@@ -31,7 +31,7 @@ public class RomanToIntegerThree {
 //        System.out.println(toInt("MMMDCCCLXXXVIII"));
 
 //        System.out.println("IntegerToRoman: ");
-        System.out.println(IntegerToRomanTwo.intToRoman(0000));
-        System.out.println(toInt(IntegerToRomanTwo.intToRoman(0000)));
+//        System.out.println(IntegerToRomanTwo.intToRoman(1234));
+        System.out.println(toInt(IntegerToRomanTwo.intToRoman(2999)));
     }
 }
