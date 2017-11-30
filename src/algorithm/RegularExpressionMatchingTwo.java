@@ -1,3 +1,5 @@
+package algorithm;
+
 //isMatch("aa","a") → false
 //        isMatch("aa","aa") → true
 //        isMatch("aaa","aa") → false

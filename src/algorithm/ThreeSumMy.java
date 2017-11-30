@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.HashMap;
 
 public class ThreeSumMy {

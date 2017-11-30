@@ -1,3 +1,5 @@
+package algorithm;
+
 public class MedianofTwoSortedArraysThree {
     public static double findMedianSortedArrays(int A[], int B[]) {
         int m = A.length;

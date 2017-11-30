@@ -1,3 +1,5 @@
+package algorithm;
+
 public class ContainerWithMostWaterTwo {
     public static int maxArea(int [] lengtHeitg){
         int left=0,right=lengtHeitg.length-1,maxArea=0;

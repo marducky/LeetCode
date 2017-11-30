@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.HashSet;
 
 public class MedianofTwoSortedArrays {

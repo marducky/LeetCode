@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +33,7 @@ public class RomanToIntegerThree {
 //        System.out.println(toInt("MMMDCCCLXXXVIII"));
 
 //        System.out.println("IntegerToRoman: ");
-//        System.out.println(IntegerToRomanTwo.intToRoman(1234));
-        System.out.println(toInt(IntegerToRomanTwo.intToRoman(2999)));
+//        System.out.println(IntegerToRomanTwo.intToRoman(31234));
+        System.out.println(toInt(IntegerToRomanTwo.intToRoman(3214)));
     }
 }

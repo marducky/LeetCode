@@ -1,3 +1,5 @@
+package algorithm;
+
 public class StringToIntegerAtoi {
     public static int myAtoi(String str){
 //        if (str==null||str.length()==0)

@@ -1,4 +1,4 @@
-//import java.util.HashMap;
+package algorithm;//import java.util.HashMap;
 //
 //public class ThreeSum {
 //    public static int[] threeSun(int[] numbers,int target){

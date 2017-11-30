@@ -1,3 +1,5 @@
+package algorithm;
+
 public class WildcardMatching {
     public boolean isMatch(String str, String pattern) {
         int s = 0, p = 0, match = 0, starIdx = -1;

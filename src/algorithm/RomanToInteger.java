@@ -1,3 +1,5 @@
+package algorithm;
+
 public class RomanToInteger {
     public static int toInteger(String strOne){
         int strLen=strOne.length();

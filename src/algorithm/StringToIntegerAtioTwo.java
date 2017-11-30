@@ -1,3 +1,5 @@
+package algorithm;
+
 public class StringToIntegerAtioTwo {
     public static int aoti(String strTwo){
         if (strTwo==null)
