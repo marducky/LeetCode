@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LetterCombinationsOfPhoneNumberTwo {
-    public List<String> letterCombinations(String digits) {
+    public static List<String> letterCombinations(String digits) {
         //把table上的数字对应的字母列出来，当输入为2是，digits[2]就是2所对应的"abc"
         String[] table = new String[]
                 {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
@@ -19,7 +19,7 @@ public class LetterCombinationsOfPhoneNumberTwo {
         return list;
     }
 
-    private void letterCombinations (List<String> list, String digits,
+    private static void letterCombinations (List<String> list, String digits,
                                      String curr, int index,String[] table) {
         //最后一层退出条件
         if (index == digits.length()) {
@@ -35,5 +35,8 @@ public class LetterCombinationsOfPhoneNumberTwo {
             //进入下一层
             letterCombinations(list,digits,next,index+1,table);
         }
+    }
+    public static void main(String[] args){
+        System.out.println(letterCombinations("23"));
     }
 }
