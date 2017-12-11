@@ -1,4 +1,4 @@
-package knowledge.jvm.chapter1;
+package knowledge.multiProcess.chapter1;
 
 public class MyThread extends Thread {
     @Override

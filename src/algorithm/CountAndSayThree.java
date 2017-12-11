@@ -20,7 +20,6 @@ public class CountAndSayThree {
             for (int i=1;i<curRes.length();i++){
                 if (curRes.charAt(i)==curRes.charAt(i-1)){
                     count++;
-
                 }
                 else {
                     res.append(count);
