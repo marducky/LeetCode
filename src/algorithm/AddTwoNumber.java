@@ -38,13 +38,13 @@ package algorithm;//import java.util.LinkedList;
  * 完成时间：2016-11-01
  ***************************************************************/
 
-class ListNode{
+class ListNodeTemp{
     int val;
     ListNode next;
-    ListNode(){
+    ListNodeTemp(){
 
     }
-    ListNode(int x){
+    ListNodeTemp(int x){
         val = x;
     }
     public String toString(){
