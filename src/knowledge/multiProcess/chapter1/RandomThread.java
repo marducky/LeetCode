@@ -1,6 +1,4 @@
-package knowledge.jvm.chapter1;
-
-import java.util.Random;
+package knowledge.multiProcess.chapter1;
 
 public class RandomThread extends Thread{
     @Override

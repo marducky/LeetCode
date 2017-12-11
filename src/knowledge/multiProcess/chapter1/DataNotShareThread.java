@@ -1,4 +1,4 @@
-package knowledge.jvm.chapter1;
+package knowledge.multiProcess.chapter1;
 
 public class DataNotShareThread extends Thread{
     private int count=5;
