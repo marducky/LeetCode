@@ -17,8 +17,17 @@ import java.util.Arrays;
 
 public class SpiralMatrixFiveNight {
     public int[][] generateMatrix(int n) {
-        int[][] resInt=returnRount(n);
+        int[][] resInt=new int[n][n];
+        int reFlag=0;
         while (n>0){
+            int[][] temInts=returnRount(n);
+            for (int i=reFlag;i<n-reFlag;i++){
+                resInt[reFlag][i]=temInts[0][i-reFlag]+n*n-(n-2)*(n-2);
+            }
+            for (int i=reFlag+1;i<n-1-reFlag;i++){
+                resInt[i][n-1-reFlag]=temInts[i-reFlag][n-1]+n*n-(n-2)*(n-2);
+            }
+            //TODO: give the ture method of method.
 //            n=returnRount(n).length;
 //            for ()
         }
@@ -26,9 +35,9 @@ return null;
     }
     public int[][] returnRount(int n){
         int[][] ints=new int[n][n];
-        if (n==0){
-            ints[0][0]=0;
-        }
+//        if (n==0){
+//            return [[0]];
+//        }
         for (int i=0;i<n;i++){
             ints[0][i]=i+1;
         }
