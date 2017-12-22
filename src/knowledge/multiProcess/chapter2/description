@@ -1,0 +1,9 @@
+/*
+~synchronized scope is the Object
+~synchronized scope is the class
+~non-thread safe condition
+~volatile
+~the difference of volatile and synchronized
+*/
+两个线程访问同一个对象中的同步方法时，一定是线程安全的。
+方法的内的变量是线程安全的。这是由于方法内部的变量是私有的特性造成的。
