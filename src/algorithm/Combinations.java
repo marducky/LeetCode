@@ -40,6 +40,10 @@ public class Combinations {
             item.remove(item.size() - 1);
         }
     }
+    public static void main(String [] args){
+        Combinations combinations=new Combinations();
+        System.out.println(combinations.combine(6,1));
+    }
 
 }
 
