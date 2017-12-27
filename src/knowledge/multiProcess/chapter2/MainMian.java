@@ -23,17 +23,22 @@ public class MainMian {
         //SynchronizedLockReloadOne main
 //        SynchronizedLockReloadOne t=new SynchronizedLockReloadOne();
 //        t.start();
-        try {
-            ThrowExceptionNoLock throwExceptionNoLock=new ThrowExceptionNoLock();
-            ThrowExceptionNoLockOne one=new ThrowExceptionNoLockOne(throwExceptionNoLock);
-            one.setName("a");
-            one.start();
-            Thread.sleep(500);
-            ThrowExceptionNoLockTwo two=new ThrowExceptionNoLockTwo(throwExceptionNoLock);
-            two.setName("b");
-            two.start();
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
+//        try {
+//            ThrowExceptionNoLock throwExceptionNoLock=new ThrowExceptionNoLock();
+//            ThrowExceptionNoLockOne one=new ThrowExceptionNoLockOne(throwExceptionNoLock);
+//            one.setName("a");
+//            one.start();
+//            Thread.sleep(500);
+//            ThrowExceptionNoLockTwo two=new ThrowExceptionNoLockTwo(throwExceptionNoLock);
+//            two.setName("b");
+//            two.start();
+//        }catch (InterruptedException e){
+//            e.printStackTrace();
+//        }
+        SynchronizedCycleForFor synchronizedCycleForFor=new SynchronizedCycleForFor();
+        SynchronizedCycleForForOne synchronizedCycleForForOne=new SynchronizedCycleForForOne(synchronizedCycleForFor);
+        synchronizedCycleForForOne.start();
+        SynchronizedCycleForForTwo synchronizedCycleForForTwo=new SynchronizedCycleForForTwo(synchronizedCycleForFor);
+        synchronizedCycleForForTwo.start();
     }
 }
