@@ -41,7 +41,7 @@ public class GrayCodeTwo {
     public static void main(String[] args){
         GrayCodeTwo grayCodeTwo=new GrayCodeTwo();
         ArrayList<Integer> integerArrayList=new ArrayList<Integer>();
-        integerArrayList=grayCodeTwo.grayCode(1);
+        integerArrayList=grayCodeTwo.grayCode(3);
         System.out.println(integerArrayList);
     }
 }
