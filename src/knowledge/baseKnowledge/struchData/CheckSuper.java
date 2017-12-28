@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 class Base{
     public Base(){
         System.out.println("This is the base con fun. "+Thread.currentThread().getName());

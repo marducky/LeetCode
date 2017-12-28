@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 
 
 /**

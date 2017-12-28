@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 
 public class BSTree<T extends Comparable<T>> {
     private BSTNode<T> mRoot;//the root node of Baniry tree.

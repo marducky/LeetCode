@@ -2,7 +2,7 @@
  * Java 实现的双向链表。
  * 注：java自带的集合包中有实现双向链表，路径是:java.util.LinkedList
  */
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 
 public class DoubleLink<T> {
     private DNode<T> mHead;//头结点；

@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 
 public class TestDoubleLink {
     // 双向链表操作int数据

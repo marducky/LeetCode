@@ -13,7 +13,7 @@ ArrayList 实现java.io.Serializable接口，这意味着ArrayList支持序列�
 和Vector不同，ArrayList中的操作不是线程安全的。
 所以，建议在单线程中才使用ArrayList，而在多线程中可以选择Vector或者CopyOnWriteArrayList。
  */
-package knowledge.baseKnowledge;
+package knowledge.baseKnowledge.struchData;
 
 import java.util.ArrayList;
 
