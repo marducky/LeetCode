@@ -1,0 +1,2 @@
+Java中的String为什么是不可变的？ -- String源码分析 - CSDN博客 \
+http://blog.csdn.net/zhangjg_blog/article/details/18319521

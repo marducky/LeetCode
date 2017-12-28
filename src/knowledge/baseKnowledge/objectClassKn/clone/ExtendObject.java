@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge.objectClassKn;
+package knowledge.baseKnowledge.objectClassKn.clone;
 
 public class ExtendObject extends Object{
     private String name;

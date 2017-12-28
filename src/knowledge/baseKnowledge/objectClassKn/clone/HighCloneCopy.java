@@ -6,7 +6,7 @@
  这个clone()函数没有声明抛出CloneNotSupportedException。这个检查异常只可能在调用Object类clone()的时候抛出。clone()是不会被调用的，因此这个异常也就没有被处理或者传回调用处的必要了。
  Object类的clone()没有被调用(这里没有调用super.clone())。因为这不是对Address的对象进行浅克隆——只是一个成员变量复制而已。
  为了克隆Address的对象，需要创建一个新的Address对象并对其成员进行初始化操作。最后将新创建的Address对象返回。*/
-package knowledge.baseKnowledge.objectClassKn;
+package knowledge.baseKnowledge.objectClassKn.clone;
 class EmployeeCloneHigh implements Cloneable{
     private String name;
     private int age;

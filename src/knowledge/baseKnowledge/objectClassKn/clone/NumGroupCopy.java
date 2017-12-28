@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge.objectClassKn;
+package knowledge.baseKnowledge.objectClassKn.clone;
 
 class City {
     private String name;
