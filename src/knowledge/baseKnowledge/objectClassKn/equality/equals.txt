@@ -1,0 +1,20 @@
+问：euqals()函数是用来做什么的？
+答：equals()函数可以用来检查一个对象与调用这个equals()的这个对象是否相等。
+问：为什么不用“==”运算符来判断两个对象是否相等呢？
+答：虽然“==”运算符可以比较两个数据是否相等，但是要来比较对象的话，恐怕达不到预期的结果。就是说，“==”通过是否引用了同一个对象来判断两个对象是否相等，这被称为“引用相等”。这个运算符不能通过比较两个对象的内容来判断它们是不是逻辑上的相等。
+问：使用Object类的equals()方法可以用来做什么样的对比？
+答：Object类默认的eqauls()函数进行比较的依据是：调用它的对象和传入的对象的引用是否相等。也就是说，默认的equals()进行的是引用比较。如果两个引用是相同的，equals()函数返回true；否则，返回false.
+问：覆盖equals()函数的时候要遵守那些规则？
+答：覆盖equals()函数的时候需要遵守的规则在Oracle官方的文档中都有申明：
+自反性：对于任意非空的引用值x，x.equals(x)返回值为真。
+对称性：对于任意非空的引用值x和y，x.equals(y)必须和y.equals(x)返回相同的结果。
+传递性：对于任意的非空引用值x,y和z,如果x.equals(y)返回真，y.equals(z)返回真，那么x.equals(z)也必须返回真。
+一致性：对于任意非空的引用值x和y，无论调用x.equals(y)多少次，都要返回相同的结果。在比较的过程中，对象中的数据不能被修改。
+对于任意的非空引用值x，x.equals(null)必须返回假。
+equals()和继承
+当Employee类被继承的时候，代码清单8就存在一些问题。例如，SaleRep类继承了Employee类，这个类中也有基于字符串类型的变量，equals()可以对其进行比较。假设你创建的Employee对象和SaleRep对象都有相同的“名字”和“年龄”。但是，SaleRep中还是添加了一些内容。
+假设你在Employee对象中调用equals()方法并且传入了一个SaleRep对象。由于SaleRep对象继承了Employee，也是一种Employee的对象，instanceof判断会通过，并且执行equals()方法来判断名字和年龄。因为这两个对象有完全相同的名字和年龄，所以equals()方法返回true。如果拿SaleRep对象中Employee的部分来和Employee比较的话，返回true值是正确的，但是，如果拿整个SaleRep对象来和Employee对象比较，返回true值就不妥了。
+现在假设在SaleRep对象中调用equals()方法并将Employee传入。因为Employee不是SaleRep类型的对象（否则的话，你可以访问Employee对象中不存在的Region域，这会导致虚拟机崩溃），无法通过instanceof判断，equals()方法返回false。综上，equals()在一种判断中为true却在另一判断中为false，违背了“对称性原则”。
+Joshua Bloch在《Effective Java Programming Language Guide》第七版中指出：我们无法扩展可被实例化的类（例如Employee）并向其中增加一个域（如Region域），而同时维持equals()方法的对称性。尽管也有办法来维持对称性，但代价是破坏传递性。Bloch指出解决这个问题需要在继承上支持组合：不是让SaleRep来扩展Employee，SaleRep应该引用一个私有的Employee值。获得更多信息可以参考Bloch的书。
+问：可以使用equals()函数来判断两个数组是否相等吗？
+答：可以调用equals()函数来比较数组的引用是否相等。但是，由于在数组对象中无法覆盖equals()，所以只能对数组的引用进行比较，因为不是很常用。参见代码清单9。

@@ -1,0 +1,6 @@
+问：getClass()方法是用来做什么的？
+答： 通过getClass()方法可以得到一个和这个类有关的java.lang.Class对象。返回的Class对象是一个被static synchronized方法封装的代表这个类的对象；例如，static sychronized void foo(){}。这也是指向反射API。因为调用gerClass()的对象的类是在内存中的，保证了类型安全。
+问： 还有其他方法得到Class对象吗？
+答： 获取Class对象的方法有两种。可以使用类字面常量，它的名字和类型相同，后缀位.class；例如，Account.class。另外一种就是调用Class的forName()方法。类字面常量更加简洁，并且编译器强制类型安全；如果找不到指定的类编译就不会通过。通过forname()可以动态地通过指定包名载入任意类型地引用。但是，不能保证类型安全，可能会导致Runtime异常。
+问： 实现equals()方法的时候，getClass()和instanceof哪一个更好？
+答： 使用getClass()还是instanceof的话题一直都是Java社区争论的热点，Angelika Langer的Secrets of equals – Part 1这片文章可以帮助你做出选择。关于正确覆盖equals()方法（例如保证对称性）的讨论，Lang的这篇文章可以作为一个很好的参考手册。
