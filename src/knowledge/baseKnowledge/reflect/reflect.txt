@@ -1,0 +1,13 @@
+Java 反射 - ImportNew http://www.importnew.com/17616.html
+指的是可以于运行时加载,探知和使用编译期间完全未知的类.
+程序在运行状态中, 可以动态加载一个只有名称的类, 对于任意一个已经加载的类,都能够知道这个类的所有属性和方法; 对于任意一个对象,都能调用他的任意一个方法和属性;
+加载完类之后, 在堆内存中会产生一个Class类型的对象(一个类只有一个Class对象), 这个对象包含了完整的类的结构信息,而且这个Class对象就像一面镜子,透过这个镜子看到类的结构,所以被称之为:反射
+Class对象的获取
+
+对象的getClass()方法;
+类的.class(最安全/性能最好)属性;
+运用Class.forName(String className)动态加载类,className需要是类的全限定名(最常用)
+http://www.importnew.com/23902.html
+深入分析Java方法反射的实现原理 - ImportNew http://www.importnew.com/23902.html
+假笨说-从一起GC血案谈到反射原理 http://mp.weixin.qq.com/s/5H6UHcP6kvR2X5hTj_SBjA
+java -- java.lang.reflect.proxy分析 - CSDN博客 http://blog.csdn.net/gaopeng0071/article/details/51657980
