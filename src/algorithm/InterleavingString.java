@@ -20,15 +20,25 @@ public class InterleavingString {
         Stack<Character> stackS3 = pushToStack(s3);
         if (stackS1.empty() && stackS2.empty() && stackS3.empty())
             return true;
-        if ((stackS1.peek() == stackS3.peek()) && ((stackS2.peek() == stackS3.peek()))) {
-            String tempS1Begin = s1.substring(stackS1.size(), s1.length());
-            String tempS2End = s2.substring(stackS2.size() + 1, s2.length());
-            String tempS2Begin = s2.substring(stackS2.size(), s2.length());
-            String tempS1End = s1.substring(stackS1.size() + 1, s1.length());
-            String tempS3ALL = s3.substring(stackS2.size() + 1 + stackS1.size(), s3.length());
-            if (isInterleave(tempS1Begin, tempS2End, tempS3ALL) && isInterleave(tempS2Begin, tempS1End, tempS3ALL))
-                return true;
+        while (!stackS3.empty() && !stackS1.empty() && !stackS3.empty()) {
+            if ((stackS1.peek() == stackS3.peek()) && ((stackS2.peek() == stackS3.peek()))) {
+                String tempS1Begin = s1.substring(stackS1.size(), s1.length());
+                String tempS2End = s2.substring(stackS2.size() + 1, s2.length());
+                String tempS2Begin = s2.substring(stackS2.size(), s2.length());
+                String tempS1End = s1.substring(stackS1.size() + 1, s1.length());
+                String tempS3ALL = s3.substring(stackS2.size() + 1 + stackS1.size(), s3.length());
+                if (isInterleave(tempS1Begin, tempS2End, tempS3ALL) && isInterleave(tempS2Begin, tempS1End, tempS3ALL))
+                    return true;
+            } else if (stackS3.peek() == stackS1.peek()) {
+                stackS1.pop();
+                stackS3.pop();
+            } else {
+                stackS2.pop();
+                stackS3.pop();
+            }
         }
+        if (!stackS3.empty() && !stackS1.empty() && !stackS3.empty())
+            return true;
         return false;
     }
 
@@ -46,8 +56,8 @@ public class InterleavingString {
 
         String s3 = "aadbbcbcac";
         String s31 = "aadbbbaccc";
-        InterleavingString interleavingString=new InterleavingString();
-        System.out.println(interleavingString.isInterleave(s1,s2,s3));
+        InterleavingString interleavingString = new InterleavingString();
+        System.out.println(interleavingString.isInterleave(s1, s2, s3));
 
     }
 }
