@@ -4,3 +4,10 @@
     Leetcode 94 or 92.
     --ing:
     clone; reflect
+1.5
+    Join.
+    ThreadLocal.
+    IteeeThreadLocal.
+    ThreadLocalMap.
+    Sleep hold lock.
+    Join not hold lock implement from wait.
