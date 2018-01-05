@@ -1,7 +1,7 @@
 # LeetCode
-#learn leetcode
+## learn leetcode
 
-<br>All file are built by the IDEA.<br><br>
+<br>All files are built by the IDEA.<br><br>
 Folder description:<br><br>
 algorithm: leetcode solution.[not end by "two three"] is the main solution. [end by "two or three or.."] is the better way. <br><br>
 knowledge: basic knowledge of java, os, multi process, design pattern, docker, jvm. <br><br>
