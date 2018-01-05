@@ -1,4 +1,4 @@
-package tools;
+package tools.print;
 
 public class Printf<T>{
 //    public T setValue(T t){
