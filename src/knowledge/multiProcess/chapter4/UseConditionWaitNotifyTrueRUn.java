@@ -5,5 +5,12 @@ public class UseConditionWaitNotifyTrueRUn {
         UseConditionWaitNotifyTrue useConditionWaitNotifyTrue = new UseConditionWaitNotifyTrue();
         UseConditionWaitNotifyTrueOne useConditionWaitNotifyTrueOne = new UseConditionWaitNotifyTrueOne(useConditionWaitNotifyTrue);
         useConditionWaitNotifyTrueOne.start();
+        try {
+            useConditionWaitNotifyTrueOne.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Yes! the thread sleep!");
     }
 }
