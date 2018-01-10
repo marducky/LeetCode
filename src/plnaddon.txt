@@ -11,3 +11,6 @@
     ThreadLocalMap.
     Sleep hold lock.
     Join not hold lock implement from wait.
+1.10
+    Serializable;
+    Json+Serializable.
