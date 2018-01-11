@@ -1,7 +1,7 @@
 /**
  * java.io.Serializable
  * <p>
- * java.io.Externalizable
+ * java.io.ExternalizableDemo
  * <p>
  * ObjectOutput
  * <p>
@@ -13,10 +13,11 @@
  */
 //http://www.hollischuang.com/archives/1140#What%20Serializable%20Did
 //http://www.importnew.com/17964.html
-package knowledge.baseKnowledge.Serialization;
+package knowledge.baseKnowledge.serialization;
 
 public class SerializationTest {
     public static void main(String[] args) {
-        System.out.println("Serialization!");
+        System.out.println("serialization!");
     }
+
 }

@@ -1,4 +1,4 @@
-package knowledge.baseKnowledge.Serialization;
+package knowledge.baseKnowledge.serialization;
 
 
 import java.io.*;
