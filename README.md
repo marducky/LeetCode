@@ -10,6 +10,5 @@ tools: some small tools built by java, c, c++, python.<br><br>
 And you can email me: qihuaneng@163.com, if you think it useful to me. Thanks. <br><br>
 
 Abort me:<br><br>
-Janus, A defender.<br><br>
-A student from a small school with strong old decay. <br><br>
+Janus, A DEFENDER.<br><br>
 Good lucky.<br><br>
