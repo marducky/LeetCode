@@ -7,6 +7,7 @@ public class NewRunnableTerminatedRun {
             System.out.println("main method state1: " + terminated.getState());
             terminated.setName("aaaaa");
             terminated.start();
+            terminated.setPriority(10);
             System.out.println("main method state2: " + terminated.getState());
             Thread.sleep(3000);
             System.out.println("main method state3: " + terminated.getState());
