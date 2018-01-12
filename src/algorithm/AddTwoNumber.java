@@ -142,6 +142,12 @@ public class AddTwoNumber {
         ListNode list11 = new ListNode(8);
         ListNode list12 = new ListNode(9);
         ListNode list13 = new ListNode(9);
+        ListNode l19 = new ListNode(9);
+        ListNode l129 = new ListNode(9);
+        ListNode l139 = new ListNode(9);
+        ListNode l28 = new ListNode(9);
+        l19.next = l129;
+        l129.next = l139;
 
         ListNode list21 = new ListNode(2);
 
