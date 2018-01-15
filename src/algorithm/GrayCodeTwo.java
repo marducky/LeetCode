@@ -43,5 +43,6 @@ public class GrayCodeTwo {
         ArrayList<Integer> integerArrayList=new ArrayList<Integer>();
         integerArrayList=grayCodeTwo.grayCode(3);
         System.out.println(integerArrayList);
+        System.gc();
     }
 }
