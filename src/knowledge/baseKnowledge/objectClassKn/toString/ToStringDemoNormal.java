@@ -1,6 +1,6 @@
 package knowledge.baseKnowledge.objectClassKn.toString;
 
-import org.python.antlr.ast.Str;
+//import org.python.antlr.ast.Str;
 
 public class ToStringDemoNormal {
     private String name;

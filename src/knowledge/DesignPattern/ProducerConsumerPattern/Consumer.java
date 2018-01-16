@@ -1,7 +1,5 @@
 package knowledge.DesignPattern.ProducerConsumerPattern;
 
-import jnr.ffi.annotations.In;
-import org.python.antlr.ast.Str;
 
 public class Consumer {
     private String lock;

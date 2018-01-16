@@ -1,6 +1,6 @@
 package knowledge.baseKnowledge.garbageCollect;
 
-import org.python.antlr.ast.Str;
+//import org.python.antlr.ast.Str;
 
 class gcTest{
     private String name;
