@@ -19,6 +19,10 @@ public class ConfTree {
         try {
             if (file.isFile() && file.exists()) {
                 try {
+//                    File file1=new File("C");
+//                    FileInputStream stream=new FileInputStream(file1);
+//                    InputStreamReader inputStreamReader=new InputStreamReader(stream);
+//                    BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(file));
                     BufferedReader bufferedReader = new BufferedReader(reader);
                     String lineTxt = null;
