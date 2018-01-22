@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/a-denfender-QMZ/a-denfender-QMZ.iml" filepath="$PROJECT_DIR$/a-denfender-QMZ/a-denfender-QMZ.iml" />
+      <!--<module fileurl="file://$PROJECT_DIR$/a-denfender-QMZ/a-denfender-QMZ.iml" filepath="$PROJECT_DIR$/a-denfender-QMZ/a-denfender-QMZ.iml" />-->
     </modules>
   </component>
 </project>
