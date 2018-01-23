@@ -13,6 +13,7 @@ import java.util.Map;
 //    private String nlus;
 //}
 public class GetNlpsJson {
+    private static int conut = 0;
     public void getNlpsJson() {
         XmlToJson jsonToXml = new XmlToJson();
         String pathXMl = "C:\\Users\\neng.qi\\Desktop\\handlers-manager.xml";
@@ -80,15 +81,16 @@ public class GetNlpsJson {
         }
         for (String s : map_nlu_group_map_nlu.keySet()) {
 //            System.out.println(s + ": " + "\n" +map_nlu_group_map_nlu.get(s));
-            System.out.println(s + ": ");
+//            System.out.println(s + ": ");
             for (String ss : map_nlu_group_map_nlu.get(s).keySet()) {
                 System.out.println(ss + ": " + "\n" + map_nlu_group_map_nlu.get(s).get(ss));
                 nlu_map.put("nlu_group:" + s + "nlu: " + ss, map_nlu_group_map_nlu.get(s).get(ss));
             }
         }
         for (String s : nlu_map.keySet()) {
-            System.out.println(s + ": " + "\n" + nlu_map.get(s));
+//            System.out.println(s + ": " + "\n" + nlu_map.get(s));
         }
+        System.out.println(nlu_map.size());
 //
     }
 
