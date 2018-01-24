@@ -41,6 +41,7 @@ public class ReformatHandlersManagerConf {
             Map<String, String> resultNlus = new HashMap<String, String>();
             ArrayList<String> nulsSingle = new ArrayList<String>();
             ArrayList<String> allLine = new ArrayList<String>();
+            Map<String,String> nuleSingleMapLine=new HashMap<String, String>();
             boolean isNlusGroupBeginFlag = true;
             String nulsName = "";
             if ((line = bufferedReader.readLine()) != null) {
@@ -67,32 +68,52 @@ public class ReformatHandlersManagerConf {
                 Matcher matcherSingleNlus = patternSingleNlus.matcher(line);
                 if (matcherSingleNlus.groupCount() == 1) {
                     nulsSingle.add(matcherSingleNlus.group(0));
+                    nuleSingleMapLine.put(targetLine+"",matcherSingleNlus.group(0));
                 }
             }
+            int finalFileLine=targetLine;
             for (String singleNlus : nulsSingle) {
                 String formatString = singleNlus.substring(0, singleNlus.lastIndexOf('"') + 1) + ">";
                 if (resultNlus.containsKey(formatString)) {
                     String[] stringsTemp = resultNlus.get(formatString).split("-");
-                    targetLine += (Math.max(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]))) - Math.min(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]));
+                    finalFileLine +=(Math.max(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]))) - Math.min(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]));
                 }
             }
-            String newFilePathName = System.getenv("NLPS_RUNTIME_ROOT") + "handlers-manager";
+            String stRootPathNewFile = System.getenv("NLPS_RUNTIME_ROOT");
+            if (stRootPathNewFile == null) {
+                stRootPathNewFile = "C:/NLPS_RUNTIME/";
+            } else if (!stRootPathNewFile.endsWith("\\") && !stRootPathNewFile.endsWith("/")) {
+                stRootPathNewFile += "/";
+            }
+            String newFilePathName =  stRootPathNewFile+ "handlers-manager.xml";
             File newFile = new File(newFilePathName);
             if (!newFile.exists()) {
                 newFile.createNewFile();
             }
+            FileWriter fileWriter=new FileWriter(newFile,true);
+            BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
             for (int i = 0; i < targetLine; i++) {
                 //TODO: Begin write to the new file: 1. create the new file; 2.use the true xml; 3. save to the new path.
-
+                if (!nulsSingle.contains(i)){
+                    bufferedWriter.write(allLine.get(i));
+                }else {
+                    String nuleChange=nuleSingleMapLine.get(i+"").substring(0,nuleSingleMapLine.get(i+"").lastIndexOf('"') + 1) + ">";
+                    String[] perBeginEnd=resultNlus.get(nuleChange).split("-");
+                    int perBegin=Integer.valueOf(perBeginEnd[0]);
+                    int perEnd=Integer.valueOf(perBeginEnd[1]);
+                    for (int j=perBegin-1;j<perEnd;j++){
+                        bufferedWriter.write(allLine.get(j));
+                    }
+                }
             }
-
-
+            bufferedWriter.close();
+            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
+//not use.
     public void renameStWorkflowManagerConfiguration() {
         String originalFileName = getHanderManagerConfPath();
         File oldFile = new File(originalFileName);
@@ -108,5 +129,6 @@ public class ReformatHandlersManagerConf {
     public static void main(String[] args) {
         ReformatHandlersManagerConf reformatHandlersManagerConf = new ReformatHandlersManagerConf();
 //        reformatHandlersManagerConf.getHanderManagerConfPath();
+        reformatHandlersManagerConf.readFileToXml(reformatHandlersManagerConf.getHanderManagerConfPath());
     }
 }
