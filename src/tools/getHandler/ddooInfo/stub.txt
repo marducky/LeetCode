@@ -1,0 +1,7 @@
+[?1/?24/?2018 11:54 AM]  Zhang, Wenbin:  
+https://github.com/azagniotov/stubby4j 
+1. Test average response time of Roobo and Nina. And response result. 
+ 
+[?1/?24/?2018 11:56 AM]  Zhang, Wenbin:  
+2. Use stub service to return stubbed result in a cutomized latency (equal to Roobo and Nina)
+ 

@@ -1,0 +1,1030 @@
+<manager>
+    <!-- semicolon separated list of nlu names to be used for processing -->
+    <use-nlus>calendar</use-nlus>
+    <!-- nlu handlers that should be loaded -->
+
+    <nlus name="url-gen-sequence">
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_generate_urls,1,java.lang.Boolean:TRUE)">
+
+            <nlu name="url-gen"
+                 class="com.nuance.nvc.nlps.handlers.URLGenerator.NLUHandler_URLGenerator"
+                 config="[%nluw.config.folder%]/url-generator.properties"
+                 simulation-mode="[%simulation.urlgen.mode,save%]"
+                 simulation-class="com.nuance.nvc.nlps.handlers.URLGenerator.NLUHandler_URLGenerator"/>
+
+            <nlu name="reverse-geocoding"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_GeoCoding"
+                 config="[%nluw.config.folder%]/reverse_geocoding.properties"/>
+        </nlu-group>
+    </nlus>
+
+    <nlus name="widget-sequence">
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,information,widget_sequence_was_called,1,java.lang.Boolean:FALSE)">
+            <nlu name="set-widget-call"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+                 config="[%nluw.config.folder%]/setting_widget.properties"/>
+
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,information,nlps.use.vcs,1,java.lang.Boolean:TRUE)">
+                <nlu name="vcs-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/vcs.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="vcs-integration-naver"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/vcs_naver.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="dcs-integration-pre"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/dcs/dcs_pre.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="mpdss-integration-pre"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/mpdss/mpdss_pre.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="mpdss-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/mpdss/mpdss.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="dcs-extra-integration_start"
+                     condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dcs_async,1,java.lang.Boolean:TRUE)"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/dcs/dcs_extra.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"
+                     process-mode="ASYNC"
+                     process-mode-name="dcs"/>
+
+                <nlu name="dcs-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/dcs/dcs.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="dcs-extra-integration_end"
+                     condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dcs_async,1,java.lang.Boolean:TRUE)"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/dcs/dcs_extra.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"
+                     process-mode="ASYNC_END"
+                     process-mode-name="dcs"/>
+
+                <nlu name="AI-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/AI/ai.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="AI-format"
+                     class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_Remapping"
+                     config="[%nluw.config.folder%]/remapper_ai.properties"/>
+
+                <nlu name="PA-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/PA/pa.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="Alexa-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/Alexa/alexa.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <nlu name="CarManual-integration"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+                     config="[%nluw.config.folder%]/data/data-providers/CarManual/car_manual.properties"
+                     simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+                <!-- nlg processing -->
+                <nlu-group type="serial"
+                           condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,PA-integration.service,pa,java.lang.Boolean:FALSE)">
+                    <!-- set default prompt based on dcs result -->
+                    <nlu name="nlg-integration-temp"
+                         class="com.nuance.nvc.nlps.handlers.NLUHandler_NLG_Temp"
+                         config="[%nluw.config.folder%]/nlg_service_temp.properties"/>
+
+                    <!-- set prompt from NLG -->
+                    <nlu name="nlg-integration"
+                         condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,call_nlg,1,java.lang.Boolean:TRUE)"
+                         class="com.nuance.nvc.nlps.handlers.NLUHandler_NLG"
+                         config="[%nluw.config.folder%]/nlg.properties"/>
+
+                </nlu-group>
+
+                <!-- Set URL for each stock -->
+                <nlu name="stocks_add_urls"
+                     class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                     config="[%nluw.config.folder%]/stocks_add_urls.properties"/>
+
+                <!-- Set params for each local -->
+                <nlu name="localsearch_add_params"
+                     class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                     config="[%nluw.config.folder%]/localsearch_add_params.properties"/>
+
+            </nlu-group>
+
+            <!-- last - all large JSON objects should be stored -->
+            <nlu name="store-objects"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/store_objects.properties"/>
+        </nlu-group>
+    </nlus>
+
+    <nlus name="dragon-go-json">
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckSystemProperty(nluw.printer.enabled,TRUE)">
+            <nlu name="printer-nlsml"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_Printer"
+                 config="[%nluw.config.folder%]/printer.properties"/>
+        </nlu-group>
+
+        <!-- return JSON result -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,return-json-result,TRUE,java.lang.Boolean:TRUE)">
+            <!-- non android -->
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_device,android(.*),java.lang.Boolean:FALSE)">
+                <nlu name="json"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSON"
+                     config="[%nluw.config.folder%]/json.properties"
+                     simulation-mode="[%simulation.json.mode,save%]"/>
+            </nlu-group>
+
+            <!-- android -->
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_device,android(.*),java.lang.Boolean:TRUE)">
+                <nlu name="json-android"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSON"
+                     config="[%nluw.config.folder%]/json-android.properties"
+                     simulation-mode="[%simulation.json.mode,save%]"/>
+            </nlu-group>
+        </nlu-group>
+
+    </nlus>
+
+    <!-- process one interpretation of dg (after we get the cas object to final nlsml result -->
+    <nlus name="dragon-go-from-cas">
+
+        <nlu name="cas_processing"
+             class="com.nuance.nvc.nlps.handlers.uima.NLUHandler_ProcessCASResult"
+             config="[%nluw.config.folder%]/cas-processing.properties"/>
+
+        <!--
+        <nlu name="checkIfURLQuery"
+            class="com.nuance.nvc.nlps.handlers.NLUHandler_FindURL"
+            config="[%nluw.config.folder%]/check_url_query.properties" />
+        -->
+        <!-- second pass -->
+        <!--
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.NLUWCondition_XMLTagExists(java.lang.String:result;url-query,java.lang.Boolean:TRUE)">
+
+            <nlu name="uima_overridessm"
+                 class="com.nuance.nvc.nlps.handlers.uima.NLUHandler_uima"
+                 config="[%nluw.config.folder%]/adk_dragon_go.properties"/>
+
+            <nlu name="cas_processing"
+                class="com.nuance.nvc.nlps.handlers.NLUHandler_ProcessCASResult"
+                config="[%nluw.config.folder%]/cas-processing.properties" />
+
+             <nlu name="mergeUIMAResults"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_MergeNLUResults"
+                 config="[%nluw.config.folder%]/merge-results.properties"/>
+
+        </nlu-group>
+        -->
+        <nlus name="url-gen-sequence"/>
+
+    </nlus>
+
+
+    <nlus name="dragon-go-full">
+        <!-- group for ENUS -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_language,ENUS|eng-USA,java.lang.Boolean:TRUE)">
+            <!-- tokenizer: should be out of the interpretations:
+                            a. to clean doubles
+                            b. to tokenize & clean based on original nluw result name
+            -->
+            <nlu name="tokenizer"
+                 class="com.nuance.nvc.nlps.handlers.tokenizer.NLUHandler_Tokenizer"
+                 config="[%nluw.config.folder%]/tokenizer.properties"
+                 simulation-mode="[%simulation.tokenizer.mode,save%]"/>
+
+
+            <nlu-group type="separate-interpretations" process-interpretations="1" add-non-processed="true">
+                <!--
+                <nlu name="uima_overridessm"
+                     class="com.nuance.nvc.nlps.handlers.uima.NLUHandler_uima"
+                     config="[%nluw.config.folder%]/adk_dragon_go.properties" />
+                -->
+                <nlus name="dragon-go-from-cas"/>
+
+            </nlu-group>
+        </nlu-group> <!-- end ENUS group -->
+
+        <!-- non ENUS group -->
+        <nlu-group type="separate-interpretations" process-interpretations="1" add-non-processed="true"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_language,ENUS|eng-USA,java.lang.Boolean:FALSE)">
+            <nlu name="url-gen-lang"
+                 class="com.nuance.nvc.nlps.handlers.URLGenerator.NLUHandler_URLGenerator"
+                 config="[%nluw.config.folder%]/url-generator-lang.properties"/>
+        </nlu-group> <!-- end non ENUS group -->
+
+        <nlus name="dragon-go-json"/>
+
+        <!-- Process sample URL's -->
+        <nlu name="process-sample-urls"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/zeppelin_process_sample_urls.properties"/>
+    </nlus>
+
+    <nlus name="set-dg-with-adk-actions">
+        <!-- JSON output with predefined template only -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,adk.output,,java.lang.Boolean:TRUE)">
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:FALSE)">
+                <nlu name="json-dragon-go-for-adk"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-adk-dg.properties"/>
+            </nlu-group>
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:TRUE)">
+                <nlu name="json-dragon-go-json-for-adk"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-adk-dg-json.properties"/>
+            </nlu-group>
+        </nlu-group>
+        <!-- JSON output with predefined template including the adk output results -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,adk.output,,java.lang.Boolean:FALSE)">
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:FALSE)">
+                <nlu name="json-dragon-go-for-adk2"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-adk-dg-withADKOutput.properties"/>
+            </nlu-group>
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:TRUE)">
+                <nlu name="json-dragon-go-json-for-adk2"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-adk-dg-json-withADKOutput.properties"/>
+            </nlu-group>
+            <nlu name="store-objects"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/store_objects.properties"/>
+        </nlu-group>
+    </nlus>
+
+    <nlus name="set-dg-disable-adk-actions">
+        <!-- Set dg results as string or as JSON -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:FALSE)">
+            <nlu name="json-dragon-go-disable-adk"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-disable-adk.properties"/>
+        </nlu-group>
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_dg_result_as_json,1,java.lang.Boolean:TRUE)">
+            <nlu name="json-dragon-go-as-json-disable-adk"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-disable-adk-json.properties"/>
+        </nlu-group>
+    </nlus>
+
+    <nlus name="calendar_process_adk">
+        <!-- ADK returned actions - generate urls based on actions -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.results.NLUWResult_JSON)">
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckSystemProperty(nlps.adk.actions.url.processing,1,1)">
+                <nlus name="url-gen-sequence"/>
+            </nlu-group>
+        </nlu-group>
+
+        <!-- ADK entry - generate urls based on NLSML -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.results.NLUWResult_NLSML)">
+            <nlus name="url-gen-sequence"/>
+        </nlu-group>
+
+        <!-- Dragon go Domain - cas processing -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.handlers.uima.results.NLUWResult_FromCAS)">
+
+            <nlus name="dragon-go-from-cas"/>
+        </nlu-group>
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.handlers.uima.results.NLUWResult_AsFromCAS)">
+
+            <nlus name="dragon-go-from-cas"/>
+        </nlu-group>
+
+        <!-- Dragon go Domain - continue the nlsml processing (from cas or from entry nlsml) -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.results.NLUWResult_NLSML)">
+
+            <nlus name="dragon-go-json"/>
+            <!-- Do we need to diablle ADK Prompts? -->
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_disable_adk_prompts,1,java.lang.Boolean:TRUE)">
+                <!-- Disable ADK prompts only if native app is not included -->
+                <nlu-group type="serial"
+                           condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckJsonTagValue(results;[0];launch_native,.+,java.lang.Boolean:FALSE)">
+                    <nlu name="set-adk-message-done"
+                         class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+                         config="[%nluw.config.folder%]/setting_ad_message_done.properties"/>
+                    <nlus name="set-dg-disable-adk-actions"/>
+                </nlu-group>
+            </nlu-group>
+
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,adk.message.done,1,java.lang.Boolean:FALSE)">
+                <nlus name="set-dg-with-adk-actions"/>
+            </nlu-group>
+
+        </nlu-group>
+
+        <nlu name="process-actions-prepare"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/process_actions_prepare.properties"/>
+
+        <!-- Process ADK actions -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_process_adk_actions,1,java.lang.Boolean:TRUE)">
+            <nlu name="adk-process-actions"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/zeppelin_process_actions.properties"/>
+        </nlu-group>
+
+        <!-- Handle External Slot Mapping requests -->
+        <nlu name="external-slot-mapping"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_ExternalSlotRemapping"
+             config="[%nluw.config.folder%]/external_slotmapping.properties"/>
+
+        <!-- Handle SessionState updates -->
+        <nlu name="session-state"
+             class="com.nuance.nvc.nlps.session.NLPSHandler_UpdateSession"
+             config="[%nluw.config.folder%]/session_state.properties"/>
+
+        <!-- Check which of the nlu nbest results candidates has associated data provider -->
+        <nlu name="nlu-results-provider-prepare"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_nBestProviders,NONE,java.lang.Boolean:FALSE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/providers_for_candidates.properties"/>
+        <!-- Add to the nbest results candidates data provider call information -->
+        <nlu name="dcs-integration-parameters"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_DataProvider"
+             config="[%nluw.config.folder%]/data/data-providers/dcs/dcs_parameters.properties"
+             simulation-mode="[%simulation.vcs.mode,save%]"/>
+
+        <!-- Handle Spatial Search requests -->
+        <nlu name="spatial-search-async"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_spatial_async,1,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+             config="[%nluw.config.folder%]/spatial_search.properties"
+             process-mode="ASYNC"
+             process-mode-name="spatial"/>
+
+        <!-- Process widget (vcs) Integration -->
+        <nlus name="widget-sequence"/>
+
+        <!-- Process ADK actions - expand prompts - based on vcs-->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,information,nlps.use.vcs,1,java.lang.Boolean:TRUE)">
+            <nlu name="adk-process-vcs-response"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/vcs_process_response.properties"/>
+
+            <nlu name="adk-process-prompts"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/zeppelin_process_prompts.properties"/>
+        </nlu-group>
+
+        <!-- Process ADK actions - expand prompts - remove prompt items and update category; process command and control -->
+        <nlu name="adk-process-prompts-stage-2"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/zeppelin_process_prompts_stage_2.properties"/>
+
+        <!-- Process ADK prompts -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,adk_dm_status,new|exists,java.lang.Boolean:TRUE)">
+            <nlu name="adk-zeppelin-prompts"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKPrompts"
+                 config="[%nluw.config.folder%]/zeppelin_prompts.properties"
+                 simulation-mode="[%simulation.adkPrompts.mode,save%]"/>
+        </nlu-group>
+
+        <!-- Process sample URL's -->
+        <nlu name="process-sample-urls"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/zeppelin_process_sample_urls.properties"/>
+
+        <!-- Final - replace place holders -->
+        <nlu name="final_set_placeholders"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/placeholders_update.properties"/>
+    </nlus>
+
+    <nlus name="add-diagnostic-info">
+        <!-- Add the session info -->
+        <nlu name="json-dragon-go-add-session-info"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-adk-add-session-info.properties"/>
+        <!-- Add the session extended info -->
+        <nlu name="json-dragon-go-add-session-info-ex"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-adk-add-session-info-ex.properties"/>
+        <!-- update diagnostic in logging info -->
+        <nlu name="json-add-diagnostic-for-logging"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-add-diagnostic-for-logging.properties"/>
+        <!-- Add the nlps version id to the JSON results -->
+        <nlu name="json-dragon-go-add-version-id"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-adk-dg-add-version-id.properties"/>
+    </nlus>
+
+    <nlus name="nlps_v2">
+
+        <nlu name="tokenizer"
+             class="com.nuance.nvc.nlps.handlers.tokenizer.NLUHandler_Tokenizer"
+             config="[%nluw.config.folder%]/tokenizer.properties"
+             simulation-mode="[%simulation.tokenizer.mode,save%]"/>
+
+        <!-- Set System Properties as informatiom slots-->
+        <nlu name="set-system-properties"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_system_properties.properties"/>
+
+        <nlu name="nlu-processing"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_NLU"
+             config="[%nluw.config.folder%]/nlu.properties"
+             init-mode="[%adk.init.mode,asynch%]"
+             simulation-mode="[%simulation.adk.mode,run%]"/>
+
+        <nlu name="load-providers"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_LoadProviders"
+             config="[%nluw.config.folder%]/load_providers.properties"/>
+
+        <nlu name="v2_flags"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/v2_flags.properties"/>
+
+        <!-- Handle External Slot Mapping requests -->
+        <nlu name="external-slot-mapping"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_ExternalSlotRemapping"
+             config="[%nluw.config.folder%]/external_slotmapping.properties"/>
+
+        <!-- Handle SessionState updates -->
+        <nlu name="session-state"
+             class="com.nuance.nvc.nlps.session.NLPSHandler_UpdateSession"
+             config="[%nluw.config.folder%]/session_state.properties"/>
+
+        <!-- Handle Spatial Search async requests -->
+        <nlu name="spatial-search-async"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_spatial_async,1,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+             config="[%nluw.config.folder%]/spatial_search.properties"
+             process-mode="ASYNC"
+             process-mode-name="spatial"/>
+
+        <!-- providers integration -->
+        <nlus name="widget-sequence"/>
+
+        <!-- Add NCE Results - if needed -->
+        <nlu name="nce-handle"
+             class="com.nuance.nvc.nlps.handlers.nce.NLUHandler_NCE"
+             config="[%nluw.config.folder%]/nce.properties"/>
+
+        <!-- Add server_specified_settings -->
+        <nlu name="json-set-server_specified_settings"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-server-specified-settings.properties"/>
+
+        <!-- Handle Spatial Search requests -->
+        <nlu-group type="if-else"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_spatial_async,1,java.lang.Boolean:TRUE)">
+            <nlu name="spatial-search-async-end"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+                 config="[%nluw.config.folder%]/spatial_search.properties"
+                 process-mode="ASYNC_END"
+                 process-mode-name="spatial"/>
+
+            <nlu name="spatial-search"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+                 config="[%nluw.config.folder%]/spatial_search.properties"/>
+        </nlu-group>
+
+
+        <!-- Handle UDE NLU slots Validated/Unconfirmed & DB-Match-->
+        <nlu name="spatial-search-db-match"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_DbMatch"
+             config="[%nluw.config.folder%]/spatial_search.properties"/>
+
+        <!-- Handle TRaCS updates -->
+        <nlu name="tracs-results"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_TraCS"
+             config="[%nluw.config.folder%]/tracs_handler.properties"/>
+
+        <nlu name="third-party-post-processing"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_ThirdPartyPostProcessing"
+             config="[%nluw.config.folder%]/third_party_post_processing.properties"/>
+
+        <!-- PA Updates temp -->
+        <nlu name="pa_updates"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,PA-integration.service,pa,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/pa_updates.properties"/>
+
+        <!-- Alexa Updates temp -->
+        <nlu name="pa_alexa_updates"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,Alexa-integration.service,alexa,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/pa_alexa_updates.properties"/>
+
+        <!-- Final Cleaning-->
+        <nlu name="final_cleaning"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/final_cleaning.properties"/>
+
+        <!-- Update V2 content format-->
+        <nlu name="content_v2"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/nlps_v2_content.properties"/>
+
+        <!-- Final - replace place holders -->
+        <nlu name="final_set_placeholders"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/placeholders_update.properties"/>
+
+        <!-- Add the LOG_INFO -->
+        <nlu-group type="if-else"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_log_info_in_response,1,java.lang.Boolean:FALSE)">
+            <!-- Add the LOG_INFO object to the JSON results, as seperate object -->
+            <nlu name="json-dragon-go-for-adk-logInfo"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-addlog.properties"/>
+
+            <!-- Add the LOG_INFO object to the JSON results, nested in the response -->
+            <nlu name="json-dragon-go-for-adk-logInfo-in-response"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-addlog-in-response.properties"/>
+        </nlu-group>
+
+        <!-- Add diagnostic info -->
+        <nlus name="add-diagnostic-info"/>
+
+        <nlu name="final-formatting"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_Remapping"
+             config="[%nluw.config.folder%]/remapper_final.properties"/>
+
+    </nlus>
+
+    <nlus name="calendar">
+
+        <nlu name="tokenizer"
+             class="com.nuance.nvc.nlps.handlers.tokenizer.NLUHandler_Tokenizer"
+             config="[%nluw.config.folder%]/tokenizer.properties"
+             simulation-mode="[%simulation.tokenizer.mode,save%]"/>
+
+        <!-- Force dragon go domain for use_dg_domain=1 -->
+        <nlu name="set-dg"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_use_dg_domain,1,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_dg.properties"/>
+
+        <!-- Set System Properties as informatiom slots-->
+        <nlu name="set-system-properties"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_system_properties.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,domain,^dgpt$,java.lang.Boolean:TRUE)">
+            <nlu name="nlu-processing"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_NLU"
+                 config="[%nluw.config.folder%]/nlu.properties"
+                 init-mode="[%adk.init.mode,asynch%]"
+                 simulation-mode="[%simulation.adk.mode,run%]"/>
+        </nlu-group>
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,domain,^dgpt$,java.lang.Boolean:FALSE)">
+            <nlu name="adk-processing"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADK"
+                 config="[%nluw.config.folder%]/adk.properties"
+                 init-mode="[%adk.init.mode,asynch%]"
+                 simulation-mode="[%simulation.adk.mode,run%]"/>
+        </nlu-group>
+        <nlu name="adk-post"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_vcs_calls.properties"/>
+
+        <nlu name="store-objects"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/store_objects.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,nlps_process_actions,1,java.lang.Boolean:FALSE)">
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,url_api_was_called,1,java.lang.Boolean:FALSE)">
+                <nlus name="calendar_process_adk"/>
+            </nlu-group>
+        </nlu-group>
+
+        <!-- store vcs in TLS -->
+        <nlu name="store-objects"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/store_objects.properties"/>
+
+        <!-- if no process action - make sure we have response_info json -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,nlps_process_actions,0,java.lang.Boolean:FALSE)">
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.handlers.uima.results.NLUWResult_FromCAS)">
+                <nlus name="dragon-go-from-cas"/>
+            </nlu-group>
+            <nlu name="set-actions"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/set_actions.properties"/>
+        </nlu-group>
+
+        <!-- Add the server application configuration - if needed -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,REQUEST_INFO.appserver_data.enable_dc,dc,java.lang.Boolean:TRUE)">
+            <nlu name="server-app-config"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_ServerAppConfig"
+                 config="[%nluw.config.folder%]/server_app_config_handler.properties"/>
+        </nlu-group>
+
+        <!-- Add NCE Results - if needed -->
+        <nlu name="nce-handle"
+             class="com.nuance.nvc.nlps.handlers.nce.NLUHandler_NCE"
+             config="[%nluw.config.folder%]/nce.properties"/>
+
+        <!-- Add server_specified_settings -->
+        <nlu name="json-set-server_specified_settings"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-server-specified-settings.properties"/>
+
+        <!-- Handle Spatial Search requests -->
+        <nlu-group type="if-else"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_spatial_async,1,java.lang.Boolean:TRUE)">
+            <nlu name="spatial-search-async-end"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+                 config="[%nluw.config.folder%]/spatial_search.properties"
+                 process-mode="ASYNC_END"
+                 process-mode-name="spatial"/>
+
+            <nlu name="spatial-search"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_SpatialSearch"
+                 config="[%nluw.config.folder%]/spatial_search.properties"/>
+        </nlu-group>
+
+
+        <!-- Handle UDE NLU slots Validated/Unconfirmed & DB-Match-->
+        <nlu name="spatial-search-db-match"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_DbMatch"
+             config="[%nluw.config.folder%]/spatial_search.properties"/>
+
+        <!-- Handle TRaCS updates -->
+        <nlu name="tracs-results"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_TraCS"
+             config="[%nluw.config.folder%]/tracs_handler.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_clean_dgo_results,1,java.lang.Boolean:TRUE)">
+            <nlu name="nlu-remove-dgo-action"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/nlu_remove_dgo_action.properties"/>
+        </nlu-group>
+
+        <nlu name="third-party-post-processing"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_ThirdPartyPostProcessing"
+             config="[%nluw.config.folder%]/third_party_post_processing.properties"/>
+
+        <nlu name="vvs-postprocessing"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_VVS"
+             config="[%nluw.config.folder%]/vvs-postprocessing.properties"/>
+
+        <!-- Format the output for DTV retro compatibility application -->
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.dtv.handlers.conditions.DTVRetroCompatibiltyChecking(java.lang.Integer:2,java.lang.Boolean:TRUE)">
+
+            <nlu name="dtv_3_5_compatitiblity"
+                 class="com.nuance.nvc.nlps.dtv.handlers.compatibility.NLUHandler_3_5_Compatibility"
+                 config="[%nluw.config.folder%]/dtv/api/api.properties"/>
+            <nlu name="dtv-url"
+                 class="com.nuance.nvc.nlps.dtv.handlers.NLUHandler_URL"
+                 config="[%nluw.config.folder%]/dtv/url.properties"/>
+            <nlu name="dtv-api"
+                 class="com.nuance.nvc.nlps.dtv.handlers.api.NLUHandler_API"
+                 config="[%nluw.config.folder%]/dtv/api/api.properties"/>
+            <nlu name="dtv-list-selection"
+                 class="com.nuance.nvc.nlps.dtv.handlers.list_selection.NLUHandler_ListSelection"/>
+            <nlu name="dtv-search"
+                 class="com.nuance.nvc.nlps.dtv.handlers.search.NLUHandler_Search"
+                 config="[%nluw.config.folder%]/dtv/search.properties"/>
+            <nlu name="dtv-json"
+                 class="com.nuance.nvc.nlps.dtv.handlers.json.NLUHandler_JSON"
+                 config="[%nluw.config.folder%]/dtv/api/api.properties"/>
+        </nlu-group>
+
+        <!-- PA Updates temp -->
+        <nlu name="pa_updates"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,PA-integration.service,pa,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/pa_updates.properties"/>
+
+        <!-- W3W Updates -->
+        <nlu name="w3w_ntg55_updates"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/w3w_ntg55_updates.properties"/>
+
+        <!-- Alexa Updates temp -->
+        <nlu name="pa_alexa_updates"
+             condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,Alexa-integration.service,alexa,java.lang.Boolean:TRUE)"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/pa_alexa_updates.properties"/>
+
+        <!-- Final Cleaning-->
+        <nlu name="final_cleaning"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/final_cleaning.properties"/>
+
+        <!-- Final - replace place holders -->
+        <nlu name="final_set_placeholders"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/placeholders_update.properties"/>
+
+        <!-- Add the LOG_INFO -->
+        <nlu-group type="if-else"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_log_info_in_response,1,java.lang.Boolean:FALSE)">
+            <!-- Add the LOG_INFO object to the JSON results, as seperate object -->
+            <nlu name="json-dragon-go-for-adk-logInfo"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-addlog.properties"/>
+
+            <!-- Add the LOG_INFO object to the JSON results, nested in the response -->
+            <nlu name="json-dragon-go-for-adk-logInfo-in-response"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                 config="[%nluw.config.folder%]/json-adk-dg-addlog-in-response.properties"/>
+        </nlu-group>
+
+        <!-- Add diagnostic info -->
+        <nlus name="add-diagnostic-info"/>
+
+        <nlu name="final-formatting"
+             class="com.nuance.nvc.nlps.handlers.adk.NLPSHandler_Remapping"
+             config="[%nluw.config.folder%]/remapper_final.properties"/>
+    </nlus>
+
+    <nlus name="smart-search">
+
+        <!-- set DG flow indicator -->
+        <nlu name="set-dg-protocol"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_dg_protocol.properties"/>
+
+        <nlu name="tokenizer"
+             class="com.nuance.nvc.nlps.handlers.tokenizer.NLUHandler_Tokenizer"
+             config="[%nluw.config.folder%]/tokenizer.properties"
+             simulation-mode="[%simulation.tokenizer.mode,save%]"/>
+
+        <nlu-group type="separate-interpretations" process-interpretations="1" add-non-processed="true">
+
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,domain,^dgpt$,java.lang.Boolean:TRUE)">
+                <nlu name="nlu-processing"
+                     class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_NLU"
+                     config="[%nluw.config.folder%]/nlu.properties"
+                     init-mode="[%adk.init.mode,asynch%]"
+                     simulation-mode="[%simulation.adk.mode,run%]"/>
+            </nlu-group>
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,domain,^dgpt$,java.lang.Boolean:FALSE)">
+                <nlu name="adk-processing"
+                     class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADK"
+                     config="[%nluw.config.folder%]/adk.properties"
+                     init-mode="[%adk.init.mode,asynch%]"
+                     simulation-mode="[%simulation.adk.mode,run%]"/>
+            </nlu-group>
+            <nlu name="adk-post"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+                 config="[%nluw.config.folder%]/setting_vcs_calls.properties"/>
+
+            <nlu name="store-objects"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/store_objects.properties"/>
+
+            <!-- Dragon go Domain - continue the cas processing -->
+            <nlu-group type="serial"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.handlers.uima.results.NLUWResult_FromCAS)">
+                <nlus name="dragon-go-from-cas"/>
+            </nlu-group>
+        </nlu-group>
+
+        <nlus name="dragon-go-json"/>
+    </nlus>
+
+    <!-- Reverse geocoding request -->
+    <nlus name="smart-search-reverse-geocoding">
+
+        <nlu name="PrepareURLs"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_ReverseGeocodingRequest"
+             config="[%nluw.config.folder%]/reverse_geocoding_request.properties"/>
+
+        <nlu name="reverse-geocoding"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_GeoCoding"
+             config="[%nluw.config.folder%]/reverse_geocoding.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckSystemProperty(nluw.printer.enabled,TRUE)">
+            <nlu name="printer-nlsml"
+                 class="com.nuance.nvc.nlps.handlers.NLUHandler_Printer"
+                 config="[%nluw.config.folder%]/printer.properties"/>
+        </nlu-group>
+
+        <nlu name="jsonReverseGeocodingRequest"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONReverseGeocoding"
+             config="[%nluw.config.folder%]/reverse_geocoding_json.properties"/>
+    </nlus>
+
+
+    <nlus name="urls-entry">
+
+        <!-- Set System Properties as informatiom slots-->
+        <!-- For now do not turn on vcs flag in this flow
+        <nlu name="set-system-properties"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_system_properties.properties" />
+        -->
+        <nlu name="ADK-entry"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKEntry"
+             config="[%nluw.config.folder%]/adk_entry.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.results.NLUWResult_JSON)">
+            <nlu name="ADK-entry-prepare"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/adk_entry_prepare.properties"/>
+        </nlu-group>
+
+        <nlus name="calendar_process_adk"/>
+
+        <!-- extract relevant results -->
+        <nlu name="ADK-entry-final"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/adk_entry_final.properties"/>
+    </nlus>
+
+    <nlus name="widget-entry">
+
+        <!-- Set System Properties as informatiom slots-->
+        <!-- turn on vcs flags -->
+        <nlu name="set-system-properties"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_SetGeneralInformation"
+             config="[%nluw.config.folder%]/setting_system_properties.properties"/>
+
+        <nlu name="ADK-entry"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKEntry"
+             config="[%nluw.config.folder%]/adk_entry.properties"/>
+
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckResultType(com.nuance.nvc.nlps.results.NLUWResult_JSON)">
+            <nlu name="ADK-entry-prepare"
+                 class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+                 config="[%nluw.config.folder%]/adk_entry_prepare.properties"/>
+        </nlu-group>
+
+        <nlus name="widget-sequence"/>
+
+        <!-- extract relevant results -->
+        <nlu name="Widget-entry-final"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/widget_entry_final.properties"/>
+
+        <!-- Final - replace place holders -->
+        <nlu name="final_set_placeholders"
+             class="com.nuance.nvc.nlps.handlers.adk.NLUHandler_ADKActions"
+             config="[%nluw.config.folder%]/placeholders_update.properties"/>
+    </nlus>
+
+    <nlus name="error-flow-dg">
+        <nlu-group type="separate-interpretations" process-interpretations="1" add-non-processed="true">
+            <nlu name="url-gen-error"
+                 class="com.nuance.nvc.nlps.handlers.URLGenerator.NLUHandler_URLGenerator"
+                 config="[%nluw.config.folder%]/url-generator-error.properties"/>
+        </nlu-group>
+
+        <!-- return JSON result -->
+        <nlus name="dragon-go-json"/>
+    </nlus>
+
+    <nlus name="error-flow">
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,protocol.type,dgpt,java.lang.Boolean:TRUE)">
+            <nlus name="error-flow-dg"/>
+        </nlu-group>
+        <nlu-group type="serial"
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(information,dummy,protocol.type,dgpt,java.lang.Boolean:FALSE)">
+            <!-- Add the LOG_INFO in response if allowed -->
+            <nlu-group type="if-else"
+                       condition-class="com.nuance.nvc.nlps.handlers.conditions.CheckInputSettings(application,application,nlps_log_info_in_response,1,java.lang.Boolean:FALSE)">
+
+                <!-- Exclude LOG_INFO object from response -->
+                <nlu name="error-template"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-error-short.properties"/>
+
+                <!-- Include LOG_INFO object from response -->
+                <nlu name="error-template-debug"
+                     class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+                     config="[%nluw.config.folder%]/json-error.properties"/>
+
+            </nlu-group>
+            <!-- Add diagnostic info -->
+            <nlus name="add-diagnostic-info"/>
+        </nlu-group>
+    </nlus>
+
+    <nlus name="final-flow">
+        <nlu name="set-final-info"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-set-final-info.properties"/>
+        <nlu name="set-callout-info"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-set-callout-info.properties"/>
+        <nlu name="set-nce-input-info"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-set-nce-input-info.properties"/>
+        <nlu name="set-internalremap-info"
+             class="com.nuance.nvc.nlps.handlers.NLUHandler_JSONTemplate"
+             config="[%nluw.config.folder%]/json-set-remap-info.properties"/>
+    </nlus>
+
+    <recognizers>
+        <recognizer>
+            <name>mrec</name>
+            <property name="class" value="com.nuance.nvc.nlps.results.NLUWResult_MRECTokenized"/>
+            <property name="space" value="^20"/>
+            <property name="toLowerCase" value="false"/>
+            <property name="max-interpretations" value="5"/>
+            <property name="log-as" value="mrec.nlsml"/>
+        </recognizer>
+        <recognizer>
+            <name>mrec-json</name>
+            <property name="class" value="com.nuance.nvc.nlps.results.NLUWResult_MRECJSON"/>
+            <property name="space" value="^20"/>
+            <property name="max-interpretations" value="5"/>
+            <property name="interpretations-array" value="text"/>
+            <property name="log-as" value="mrec.json"/>
+        </recognizer>
+        <recognizer>
+            <name>text</name>
+            <property name="class" value="com.nuance.nvc.nlps.results.NLUWResult_Text"/>
+            <property name="log-as" value="text.text"/>
+            <property name="log-as-MTPS" value="text.mtps"/>
+
+        </recognizer>
+        <recognizer>
+            <!-- Used for running sub script - e.g. Url Generation API -->
+            <name>json</name>
+            <property name="class" value="com.nuance.nvc.nlps.results.NLUWResult_JSON"/>
+        </recognizer>
+    </recognizers>
+    <general>
+        <use-nlus-property-file>[%nluw.config.folder%]/nluw_flow_defaults.txt</use-nlus-property-file>
+    </general>
+    <applicationExtraSlots>
+        <properties-file>[%nluw.config.folder%]/data/app_extra_slots.properties</properties-file>
+        <rules-file-generate>[%nluw.config.folder%]/data/user-files/generate-slots.properties</rules-file-generate>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules_initial_0.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules_initial.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules_initial_1.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules_1.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/app_slots_rules_2.txt</rules-file>
+        <rules-file>[%nluw.config.folder%]/data/log_update_rules.txt</rules-file>
+        <templates-folder>[%nluw.config.folder%]/data/templates/</templates-folder>
+        <templates-logs-folder>[%NLUW_HOME%]/logs/nlps_[%jetty.port%]/</templates-logs-folder>
+    </applicationExtraSlots>
+    <default-settings>[%nluw.config.folder%]/data/default-settings.xml</default-settings>
+    <!--- the source for the session id from the application settings for logging.
+          the NLUW will use the http session ID as a default  -->
+    <session-id-source category="application" key="sessionID" log4j-var="ApplicationSessionID"
+                       log4j-gw-var="SessionID"/>
+
+    <!-- The input slot fro the language -->
+    <language-request-slot>nlps_language</language-request-slot>
+
+    <!-- file contains the version id -->
+    <version-file>[%NLPS_HOME%]/nlps-server/nlps_version.txt</version-file>
+    <version-text>;</version-text>
+    <version-file>[%nluw.config.folder%]/../UpdateHistory.txt</version-file>
+    <version-text>;</version-text>
+    <set-warn-log-level-for-stats>[%nlps.set.warn.level.for.stats,1%]</set-warn-log-level-for-stats>
+</manager>

@@ -1,0 +1,15 @@
+[?1/?5/?2018 10:34 AM]  Zhang, Wenbin:  
+com.nuance.nvc.nlps.workflow.DefaultNLUWorkflowManager#initConfiguration 
+ 
+[?1/?5/?2018 10:34 AM]  Zhang, Wenbin:  
+config/handlers-manager.conf 
+ [?1/?23/?2018 3:56 PM]  Zhang, Wenbin:  
+protected void?initConfiguration(String configFile)?throws?NLUWException 
+ 
+[?1/?23/?2018 3:56 PM]  
+ok
+ 
+[?1/?23/?2018 3:56 PM]  Zhang, Wenbin:  
+com.nuance.nvc.nlps.workflow.DefaultNLUWorkflowManager#initConfiguration 
+ 
+
