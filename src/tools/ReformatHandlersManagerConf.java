@@ -76,8 +76,14 @@ public class ReformatHandlersManagerConf {
                     targetLine += (Math.max(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]))) - Math.min(Integer.valueOf(stringsTemp[0]), Integer.valueOf(stringsTemp[1]));
                 }
             }
+            String newFilePathName = System.getenv("NLPS_RUNTIME_ROOT") + "handlers-manager";
+            File newFile = new File(newFilePathName);
+            if (!newFile.exists()) {
+                newFile.createNewFile();
+            }
             for (int i = 0; i < targetLine; i++) {
                 //TODO: Begin write to the new file: 1. create the new file; 2.use the true xml; 3. save to the new path.
+
             }
 
 
