@@ -88,7 +88,7 @@ public class GetNlpsJson {
             }
         }
         for (String s : nlu_map.keySet()) {
-//            System.out.println(s + ": " + "\n" + nlu_map.get(s));
+            System.out.println(s + ": " + "\n" + nlu_map.get(s));
         }
         System.out.println(nlu_map.size());
 //
