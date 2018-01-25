@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * Version 1.0:
  * This code's main functions: format the conf file named: handlers-manager.conf.
  * After you run this code, you must make sure that you computer can run the NLPS normally.
  * That is: the computer must have the env named:[%NLPS_RUNTIME_ROOT%] or [%NLPS_HOME%],
@@ -17,10 +18,23 @@ import java.util.regex.Pattern;
  * "7-21-false":  <begin line>-<end line>-<whether have sub nlus group> of <nlus name="url-gen-sequence">.
  * "200": <line of the sub nlus group>
  *
+ *  Version 2.0:
+ *  Changes:
+ *  Get the project file path.
+ *
  * @author: Neng Qi [neng.qi@nuance.com]
  * @since: java8
  */
 public class ReformatHandlersManagerConfTwo {
+
+    /**
+     * @return cdProjectPathFormate
+     */
+    public String getManagerPathInTheCodeProject() {
+        String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.conf").toString();
+        String cdProjectPathFormate = cdProjectPath.substring(cdProjectPath.indexOf("/") + 1, cdProjectPath.length());
+        return cdProjectPathFormate;
+    }
 
     /**
      * @return stWorkflowManagerConfiguration
