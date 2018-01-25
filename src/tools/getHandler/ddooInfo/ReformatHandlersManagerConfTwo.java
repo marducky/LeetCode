@@ -31,7 +31,9 @@ public class ReformatHandlersManagerConfTwo {
      * @return cdProjectPathFormate
      */
     public String getManagerPathInTheCodeProject() {
-        String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.conf").toString();
+//        System.out.println(ReformatHandlersManagerConf.class.getResource(""));
+        String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.xml").toString();
+//        String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.conf").toString();
         String cdProjectPathFormate = cdProjectPath.substring(cdProjectPath.indexOf("/") + 1, cdProjectPath.length());
         return cdProjectPathFormate;
     }
@@ -155,8 +157,13 @@ public class ReformatHandlersManagerConfTwo {
             } else if (!stRootPathNewFile.endsWith("\\") && !stRootPathNewFile.endsWith("/")) {
                 stRootPathNewFile += "/";
             }
+            File dirFile=new File(stRootPathNewFile);
+            if (!dirFile.exists()){
+                dirFile.mkdirs();
+            }
             String newFilePathName = stRootPathNewFile + "handlers-manager.xml";
             File newFile = new File(newFilePathName);
+//            File newFile=new File(stRootPathNewFile,"handlers-manager.xml");
             //exists-->clear content. not exists--> builder.
             if (!newFile.exists()) {
                 newFile.createNewFile();
@@ -166,6 +173,7 @@ public class ReformatHandlersManagerConfTwo {
                 fileWriterClear.flush();
                 fileWriterClear.close();
             }
+            System.out.println("---------------------\n"+"new handlers-manager.xml output: "+newFilePathName+"\n---------------------");
             FileWriter fileWriter = new FileWriter(newFile, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             writeToTheNewFile(bufferedWriter, 1, targetLine, allLine, nlusLineToSingle, resultNlus);
@@ -230,7 +238,10 @@ public class ReformatHandlersManagerConfTwo {
     public static void main(String[] args) {
         ReformatHandlersManagerConfTwo reformatHandlersManagerConf = new ReformatHandlersManagerConfTwo();
 //        reformatHandlersManagerConf.readFileToXml("C:\\Users\\neng.qi\\Desktop\\handlers-manager.xml");
-        String strPath = reformatHandlersManagerConf.getHanderManagerConfPath();
-        reformatHandlersManagerConf.readFileToXml(strPath);
+//        String strPath = reformatHandlersManagerConf.getHanderManagerConfPath();
+        String strPathPaath = reformatHandlersManagerConf.getManagerPathInTheCodeProject();
+        System.out.println("---------------------\n"+"handlers-manager.conf: "+strPathPaath+"\n---------------------");
+//        reformatHandlersManagerConf.readFileToXml(strPath);
+        reformatHandlersManagerConf.readFileToXml(strPathPaath);
     }
 }
