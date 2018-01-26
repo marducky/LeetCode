@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  *
  *  Version 2.0:
  *  Changes:
- *  Get the project file path.
+ *  Get the project file path from the handlers-manager.conf file path.
  *
  * @author: Neng Qi [neng.qi@nuance.com]
  * @since: java8
@@ -31,9 +31,9 @@ public class ReformatHandlersManagerConfTwo {
      * @return cdProjectPathFormate
      */
     public String getManagerPathInTheCodeProject() {
-//        System.out.println(ReformatHandlersManagerConf.class.getResource(""));
+        //System.out.println(ReformatHandlersManagerConf.class.getResource(""));
         String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.xml").toString();
-//        String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.conf").toString();
+        //String cdProjectPath = ReformatHandlersManagerConfTwo.class.getResource("handlers-manager.conf").toString();
         String cdProjectPathFormate = cdProjectPath.substring(cdProjectPath.indexOf("/") + 1, cdProjectPath.length());
         return cdProjectPathFormate;
     }
@@ -107,7 +107,8 @@ public class ReformatHandlersManagerConfTwo {
                     targetBegin = targetLine;
                     isNlusGroupBeginFlag = false;
                     nulsName = matcherBegin.group(0);
-                    System.out.println(nulsName);
+                    //print the pattern info
+                    //System.out.println(nulsName);
                 }
 
                 //pattern the </nlus>
@@ -118,15 +119,18 @@ public class ReformatHandlersManagerConfTwo {
                     if (isNlusGroupHavaOtherNlus) {
                         resultNlus.put(nulsName, targetBegin + "-" + targetEnd + "-true");
                         isNlusGroupHavaOtherNlus = false;
-                        System.out.println(targetBegin + "-" + targetEnd + "-true");
+                        //print the pattern info
+                        //System.out.println(targetBegin + "-" + targetEnd + "-true");
                     } else {
                         resultNlus.put(nulsName, targetBegin + "-" + targetEnd + "-false");
-                        System.out.println(targetBegin + "-" + targetEnd + "-false");
+                        //print the pattern info
+                        //System.out.println(targetBegin + "-" + targetEnd + "-false");
                     }
 
-//                    System.out.println(targetBegin + "-" + targetEnd);
+                    //System.out.println(targetBegin + "-" + targetEnd);
                     isNlusGroupBeginFlag = true;
-                    System.out.println(matcherEnd.group());
+                    //print the pattern info
+                    //System.out.println(matcherEnd.group());
                 }
                 //pattern the <nlus name="dragon-go-from-cas" /> or  <nlus name="dragon-go-from-cas"/>
                 Pattern patternSingleNlus = Pattern.compile(isSingleNlus);
@@ -137,7 +141,8 @@ public class ReformatHandlersManagerConfTwo {
                     nlusLineToSingle.put(targetLine, matcherSingleNlus.group(0));
                     //can be delete.
                     nuleSingleMapLine.put(targetLine + "", matcherSingleNlus.group(0));
-                    System.out.println(targetLine + "       " + matcherSingleNlus.group(0));
+                    //print the pattern info
+                    //System.out.println(targetLine + "       " + matcherSingleNlus.group(0));
                     isNlusGroupHavaOtherNlus = true;
                 }
             }
@@ -163,7 +168,7 @@ public class ReformatHandlersManagerConfTwo {
             }
             String newFilePathName = stRootPathNewFile + "handlers-manager.xml";
             File newFile = new File(newFilePathName);
-//            File newFile=new File(stRootPathNewFile,"handlers-manager.xml");
+            //File newFile=new File(stRootPathNewFile,"handlers-manager.xml");
             //exists-->clear content. not exists--> builder.
             if (!newFile.exists()) {
                 newFile.createNewFile();
@@ -173,7 +178,7 @@ public class ReformatHandlersManagerConfTwo {
                 fileWriterClear.flush();
                 fileWriterClear.close();
             }
-            System.out.println("---------------------\n"+"new handlers-manager.xml output: "+newFilePathName+"\n---------------------");
+            System.out.println("---------------------\n" + "new handlers-manager.xml output: \n" + newFilePathName + "\n---------------------");
             FileWriter fileWriter = new FileWriter(newFile, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             writeToTheNewFile(bufferedWriter, 1, targetLine, allLine, nlusLineToSingle, resultNlus);
@@ -237,11 +242,11 @@ public class ReformatHandlersManagerConfTwo {
 
     public static void main(String[] args) {
         ReformatHandlersManagerConfTwo reformatHandlersManagerConf = new ReformatHandlersManagerConfTwo();
-//        reformatHandlersManagerConf.readFileToXml("C:\\Users\\neng.qi\\Desktop\\handlers-manager.xml");
-//        String strPath = reformatHandlersManagerConf.getHanderManagerConfPath();
+        //reformatHandlersManagerConf.readFileToXml("C:\\Users\\neng.qi\\Desktop\\handlers-manager.xml");
+        //String strPath = reformatHandlersManagerConf.getHanderManagerConfPath();
         String strPathPaath = reformatHandlersManagerConf.getManagerPathInTheCodeProject();
-        System.out.println("---------------------\n"+"handlers-manager.conf: "+strPathPaath+"\n---------------------");
-//        reformatHandlersManagerConf.readFileToXml(strPath);
+        System.out.println("---------------------\n" + "handlers-manager.conf: \n" + strPathPaath + "\n---------------------");
+        //reformatHandlersManagerConf.readFileToXml(strPath);
         reformatHandlersManagerConf.readFileToXml(strPathPaath);
     }
 }

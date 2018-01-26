@@ -1,9 +1,8 @@
-package tools.getHandler;
+package tools.getHandler.aaaaoooInfo;
 
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Set;
 
 public class ConfTree {
     private String confPath;

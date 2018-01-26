@@ -1,12 +1,9 @@
 package knowledge.baseKnowledge.jsonDemo;
 
-import net.sf.json.JSON;
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import tools.getHandler.PrintConsoleInfo;
+import tools.getHandler.aaaaoooInfo.PrintConsoleInfo;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 //class manager{

@@ -1,0 +1,1 @@
+CMD java -jar /stubby/stubby4j-5.1.1.jar -d /stubby/NinaTest.yaml
