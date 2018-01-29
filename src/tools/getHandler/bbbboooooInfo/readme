@@ -1,0 +1,22 @@
+//http://blog.csdn.net/wb96a1007/article/details/52015351
+This is the simplest you can get:
+
+-  request:
+      url: /
+A demonstration when not using regular expressions:
+
+-  request:
+      url: /some/resource/that/will/be/fully/matched
+A demonstration using regular expressions:
+
+-  request:
+      url: ^/has/to/begin/with/this/
+
+-  request:
+      url: /has/to/end/with/this/$
+
+-  request:
+      url: ^/must/be/this/exactly/with/optional/trailing/slash/?$
+
+-  request:
+      url: ^/[a-z]{3}-[a-z]{3}/[0-9]{2}/[A-Z]{2}/[a-z0-9]+$

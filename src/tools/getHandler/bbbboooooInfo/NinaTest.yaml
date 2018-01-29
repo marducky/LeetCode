@@ -7,3 +7,106 @@
       headers:
          content-type: application/json
       body: Hello World!
+-  request:
+      method: GET
+      url: /hello-world3333
+
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      body: Hello World3333!
+
+
+-  description: Stub one
+   request:
+      url: /one
+      method: GET
+
+   response:
+      status: 200
+      latency: 100
+      body: 'One!'
+-  description: Stub two
+   request:
+      url: ^/two$
+      method: GET
+
+   response:
+      status: 200
+      latency: 100
+      body: 'Two!'
+- request: 
+      url: /aaa/bbb/queryCst
+      method: POST
+      post:
+        (.*)6791169999(.*)
+
+  response:
+       status: 200
+       headers:
+          content-type: application/json
+       body: >
+         <?xml version="1.0" ?>
+         <response>
+             <resultCode>0</resultCode>
+         </response>
+-  request:
+      method: POST
+      url: /post-body-as-json-2
+      headers:
+         content-type: application/json
+      post: >
+         {"objects": [{"key": "value"}, {"key": "value"}, {"key": {"key": "(.*)"}}]}
+
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      body: >
+         {"internalKey": "<%post.1%>"}
+-  request:
+      method: POST
+      url: /post-body-as-json-2
+      headers:
+         content-type: application/json
+      post: >
+         .*"userTest":(.*)ssss
+
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      body: >
+         {"internalKey": "<%post.1%>"}
+
+#-  request:
+#      method: GET
+#      url: ^/with/parameters$
+#      query:
+#         type_name: user
+#         client_id: id
+#         client_secret: secret
+#         random_id: "^sequence/-/\\d/"
+#         session_id: "^user_\\d{32}_local"
+#         attributes: '["id","uuid","created","lastUpdated","displayName","email","givenName","familyName"]'
+#   response:
+#      status: 200
+#      latency: 100
+#      body: 'Two!'
+
+#-a test for post --failed
+#-  request:
+#   method: PUT
+#   url: /invoice/123
+#   headers:
+#      content-type: application/json
+#   post: >
+#      {"name": "milk", "description": "full", "department": "savoury"}
+#
+#   response:
+#      headers:
+#         content-type: application/json
+#         pragma: no-cache
+#      status: 200
+#      body: 

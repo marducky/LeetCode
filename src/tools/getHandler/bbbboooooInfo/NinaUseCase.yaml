@@ -1,0 +1,15 @@
+-  request:
+      method: POST
+      url: /Nina/Finance
+      headers:
+         content-type: application/json
+      post: >
+#         {"objects": [{"key": "value"}, {"key": "value"}, {"key": {"key": "(.*)"}}]}
+          {  "TalkAgentRequest":{    "@SCI": "(.*)",    "@IID": "(.*)",    "@TimeStamp": "(.*)",    "UserText": "I want to transfer some money.",      }}
+
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      body: >
+#         {"internalKey": "<%post.1%>"}

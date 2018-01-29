@@ -47,14 +47,14 @@ public class RunStubbyProcessJar implements Runnable {
             String command2 = "java -jar G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\stubby4j-5.1.1.jar -d G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\NinaTest.yaml";
 //            Process p1 = Runtime.getRuntime().exec(cmdPath1);
 //            Process p2 = Runtime.getRuntime().exec(cmdPath2);
-            Process p = Runtime.getRuntime().exec(command2);
+            Process p = Runtime.getRuntime().exec(cmdPath1);
             RunStubbyProcessJar errorStream = new RunStubbyProcessJar(p.getErrorStream());
             RunStubbyProcessJar outputStream = new RunStubbyProcessJar(p.getInputStream());
             new Thread(errorStream).start();
             new Thread(outputStream).start();
             p.waitFor();
 
-            String result = command2 + "\n" + outputStream.output.toString()
+            String result = cmdPath2 + "\n" + outputStream.output.toString()
                     + errorStream.output.toString();
             System.out.print(result);
         } catch (Exception e) {
