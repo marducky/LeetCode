@@ -1,0 +1,20 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@ae388bee-cf77-0a9e-2b1a-2ece4b16449c@2c066f6e-2e49-42aa-bab3-6c89a32cefc4",
+    "@IID": "1cac0efe-2d21-4ffb-9512-39c6c1bb3933",
+    "@TimeStamp": "2018-01-09T07:06:06.1630972Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "I come from Nuance Chengdu Team! "
+      },
+      "AlternateOutText": {
+        "#text": "I come from Nuance Chengdu Team! "
+      }
+    },
+    "OutRewords": {
+      "rewords": "I come from Nuance Chengdu Team! "
+    }
+  }
+}
