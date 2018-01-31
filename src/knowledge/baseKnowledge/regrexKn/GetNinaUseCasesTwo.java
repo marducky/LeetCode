@@ -53,7 +53,8 @@ public class GetNinaUseCasesTwo {
     }
 
     // it can make the txt format.
-    public void fomatNinaTxtFile(String pathNinaUseCase) {
+    public ArrayList<String> fomatNinaTxtFile(String pathNinaUseCase) {
+        ArrayList<String> arrayListResult = new ArrayList<String>();
         File newText = new File(pathNinaUseCase.substring(0, pathNinaUseCase.lastIndexOf('\\') + 1) + "NinaCase.txt");
         try {
             FileInputStream fileInputStream = new FileInputStream(newText);
@@ -75,9 +76,11 @@ public class GetNinaUseCasesTwo {
 //                System.out.println(counter + " " + line.length());
                 line = line.trim();
                 line.replaceAll("\r\n", "");
-//                line.replaceAll("\\(.*\\)", "");
                 if (line.startsWith("#") || (line.equals("\r\n")) || (line.equals("\t")) || (line.equals(""))) {
                     continue;
+                }
+                if (line.toString().equals("Overall notes")) {
+                    break;
                 }
                 Pattern pattern = Pattern.compile(truDemo);
                 Matcher matcher = pattern.matcher(line);
@@ -95,19 +98,13 @@ public class GetNinaUseCasesTwo {
                         Matcher matcherTemp = patternTemp.matcher(line);
                         int ccc = 0;
                         if (matcherTemp.find()) {
-//                            arrayList.add(line);
                             ccc++;
-//                            System.out.println("++++++++++++++++++++");
                         }
                         if (ccc == 1) {
-                            System.out.println("++++++++++++++++++++");
-                        } else System.out.println("--------------------");
-//                        else {
-//                        if (line.startsWith("[\\d]\\.[\\d]\\.[\\d]")){
-//
-//                        }
-                        arrayList.add(line.substring(0, Integer.valueOf(strings[0])));
-//                        }
+                            arrayList.add(line);
+                        } else {
+                            arrayList.add(line.substring(0, Integer.valueOf(strings[0])));
+                        }
                     } else {
                         arrayList.add(line.substring(Integer.valueOf(strings[1]), line.length()));
                     }
@@ -118,20 +115,42 @@ public class GetNinaUseCasesTwo {
                 arrayListTemp.clear();
             }
             System.out.println(counter);
-            for (String s : arrayList) {
-                System.out.println(s);
-            }
+//            for (String s : arrayList) {
+//                System.out.println(s);
+//            }
+            arrayListResult = arrayList;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return arrayListResult;
     }
-
+    //begin save the format file.
+    public void saveFormatFile(ArrayList<String> targetArrayList,String pathNinaUseCase){
+        File newText = new File(pathNinaUseCase.substring(0, pathNinaUseCase.lastIndexOf('\\') + 1) + "NinaCaseFormat.txt");
+        try {
+            if (!newText.exists()) {
+                newText.createNewFile();
+            } else {
+                FileWriter fileWriterClear = new FileWriter(pathNinaUseCase.substring(0, pathNinaUseCase.lastIndexOf('\\') + 1) + "NinaCaseFormat.txt", false);
+                fileWriterClear.write("");
+                fileWriterClear.flush();
+                fileWriterClear.close();
+            }
+            FileWriter fileWriter = new FileWriter(newText, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (String stringTemo:targetArrayList){
+                bufferedWriter.write(stringTemo+"\n");
+            }
+//            bufferedWriter.write(text2003);
+            bufferedWriter.close();
+            fileWriter.close();
+        }catch (IOException e){e.printStackTrace();}
+    }
     public static void main(String[] args) {
         GetNinaUseCasesTwo getNinaUseCases = new GetNinaUseCasesTwo();
         getNinaUseCases.turnToTxt(getNinaUseCases.getFileName());
-        getNinaUseCases.fomatNinaTxtFile(getNinaUseCases.getFileName());
+        getNinaUseCases.saveFormatFile(getNinaUseCases.fomatNinaTxtFile(getNinaUseCases.getFileName()),getNinaUseCases.getFileName());
     }
 }
