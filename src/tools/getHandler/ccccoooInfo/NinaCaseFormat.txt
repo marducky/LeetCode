@@ -1,0 +1,1219 @@
+Nina MC – Coded reference design
+Author: Susan Daniel
+Table of Contents
+TOC \o "1-3" \h \z \u Use cases
+1 Finance
+1.1.0 Funds transfer (happy path)	3
+1.1.1	Funds transfer (insufficient funds, suggest sufficient account)	
+1.1.2 Funds transfer (insufficient funds)	5
+1.2.0 POP Money (happy path)	6
+1.2.1 POP Money (insufficient funds, suggest sufficient account)	7
+1.2.2 POP Money (insufficient funds)	8
+1.3.0 Pay a bill (happy path)	9
+1.3.1 Pay a bill (insufficient funds, suggest sufficient account)	10
+1.4.0 New Credit Card (happy path)	12
+1.5.0 Activate Credit Card (happy path)	19
+1.6.0 Fraud Identity verification (happy path)	22
+1.7.3.0 Channel to live agent (happy path)	23
+2 Telco
+2.1.0 FAQ/NAV with eCommerce upsell (happy path)	25
+2.1.1 FAQ/NAV with eCommerce upsell (Apple Pre-order)	27
+2.1.2 FAQ/NAV with eCommerce upsell (product unavailable error)	28
+2.2.0 Account Management (happy path)	29
+2.2.1 Account Management (different phone, smartphone)	30
+2.2.2 Account Management (different phone, basic phone not compatible)	30
+2.3.0 Troubleshooting (happy path)	31
+2.3.1 Troubleshooting (Apple can’t replace)	32
+2.3.2 Troubleshooting (Replace battery)	33
+2.4.0 Channel to live agent (happy path)	33
+3 Retail
+3.1.0 Search (happy path)	35
+3.2.0 Navigation (happy path)	36
+3.2.1 Navigation - item not delivered yet	36
+3.2.2 Navigation - item being restocked	37
+3.3.0 Process automation (happy path)	38
+3.3.1 Process automation – can’t return after 30 days	38
+3.4.0 Channel to live agent (happy path)	39
+3.5.0 How do I… (happy path)	40
+3.6.0 In store locator  (happy path)	41
+3.6.1 In store locator  (online item only)	41
+4 Food
+4.1.0 Locator Map (happy path)	42
+4.2.0 How do I… (happy path)	42
+4.3.0 Order transaction (happy path)	43
+4.3.1 Order transaction  - drink unavailable at favorite café	44
+4.4.0 Add money to payment account (happy path)	46
+4.4.1 Add money to payment account – insufficient funds	46
+4.5.0 Personalized Order transaction (happy path)	47
+4.6.0 Channel to live agent (happy path)	48
+4.5.1 Personalized Order transaction - update favorite drink	49
+5 Healthcare
+5.1.0 Claim Status (happy path)	50
+5.2.0 Renew prescription (happy path)	50
+5.2.1 Renew prescription (monthly maximum reached)	51
+5.3.0 Channel to live agent (happy path)	51
+5.4.0 Coverage (happy path)	52
+5.4.1 Coverage (procedure not covered)	53
+6 Travel
+6.1.0 Flight information (happy path)	55
+6.2.0 Booking (happy path)	58
+6.3.0 Booking (happy path)	62
+6.4.0 Transaction – Transfer Points (happy path)	62
+6.5.0 Channel to live agent (happy path)	64
+Overall notes
+Hyperlinks
+Requirements (From Abhinav)
+Use cases
+1 Finance
+1.1.0 Funds transfer (happy path)
+1.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to transfer some money.
+Transfer money
+I’d like to transfer money
+I would like to transfer money
+1.1.0-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking
+Checking account
+1.1.0-2	Ok. To which account?
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+All account values except the payer account
+Savings
+Savings account
+1.1.0-3	Please type in the amount you like to <transfer/send/pay>.
+The variable text should say “transfer” in this case
+$5000.00
+1.1.0-4	Ok, you’d like to <transfer/send/pay>  $5000.00 from your checking account to your saving account. Is that correct?
+Yes
+No
+Yes
+Yep
+Sure
+Correct
+That’s right
+1.1.0-5	Great. Your transaction has been submitted.
+1.1.0-6	Can I help you with anything else?
+Funds transfer (insufficient funds, suggest sufficient account)
+Agent transfer NOT allowed for this use case, Nina response, “A live agent is currently not available, but I’d be happy to assist you.”
+1.1.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to transfer some money.
+1.1.1-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.1.1-2	Ok. To which account?
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+All account values except the payer account
+Saving
+1.1.1-3	Please type in the amount you like to <transfer/send/pay>.
+The variable text should say “transfer” in this case
+$13,000.00
+1.1.1-4	Hmm, there’s not enough money in your checking account to make this transfer. Do you want to transfer this amount from your brokerage account instead?
+Yes, transfer from brokerage account
+No, don’t make a transfer
+(Suggest account with sufficient funds)
+Yes.
+1.1.0-4	Ok, you’d like to <transfer/send/pay>  $13,000.00 from your brokerage account to your saving account. Is that correct?
+Yes
+No
+Yes.
+1.1.1-5	Great. Your transaction has been submitted.
+(If Yes transfer from Brokerage, go to wrap up prompt)
+No.
+1.1.1-6	Ok. This transaction has been canceled.
+(If No, don’t make a transfer, play wrap up prompt)
+1.1.1-7	Can I help you with anything else?
+1.1.2 Funds transfer (insufficient funds)
+1.1.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to transfer some money.
+1.1.2-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.1.2-2	Ok. To which account?
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+All account values except the payer account
+Savings
+1.1.2-3	Please type in the amount you like to <transfer/send/pay>.
+The variable text should say “transfer” in this case
+$35,000.00
+1.1.2-4	Sorry, there isn’t enough money in that account to make this transfer.
+1.1.2-5	Can I help you with anything else?
+1.2.0 POP Money (happy path)
+1.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to send money to Jon
+Send money to Jon
+Transfer money to Jon
+I’d like to transfer money to Jon
+I would like to transfer money to Jon
+1.2.0-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.2.0-2	Ok. To which account?
+Jon Stevens - Checking *6710
+Jon Stevens - Savings *6712
+Jon Stevens - Checking *6710
+Checking
+Checking account
+First one (or second one for Saving)
+(Payee account--Any value)
+1.2.0-3	Please type in the amount you like to <transfer/send/pay>.
+$50.00
+1.2.0-4	Ok, you’d like to <transfer/send/pay>  $50.00 from your checking account to Jon Stevens checking account. Is that correct?
+Yes
+No
+Yes.
+1.2.0-5	Great. Your transaction has been submitted.
+Can I help you with anything else?
+1.2.1 POP Money (insufficient funds, suggest sufficient account)
+Option of live chat offered proactively in the use case
+1.2.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to send money to Jon
+1.2.1-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.2.1-2	Ok. To which account?
+Jon Stevens - Checking *6710
+Jon Stevens - Savings *6712
+Jon Stevens - Checking *6710
+1.2.1-3	Please type in the amount you like to <transfer/send/pay>.
+$10,000.00
+1.2.1-4	Hmm, there’s not enough money in your checking account to make this transfer. Do you want to transfer this amount from your savings account instead?
+Yes, transfer from Savings account
+No, don’t make a transfer
+Chat with a live agent
+When both brokerage and Savings have sufficient funds, suggest Saving. Only when Saving is also insufficient suggest brokerage.
+Yes.
+1.2.0-4	Ok, you’d like to <transfer/send/pay>  $10,000.00 from your saving account to Jon Stevens checking account. Is that correct?
+Yes
+No
+Yes.
+1.2.1-5	Great. Your transaction has been submitted.
+Can I help you with anything else?
+1.2.2 POP Money (insufficient funds)
+1.2.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to send money to Jon
+1.2.2-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.2.2-2	Ok. To which account?
+Jon Stevens - Checking *6710
+Jon Stevens - Savings *6712
+Jon Stevens - Checking *6710
+1.2.2-3	Please type in the amount you like to <transfer/send/pay>.
+$35,000.00
+1.2.2-4	Sorry, there isn’t enough money in that account to make this transfer.
+1.2.2-5	Can I help you with anything else?
+1.3.0 Pay a bill (happy path)
+1.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to pay my credit card bill.
+Pay my credit card bill
+I’d like to pay my credit card bill
+I would like to pay my credit card bill
+1.3.0-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Checking
+Checking account
+1.3.0-2	Ok. Which credit card bill would you like to pay?
+Visa *3424
+Mastercard *5401
+Visa *3424
+Visa card
+Visa
+(Visa is happy path, Mastercard is insufficient funds path)
+1.3.0-3	How much?
+Full balance - $5,416.78
+Monthly payment – $303.12
+A specific amount
+Full balance - $5,416.78
+Full
+In full
+1.3.0-4	Ok, you’d like to <transfer/send/pay> the full balance of $5,415.78 from your checking account to your Visa card. Is that correct?
+Yes
+No
+Yes.
+1.3.0-5	Great. Your transaction has been submitted.
+1.3.0-6	Can I help you with anything else?
+1.3.1 Pay a bill (insufficient funds, suggest sufficient account)
+1.3.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to pay my credit card bill.
+1.3.1-1	Sure. From which account?
+Checking *2341 – Balance $8,345.01
+Savings *8760 – Balance $12,762.90
+Brokerage *2376 – Balance $34,981.76
+Checking 
+1.3.1-2	Ok. Which credit card bill would you like to pay?
+Visa *3424
+Mastercard *5401
+Mastercard *5401
+Mastercard
+1.3.1-3	How much?
+Full balance - $9,724.01
+Monthly payment – $324.12
+A specific amount
+Full balance- $9,000.00
+1.3.1-4	Hmm, there’s not enough money in your checking account to pay this bill. Do you want to pay this amount from your savings account instead?
+Yes, pay from Savings account
+No, don’t pay this bill
+Yes.
+1.3.1-5	Ok, you’d like to <transfer/send/pay> the full balance of $9,724.01 from your savings account to your Mastercard. Is that correct?
+Yes
+No
+Yes.
+1.3.1-6	Great. Your transaction has been submitted.
+No.
+1.3.1-7	Ok. This transaction has been canceled.
+(If No, don’t make a transfer, play wrap up prompt)
+1.3.1-8	Can I help you with anything else?
+1.4.0 New Credit Card (happy path)
+1.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+What kind of credit cards do you offer?
+Which credit cards do you offer?
+What credit cards do you offer?
+Which credit cards do you provide?
+1.4.0-1	We offer competitive rates for 3 popular credit cards. Which are you interested in?
+Travel rewards credit card
+Cash rewards credit card
+0% APR for a year introductory credit card	Travel rewards goes to 1.4.0-2 (path A)
+Cash rewards goes to
+Travel rewards
+Travel
+1.4.0-2a	Our travel rewards card will really take you places! You’ll earn 3 Neptune Airlines miles for every $1 you spend on Neptune Airlines, 2 miles for every $1 spent at restaurants, gas stations, department stores, grocery stores, and on Neomart.com, plus 1 mile per dollar on all other purchases. We’ll also give you a one-time welcome bonus of 75,000 miles if you spend $2000 in the first 3 months. Would you like to apply now or do you have more questions about this card?
+Apply now How many interest free days?
+What’s the interest rate?
+What insurances are included?
+What are the fees?
+Apply now is an upsell (This is path A)
+How many interest free days? 
+1.4.0-3a	You pay no interest on purchases for the first 12 months of card membership, and no interest when you pay your statement balance in full every month. Would you like to apply now?
+What’s the interest rate?
+What is the interest rate?
+1.4.0-4a	The interest rate on purchases is 12.99%, and 19.99% on cash advances. Would you like to apply now?
+What insurances are included?
+Which insurances are included?
+Any insurances included?
+1.4.0-5a	This card offers the full suite of Visa Signature benefits including warranty extension, price and return protection, travel insurance, travel delay reimbursement, lost luggage protection, roadside assistance, and much more. Would you like to apply now?
+What are the fees?
+What about the fees?
+What’s the fee?
+What is the fee?
+1.4.0-6a	There's no fee for the first 12 months of card membership. After that, there’s a $95 annual fee. Would you like to apply now?
+Cash rewards
+1.4.0-2b	Our cash rewards card will really pay off! You’ll earn 1% cash back on every purchase, 2% at the grocery store and on NeoMart.com, plus 3% on gas for the first $2500 in combined grocery & gas purchases each quarter. 0% APR for the first 12 months. Would you like to apply now or do you have more questions about this card?
+Apply now What is the APR after 12 months?
+What is the balance transfer fee?
+What is the annual fee?
+Apply now is an upsell (this is path B)
+What is the APR after 12 months? 
+1.4.0-3b	You pay 0% APR on purchases for the first 12 months of card membership. After that, a variable APR between 13% to 24% will apply. Would you like to apply now?
+What is the balance transfer fee?
+1.4.0-4b	A 3% fee, minimum $10, applies to balance transfers. Would you like to apply now?
+What is the annual fee?
+1.4.0-5b	There’s no annual fee for our cash rewards card. Would you like to apply now?
+0% APR for a year introductory credit card
+1.4.0-2c	Our 0% APR introductory card is simple and convenient. You’ll save more with the lowest APR available amongst our cards. This cards offers 0% APR on balance transfers for the first 18 billing cycles. Would you like to apply now or do you have more questions about this card?
+Apply now What is the APR for purchases?
+What is the APR on balance transfers after 18 months?
+What is the annual fee?
+Apply now is an upsell (This is path C)
+What is the APR for purchases?
+1.4.0-3c	The APR on purchases is variable between 11% to 22% for the first 12 months of card membership. After that, a variable APR between 13% to 24% will apply. Would you like to apply now?
+What is the APR  on balance transfers after 18 months?
+1.4.0-4c	You pay 0% APR on balance transfers for the first 18 billing cycles. After that, a variable APR between 13% to 22% will apply. Would you like to apply now?
+What is the annual fee?
+1.4.0-5c	There’s no annual fee for our cash rewards card. Would you like to apply now?
+Apply now 
+1.4.0-7	Sure, I can help you with that. Here’s the information I have from your account:
+<Toria Stevens
+1250 Hamilton Ave
+Palo Alto, CA 94301
+415-328-4539
+toria@mail.com
+March, 11, 1974>
+Is that all correct?
+[Pre-filled table with first name, last name, address, phone, email, date of birth]
+We can hard code this for the demo so it will show up on the mobile side.
+Yes
+1.4.0-8	What is your citizenship status?
+US Citizen
+Resident Alien
+Non-resident Alien
+(Any value)
+1.4.0-9	What is your employment status?
+Employed
+Self employed
+Homemaker
+Retired
+Student
+Unemployed with income
+Unemployed with no income
+(Any value)
+1.4.0-10	Enter your total annual income.
+(Any value)
+1.4.0-11	What is your source of income?
+Employment
+Inheritance/Trust
+Investment Income
+Retirement Income
+Social Security
+Unemployment/Other income
+Skip if employment status is employed
+(Any value)
+1.4.0-12	Enter your monthly housing payment.
+(Any value)
+1.4.0-13	Here are the terms and conditions. Do you accept?
+Yes
+No
+Yes
+1.4.0-14	Almost done. Please review your information. Does this look correct?
+Name: Toria Stevens
+Address: 1250 Hamilton Ave
+Palo Alto, CA 94301
+Phone: 415-328-4539
+Email: toria@mail.com
+Birthdate: March, 11, 1974
+Citizenship: <citizenship>
+Employment: <employment_status>
+Annual Income: $<annual_income>
+Income source: <income_source>
+House payment: <house_payment>
+Yes, this looks correct
+No, I need to change something
+I’d like to speak to a live agent
+We can hard code the personal info for the demo so it will show up in the mobile version
+Yes, this looks correct
+That’s right
+Correct
+Yes
+1.4.0-15	Great. Your application has been submitted. A response will be emailed to you right away.
+Can I help you with anything else?
+No, I need to change something
+(Path 5b)
+1.4.0-16	No problem. What information would you like to update?
+<first_name>?
+<last_name>?
+<address>?
+<phone_number>?
+<email_address>?
+<citizenship>?
+<employment_status>?
+<annual_income>?
+<income_source>?
+<house_payment>?
+I’d like to speak to a live agent
+Talk to a live agent
+Speak to a live agent
+Speak to a human
+Talk to a human
+(Path 5c)
+1.4.0-17	Ok. One of our credit specialists will call you in less than 5 minutes. I’ve already forwarded your information. Can I help you with anything else while we wait?
+1.5.0 Activate Credit Card (happy path) – NOT SUPPORTED FOR NOW
+(User is logged in)
+1.5.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I’ve received my credit card and need to activate it
+Activate my credit card
+Activate credit card
+Activate my card
+I’d like to activate my credit card
+I want to activate my card
+1.5.0-1	Sure, I can help you with that.
+To get started, enter the 16 digit card number from the front of your card.
+Images not supported on mobile for this demo.
+MUST be supported for the product.
+1234567891234567 
+1.5.0-2	Next, enter the expiration date on the front of your card. (xx/xx)
+Images not supported on mobile for this demo.
+MUST be supported for the product.
+01/17
+January 2017
+January 17
+1.5.0-3	Next, enter the 3 digit security number on the back of your card.
+Images not supported on mobile for this demo.
+MUST be supported for the product.
+123
+1.5.0-4	Thanks. Finally, I will quickly record your voiceprint so that I can confirm your identity in the future. Please make sure your microphone is enabled and you are in a quiet place.
+Continue. Record my voiceprint now
+Cancel, please record my voiceprint later
+Continue. Record my voiceprint now
+1.5.0-5	Please speak clearly into the microphone. I’ll record your passphrase three times. Say the following phrase when you hear the beep.	
+At Neighborhood Bank my voice is my password
+1.5.0-6	Thanks. Please say the phrase again.
+(beep)
+At Neighborhood Bank my voice is my password
+1.5.0-7	Great. Please say the passphrase one more time.
+(beep)
+At Neighborhood Bank my voice is my password
+1.5.0-8	All done! Your voiceprint has been successfully recorded and voiceprint identification is now active on your account. Your credit card has been activated and you can start using it immediately.
+Can I help you with anything else?
+1.5.0-9	Can I help you with anything else?
+1.6.0 Fraud Identity verification (happy path)
+1.6.0-0		
+(User clicks link)
+1.6.0-1
+At Neighborhood Bank my voice is my password
+1.6.0-2	Voice verified. This transaction has been authorized.
+1.6.0-3	Can I help you with anything else?
+1.7.3.0 Channel to live agent (happy path)
+1.7.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+1.7.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+1.7.0-2	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+1.7.0-3	Hey I’m James. How can I help you today?	
+I’m in Rome and a pickpocket stole my wallet outside the collseum. I need to cancel my credit card and get a new one right away.
+1.7.0-4	I’m so sorry that happened to you. I’m cancelling your card now. I can have a new card sent to your hotel within 24 hours. Where are you staying…
+2 Telco
+2.1.0 FAQ/NAV with eCommerce upsell (happy path)
+2.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to upgrade my phone.
+I’d like to upgrade my phone
+Upgrade my phone
+Upgrade phone
+2.1.0-1	Sure, I can help you with that.
+Which brand are you interested in?
+Samsung  Apple
+HTC
+Samsung is the happy path. Apple is the pre-order path. All other phones will get not available errors.
+Navigate page to phones page
+Samsung
+2.1.0-2	We have several Samsung phones. The Samsung Galaxy S6 Edge is currently our best selling Samsung phone.
+Galaxy S6 Edge DetailsAdd this phone to cart
+Other Samsung phones
+Navigate page to Samsung page
+Galaxy S6 Edge Details goes to 2.1.3-3a
+Add this phone to cart goes straight to 2.1.0-3b
+Galaxy S6 Edge Details
+Samsung S6
+S6
+Galaxy S6
+S6 Edge
+2.1.0-3a	The beautiful Samsung Galaxy S6 is more than a pretty face. Within the stunning metal and glass design, the 5.1-inch HD Super display lets content shine like never before. You can quickly launch the camera by double tapping the Home button and use optical image stabilization to eliminate blurry photos and shaky videos. You'll hear natural-sounding calls with HD Voice and Video.
+Shall I add this phone to your cart now?
+Yes
+No
+Yes goes to 2.1.0.3b
+No goes to 2.1.0-1
+Add to cart
+Yes
+Yep
+Yeah
+Yes please
+Okay
+2.1.0-3b	Great! Let’s customize it for you. Which color do you prefer?
+Black SapphireWhite Pearl
+Gold Platinum
+Navigate to product pageImages not supported on mobile for this demo.
+MUST be supported for the product.
+(Any value)
+2.1.0-4	Stylish! How much storage do you want on your phone?
+32GB ($672 full price or $28/mo)
+64GB ($768 full price or $32/mo)
+128GB ($899 full price or $38/mo)
+(Any value)
+2.1.0-5	Cool. I’ve added this phone to your cart. Most people buy this phone with:
+Screen protector model xyz
+Phone case model xyz
+Car charger model xyz
+Add all to cart
+No thanks
+Links would go to product pages, but we aren’t building that for this happy path.
+Add all to cart
+Add to cart
+2.1.0-6	Great. I’ve added all those to your cart.
+2.1.0-7	Can I help you with anything else?
+2.1.1 FAQ/NAV with eCommerce upsell (Apple Pre-order)
+2.1.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to upgrade my phone.
+2.1.1-1	Sure, I can help you with that.
+Which brand are you interested in?
+Samsung  Apple
+HTC
+Motorola
+LG
+Blackberry
+Microsoft
+Samsung is the happy path. Apple is the pre-order path. All other phones will get not available errors.
+Navigate page to phones page
+Apple
+2.1.1-2	The newest iPhone is not out yet but we are now accepting pre-orders. Would you like to pre-order the new iPhone?
+Yes, pre-orderNo
+Navigate page to Apple page
+Yes, pre-order
+Pre-order
+Yes
+2.1.1-3	Great! Let’s customize it for you. Which color do you prefer?
+GraySilverGold
+Rose Gold
+Navigate to product page.Images not supported on mobile for this demo.
+MUST be supported for the product.
+(Any value)
+2.1.1-4	Stylish! How much storage do you want on your phone?
+16GB ($750 full price or $32/mo)
+64GB ($850 full price or $36/mo)
+128GB ($950 full price or $40/mo)
+(Any value)
+2.1.1-5	Cool. I’ve added this phone to your cart. Most people buy this phone with:
+Screen protector model xyz
+Phone case model xyz
+Car charger model xyz
+Add all to cart
+No thanks
+Links would go to product pages, but we aren’t building that for this path. We will support add all or No thanks.
+Add all to cart
+2.1.1-6	Great. I’ve added all those to your cart.
+If add all, then go to wrap up.
+No thanks
+2.1.1-7	Great. I’ve added your iPhone pre-order to your cart.
+If no thanks, then go to wrap up
+2.1.1-8	Can I help you with anything else?
+2.1.2 FAQ/NAV with eCommerce upsell (product unavailable error)
+2.1.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to upgrade my phone.
+2.1.2-1	Sure, I can help you with that.
+Which brand are you interested in?
+Samsung  Apple
+HTC
+Motorola
+LG
+Blackberry
+Microsoft
+Samsung is the happy path. Apple is the pre-order path. All other phones will get not available errors.
+HTC
+2.1.2-2	Oops! It looks like this brand is out of stock right now. Would you like me to email you when we restock it?
+Yes
+No thanks
+Yes
+2.1.2-3	Ok, I’ll keep you posted.
+If no go directly to wrap up
+2.1.2-8	Can I help you with anything else?
+2.2.0 Account Management (happy path)
+2.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to activate my phone.
+Activate my phone
+I’d like to activate my phone
+I would like to activate my phone
+Intent = activate_phone
+2.2.0-1	Sure. Do you want to activate the Samsung Galaxy S6 Edge you recently purchased?
+Yes, activate this phone
+No, a different phone
+Yes, activate this phone
+Yes
+2.2.0-2	Ok, you’re all set. This phone is now active on our network.
+Can I help you with anything else?
+2.2.1 Account Management (different phone, smartphone)
+2.2.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to activate my phone.
+Intent = activate_phone
+2.2.1-1	Sure. Do you want to activate the Samsung Galaxy S6 Edge you recently purchased?
+Yes, activate this phone
+No, a different phone
+No, activate a different phone
+No
+Activate different phone
+Different phone
+2.2.1-1	I will need to check the device ID to know if it is a compatible phone. Is it a smartphone or a basic phone?
+Smartphone
+Basic phone
+smartphone
+2.2.1-1	Dial *#06# from the smartphone. Your device ID should display on the screen. Enter the device ID.
+<any numerical string>
+2.2.1-2	Ok, you’re all set. This phone is now active on our network.
+Can I help you with anything else?
+2.2.2 Account Management (different phone, basic phone not compatible)
+2.2.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to activate my phone.
+2.2.2-1	Sure. Do you want to activate the Samsung Galaxy S6 Edge you recently purchased?
+Yes, activate this phone
+No, a different phone
+No, activate a different phone
+2.2.2-2	I will need to check the device ID to know if it is a compatible phone. Is it a smartphone or a basic phone?
+Smartphone
+Basic phone
+Basic phone
+basic
+2.2.2-3	Locate the IMEI, ESN, or MEID number on your device. Enter the device ID.	
+MUST be supported for the product.
+<any numerical string>
+2.2.2-4	Sorry. It looks like this device is not compatible with our network.
+2.2.2-5	Can I help you with anything else?
+2.3.0 Troubleshooting (happy path)
+2.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+How do I replace my phone battery?
+I want to replace my phone battery
+I’d like to replace my phone battery
+Replace battery
+Replace phone battery
+Intent = troubleshoot_battery
+2.3.0-1	Which brand of phone do you have?
+Samsung  Apple
+HTC 
+Samsung
+2.3.0-2	Which model?
+Galaxy S6
+S6
+Samsung Galaxy S6
+2.3.0-3	Samsung Galaxy S6 manual provides instructions for replacing the phone battery here. These instructions are only for your service provider or an authorized repair agent. Damage or faults caused by the unauthorized removal of battery are not covered by the warranty.
+2.3.0-4	Can I help you with anything else?
+2.3.1 Troubleshooting (Apple can’t replace)
+Agent transfer NOT allowed for this use case, Nina response, “A live agent is currently not available, but I’d be happy to assist you.”
+2.3.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+How do I replace my phone battery?
+2.3.1-1	Which brand of phone do you have?
+Samsung  Apple
+HTC 
+Apple
+2.3.1-2	Sorry but Apple phones don’t have a removable battery.
+2.3.1-3	Can I help you with anything else?
+2.3.2 Troubleshooting (Replace battery)
+Agent transfer proactively offered for this use case
+2.3.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+How do I replace my phone battery?
+2.3.0-1	Which brand of phone do you have?
+Samsung  Apple
+HTC 
+HTC
+2.3.0-3	Remove the battery cover on the back of the phone. Carefully remove the old battery and replace it with the new one. Slide the battery cover back on the phone and make sure it locks into place. If you need further instructions you can ask me to transfer you to a live agent.
+2.3.0-4	Can I help you with anything else?
+2.4.0 Channel to live agent (happy path)
+2.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+2.4.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+2.4.0-2	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+2.4.0-3	Hey I’m James. How can I help you today?	
+I lost my phone is there any way for you guys to track it?
+2.4.0-4	If you have an iPhone and the battery isn’t dead yet you can turn on find my phone. How long has it been lost…
+3 Retail
+3.1.0 Search (happy path)
+3.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Show me all promotions on coffee makers
+Coffee maker promotions
+Coffee maker promos
+Promotions on coffee makers
+Promos on coffee maker
+3.1.0-1	Our current promotions on coffee makers are here.	
+3.1.0-2	Can I help you with anything else?
+3.2.0 Navigation (happy path)
+3.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+What is the status of my order?
+I want to know the status of my order
+I’d like to know the status of my order
+Order status
+3.2.0-1	Here are your last 5 orders. Select one to get status details.
+Cherry wood pen set
+Novelty coffee mug
+450 thread count bath towel
+Desktop storage
+Designer acrylic stapler
+Cherry wood pen set
+First one
+The first one
+Pen set
+3.2.0-2	This item was delivered on November 8, 2015
+3.2.0-3	Can I help you with anything else?
+3.2.1 Navigation - item not delivered yet
+Agent transfer NOT allowed for this use case, Nina response, “A live agent is currently not available, but I’d be happy to assist you.”
+3.2.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+What is the status of my order?
+3.2.1-1	Here are your last 5 orders. Select one to get status details.
+Cherry wood pen set
+Novelty coffee mug
+450 thread count bath towel
+Desktop storage
+Designer acrylic stapler
+Novelty coffee mug
+Coffee mug
+Second one
+The second one
+Mug
+3.2.1-2	This item is scheduled for delivery tomorrow.
+3.2.1-3	Can I help you with anything else?
+3.2.2 Navigation - item being restocked
+Agent transfer offered proactively for this use case
+3.2.2-0	Hi, I’m Nina your virtual assistant. How can I help you?
+What is the status of my order?
+3.2.2-1	Here are your last 5 orders. Select one to get status details.
+Cherry wood pen set
+Novelty coffee mug
+450 thread count bath towel
+Desktop storage
+Designer acrylic stapler
+Designer acrylic stapler
+Stapler
+Last one
+The last one
+3.2.2-2	Unfortunately this item is currently out of stock. We’ll email you when this item becomes available. You have not been charged for this item. If you have further questions about this you can ask me to transfer you to a live agent.
+3.2.2-3	Can I help you with anything else?
+3.3.0 Process automation (happy path)
+3.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to return an order
+Return an order
+I’d like to return an order
+Return order
+3.3.0-1	Returns are no problem! Items can be returned within 30 days. Looks like you have 3 eligible items. Which item would you like to return?
+Cherry wood pen set
+Novelty coffee mug
+450 thread count bath towel
+Cherry wood pen set
+3.3.0-2	Sorry that didn’t work out for you, but sending it back is easy. Just put it back in the original packaging and apply the return shipping label we provided to the front of the package. Then just put it in the mail. I’ve made a note that you plan to return this item. We’ll send you a quick email when we get it back.
+3.3.0-3	Can I help you with anything else?
+Can go directly to escalation and ask for agent 3.4.0.
+3.3.1 Process automation – can’t return after 30 days
+3.3.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to return my desktop storage
+Return my desktop storage
+I’d like to return my desktop storage
+Return desktop storage
+Intent = order_return
+3.3.1-1	Items can only be returned within 30 days. Unfortunately the desktop storage system is no longer eligible for return.
+3.3.1-3	Can I help you with anything else?
+Can go directly to escalation and ask for agent 3.4.0.
+3.4.0 Channel to live agent (happy path)
+3.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+3.4.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+3.4.0-2	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+3.4.0-3	Hey I’m James. How can I help you today?	
+I have a complicated question about shipping overseas via a shipping agent.
+3.4.0-4	Where is the shipping agent located…
+3.5.0 How do I… (happy path)
+3.5.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+How do I register for my wedding?
+Register for my wedding
+Wedding registry
+I want to register for my wedding
+I’d like to register for my wedding
+3.5.0-1	Congratulations! I love weddings. You can join our wedding registry here.	
+3.5.0-2	Can I help you with anything else?
+3.6.0 In store locator  (happy path)
+3.6.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Where can I find sauce pans?
+Sauce pan location
+Where are sauce pans in the store?
+3.6.0-1	Cooking items are located in aisle 34 at your nearest store.	
+3.6.0-2	Can I help you with anything else?
+3.6.1 In store locator  (online item only)
+3.6.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Where can I find steering wheel covers?
+Steering wheel location
+Where are steering wheels in the store?
+Intent = instore_item_location
+3.6.1-1	Our automotive accessories are sold online only. You can browse them here.	
+3.6.1-2	Can I help you with anything else?
+4 Food
+4.1.0 Locator Map (happy path)
+4.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Where’s the nearest Nosh Time cafe?
+Nearest café
+Intent = café_location
+4.1.0-1	The nearest Nosh Time Café is 1.2 miles from your current location. The address is:
+460 North Mathilda Avenue,
+Sunnyvale, CA 94085
+Note: café uses a special character that is not supported yet. For now use a normal “e” when support for special characters is implemented use the correct form of café
+4.1.0-2	Can I help you with anything else?
+4.2.0 How do I… (happy path)
+4.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+How do I sign up for Nosh Time’s Rewards program?
+Sign up for Nosh Time rewards program
+Sign up for Nosh Time rewards
+Sign up for rewards program
+Sign up for rewards
+Intent = rewards_program_info
+4.2.0-1	Great choice! Nosh Time Rewards offers discounts and freebies that you won’t want to miss. You can join our rewards program here.	
+4.2.0-2	Can I help you with anything else?
+4.3.0 Order transaction (happy path)
+4.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I would like to order a drink
+Order drink
+Order beverage
+I’d like to order a drink
+I want to order a beverage
+Intent = order drink
+4.3.0-1	What kind of drink do you want?
+Latte
+Drip coffeeLatte
+4.3.0-2	What temperature do you want?
+Iced
+Hot
+Extra hot
+Extra hot
+4.3.0-3	What size?
+Small
+Medium
+Large
+Large
+4.3.0-4	Do you want a flavor shot?
+Vanilla
+Hazelnut
+Mocha
+None
+Vanilla
+4.3.0-5	Do want regular, decaf or half-caf?
+Regular
+Decaf
+Half-caf
+Regular
+4.3.0-6	What type of milk?
+Whole Milk
+2% Milk
+1% Milk
+Nonfat Milk
+Soy Milk
+None
+Non-fat Milk
+4.3.0-7	Ok, you want  a <large> <extra hot> <nonfat> <vanilla> <regular> <latte>. Is that correct?Yes
+NoYes
+<flavor> <caffeine> <drinkktype>. Is that correct?
+4.3.0-8	Great! I’ve submitted this order to your favorite café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.
+4.3.0-9	Can I help you with anything else?
+4.3.1 Order transaction  - drink unavailable at favorite café
+Agent transfer offered proactively for this use case
+4.3.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I would like to order a drink
+Intent = order drink
+4.3.1-1	What kind of drink do you want?
+Latte
+Drip coffeeDrip coffee
+4.3.1-2	What temperature do you want?
+Iced
+Hot
+Extra hot
+hot
+4.3.1-3	What size?
+Small
+Medium
+Large
+small
+4.3.1-4	Do want regular, decaf or half-caf?
+Regular
+Decaf
+Half-caf
+Regular
+4.3.1-5	What type of milk?
+Whole Milk
+2% Milk
+1% Milk
+Nonfat Milk
+Soy Milk
+None
+none
+4.3.1-6	Ok, you want  a <small> <hot> <black> <unflavored> <regular> <drip coffee>. Is that correct?Yes
+NoYes
+<flavor> <caffeine> <drinkktype>. Is that correct?
+4.3.1-7	It looks like your favorite café location is not currently serving drip coffee.  The nearest Nosh Time Café serving drip coffee is 1.2 miles from your current location. The address is:
+460 North Mathilda Avenue,
+Sunnyvale, CA 94085
+Shall I submit your order to this location?
+Yes
+No
+Transfer to a live agentYes
+4.3.1-8	Great! I’ve submitted this order to this café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.
+4.3.1-9	Can I help you with anything else?
+4.4.0 Add money to payment account (happy path)
+4.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Add $25 to my payment account?
+Add $25 to my account
+4.4.0-1	Ok, you’d like to reload $25 to your Nosh Time payment account, is that correct?
+Yes
+NoYes
+(page navigation, rewards page)
+4.4.0-2	All set. I’ve charged $25 to your credit card on file and reloaded your Nosh Time payment account by this amount.
+4.4.0-3	Can I help you with anything else?
+4.4.1 Add money to payment account – insufficient funds
+Agent transfer NOT allowed for this use case, Nina response, “A live agent is currently not available, but I’d be happy to assist you.”
+4.4.1-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Add $250 to my payment account
+4.4.1-1	Ok, you’d like to reload $250 to your Nosh Time payment account, is that correct?
+Yes
+NoYes
+(page navigation, rewards page)
+If no, Skip to Can I help you with anything else.
+4.4.1-2	The charge to your credit card on file was declined and your Nosh Time account was not reloaded. Please update your card information in your profile and try again.
+4.4.1-3	Can I help you with anything else?
+4.5.0 Personalized Order transaction (happy path)
+4.5.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Order my usual drink and add a breakfast sandwich
+Intent = order
+4.5.0-1	Ok, as I recall, your favorite drink is a <large> <extra hot> <nonfat> <vanilla> <regular> <latte> Is that right?Yes
+NoYes
+<flavor> <caffeine> <drinkktype>. Is that right?
+4.5.0-2	Ok, and you also want a Nosh Time morning breakfast sandwich. Is that correct?Yes
+NoYes
+4.5.0-3	Great. Do you want to add anything else to your order?Yes
+NoNo
+4.5.0-4	Sounds yummy! I’ve submitted this order to your favorite café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.
+4.5.0-5	Can I help you with anything else?
+4.5.1 Personalized Order transaction - update favorite drink
+4.5.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+Order my usual drink and add a breakfast sandwich
+Intent = order
+4.5.0-1	Ok, as I recall, your favorite drink is a <large> <extra hot> <nonfat> <vanilla> <regular> <latte> Is that right?Yes
+NoNo
+<flavor> <caffeine> <drinkktype>. Is that right?
+4.5.0-2	Oh wow. I thought I knew you! So tell me, what’s your favorite drink?Small iced coffee	
+4.3.0-5	Do want regular, decaf or half-caf?
+Regular
+Decaf
+Half-caf
+Regular
+4.3.0-6	What type of milk?
+Whole Milk
+2% Milk
+1% Milk
+Nonfat Milk
+Soy Milk
+None
+none
+4.3.0-7	Perfect, you want your new favorite drink. That’s a <small> <iced> <regular> <coffee>. Is that correct?Yes
+NoYes
+<flavor> <caffeine> <drinkktype>. Is that correct?
+Update favorite drink.
+4.5.0-2	Ok, and you also want a Nosh Time morning breakfast sandwich. Is that correct?Yes
+NoYes
+4.5.0-3	Great. Do you want to add anything else to your order?Yes
+NoNo
+4.5.0-4	Sounds yummy! I’ve submitted this order to your favorite café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.
+4.5.0-5	Can I help you with anything else?
+4.6.0 Channel to live agent (happy path)
+4.6.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+4.6.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+4.6.0-2	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+4.6.0-3	Hey I’m James. How can I help you today?	
+I need to order a catered breakfast for my entire office tomorrow.
+4.6.0-4	About how big is this order and where is your office located...
+5 Healthcare
+5.1.0 Claim Status (happy path)
+5.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is my claim status?
+Claim status
+I want to know my claim status
+I’d like to know my claim status
+What is the status of my claim?
+5.1.0-1	Your last dental cleaning service on November 16, 2015 has been approved for the full coverage amount. You do not owe anything. You can see full details here.	
+Would prefer to calculate a date exactly three weeks from current date, but this means k-query. This demo will be odd quickly if we hard code the date.)
+5.1.0-2	Can I help you with anything else?
+5.2.0 Renew prescription (happy path)
+5.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+Renew my prescription
+Prescription renewal
+Renew prescription
+5.2.0-1	It looks like all your refills of <Amoxicillin> have been fulfilled. You’ll need to speak to your doctor to renew this prescription. Do you want me to have your doctor call you? 	
+yes
+5.2.0-1	Okay. I’ve sent your doctor a message and you should receive a call back within the next 24 hours. 	
+5.2.0-2	Can I help you with anything else?
+5.2.1 Renew prescription (monthly maximum reached)
+Agent transfer proactively offered for this use case
+5.2.1-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+Renew my prescription for Cialis
+Renew prescription for Cialis
+Renew Cialis prescription
+Order Cialis again
+Order Cialis
+5.2.1-1	It looks like all your refills of <Cialis> have been fulfilled. You have reached the maximum monthly allowed refills for this medication under your benefit plan. You will be able to obtain a refill in 3 days. If you have more questions about this you can ask me to transfer you to a live agent.	
+5.2.1-2	Can I help you with anything else?
+5.3.0 Channel to live agent (happy path)
+5.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+5.3.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+5.3.0-3	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+5.3.0-4	Hey I’m James. How can I help you today?	
+I’m on vacation in France and my luggage was lost including my prescription medicine.
+5.3.0-5	I’ll have to locate a local pharmacy, things work a little differently in Europe. Where are you staying…
+5.4.0 Coverage (happy path)
+5.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is my deductible?
+What’s my deductible?
+I want to know what is my deductible
+I’d like to know what is my deductable
+5.4.0-1	Deductibles vary by service. What service do you want to know the deductible for?
+Orthodontics
+Liposuction
+Lab work
+Annual Check-up
+orthodontics
+5.4.0-2	You have no plan deductible for orthodontics. Your lifetime individual benefit for orthodontics is $1250. To date you have used $300, so you have $950 still remaining.	
+5.4.0-3	By the way, as a valued customer you are eligible to apply for our Nurture Healthcare credit card with a maximum credit limit of $5,000.00. Would you like to apply now?	
+no	If yes dialog from 1.4.0-7
+5.4.0-4	Can I help you with anything else?
+5.4.1 Coverage (procedure not covered)
+Agent transfer NOT allowed for this use case, Nina response, “A live agent is currently not available, but I’d be happy to assist you.”
+5.4.1-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is my deductible?
+5.4.1-1	Deductibles vary by service. What service do you want to know the deductible for?
+Orthodontics
+Liposuction
+Lab work
+Annual Check-up
+liposuction
+5.4.1-1	Elective cosmetic surgery is not covered under your plan. 	
+5.4.1-3	Can I help you with anything else?
+5.4.2 Coverage (lab work)
+5.4.2-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is my deductible?
+5.4.2-1	Deductibles vary by service. What service do you want to know the deductible for?
+Orthodontics
+Liposuction
+Lab work
+Annual Check-up
+Lab work
+5.4.2-1	You have a $500 deductible for lab work of which $500 is still remaining.	
+5.4.2-3	Can I help you with anything else?
+5.4.3 Coverage (annual check-up)
+5.4.3-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is my deductible?
+5.4.3-1	Deductibles vary by service. What service do you want to know the deductible for?
+Orthodontics
+Liposuction
+Lab work
+Annual Check-up
+Annual check up
+5.4.3-1	One annual wellness check-up with your primary physician is fully covered by your insurance with no deductible. You have not yet had your check-up for this calendar year.	
+5.4.3-3	Can I help you with anything else?
+6 Travel
+6.1.0 Flight information (happy path)
+6.1.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What terminal is my flight departing from?
+Intent = departing terminal
+6.1.0-1	Your itinerary includes three flights. Which flight do you want arrival information for?
+Sun May 22: NP1628 SJC-ORD
+Wed May 25: NP364 ORD-LGA
+Sat May 28: NP2153 LGA-DCA
+The first one
+6.1.0-2	Flight number NP1628 departs from Terminal A in San Jose at 8:05 PM on Sunday May 22
+When does my flight arrive?
+6.1.0-3	Flight number NP1628 arrives in Chicago at 1:29 PM on Sunday May 22.
+Where is the premier lounge located during my first layover?
+6.1.0-4a	The premier lounge is located at gate G8 in terminal 3 at Chicago O’Hare airport.
+Where is the premier lounge located during my second layover?
+6.1.0-4b	The premier lounge is located at gate D3 in terminal D at La Guardia airport.
+What is the baggage limit for this flight?
+6.1.0-5	You’re allowed one checked bag less than 50 pounds. Extra checked bags are $25 each. You may board your flight with one personal item and one carry-on bag. You can find more information about baggage limits here.
+When a user clicks on the hyperlink, the baggage info page loads
+Is there an extra fee for checking my golf clubs?
+6.1.0-6	There is no oversized fee for golf bags as long as they are less than 50 pounds. A golf bag will count as one of your checked bags. We will accept golf bags in a soft-sided travel bag, but will not be liable for damage to the bag or contents.
+What food is available during this flight?
+6.1.0-7	Food is available for purchase aboard your flight. Your flight includes a variety of snack items as well as artisan sandwich and healthy salad options.
+Is there wi-fi on the flight?
+6.1.0-8	Your flight includes free in flight wi-fi for all passengers. Look for NeptuneInFlight wifi. It’s just one more way we make your flight as enjoyable as possible.
+Resend my itinerary
+6.1.0-9	Sure. I’ve resent your itinerary to your email address. (toria_starr@bmcmusic.com)
+Can I board early if I upgrade to a priority seat?
+6.1.0-10	Yes, the $45 upgrade fee includes the extra legroom and priority boarding in group 1. Would you like to upgrade?
+If yes go to 6.6.0-11a  If no go to 6.6.0-11b
+Yes
+6.1.0-11a	Okay, you’re all set. Your credit card on file has been charged $45.
+no
+6.1.0-11b	Can I help you with anything else?
+6.2.0 Booking (happy path)
+6.2.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+How do I change my booking?
+6.2.0-1	I can help you with that. Which flight would you like to rebook?
+Sun May 22: NP1628 SJC-ORD
+Wed May 25: NP364 ORD-LGA
+Sat May 28: NP2153 LGA-DCA
+May 22
+6.2.0-2a	Ok, you want to rebook flight <NP1628> on <Sunday May 22> departing <San Jose> at <7:05am> and arriving at <Chicago O’Hare> at <1:29pm>. What would you like to change about this flight?
+Flight date
+Departure time
+Make flight numbers and dates dynamic so user can choose any option from 6.2.0-1
+Departure time
+6.2.0-3a	Ok, I see availability on two different flights from San Jose to Chicago O’Hare on Sunday May 22. Which departure time works best for you?
+Departure: 8:05 am (Arrival: 2:10 pm)
+Departure: 1:14 pm (Arrival: 7:30 pm)
+8:05 am
+6.2.0-4a	Great. I can book you on Flight NP 1724 departing from San Jose at <8:05 am> and arriving at Chicago O’Hare at <2:10 pm>. Shall I book it for you?
+Make times Dynamic so user can choose any option from 6.2.0-3a
+yes
+May 25
+6.2.0-2b	Ok, you want to rebook flight NP364 on Wednesday May 25 departing Chicago O’Hare at 3:00pm and arriving at New York La Guardia at 6:03pm. What would you like to change about this flight?
+Flight date
+Departure time
+Departure time
+6.2.0-3b	Ok, I see availability on three different flights from Chicago O’Hare to New York La Guardia on Wednesday May 25. Which departure time works best for you?
+Departure: 10:05 am (Arrival: 1:10 pm)
+Departure: 12:36 pm (Arrival: 3:40 pm)
+Departure: 6:40 pm (Arrival: 9:50 pm)
+6:40 pm
+6.2.0-4b	Great. I can book you on Flight NP 1785 departing from Chicago at <6:40 pm> and arriving at New York La Guardia at <9:50 pm>. Shall I book it for you?
+Make times Dynamic so user can choose any option from 6.2.0-3b
+yes
+May 28
+6.2.0-2c	Ok, you want to rebook flight NP2153 on Saturday May 28 departing New York La Guardia at 7:05pm and arriving at Ronald Reagan Washington National  at 8:25pm. What would you like to change about this flight?
+Flight date
+Departure time
+Departure time
+6.2.0-3c	Ok, I see availability on four different flights from New York La Guardia to   Ronald Reagan Washington National  on  Saturday May 28. Which departure time works best for you?
+Departure: 8:00 am (Arrival: 9:20 am)
+Departure: 12:05 pm (Arrival: 1:23 pm)
+Departure: 3:40 pm (Arrival: 4:24 pm)
+Departure: 6:00 pm (Arrival: 7:26 pm)
+8:00 am
+6.2.0-4c	Great. I can book you on Flight NP 2137 departing from New York La Guardia at <8:00 am> and arriving at  Ronald Reagan Washington National   at <9:20 am>. Shall I book it for you?
+Make times Dynamic so user can choose any option from 6.2.0-3c
+yes
+May 22
+6.2.0-2d	Ok, you want to rebook flight <NP1628> on Sunday May 22 departing <San Jose> at <7:05am> and arriving at <Chicago O’Hare> at <1:29pm>. What would you like to change about this flight?
+Flight date
+Departure time
+Departure date
+6.2.0-3d	Ok, which date would like to change this flight to?
+May 24
+6.2.0-4d	Great. I can book you on Flight NP 1901 departing San Jose at 7:05am and arriving at Chicago O’Hare at 1:29pm on <May 24). Shall I book it for you?
+Make dates Dynamic so user can choose any date in 6.2.0-3d
+yes
+6.2.0-5	There are three types of seats still available on this flight. Do you have a seat preference?
+Any seat
+Window seat
+Aisle seat
+Window seat
+6.2.0-6	Perfect. I’ve booked your flight. Your record locator number is 6bv123. I’ve sent the flight information to your email address (toria_starr@bmcmusic.com.
+6.2.0-7	Can I help you with anything else?
+6.3.0 Booking (happy path)
+6.3.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+What is the fee for canceling my booking?
+6.3.0-1	There’s no fee to change or cancel a flight ticketed within the last 24 hours. Otherwise the cancelation fee is $200 for domestic flights and $400 for international itineraries.
+6.3.0-2	Can I help you with anything else?
+6.4.0 Transaction – Transfer Points (happy path)
+6.4.0-0	Hi, I’m Nina your virtual assistant. How can I help you?	
+I want to transfer points
+6.4.0-1	Sure, I can help you with that. We have transfer agreements with several US Airlines. Which program do you want to transfer from?	
+American Airlines
+6.4.0-2	Please enter your <American Airlines> program membership number.	
+3692197
+6.4.0-3	Perfect. How many <American Airlines> miles would you like to transfer to your Neptune Airline points program?	
+Twenty thousand miles
+6.4.0-4	Ok, you’d like to transfer 20,000 miles from your <American Airlines> program to your Neptune Airlines points program, Is that correct?
+Yes
+No
+Airline is dynamic
+yes
+6.4.0-5	Great. Your transaction has been submitted to <American Airlines> for processing. This type of request is usually processed within 7 business days.
+You are also eligible to take advantage of our points for pay program. Would you like to purchase extra Neptune Airlines points?
+yes
+6.4.0-6	How may points would you like to purchase?
+Twelve thousand
+6.4.0-6	Twelve thousand miles will cost you $318.60. You’ll get an extra 2.500 bonus points and save $35.40! Shall I charge this to your credit card?
+yes
+6.4.0-5	Great. Your transaction has been submitted. Your Neptune Airlines points account has been credited 14,500 points.
+6.4.0-6	Can I help you with anything else?
+6.5.0 Channel to live agent (happy path)
+6.5.0-0	Hi, I’m Nina your virtual assistant. How can I help you?
+I want to speak to an agent
+6.5.0-1	Sure. I’ve asked the next available agent to join this conversation. They should be joining us in less than 1 minute.
+6.5.0-3	A customer care specialist is joining us now. I’d like to introduce you to James. I’ve sent James the information from this conversation so far. It’s been a pleasure assisting you!
+6.5.0-4	Hey I’m James. How can I help you today?	
+My schedule changed and I need a flight leaving two hours later.
+6.5.0-5	Let me check the flights… It looks like I can get you on a flight leaving three hours later, but it has a layover…
