@@ -152,10 +152,6 @@ public class SendNinaUseCasesPostForNina {
                     if (!fileJson.exists()) {
                         fileJson.createNewFile();
                     } else {
-//                        FileWriter fileWriterClear = new FileWriter(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\"+sssTemop+i+".json", false);
-//                        fileWriterClear.write("");
-//                        fileWriterClear.flush();
-//                        fileWriterClear.close();
                         fileJson = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\" + df.format(new Date(System.currentTimeMillis())) + sssTemop + i + "" + Math.abs(random.nextInt()) % 10 + ".json");
                     }
                     FileWriter fileWriter = new FileWriter(fileJson, true);
