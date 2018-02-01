@@ -1,9 +1,8 @@
-package tools.getHandler.ddooInfo;
+package tools.getHandler.ddddoooInfo;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

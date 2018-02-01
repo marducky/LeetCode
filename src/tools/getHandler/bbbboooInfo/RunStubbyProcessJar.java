@@ -1,4 +1,4 @@
-package tools.getHandler.bbbboooooInfo;
+package tools.getHandler.bbbboooInfo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

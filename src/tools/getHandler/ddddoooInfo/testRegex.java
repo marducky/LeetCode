@@ -1,11 +1,9 @@
-package tools.getHandler.ddooInfo;
+package tools.getHandler.ddddoooInfo;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class testRegex {
     public static void main(String[] args) {
