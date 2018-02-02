@@ -1,0 +1,13 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@baace1c3-4d3d-419b-8d5e-1e731248dae5",
+    "@IID": "a7a6b2fa-162c-4b7f-9e89-9491c047990f",
+    "@TimeStamp": "2018-02-02T05:53:24.5995717Z",
+    "@ResponseCode": "ErrorInputTooLong",
+    "Display": {
+      "OutText": {
+        "#text": "I'm afraid I didn't understand your question, please could you ask it more simply..."
+      }
+    }
+  }
+}

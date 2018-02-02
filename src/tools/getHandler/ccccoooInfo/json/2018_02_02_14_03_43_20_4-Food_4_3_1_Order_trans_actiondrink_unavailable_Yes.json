@@ -1,0 +1,59 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@01aaa824-8c71-4da2-8bd0-1544d8962866",
+    "@IID": "ed9a1a58-231f-4891-ae08-de378ce44a2d",
+    "@TimeStamp": "2018-02-02T06:03:43.5903017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok. I'm here if you need any further information."
+      },
+      "AlternateOutText": {
+        "#text": "Ok. I'm here if you need any further information."
+      },
+      "AlternateOutText2": {
+        "#text": "Ok. I'm here if you need any further information."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "41cdb186-0ca6-4ae1-9f44-08f21f0459da",
+        "Incomprehension": "704c822f-b8a3-45fe-ad40-03b33a823899",
+        "Social": "6529f7fd-bdff-42a7-b3df-00d4af204549"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "drip coffee",
+            "literal": "Drip coffee"
+          },
+          "DRINK_TEMPERATURE": {
+            "value": "hot",
+            "literal": "hot"
+          },
+          "DRINK_SIZE": {
+            "value": "small",
+            "literal": "small"
+          },
+          "DRINK_FLAVOR": {
+            "value": "none",
+            "literal": "none"
+          },
+          "DRINK_MILK_TYPE": {
+            "value": "none",
+            "literal": "none"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_CAFFEINE"
+    ]
+  }
+}

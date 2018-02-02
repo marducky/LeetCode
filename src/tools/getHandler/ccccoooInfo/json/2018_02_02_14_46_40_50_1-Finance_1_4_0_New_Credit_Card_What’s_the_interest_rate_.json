@@ -1,0 +1,51 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@e1372103-12ab-4d8a-bff5-f3d3cd5f9fa1",
+    "@IID": "622fbe03-2f11-4eaf-b5c0-376c3c2092d9",
+    "@TimeStamp": "2018-02-02T06:46:39.8831566Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "The interest rate on purchases is 12.99%, and 19.99% on cash advances. Would you like to apply now?"
+      },
+      "AlternateOutText": {
+        "#text": "The interest rate on purchases is 12.99%, and 19.99% on cash advances. Would you like to apply now?"
+      },
+      "AlternateOutText2": {
+        "#text": "The interest rate on purchases is 12.99%, and 19.99% on cash advances. Would you like to apply now?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "13a67eab-f339-40c1-9239-5b9157762dce",
+        "Social": "06c176a5-890e-4e36-b3ad-c94957a2f073"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862181873988816762": {
+            "CARD_ACTIVATION_TYPE": {
+              "value": "travel rewards",
+              "literal": "Travel rewards"
+            }
+          }
+        },
+        "node": {
+          "2331d484-8b3a-42f8-9ed5-e0859c0d6282": {
+            "CARD_ACTIVATION_QUESTIONS": {
+              "value": "interest rate",
+              "literal": "rate"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862181873988816762",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

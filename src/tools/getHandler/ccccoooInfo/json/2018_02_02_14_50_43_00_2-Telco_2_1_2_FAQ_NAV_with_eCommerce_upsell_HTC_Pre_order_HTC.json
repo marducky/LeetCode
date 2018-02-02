@@ -1,0 +1,41 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@c6112396-0e74-426f-8ef3-cd38f8dd7e8b",
+    "@IID": "1964046d-c7aa-4c78-9646-64f1b844afef",
+    "@TimeStamp": "2018-02-02T06:50:43.1881155Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Oops! It looks like this brand is out of stock right now. Would you like me to email you when we restock it?"
+      },
+      "AlternateOutText": {
+        "#text": "Oops! It looks like this brand is out of stock right now. Would you like me to email you when we restock it?"
+      },
+      "AlternateOutText2": {
+        "#text": "Oops! It looks like this brand is out of stock right now. Would you like me to email you when we restock it?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "02eed8ce-5a73-464c-8d3a-136a54494c16"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "PHONE_BRAND": {
+            "value": "HTC",
+            "literal": "HTC"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182853241360250",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

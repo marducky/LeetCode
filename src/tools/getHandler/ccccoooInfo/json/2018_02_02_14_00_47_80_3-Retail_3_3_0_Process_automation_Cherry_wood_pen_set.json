@@ -1,0 +1,39 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@6317a682-1c47-4ccc-b6d3-e39c8a09a5c2",
+    "@IID": "757b7470-4773-40d6-a658-6b9ef1c59353",
+    "@TimeStamp": "2018-02-02T06:00:46.996807Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sorry that didn't work out for you, but sending it back is easy. Just put it back in the original packaging and apply the return shipping label we provided to the front of the package. Then just put it in the mail. I've made a note that you plan to return this item. We'll send you a quick email when we get it back. <br /><br />\nCan I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Sorry that didn't work out for you, but sending it back is easy. Just put it back in the original packaging and apply the return shipping label we provided to the front of the package. Then just put it in the mail. I've made a note that you plan to return this item. We'll send you a quick email when we get it back.\n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Sorry that didn't work out for you, but sending it back is easy. Just put it back in the original packaging and apply the return shipping label we provided to the front of the package. Then just put it in the mail. I've made a note that you plan to return this item. We'll send you a quick email when we get it back.\n\nCan I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "96de0704-0bbc-4b7b-ae4e-3e02e4966ac5"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "RETAIL_ITEM": {
+            "value": "pen set",
+            "literal": "Cherry wood pen set"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862185537595920250",
+    "kbNodeHit": true
+  }
+}

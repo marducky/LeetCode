@@ -1,0 +1,63 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@4596d9e6-8731-4354-9ed9-a0061a3cd763",
+    "@IID": "cae92b60-514d-4a57-8936-704ad7f2ec6c",
+    "@TimeStamp": "2018-02-02T06:49:29.5501566Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great! Let's customize it for you. Which color do you prefer?\n\n<img src=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/telco/apple_colors.png\" style=\"width:75%;\" align=\"center\"> <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"aaa460c6-539b-49b5-beae-c590b181709e\">Gray<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"59e83ff3-54ec-464c-a326-5a5f8d4ab86f\">Silver<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"6d2b9c64-3169-4ea7-a45c-391b94ae99c8\">Gold<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"d7036838-14f6-470d-99e1-d8fce3397c89\">Rose Gold<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Great! Let's customize it for you. Which color do you prefer? "
+      },
+      "AlternateOutText2": {
+        "#text": "Great! Let's customize it for you. Which color do you prefer? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Gray",
+        "Silver",
+        "Gold",
+        "Rose Gold"
+      ]
+    },
+    "TimeOut": 300,
+    "data": [
+      {
+        "text": "Apple Phones",
+        "image": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/telco/apple_colors.png"
+      }
+    ],
+    "useCollectionView": true,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "9f9eb027-d946-451e-859e-d997290f4022"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "PHONE_BRAND": {
+            "value": "Apple",
+            "literal": "Apple"
+          }
+        },
+        "intent": {},
+        "node": {
+          "e8c9fc3e-22c8-4841-a016-8ae243e17b0c": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes, pre-order"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182853241360250",
+    "conceptsInFocus": [
+      "PHONE_COLOR"
+    ]
+  }
+}

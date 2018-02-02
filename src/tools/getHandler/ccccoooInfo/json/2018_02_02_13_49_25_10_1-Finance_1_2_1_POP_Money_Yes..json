@@ -1,0 +1,59 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@82e383e2-c4e2-4e9a-bd05-5f15ed1b7f90",
+    "@IID": "b1910659-b422-42af-aaec-c0120e878b6d",
+    "@TimeStamp": "2018-02-02T05:49:25.2497034Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok. I'm here if you need any further information."
+      },
+      "AlternateOutText": {
+        "#text": "Ok. I'm here if you need any further information."
+      },
+      "AlternateOutText2": {
+        "#text": "Ok. I'm here if you need any further information."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "b2214b36-24c9-4185-bc6a-c3fbee7a111d",
+        "Incomprehension": "704c822f-b8a3-45fe-ad40-03b33a823899",
+        "Social": "6529f7fd-bdff-42a7-b3df-00d4af204549"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "TO_ACCOUNT": {
+              "value": "Jon Stevens",
+              "literal": "Jon"
+            },
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "checking",
+              "literal": ""
+            }
+          },
+          "2186e2f0-365d-4bf3-a21f-8f21b29c8245": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes."
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642"
+  }
+}

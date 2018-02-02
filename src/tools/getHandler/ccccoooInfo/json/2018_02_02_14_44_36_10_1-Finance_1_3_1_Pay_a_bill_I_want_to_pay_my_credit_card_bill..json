@@ -1,0 +1,43 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@fcfc6db6-e1e4-44cd-af53-79116e366f1d",
+    "@IID": "a576488c-427e-4a31-8f14-98639f5bc346",
+    "@TimeStamp": "2018-02-02T06:44:35.9396952Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sure.  From which account? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"c05fb6f1-6fc0-48e2-82d2-7f2c133597bf\">Checking - $8,345.01<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"1f0c2e47-f85e-49ae-bbf5-3f8342602929\">Savings - $12,762.90<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Sure. From which account? "
+      },
+      "AlternateOutText2": {
+        "#text": "Sure. From which account? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Checking - $8,345.01",
+        "Savings - $12,762.90"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "9c318d67-6128-469c-8337-6c6746d8e029"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862181843924045690",
+    "conceptsInFocus": [
+      "FROM_ACCOUNT"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/banking/index.html"
+  }
+}

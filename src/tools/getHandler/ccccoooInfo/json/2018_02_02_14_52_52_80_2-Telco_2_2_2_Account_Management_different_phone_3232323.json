@@ -1,0 +1,47 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@4f92df63-70c3-49bd-8b2d-c42d36be7028",
+    "@IID": "461aba90-4397-4dc3-90cf-52ea07d37432",
+    "@TimeStamp": "2018-02-02T06:52:52.5901474Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sorry. It looks like this device is not compatible with our network. <br /><br />Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Sorry. It looks like this device is not compatible with our network. \n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Sorry. It looks like this device is not compatible with our network. Can I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "38b5f40b-16bc-4409-95a2-ec21980a67cf"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "b7bc0bac-cf82-41c7-82fd-75223ba54fb9": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          },
+          "b09d65b7-e583-4f99-a364-1985957556eb": {
+            "PHONE_TYPE": {
+              "value": "basicphone",
+              "literal": "Basic phone"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182818881621882",
+    "kbNodeHit": true
+  }
+}

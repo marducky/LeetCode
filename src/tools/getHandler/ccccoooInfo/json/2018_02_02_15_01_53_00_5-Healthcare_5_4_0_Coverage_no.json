@@ -1,0 +1,54 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@49a96680-ab44-4f4b-bc3f-951a6f3b0704",
+    "@IID": "63f140b3-ef7b-4e83-89ba-72715c2ab6fc",
+    "@TimeStamp": "2018-02-02T07:01:53.4752305Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Can I help you with anything else? <br /><div><span style=\"font-weight: bold;\">Was this information helpful in solving your issue?<\/span><\/div> <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"bba36671-2aaf-11e5-9a0d-00155d112902\">Yes<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"bba366b8-2aaf-11e5-9a0d-00155d112902\">No<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Can I help you with anything else? Was this information helpful in solving your issue? "
+      },
+      "AlternateOutText2": {
+        "#text": "Can I help you with anything else? Was this information helpful in solving your issue? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "4d2c97e9-1060-4ee6-a684-b83cc8418bcb",
+        "PostAnswer": "9dafd8b3-1eb9-4e02-85a4-8c89a4d662c0"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "91984cfd-3d81-4917-a872-7af91010f323": {
+            "ASK_DEDUCTIBLE": {
+              "value": "orthodontics",
+              "literal": "orthodontics"
+            }
+          },
+          "fffa5162-8651-4fad-a8ee-e4ab6ab09002": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "no"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862173571817033594",
+    "kbNodeHit": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@1dc3d7dd-6121-4dfc-b6b1-0bf3b362b1cc",
+    "@IID": "1ff320ea-c814-46a4-b6e0-796f9ceae0fb",
+    "@TimeStamp": "2018-02-02T06:12:37.5795654Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Can you repeat what you said in a different way? I'm still learning and might need more information."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "dddd09ad-99fc-4384-b534-3c71100a231b",
+        "Incomprehension": "704c822f-b8a3-45fe-ad40-03b33a823899",
+        "Social": "6529f7fd-bdff-42a7-b3df-00d4af204549"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "9a92c523-6367-436d-9f4d-1100da1916c9": {
+            "SELECT_FLIGHT": {
+              "value": "may 25",
+              "literal": "May 25"
+            }
+          },
+          "f269d231-4147-4a9b-9399-278a300f4261": {
+            "CHANGE_FLIGHT": {
+              "value": "departure time",
+              "literal": "Departure time"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862131695885897594",
+    "conceptsInFocus": [
+      "SELECT_DEPARTURE"
+    ]
+  }
+}

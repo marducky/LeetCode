@@ -1,0 +1,54 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:02:47.4776918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "The premier lounge is located at gate G8 in terminal 3 at Chicago O'Hare airport.\n<br />\n<img src=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/travel/premier_lounge.png\" style=\"width:75%;\" align=\"center\">"
+      },
+      "AlternateOutText": {
+        "#text": "The premier lounge is located at gate G8 in terminal 3 at Chicago O'Hare airport."
+      },
+      "AlternateOutText2": {
+        "#text": "The premier lounge is located at gate G8 in terminal 3 at Chicago O'Hare airport."
+      }
+    },
+    "TimeOut": 300,
+    "data": [
+      {
+        "text": "Ask Premier Lounge",
+        "image": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/travel/premier_lounge.png"
+      }
+    ],
+    "useCollectionView": true,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "5c98444b-7828-4278-b631-c4600e2e97fa"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "first",
+              "literal": "first"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128440300687226"
+  }
+}

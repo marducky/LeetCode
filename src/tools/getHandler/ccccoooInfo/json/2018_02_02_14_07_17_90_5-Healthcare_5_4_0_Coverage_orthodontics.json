@@ -1,0 +1,44 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@ed7c809d-7a84-4f74-892d-6ddbad214e62",
+    "@IID": "ff40eb7f-bc08-4c64-b28c-d267eacb642d",
+    "@TimeStamp": "2018-02-02T06:07:17.0727651Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "You have no plan deductible for orthodontics. Your lifetime individual benefit for orthodontics is $1250. To date you have used $300, so you have $950 still remaining.<br /><br />By the way, as a valued customer you are eligible to apply for our Nurture Healthcare credit card with a maximum credit limit of $5,000.00. Would you like to apply now?"
+      },
+      "AlternateOutText": {
+        "#text": "You have no plan deductible for orthodontics. Your lifetime individual benefit for orthodontics is $1250. To date you have used $300, so you have $950 still remaining.\n\nBy the way, as a valued customer you are eligible to apply for our Nurture Healthcare credit card with a maximum credit limit of $5,000.00. Would you like to apply now?"
+      },
+      "AlternateOutText2": {
+        "#text": "You have no plan deductible for orthodontics. Your lifetime individual benefit for orthodontics is $1250. To date you have used $300, so you have $950 still remaining.\n\nBy the way, as a valued customer you are eligible to apply for our Nurture Healthcare credit card with a maximum credit limit of $5,000.00. Would you like to apply now?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "fffa5162-8651-4fad-a8ee-e4ab6ab09002"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "91984cfd-3d81-4917-a872-7af91010f323": {
+            "ASK_DEDUCTIBLE": {
+              "value": "orthodontics",
+              "literal": "orthodontics"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862173571817033594",
+    "conceptsInFocus": [
+      "YES_NO"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/healthcare/index.html"
+  }
+}

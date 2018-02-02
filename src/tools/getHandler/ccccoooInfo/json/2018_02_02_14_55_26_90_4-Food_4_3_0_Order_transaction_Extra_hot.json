@@ -1,0 +1,53 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@766a56df-44d8-46de-822c-3b7cc9966ac6",
+    "@IID": "60beeafa-ca9e-4cda-90b8-4a7cdb8039b5",
+    "@TimeStamp": "2018-02-02T06:55:26.4504389Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "What size? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"522dd953-117d-4509-b46e-71c3d328301a\">Small<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"fc925f1c-e660-4c0f-9aa0-1cf503bfe8d2\">Medium<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"dc9f80f0-2596-4249-9e79-fbe80b52799b\">Large<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "What size? "
+      },
+      "AlternateOutText2": {
+        "#text": "What size? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "38cd3064-3fcc-4cb0-a863-15544aa1b32f"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "latte",
+            "literal": "Latte"
+          },
+          "DRINK_TEMPERATURE": {
+            "value": "extra hot",
+            "literal": "Extra hot"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_SIZE"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2a126012-7dbf-45d2-a8ac-60645ab8f40c",
+    "@IID": "81605514-164d-478b-875f-c9e23f80acbd",
+    "@TimeStamp": "2018-02-02T06:02:32.5623017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great! I've submitted this order to your favorite café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.<br /><br />\nCan I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Great! I've submitted this order to your favorite cafe location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.\n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great! I've submitted this order to your favorite cafe location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.\n\nCan I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "5ceb9f4c-f43a-4ec0-8b65-c6133a9a5fff"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "8d005ac4-c9aa-4f07-bec5-15ba2bba7d99": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "kbNodeHit": true,
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

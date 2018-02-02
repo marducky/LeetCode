@@ -1,0 +1,46 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@cbc84930-4c13-4d7f-8d87-122311abe0a2",
+    "@IID": "90cbd0dd-17db-4488-b185-8d8a1d9a68d2",
+    "@TimeStamp": "2018-02-02T06:53:40.7068656Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Here are your last 5 orders. Select one to get status details. <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"1f3b9efe-4fbf-49ac-b088-16262e58c248\">Cherry wood pen set<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"3157f5be-d4e5-48af-8253-3fe54cb5151a\">Novelty coffee mug<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"cde5f3ff-78bd-4832-96d5-1d3ac66b30b2\">450 thread count bath towel<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"50c87d2b-321f-489b-a27a-13317e571371\">Desktop storage<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"b0d4143d-59f8-48a8-ac32-3c2b89e51b67\">Designer acrylic stapler<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Here are your last 5 orders. Select one to get status details. "
+      },
+      "AlternateOutText2": {
+        "#text": "Here are your last 5 orders. Select one to get status details. "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Cherry wood pen set",
+        "Novelty coffee mug",
+        "450 thread count bath towel",
+        "Desktop storage",
+        "Designer acrylic stapler"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "1b423ff3-b147-47a6-907e-bd0f8777a9e1"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862185533300952954",
+    "conceptsInFocus": [
+      "RETAIL_ITEM"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/retail/orders.html"
+  }
+}

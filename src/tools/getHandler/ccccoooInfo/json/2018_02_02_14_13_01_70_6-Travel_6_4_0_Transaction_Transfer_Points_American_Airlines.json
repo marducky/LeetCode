@@ -1,0 +1,40 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@c302f0a6-7d1b-4355-85e8-3f41ef23c4dd",
+    "@IID": "3ff2e5fc-0980-4b62-8a56-4b7c311642ae",
+    "@TimeStamp": "2018-02-02T06:13:01.7167651Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Please enter your American Airlines Aadvantage program membership number."
+      },
+      "AlternateOutText": {
+        "#text": "Please enter your American Airlines AAdvantage program membership number."
+      },
+      "AlternateOutText2": {
+        "#text": "Please enter your American Airlines AAdvantage program membership number."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "c656b21e-81d3-4021-9eb3-efacc0c86495"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "580a9231-3042-4d36-b0f1-b2e97a72b761": {
+            "AIRLINES": {
+              "value": "American Airlines",
+              "literal": "American Airlines"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862134332995817338"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@baace1c3-4d3d-419b-8d5e-1e731248dae5",
+    "@IID": "a7a6b2fa-162c-4b7f-9e89-9491c047990f",
+    "@TimeStamp": "2018-02-02T05:53:12.4333552Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "<span style=\"font-size: 13.3333px;\">Sure. I've asked the next available agent to join this conversation. They should be joining us in less than 1 minute.<\/span><div><span style=\"font-size: 13.3333px;\"><br /><\/span><\/div> <span style=\"font-size: 13.3333px;\">Chat Error. <\/span>"
+      },
+      "AlternateOutText": {
+        "#text": "Sure. I've asked the next available agent to join this conversation. They should be joining us in less than 1 minute. <span style=\"font-size: 13.3333px;\">Chat Error. <\/span>"
+      },
+      "AlternateOutText2": {
+        "#text": "Sure. I've asked the next available agent to join this conversation. They should be joining us in less than 1 minute. <span style=\"font-size: 13.3333px;\">Chat Error. <\/span>"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "a113f8db-5106-4a62-95a0-1b2d335bada4"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862166171588382586",
+    "kbNodeHit": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@9bc98686-f7b5-47a1-b020-1171f1fffcb5",
+    "@IID": "363ebb2e-f481-4e31-95eb-765b4326bbb9",
+    "@TimeStamp": "2018-02-02T06:52:05.54135Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, you're all set. This phone is now active on our network. <br /><br />Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, you're all set. This phone is now active on our network. \n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, you are all set. This phone is now active on our network. Can I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "cfc9f616-e7df-4126-b55f-e9f402297cd3"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "b7bc0bac-cf82-41c7-82fd-75223ba54fb9": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          },
+          "b09d65b7-e583-4f99-a364-1985957556eb": {
+            "PHONE_TYPE": {
+              "value": "smartphone",
+              "literal": "smartphone"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182818881621882",
+    "kbNodeHit": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@0d34c319-1268-40dd-892c-4e45281419c9",
+    "@IID": "27417bfe-d1fe-4f20-8881-f787ad1f96df",
+    "@TimeStamp": "2018-02-02T06:58:12.2550177Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, you'd like to reload $25 to your Nosh Time payment account, is that correct?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, you'd like to reload $25 to your Nosh Time payment account, is that correct?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, you'd like to reload $25 to your Nosh Time payment account, is that correct?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "f11ac335-777b-40e2-9932-c5f74bbcd958"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862186632812580730": {
+            "AMOUNT": {
+              "value": "$25",
+              "literal": "$25"
+            }
+          }
+        },
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186632812580730",
+    "conceptsInFocus": [
+      "YES_NO"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

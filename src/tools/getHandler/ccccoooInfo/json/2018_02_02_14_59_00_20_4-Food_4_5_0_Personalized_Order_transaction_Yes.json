@@ -1,0 +1,49 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@6d8230ec-dfe6-452b-ba48-9b90342fa40e",
+    "@IID": "83b62f86-da31-44b4-97bf-4f50dfe33e0f",
+    "@TimeStamp": "2018-02-02T06:59:00.562848Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      },
+      "AlternateOutText": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "ded20a8c-fac3-429c-871c-f346eb2bb5b8"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "1ae89ecb-254d-4a43-b0be-1a126997f29a": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          },
+          "707c8a6c-dfbc-4583-9939-b44931c5cd8f": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186267740360570",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:03:40.6916918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Food is available for purchase aboard your flight. Your flight includes a variety of snack items as well as artisan sandwich and healthy salad options."
+      },
+      "AlternateOutText": {
+        "#text": "Food is available for purchase aboard your flight. Your flight includes a variety of snack items as well as artisan sandwich and healthy salad options."
+      },
+      "AlternateOutText2": {
+        "#text": "Food is available for purchase aboard your flight. Your flight includes a variety of snack items as well as artisan sandwich and healthy salad options."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "85bc11dd-0769-409b-a859-269c6cac7f64"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128405940948858"
+  }
+}

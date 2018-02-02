@@ -1,0 +1,49 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@c302f0a6-7d1b-4355-85e8-3f41ef23c4dd",
+    "@IID": "3ff2e5fc-0980-4b62-8a56-4b7c311642ae",
+    "@TimeStamp": "2018-02-02T06:13:37.1367651Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great. Your transaction has been submitted to American Airlines for processing. this type of request is usually processed within 7 business days. <br /><br />You are also eligible to take advantage of our points for pay program. Would you like to purchase extra Neptune Airlines points?"
+      },
+      "AlternateOutText": {
+        "#text": "Great. Your transaction has been submitted to American Airlines for processing. this type of request is usually processed within 7 business days. \n\nYou are also eligible to take advantage of our points for pay program. Would you like to purchase extra Neptune Airlines points?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great. Your transaction has been submitted to American Airlines for processing. this type of request is usually processed within 7 business days. \n\nYou are also eligible to take advantage of our points for pay program. Would you like to purchase extra Neptune Airlines points?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "01e34f28-699e-4cc9-b0db-77a9b49de8f5"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "580a9231-3042-4d36-b0f1-b2e97a72b761": {
+            "AIRLINES": {
+              "value": "American Airlines",
+              "literal": "American Airlines"
+            }
+          },
+          "5533b3af-6400-452d-8eed-8dc1f7e47bd9": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862134332995817338",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

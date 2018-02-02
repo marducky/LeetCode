@@ -1,0 +1,62 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2a126012-7dbf-45d2-a8ac-60645ab8f40c",
+    "@IID": "81605514-164d-478b-875f-c9e23f80acbd",
+    "@TimeStamp": "2018-02-02T06:02:20.8023017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "<span style=\"font-size: 13.3333px;\">Ok, you want a <\/span> large extra hot nonfat milk vanilla regular latte.  Is that correct?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, you want a  large extra hot nonfat milk vanilla regular latte. Is that correct?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, you want a  large extra hot nonfat milk vanilla regular latte. Is that correct?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "8d005ac4-c9aa-4f07-bec5-15ba2bba7d99"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "latte",
+            "literal": "Latte"
+          },
+          "DRINK_TEMPERATURE": {
+            "value": "extra hot",
+            "literal": "Extra hot"
+          },
+          "DRINK_SIZE": {
+            "value": "large",
+            "literal": "Large"
+          },
+          "DRINK_FLAVOR": {
+            "value": "vanilla",
+            "literal": "Vanilla"
+          },
+          "DRINK_CAFFEINE": {
+            "value": "regular",
+            "literal": "Regular"
+          },
+          "DRINK_MILK_TYPE": {
+            "value": "nonfat milk",
+            "literal": "Non-fat Milk"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "YES_NO"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

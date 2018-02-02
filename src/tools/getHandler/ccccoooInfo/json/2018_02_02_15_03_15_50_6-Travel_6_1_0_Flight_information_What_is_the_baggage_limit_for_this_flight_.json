@@ -1,0 +1,48 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:03:14.8706918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "You're allowed one checked bag less than 50 pounds. Extra checked bags are $25 each. You may board your flight with one personal item and one carry-on bag. You can find more information about baggage limits <a href=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/travel/baggage.html\" data-vtz-browse=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/travel/baggage.html\" data-vtz-link-type=\"Web\">here.<\/a>"
+      },
+      "AlternateOutText": {
+        "#text": "You're allowed one checked bag less than 50 pounds. Extra checked bags are $25 each. You may board your flight with one personal item and one carry-on bag."
+      },
+      "AlternateOutText2": {
+        "#text": "You're allowed one checked bag less than 50 pounds. Extra checked bags are $25 each. You may board your flight with one personal item and one carry-on bag."
+      }
+    },
+    "TimeOut": 300,
+    "additionalUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/travel/baggage.html'> click here <\/a>",
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "be9dcbc8-c8f7-4f63-b3e1-03d1b32f187e"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128401645981562"
+  }
+}

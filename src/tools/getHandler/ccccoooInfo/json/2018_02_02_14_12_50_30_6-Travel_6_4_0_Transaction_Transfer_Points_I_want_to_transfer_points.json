@@ -1,0 +1,36 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@c302f0a6-7d1b-4355-85e8-3f41ef23c4dd",
+    "@IID": "3ff2e5fc-0980-4b62-8a56-4b7c311642ae",
+    "@TimeStamp": "2018-02-02T06:12:50.3767651Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sure, I can help you with that. We have transfer agreements with several US Airlines. Which program do you want to transfer from?"
+      },
+      "AlternateOutText": {
+        "#text": "Sure, I can help you with that. We have transfer agreements with several US Airlines. Which program do you want to transfer from?"
+      },
+      "AlternateOutText2": {
+        "#text": "Sure, I can help you with that. We have transfer agreements with several US Airlines. Which program do you want to transfer from?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "580a9231-3042-4d36-b0f1-b2e97a72b761"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862134332995817338",
+    "conceptsInFocus": [
+      "AIRLINES"
+    ]
+  }
+}

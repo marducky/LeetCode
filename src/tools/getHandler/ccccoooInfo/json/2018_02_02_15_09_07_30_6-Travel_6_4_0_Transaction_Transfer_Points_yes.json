@@ -1,0 +1,49 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@f04ee22f-1890-4d9d-b53e-c6f2fb1edb48",
+    "@IID": "5b5ff11f-ae46-4048-9e96-71fb263fb7ce",
+    "@TimeStamp": "2018-02-02T07:09:07.5526918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Twelve thousand miles will cost you $318.60. You'll get an extra 2,500 bonus points and save $35.40! Shall I charge this to your credit card?"
+      },
+      "AlternateOutText": {
+        "#text": "Twelve thousand miles will cost you $318.60. You'll get an extra 2,500 bonus points and save $35.40! Shall I charge this to your credit card?"
+      },
+      "AlternateOutText2": {
+        "#text": "Twelve thousand miles will cost you $318.60. You'll get an extra 2,500 bonus points and save $35.40! Shall I charge this to your credit card?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "ba9e459a-19f9-497f-8b5a-e74da9c0a4bd"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "580a9231-3042-4d36-b0f1-b2e97a72b761": {
+            "AIRLINES": {
+              "value": "American Airlines",
+              "literal": "American Airlines"
+            }
+          },
+          "5533b3af-6400-452d-8eed-8dc1f7e47bd9": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862134332995817338",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

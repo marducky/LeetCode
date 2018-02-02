@@ -1,0 +1,40 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7e046891-e963-435b-8187-15a41618df87",
+    "@IID": "1bc40a77-ce2d-4260-8d54-38664ede6f52",
+    "@TimeStamp": "2018-02-02T06:07:55.3053017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Flight number NP1628 departs from Terminal A in San Jose at 8:05 PM on Sunday May 22nd"
+      },
+      "AlternateOutText": {
+        "#text": "Flight number NP1628 departs from Terminal A in San Jose at 8:05 PM on Sunday May 22nd"
+      },
+      "AlternateOutText2": {
+        "#text": "Flight number N P One Six Two Eight departs from Terminal A in San Jose at 8 05 PM on Sunday May 22nd"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "167cde1f-079d-4c93-842a-eccfa74bb059"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128530495000442"
+  }
+}

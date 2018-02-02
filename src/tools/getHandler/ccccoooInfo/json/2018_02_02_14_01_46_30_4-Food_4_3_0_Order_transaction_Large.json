@@ -1,0 +1,59 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2a126012-7dbf-45d2-a8ac-60645ab8f40c",
+    "@IID": "81605514-164d-478b-875f-c9e23f80acbd",
+    "@TimeStamp": "2018-02-02T06:01:46.5083017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Do you want a flavor shot? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"dcc6c07a-358e-4c15-a1cb-f4d43483ea22\">Vanilla<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"8e872644-5846-49fd-9791-ef5c47c2dd25\">Hazelnut<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"1ae98151-0520-480e-a4ff-09c8b939a829\">Mocha<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"b2674579-23b3-417c-bcf9-73407a13a09e\">None<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Do you want a flavor shot? "
+      },
+      "AlternateOutText2": {
+        "#text": "Do you want a flavor shot? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Vanilla",
+        "Hazelnut",
+        "Mocha",
+        "None"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "9f656a60-4d84-4632-a340-d08657917e1f"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "latte",
+            "literal": "Latte"
+          },
+          "DRINK_TEMPERATURE": {
+            "value": "extra hot",
+            "literal": "Extra hot"
+          },
+          "DRINK_SIZE": {
+            "value": "large",
+            "literal": "Large"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_FLAVOR",
+      "YES_NO"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

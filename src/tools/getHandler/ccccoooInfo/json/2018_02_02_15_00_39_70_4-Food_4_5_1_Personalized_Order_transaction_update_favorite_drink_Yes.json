@@ -1,0 +1,76 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2494e12c-2576-4147-a844-9ae6ab20af62",
+    "@IID": "126c5c45-9723-4193-ad61-bde436a6042f",
+    "@TimeStamp": "2018-02-02T07:00:38.8056918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      },
+      "AlternateOutText": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great. Do you want to add anything else to your order?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "ded20a8c-fac3-429c-871c-f346eb2bb5b8"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TEMPERATURE": {
+            "value": "iced",
+            "literal": "iced"
+          },
+          "DRINK_TYPE": {
+            "value": "drip coffee",
+            "literal": "coffee"
+          },
+          "DRINK_SIZE": {
+            "value": "small",
+            "literal": "Small"
+          },
+          "DRINK_CAFFEINE": {
+            "value": "regular",
+            "literal": "Regular"
+          },
+          "DRINK_MILK_TYPE": {
+            "value": "none",
+            "literal": "none"
+          }
+        },
+        "intent": {},
+        "node": {
+          "1ae89ecb-254d-4a43-b0be-1a126997f29a": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          },
+          "cf0faca8-ac4f-43fe-83ea-f1b638e41ea2": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          },
+          "707c8a6c-dfbc-4583-9939-b44931c5cd8f": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186267740360570",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

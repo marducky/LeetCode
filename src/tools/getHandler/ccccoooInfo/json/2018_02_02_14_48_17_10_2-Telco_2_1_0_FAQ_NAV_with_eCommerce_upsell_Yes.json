@@ -1,0 +1,69 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@ae0f9fb0-1b3c-47a1-9efe-f6bba02eb277",
+    "@IID": "b4b1c0c5-e316-4a77-9e1b-5834e532be2e",
+    "@TimeStamp": "2018-02-02T06:48:17.1636952Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great!  Let's customize it for you.  Which color do you prefer?\n\n<img src=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/telco/samsung_galaxy_colors.png\" style=\"width:90%;\" align=\"center\"> <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"f39e8c58-d76b-41ee-b1e7-278748917cdb\">Black Sapphire<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"dfdecd4f-47da-4c22-a2ff-a84cf5da7f2e\">White Pearl<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"c4b94752-65b2-4f2d-85ef-03f63f73c71f\">Gold Platinum<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Great! Let's customize it for you. Which color do you prefer? "
+      },
+      "AlternateOutText2": {
+        "#text": "Great! Let's customize it for you. Which color do you prefer? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Black Sapphire",
+        "White Pearl",
+        "Gold Platinum"
+      ]
+    },
+    "TimeOut": 300,
+    "data": [
+      {
+        "text": "Samsung Phones",
+        "image": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/telco/samsung_galaxy_colors.png"
+      }
+    ],
+    "useCollectionView": true,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "130756f6-863c-4bdd-a2ce-5548ec78411e"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "PHONE_BRAND": {
+            "value": "Samsung",
+            "literal": "Samsung"
+          }
+        },
+        "intent": {},
+        "node": {
+          "b7ed2c98-68be-4f14-9802-aaa5963fba3e": {
+            "ASK_SAMSUNG_PHONE": {
+              "value": "Galaxy S6",
+              "literal": "Galaxy S6 Edge Details"
+            }
+          },
+          "7184d328-3329-48d5-9612-b4c7aee96d37": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182853241360250",
+    "conceptsInFocus": [
+      "PHONE_COLOR"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/telco/product.html"
+  }
+}

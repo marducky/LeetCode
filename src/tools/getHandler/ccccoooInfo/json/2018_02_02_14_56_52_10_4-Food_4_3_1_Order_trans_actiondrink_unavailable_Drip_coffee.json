@@ -1,0 +1,49 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@a017a888-82b6-40f4-ab4d-b53a9e800bb8",
+    "@IID": "8a1a3db4-2727-4774-b976-87bb26e06505",
+    "@TimeStamp": "2018-02-02T06:56:52.1640094Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "What temperature do you want? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"f522f552-dde7-41fb-a042-16bc4771786e\">Iced<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"d0137df6-d719-46a3-8af8-9dda19c999ca\">Hot<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"d067ae01-8ee6-45c2-a4ba-29fbc609cbff\">Extra hot<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "What temperature do you want? "
+      },
+      "AlternateOutText2": {
+        "#text": "What temperature do you want? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Iced",
+        "Hot",
+        "Extra hot"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "568215b7-0142-4cfe-b405-54448f7a3818"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "drip coffee",
+            "literal": "Drip coffee"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_TEMPERATURE"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

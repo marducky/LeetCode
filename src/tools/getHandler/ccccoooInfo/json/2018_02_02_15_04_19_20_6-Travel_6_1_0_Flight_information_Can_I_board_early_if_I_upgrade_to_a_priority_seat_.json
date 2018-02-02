@@ -1,0 +1,50 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:04:19.5016918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Yes, the $45 upgrade fee includes the extra legroom and priority boarding in group 1.<br /><br /> Would you like to upgrade?"
+      },
+      "AlternateOutText": {
+        "#text": "Yes, the $45 upgrade fee includes the extra legroom and priority boarding in group 1.\n\nWould you like to upgrade?"
+      },
+      "AlternateOutText2": {
+        "#text": "Yes, the $45 upgrade fee includes the extra legroom and priority boarding in group 1. Would you like to upgrade?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "fd409354-acc8-4bb4-882e-693a46928227"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862129273524342650",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

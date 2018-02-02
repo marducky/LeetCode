@@ -1,0 +1,54 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7e046891-e963-435b-8187-15a41618df87",
+    "@IID": "1bc40a77-ce2d-4260-8d54-38664ede6f52",
+    "@TimeStamp": "2018-02-02T06:09:57.4333017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Okay, you are all set. Your credit card on file has been charged $45."
+      },
+      "AlternateOutText": {
+        "#text": "Okay, you are all set. Your credit card on file has been charged $45."
+      },
+      "AlternateOutText2": {
+        "#text": "Okay, you are all set. Your credit card on file has been charged $45."
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "f6058fc7-5854-4714-9946-d18d30a4dd54"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          },
+          "fd409354-acc8-4bb4-882e-693a46928227": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862129273524342650",
+    "kbNodeHit": true
+  }
+}

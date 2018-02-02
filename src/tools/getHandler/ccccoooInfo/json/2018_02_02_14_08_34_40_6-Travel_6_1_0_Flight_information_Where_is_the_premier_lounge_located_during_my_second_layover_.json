@@ -1,0 +1,54 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7e046891-e963-435b-8187-15a41618df87",
+    "@IID": "1bc40a77-ce2d-4260-8d54-38664ede6f52",
+    "@TimeStamp": "2018-02-02T06:08:34.5893017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "The premier lounge is located at gate D3 in terminal D at La Guardia airport.\n<br />\n<img src=\"http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/travel/premier_lounge_lga.png\" style=\"width:75%;\" align=\"center\">"
+      },
+      "AlternateOutText": {
+        "#text": "The premier lounge is located at gate D3 in terminal D at La Guardia airport."
+      },
+      "AlternateOutText2": {
+        "#text": "The premier lounge is located at gate D3 in terminal D at La Guardia airport."
+      }
+    },
+    "TimeOut": 300,
+    "data": [
+      {
+        "text": "Ask Premier Lounge",
+        "image": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/images/travel/premier_lounge_lga.png"
+      }
+    ],
+    "useCollectionView": true,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "f6b4891d-79b6-480e-b997-bb02c82e8235"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128440300687226"
+  }
+}

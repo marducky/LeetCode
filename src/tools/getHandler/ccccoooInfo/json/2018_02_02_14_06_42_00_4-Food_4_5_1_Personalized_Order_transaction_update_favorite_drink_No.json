@@ -1,0 +1,80 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@eb21eebf-08f1-432d-b81c-8ddcc4f2d27d",
+    "@IID": "f4931e95-55e0-4d6c-b2cb-aacc09f4782a",
+    "@TimeStamp": "2018-02-02T06:06:42.0757651Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sounds yummy! I've submitted this order to your favorite café location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.<br /><br />Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Sounds yummy! I've submitted this order to your favorite cafe location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.\n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Sounds yummy! I've submitted this order to your favorite cafe location and debited your Nosh Time payment account. Your order will be at the pick up counter when you arrive.\n\nCan I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "0b688f16-023c-41a7-b8df-b4ab553c3438"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TEMPERATURE": {
+            "value": "iced",
+            "literal": "iced"
+          },
+          "DRINK_TYPE": {
+            "value": "drip coffee",
+            "literal": "coffee"
+          },
+          "DRINK_SIZE": {
+            "value": "small",
+            "literal": "Small"
+          },
+          "DRINK_CAFFEINE": {
+            "value": "regular",
+            "literal": "Regular"
+          },
+          "DRINK_MILK_TYPE": {
+            "value": "none",
+            "literal": "none"
+          }
+        },
+        "intent": {},
+        "node": {
+          "1ae89ecb-254d-4a43-b0be-1a126997f29a": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          },
+          "cf0faca8-ac4f-43fe-83ea-f1b638e41ea2": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          },
+          "707c8a6c-dfbc-4583-9939-b44931c5cd8f": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          },
+          "ded20a8c-fac3-429c-871c-f346eb2bb5b8": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186267740360570",
+    "kbNodeHit": true
+  }
+}

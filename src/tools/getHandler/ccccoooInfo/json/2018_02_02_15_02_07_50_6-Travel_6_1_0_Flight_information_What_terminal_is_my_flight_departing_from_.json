@@ -1,0 +1,45 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:02:07.0656918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Your itinerary includes three flights. Which flight do you want information for? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"5b42c34f-e369-4889-b71f-d4b969df3c54\">San Jose to Chicago<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"6d43bce1-f35e-4117-b74c-12609ce93718\">Chicago to New York<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"8563dd81-7b3b-42ce-8de5-9ffedd42aa55\">New York to DC<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Your itinerary includes three flights. Which flight do you want information for? "
+      },
+      "AlternateOutText2": {
+        "#text": "Your itinerary includes three flights. Which flight do you want information for? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "San Jose to Chicago",
+        "Chicago to New York",
+        "New York to DC"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "a12f066b-546c-43c1-bcbc-1687f1387a25"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128530495000442",
+    "conceptsInFocus": [
+      "SELECT_FLIGHT",
+      "SELECT_FLIGHT_DATE",
+      "NUMACC"
+    ]
+  }
+}

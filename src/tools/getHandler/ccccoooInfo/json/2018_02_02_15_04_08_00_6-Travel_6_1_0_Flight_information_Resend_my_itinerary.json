@@ -1,0 +1,47 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@7a3d9bbe-ec8a-4799-a5f3-56b350f2cfd5",
+    "@IID": "70810142-df16-4c54-b2a8-7bc101e9fcaa",
+    "@TimeStamp": "2018-02-02T07:04:07.9116918Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sure. I’ve resent your itinerary to your email address. (toria_starr@bmcmusic.com)"
+      },
+      "AlternateOutText": {
+        "#text": "Sure. I’ve resent your itinerary to your email address. (toria_starr@bmcmusic.com)"
+      },
+      "AlternateOutText2": {
+        "#text": "Sure. I’ve resent your itinerary to your email address. (toria_starr@bmcmusic.com)"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "49eae1ac-a4d4-4e73-b588-f0e5319a5dc2"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862128440300687226": {
+            "LAYOVER": {
+              "value": "second",
+              "literal": "second"
+            }
+          }
+        },
+        "node": {
+          "a12f066b-546c-43c1-bcbc-1687f1387a25": {
+            "NUMACC": {
+              "value": "the first one",
+              "literal": "The first one"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862128491840294778"
+  }
+}

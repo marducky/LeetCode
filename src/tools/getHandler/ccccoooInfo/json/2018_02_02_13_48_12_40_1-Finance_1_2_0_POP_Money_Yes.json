@@ -1,0 +1,59 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@48071526-f842-42fc-b294-b9cb0dc318c1",
+    "@IID": "30aea4ad-cce4-41f0-b30a-b5a8c4fe1a2e",
+    "@TimeStamp": "2018-02-02T05:48:11.7892938Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great.  Your transaction has been submitted. Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Great. Your transaction has been submitted. Can I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great. Your transaction has been submitted. Can I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "b2214b36-24c9-4185-bc6a-c3fbee7a111d",
+        "Incomprehension": "704c822f-b8a3-45fe-ad40-03b33a823899"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "TO_ACCOUNT": {
+              "value": "Jon Stevens",
+              "literal": "Jon"
+            },
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "checking",
+              "literal": ""
+            }
+          },
+          "2186e2f0-365d-4bf3-a21f-8f21b29c8245": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "kbNodeHit": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@c6112396-0e74-426f-8ef3-cd38f8dd7e8b",
+    "@IID": "1964046d-c7aa-4c78-9646-64f1b844afef",
+    "@TimeStamp": "2018-02-02T06:50:55.0022968Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, I’ll keep you posted. Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, I’ll keep you posted. Can I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, I’ll keep you posted. Can I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "10f6d808-a336-42d6-a55c-ce89c47ed0de"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "PHONE_BRAND": {
+            "value": "HTC",
+            "literal": "HTC"
+          }
+        },
+        "intent": {},
+        "node": {
+          "02eed8ce-5a73-464c-8d3a-136a54494c16": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182853241360250",
+    "kbNodeHit": true
+  }
+}

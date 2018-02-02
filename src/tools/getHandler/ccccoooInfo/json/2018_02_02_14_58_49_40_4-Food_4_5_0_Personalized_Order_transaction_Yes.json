@@ -1,0 +1,43 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@6d8230ec-dfe6-452b-ba48-9b90342fa40e",
+    "@IID": "83b62f86-da31-44b4-97bf-4f50dfe33e0f",
+    "@TimeStamp": "2018-02-02T06:58:48.9546873Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, and you also want a Nosh Time morning breakfast sandwich. Is that correct?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, and you also want a Nosh Time morning breakfast sandwich. Is that correct?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, and you also want a Nosh Time morning breakfast sandwich. Is that correct?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "707c8a6c-dfbc-4583-9939-b44931c5cd8f"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "1ae89ecb-254d-4a43-b0be-1a126997f29a": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186267740360570",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

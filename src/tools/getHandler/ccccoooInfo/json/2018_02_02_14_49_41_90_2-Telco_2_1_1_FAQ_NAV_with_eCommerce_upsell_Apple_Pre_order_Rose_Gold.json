@@ -1,0 +1,61 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@4596d9e6-8731-4354-9ed9-a0061a3cd763",
+    "@IID": "cae92b60-514d-4a57-8936-704ad7f2ec6c",
+    "@TimeStamp": "2018-02-02T06:49:41.2711566Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Stylish!  How much storage do you want on your phone? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"7eecf8a0-0283-45e1-8b8b-d976e836c3bc\">16GB ($750 full price or $32/mo*)<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"d68b27c2-fede-47dd-a17a-7d69860ef2ee\">64GB ($850 full price or $36/mo*)<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"eda3c78c-30c1-4897-b06a-1cefe8d1ae92\">128GB ($950 full price or $40/mo*)<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Stylish! How much storage do you want on your phone?\n "
+      },
+      "AlternateOutText2": {
+        "#text": "Stylish! How much storage do you want on your phone?\n\n        16GB ($750 full price or $32 per month)\n        64GB ($850 full price or $36 per month)\n        128GB ($950 full price or $40 per month)\n "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "16GB ($750 full price or $32/mo*)",
+        "64GB ($850 full price or $36/mo*)",
+        "128GB ($950 full price or $40/mo*)"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "af85597c-f938-4756-b55b-915819f2c00c"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "PHONE_BRAND": {
+            "value": "Apple",
+            "literal": "Apple"
+          }
+        },
+        "intent": {},
+        "node": {
+          "e8c9fc3e-22c8-4841-a016-8ae243e17b0c": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes, pre-order"
+            }
+          },
+          "9f9eb027-d946-451e-859e-d997290f4022": {
+            "PHONE_COLOR": {
+              "value": "rose gold",
+              "literal": "Rose Gold"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182853241360250",
+    "conceptsInFocus": [
+      "PHONE_STORAGE_SIZE"
+    ]
+  }
+}

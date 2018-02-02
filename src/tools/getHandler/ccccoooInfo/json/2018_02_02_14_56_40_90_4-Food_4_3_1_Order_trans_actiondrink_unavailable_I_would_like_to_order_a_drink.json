@@ -1,0 +1,43 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@a017a888-82b6-40f4-ab4d-b53a9e800bb8",
+    "@IID": "8a1a3db4-2727-4774-b976-87bb26e06505",
+    "@TimeStamp": "2018-02-02T06:56:40.108804Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "What kind of drink do you want? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"8e46a3a6-7a90-4cce-9c17-723d5edfc911\">Latte<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"78f9d18e-9477-4476-8349-f2a64e5314ba\">Drip Coffee<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "What kind of drink do you want? "
+      },
+      "AlternateOutText2": {
+        "#text": "What kind of drink do you want? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Latte",
+        "Drip Coffee"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "5dce9e87-87d1-4822-8cf6-964b677b878c"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_TYPE"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

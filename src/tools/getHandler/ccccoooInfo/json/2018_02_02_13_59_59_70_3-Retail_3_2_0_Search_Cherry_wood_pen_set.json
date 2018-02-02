@@ -1,0 +1,42 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@45d790ee-7047-4fe7-aa87-992691318e05",
+    "@IID": "7705561f-6108-4b49-a180-1dfe81f90814",
+    "@TimeStamp": "2018-02-02T05:59:59.6903017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "This item was delivered on November 8, 2015.<br /><br />\nCan I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "This item was delivered on November 8, 2015.\n\nCan I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "This item was delivered on November 8, 2015.\n\nCan I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "c17ed7c0-918c-4296-a30c-ed7aeeb1504b"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862185533300952954": {
+            "RETAIL_ITEM": {
+              "value": "pen set",
+              "literal": "Cherry wood pen set"
+            }
+          }
+        },
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862185533300952954",
+    "kbNodeHit": true,
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/retail/orders.html"
+  }
+}

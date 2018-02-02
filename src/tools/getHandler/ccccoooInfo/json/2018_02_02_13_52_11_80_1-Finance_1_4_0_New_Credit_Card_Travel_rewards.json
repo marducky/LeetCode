@@ -1,0 +1,53 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@bc19bfb9-c6ce-48a5-9a9e-b5536bf12951",
+    "@IID": "5a3aaf8f-e0c5-4270-8569-d2df47cac8a1",
+    "@TimeStamp": "2018-02-02T05:52:10.7858879Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Our travel rewards card will really take you places! You'll earn 3 Neptune Airlines miles for every $1 you spend on Neptune Airlines, 2 miles for every $1 spent at restaurants, gas stations, department stores, grocery stores, and on Neomart.com, plus 1 mile per dollar on all other purchases. We'll also give you a one-time welcome bonus of 75,000 miles if you spend $2000 in the first 3 months. Would you like to apply now or do you have more questions about this card? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"c757250b-1c91-4cfc-89ad-0fe4e6b8f74c\">Apply now<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"248410f2-0465-4369-bd12-b7f6c8847896\">Interest free days?<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"a3293da0-e62e-46a4-ab2c-932d2511a5c9\">Interest rate?<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"81c1fe5d-931c-47ac-914f-ebc243350f4e\">Insurances included?<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"2966bff1-b963-4a76-a01a-3f1db8c3fc22\">Fees?<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Our travel rewards card will really take you places! You'll earn 3 Neptune Airlines miles for every $1 you spend on Neptune Airlines, 2 miles for every $1 spent at restaurants, gas stations, department stores, grocery stores, and on Neomart.com, plus 1 mile per dollar on all other purchases. We'll also give you a one-time welcome bonus of 75,000 miles if you spend $2000 in the first 3 months. Would you like to apply now or do you have more questions about this card? "
+      },
+      "AlternateOutText2": {
+        "#text": "Our travel rewards card will really take you places! You'll earn 3 Neptune Airlines miles for every $1 you spend on Neptune Airlines, 2 miles for every $1 spent at restaurants, gas stations, department stores, grocery stores, and on Neomart.com, plus 1 mile per dollar on all other purchases. We'll also give you a one-time welcome bonus of 75,000 miles if you spend $2000 in the first 3 months. Would you like to apply now or do you have more questions about this card? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Apply now",
+        "Interest free days?",
+        "Interest rate?",
+        "Insurances included?",
+        "Fees?"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "2331d484-8b3a-42f8-9ed5-e0859c0d6282"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862181873988816762": {
+            "CARD_ACTIVATION_TYPE": {
+              "value": "travel rewards",
+              "literal": "Travel rewards"
+            }
+          }
+        },
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862181873988816762",
+    "conceptsInFocus": [
+      "CARD_ACTIVATION_QUESTIONS"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/banking/index.html"
+  }
+}

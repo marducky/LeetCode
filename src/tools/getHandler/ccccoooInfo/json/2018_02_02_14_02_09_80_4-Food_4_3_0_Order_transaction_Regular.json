@@ -1,0 +1,68 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2a126012-7dbf-45d2-a8ac-60645ab8f40c",
+    "@IID": "81605514-164d-478b-875f-c9e23f80acbd",
+    "@TimeStamp": "2018-02-02T06:02:09.4823017Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "What type of milk? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"ab994010-34bd-427a-96d7-77031d00529f\">Whole Milk<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"894e64f8-c2b2-4bb5-a468-90b24c4aa938\">2% Milk<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"fdf1df20-3a92-426f-810a-d42fc8b272ff\">1% Milk<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"617f6606-18c3-4a11-bbf1-b504a31ca963\">Nonfat Milk<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"4c115266-f95a-4da5-8019-37b56cc0ddbb\">Soy Milk<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"ed7c925e-4219-4c13-b32a-362f871d9b4b\">None<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "What type of milk? "
+      },
+      "AlternateOutText2": {
+        "#text": "What type of milk? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Whole Milk",
+        "2% Milk",
+        "1% Milk",
+        "Nonfat Milk",
+        "Soy Milk",
+        "None"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "958528b8-6e95-4b08-b6f6-0f7771c64b3d"
+      },
+      "conceptCaptures": {
+        "agent": {
+          "DRINK_TYPE": {
+            "value": "latte",
+            "literal": "Latte"
+          },
+          "DRINK_TEMPERATURE": {
+            "value": "extra hot",
+            "literal": "Extra hot"
+          },
+          "DRINK_SIZE": {
+            "value": "large",
+            "literal": "Large"
+          },
+          "DRINK_FLAVOR": {
+            "value": "vanilla",
+            "literal": "Vanilla"
+          },
+          "DRINK_CAFFEINE": {
+            "value": "regular",
+            "literal": "Regular"
+          }
+        },
+        "intent": {},
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186619927678842",
+    "conceptsInFocus": [
+      "DRINK_MILK_TYPE"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/food/"
+  }
+}

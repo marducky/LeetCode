@@ -1,0 +1,51 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@48071526-f842-42fc-b294-b9cb0dc318c1",
+    "@IID": "30aea4ad-cce4-41f0-b30a-b5a8c4fe1a2e",
+    "@TimeStamp": "2018-02-02T05:47:20.6801834Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Sure.  From which account? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"da08e0b6-7294-4c6f-be5f-2124b2722786\">Checking - $8,345.01<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"ec00700b-c29b-4ada-9bf0-9f9cbc7d2320\">Savings - $12,762.90<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"12ff2334-0e85-44aa-96ab-3464df720ce2\">Brokerage - $34,981.76<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Sure. From which account? "
+      },
+      "AlternateOutText2": {
+        "#text": "Sure. From which account? "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Checking - $8,345.01",
+        "Savings - $12,762.90",
+        "Brokerage - $34,981.76"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "9bcc0fa4-8036-44c7-b91b-40ea732f73dd"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "TO_ACCOUNT": {
+              "value": "Jon Stevens",
+              "literal": "Jon"
+            }
+          }
+        },
+        "node": {},
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "conceptsInFocus": [
+      "FROM_ACCOUNT"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/banking/index.html"
+  }
+}

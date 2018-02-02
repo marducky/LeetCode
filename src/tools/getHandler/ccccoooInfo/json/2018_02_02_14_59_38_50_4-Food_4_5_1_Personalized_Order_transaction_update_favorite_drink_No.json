@@ -1,0 +1,43 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@2494e12c-2576-4147-a844-9ae6ab20af62",
+    "@IID": "126c5c45-9723-4193-ad61-bde436a6042f",
+    "@TimeStamp": "2018-02-02T06:59:37.7945708Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Oh wow. I thought I knew you! So tell me, what's your favorite drink?"
+      },
+      "AlternateOutText": {
+        "#text": "Oh wow. I thought I knew you! So tell me, what's your favorite drink?"
+      },
+      "AlternateOutText2": {
+        "#text": "Oh wow. I thought I knew you! So tell me, what's your favorite drink?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "7c25e546-d328-4845-b4c9-7e9e90296867"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {},
+        "node": {
+          "1ae89ecb-254d-4a43-b0be-1a126997f29a": {
+            "YES_NO": {
+              "value": "no",
+              "literal": "No"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862186267740360570",
+    "conceptsInFocus": [
+      "ASK_DRINK_CHANGE"
+    ]
+  }
+}

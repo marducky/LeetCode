@@ -1,0 +1,51 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@941783d9-bf99-4de8-86a2-a5412d468983",
+    "@IID": "962d9827-d265-4ec6-8c82-fb74d4994f95",
+    "@TimeStamp": "2018-02-02T06:40:02.8490819Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, you'd like to transfer $5,000.00 from your checking account to your savings account.  Is that correct?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, you'd like to transfer $5,000.00 from your checking account to your savings account. Is that correct?"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, you'd like to transfer $5,000.00 from your checking account to your savings account. Is that correct?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "2186e2f0-365d-4bf3-a21f-8f21b29c8245"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "savings",
+              "literal": ""
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "conceptsInFocus": [
+      "YES_NO"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/banking/index.html"
+  }
+}
