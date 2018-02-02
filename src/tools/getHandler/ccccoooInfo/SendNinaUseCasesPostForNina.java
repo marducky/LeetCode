@@ -76,7 +76,7 @@ public class SendNinaUseCasesPostForNina {
      * @return
      */
     private JSONObject sendPostUrl(String url, String param) {
-        PrintWriter out = null;
+        PrintWriter outq = null;
         BufferedReader in = null;
         JSONObject jsonObject = null;
         String result = "";
@@ -91,11 +91,11 @@ public class SendNinaUseCasesPostForNina {
             httpUrlConnection.setDoOutput(true);
             httpUrlConnection.setDoInput(true);
             // 获取URLConnection对象对应的输出流（设置请求编码为UTF-8）
-            out = new PrintWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
+            outq = new PrintWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
             // 发送请求参数
-            out.print(param);
+            outq.print(param);
             // flush输出流的缓冲
-            out.flush();
+            outq.flush();
             // 获取请求返回数据（设置返回数据编码为UTF-8）
             in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
             String line;
@@ -108,8 +108,10 @@ public class SendNinaUseCasesPostForNina {
             e.printStackTrace();
         } finally {
             try {
-                if (out != null) {
-                    out.close();
+                if (outq != null) {
+                    outq.close();
+                    String s = "";
+//                    System.out.print("");
                 }
                 if (in != null) {
                     in.close();
@@ -121,6 +123,9 @@ public class SendNinaUseCasesPostForNina {
         return jsonObject;
     }
 
+    /**
+     * @return
+     */
     //get the Stubby demo json.
     private JSONObject changeStubbyDemoJson() {
         GetNinaUseCasesTwo getNinaUseCases = new GetNinaUseCasesTwo();
@@ -146,6 +151,10 @@ public class SendNinaUseCasesPostForNina {
         return jsonObjectResult;
     }
 
+    /**
+     *
+     * @return
+     */
     //get the YamlDemo String
     private String getYamlDemoString() {
         GetNinaUseCasesTwo getNinaUseCases = new GetNinaUseCasesTwo();
@@ -169,6 +178,9 @@ public class SendNinaUseCasesPostForNina {
         return stringBufferResult.toString();
     }
 
+    /**
+     *
+     */
     public void sendPostToNinaUrl() {
         DateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_");
 
