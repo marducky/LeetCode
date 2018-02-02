@@ -1,0 +1,28 @@
+github:
+https://github.com/roobo/docs/tree/master/ApiReference/skills 
+jsonDemo：
+{
+	"sessionId":"NuanceWenbinTest21",
+	"agentId":"MmM3YmVkMjkxZmE5",
+	"token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689",
+	"query":"北京天气怎么样",
+	"context": {
+		"service": "Weather",
+		"context": "weather_aday"
+	},
+	"location":{
+        "address":{
+            "city":"上海",
+            "country":"中国",
+            "detail":"成都市武侯区",
+            "province":"四川"
+        },
+        "latitude":40.040545,
+        "longitude":116.415858
+    }
+
+} 
+
+url:
+https://api.ros.ai/bot/third/cheji/v3 
+ 
