@@ -1,4 +1,4 @@
-#####1£ºOnly have PA_Service_Name,UserText.
+#####1: Only have PA_Service_Name,UserText.
 {"PA_Service_Name":"pa_flag","UserText":"text_flag"}
 #####2: Only have UserText.
 {"UserText":"text_flag"}

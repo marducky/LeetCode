@@ -41,6 +41,8 @@ public class SendNinaUseCasesPostForNina {
                     stringBuffer.append(line + "\n");
                 }
             }
+            fileInputStream.close();
+            bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -119,6 +121,54 @@ public class SendNinaUseCasesPostForNina {
         return jsonObject;
     }
 
+    //get the Stubby demo json.
+    private JSONObject changeStubbyDemoJson() {
+        GetNinaUseCasesTwo getNinaUseCases = new GetNinaUseCasesTwo();
+        String pathName = getNinaUseCases.getFileName();
+        File file = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "PostJsonForStuby.txt");
+//        ArrayList<String> arrayListPost = new ArrayList<String>();
+        JSONObject jsonObjectResult = new JSONObject();
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line = "";
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.indexOf("text_flag") > 0 && (line.indexOf("pa_flag") == -1)) {
+                    jsonObjectResult = JSONObject.fromObject(line);
+                }
+            }
+            fileInputStream.close();
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return jsonObjectResult;
+    }
+
+    //get the YamlDemo String
+    private String getYamlDemoString() {
+        GetNinaUseCasesTwo getNinaUseCases = new GetNinaUseCasesTwo();
+        String pathName = getNinaUseCases.getFileName();
+        File file = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "StubyYamlForNina.txt");
+        StringBuffer stringBufferResult = new StringBuffer("");
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line = "";
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBufferResult.append(line + "\n");
+            }
+            fileInputStream.close();
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBufferResult.toString();
+    }
+
     public void sendPostToNinaUrl() {
         DateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_");
 
@@ -130,8 +180,10 @@ public class SendNinaUseCasesPostForNina {
         String sci = "@5c3216df-8a3c-2f43-6cc3-1cdb9a32eac2@2236d4fc-abfd-47c4-a259-a43a95d65c9e";
         String iid = "4a01871a-38de-42df-bafd-4935fdac2a3e";
         String userText = "Checking - $8,345.01";
-        File file = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "NinaCaseFormatFinal.txt");
+        File file = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "NinaDialogUseAction.txt");
         ArrayList<String> arrayListPost = new ArrayList<String>();
+//        ArrayList<String> arrayListForFinalTestToQA=new ArrayList<String>();
+        StringBuffer stringBufferListForFinalTestToQA = new StringBuffer("UserTestList\n");
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
@@ -143,32 +195,101 @@ public class SendNinaUseCasesPostForNina {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (String sssTemop : arrayListPost) {
-            ArrayList<String> arrayList = changePostFlag(postJsonArrayList, sci, iid, sssTemop);
-            for (int i = 0; i < arrayList.size(); i++) {
-                JSONObject jsonObject = sendPostUrl("https://agent.nina-nuance.com/sales-assistant-englishus-WebBotRouter/jbotservice.asmx/TalkAgent", arrayList.get(i));
-                File fileJson = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\" + df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + i + ".json");
-                try {
-                    if (!fileJson.exists()) {
-                        fileJson.createNewFile();
-                    } else {
-                        fileJson = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\" + df.format(new Date(System.currentTimeMillis())) + sssTemop + i + "" + Math.abs(random.nextInt()) % 10 + ".json");
-                    }
-                    FileWriter fileWriter = new FileWriter(fileJson, true);
-                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                    bufferedWriter.write(jsonObject.toString());
-                    bufferedWriter.close();
-                    fileWriter.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(jsonObject.toString());
+        //begin the dialog time
+        String firstLevel = "";
+        String secondLevel = "";
+        boolean newDialog = false;
+//        String sciPattern="\"@SCI\" :\"[\\s\\S]*\"";
+//        String iidPattern="\"@IID\" :\"[\\s\\S]*\"";
+        String stubbyYamlDemoForNinaString = getYamlDemoString();
+        JSONObject jsonObjectForPostJsonForStubby = changeStubbyDemoJson();
+
+        File fileForYaml = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "StubbyNinaTest.yaml");
+        try {
+            if (!fileForYaml.exists()) {
+                fileForYaml.createNewFile();
+            } else {
+                FileWriter fileWriterClear = new FileWriter(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "StubbyNinaTest.yaml", false);
+                fileWriterClear.write("");
+                fileWriterClear.flush();
+                fileWriterClear.close();
             }
+            FileWriter fileWriterForYaml = new FileWriter(fileForYaml, true);
+            BufferedWriter bufferedWriterForYaml = new BufferedWriter(fileWriterForYaml);
+
+            for (String sssTemop : arrayListPost) {
+                if (sssTemop.startsWith("*")) {
+                    firstLevel = sssTemop.substring(sssTemop.lastIndexOf("*") + 1, sssTemop.length());
+                } else {
+                    if (sssTemop.startsWith("#")) {
+                        secondLevel = sssTemop.substring(sssTemop.lastIndexOf("#") + 1, sssTemop.length());
+                        sci = "";
+                        iid = "";
+                        newDialog = true;
+                    } else {
+                        ArrayList<String> arrayList = changePostFlag(postJsonArrayList, sci, iid, sssTemop);
+                        for (int i = 0; i < arrayList.size(); i++) {
+                            JSONObject jsonObject = sendPostUrl("https://agent.nina-nuance.com/sales-assistant-englishus-WebBotRouter/jbotservice.asmx/TalkAgent", arrayList.get(i));
+//                        String perJsonName=df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + i+"_"+firstLevel+"_"+secondLevel+"_"+sssTemop.replace("[ |\\?|\\*|\\/|\\|\\<|\\>|\\:|\"]","_");
+                            String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + i + "_" + firstLevel + "_" + secondLevel + "_" + sssTemop.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
+                            JSONObject jsonObjectForSave = JSONObject.fromObject(jsonObjectForPostJsonForStubby.toString().replace("text_flag", secondLevel + "_" + sssTemop));
+                            String saveToFileYamlDemo = stubbyYamlDemoForNinaString.replace("request_json_flag", jsonObjectForSave.toString()).replace("response_json_flag", perJsonName);
+                            stringBufferListForFinalTestToQA.append(jsonObjectForPostJsonForStubby.toString().replace("text_flag", secondLevel + "_" + sssTemop) + "\n");
+                            bufferedWriterForYaml.write(saveToFileYamlDemo + "\n");
+                            File fileJson = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\" + perJsonName + ".json");
+                            if (newDialog = true) {
+                                JSONObject jsonObjectFirstCase = jsonObject.getJSONObject("TalkAgentResponse");
+                                sci = jsonObjectFirstCase.getString("@SCI");
+                                iid = jsonObjectFirstCase.getString("@IID");
+                            }
+                            newDialog = false;
+                            try {
+                                if (!fileJson.exists()) {
+                                    fileJson.createNewFile();
+                                } else {
+                                    fileJson = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "json\\" + df.format(new Date(System.currentTimeMillis())) + sssTemop + i + "" + Math.abs(random.nextInt()) % 10 + ".json");
+                                }
+                                FileWriter fileWriter = new FileWriter(fileJson, true);
+                                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                                bufferedWriter.write(jsonObject.toString());
+                                bufferedWriter.close();
+                                fileWriter.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                Thread.sleep(10000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println(jsonObject.toString());
+                        }
+                    }
+                }
+
+            }
+            bufferedWriterForYaml.close();
+            fileWriterForYaml.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File fileWriterForFinalTestToQA = new File(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "NinaTestCaseDialogForFinalTestToQA.yaml");
+        try {
+            if (!fileWriterForFinalTestToQA.exists()) {
+                fileWriterForFinalTestToQA.createNewFile();
+            } else {
+                FileWriter fileWriterClearForFinalTestToQA = new FileWriter(pathName.substring(0, pathName.lastIndexOf('\\') + 1) + "NinaTestCaseDialogForFinalTestToQA.yaml", false);
+                fileWriterClearForFinalTestToQA.write("");
+                fileWriterClearForFinalTestToQA.flush();
+                fileWriterClearForFinalTestToQA.close();
+            }
+            FileWriter fileWriterForQA = new FileWriter(fileWriterForFinalTestToQA, true);
+            BufferedWriter bufferedWriterForQA = new BufferedWriter(fileWriterForQA);
+            bufferedWriterForQA.write(stringBufferListForFinalTestToQA.toString());
+            bufferedWriterForQA.close();
+            fileWriterForQA.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
