@@ -1,0 +1,21 @@
+####1
+{  "sessionId": "sessionId_flag",
+  "agentId": "agentId_flag",
+  "token": "token_flag",
+  "query": "query_flag",
+  "context": {
+    "service": "",
+    "context": ""
+  },
+  "location": {
+    "address": {
+      "city": "成都",
+      "country": "中国",
+      "detail": "成都市武侯区",
+      "province": "四川"
+    },
+    "latitude": 40.040545,
+    "longitude": 116.415858
+  }
+}
+#####

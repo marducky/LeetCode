@@ -1,0 +1,179 @@
+*1-Finance
+#1_1_0_Funds_transfer
+I’d like to transfer money
+Checking *2341
+Savings *8760
+$5000.00
+Yes
+#1_1_1_Funds_transfer
+I want to transfer some money.
+Checking *2341
+Savings *8760
+$13,000.00
+Yes
+#1_2_0_POP_Money
+I want to send money to Jon
+Checking *2341
+First one
+$50.00
+Yes
+#1_2_1_POP_Money
+I want to send money to Jon
+Checking *2341
+Jon Stevens - Checking *6710
+$10,000.00
+Yes.
+Yes.
+#1_3_0_Pay_a_bill
+I want to pay my credit card bill.
+Checking *2341
+Visa *3424
+Full balance - $5,416.78
+Yes
+#1_3_1_Pay_a_bill
+I want to pay my credit card bill.
+Checking *2341
+Mastercard *5401
+Full balance- $9,000.00
+Yes.
+Yes.
+No.
+#1_4_0_New_Credit_Card
+What kind of credit cards do you offer?
+Travel rewards
+How many interest free days?
+What’s the interest rate?
+What insurances are included?
+What are the fees?
+#1_7_0_Channel_to_live_agent
+I want to speak to an agent
+I’m in Rome and a pickpocket stole my wallet outside the collseum. I need to cancel my credit card and get a new one right away.
+*2-Telco
+#2_1_0_FAQ_NAV_with_eCommerce_upsell
+I want to upgrade my phone.
+Samsung
+Galaxy S6 Edge Details
+Yes
+Black Sapphire
+32GB
+Add all to cart
+#2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order
+I want to upgrade my phone.
+Apple
+Yes, pre-order
+Rose Gold
+16GB
+Add all to cart
+No thanks
+#2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order
+I want to upgrade my phone.
+HTC
+Yes
+#2_2_0_FAQ_NAV_Account_Management
+I want to activate my phone.
+Yes, activate this phone
+#2_2_1_Account_Management
+I want to activate my phone.
+No, activate a different phone
+smartphone
+324232342
+#2_2_2_Account_Management_different_phone
+I want to activate my phone.
+No, activate a different phone
+Basic phone
+3232323
+#2_3_0_Troubleshooting
+I want to replace my phone battery
+Samsung
+Galaxy S6
+*3-Retail
+#3_2_0_Search
+What is the status of my order?
+Cherry wood pen set
+#3_2_1_Navigation
+What is the status of my order?
+Novelty coffee mug
+#3_3_0_Process_automation
+I want to return an order
+Cherry wood pen set
+*4-Food
+#4_1_0_Locator_Map
+Where’s the nearest Nosh Time cafe?
+#4_3_0_Order_transaction
+I would like to order a drink
+Latte
+Extra hot
+Large
+Vanilla
+Regular
+Non-fat Milk
+Yes
+#4_3_1_Order_trans_actiondrink_unavailable
+I would like to order a drink
+Drip coffee
+hot
+small
+none
+Yes
+Yes
+#4_4_0_Add_money_to_payment_account
+Add $25 to my payment account?
+Yes
+#4_5_0_Personalized_Order_transaction
+Order my usual drink and add a breakfast sandwich
+Yes
+Yes
+No
+#4_5_1_Personalized_Order_transaction_update_favorite_drink
+Order my usual drink and add a breakfast sandwich
+No
+Small iced coffee
+Regular
+none
+Yes
+Yes
+No
+*5-Healthcare
+#5_1_0_Claim_Status
+What is my claim status?
+#5_4_0_Coverage
+What’s my deductible?
+orthodontics
+no
+*6-Travel
+#6_1_0_Flight_information
+What terminal is my flight departing from?
+The first one
+When does my flight arrive?
+Where is the premier lounge located during my first layover?
+Where is the premier lounge located during my second layover?
+What is the baggage limit for this flight?
+Is there an extra fee for checking my golf clubs?
+What food is available during this flight?
+Is there wi-fi on the flight?
+Resend my itinerary
+Can I board early if I upgrade to a priority seat?
+Yes
+no
+#6_2_0_Booking
+How do I change my booking?
+May 22
+Departure time
+8:05 am
+yes
+Window seat
+#6_2_1_Booking
+How do I change my booking?
+May 25
+Departure time
+6:40 pm
+yes
+Window seat
+#6_4_0_Transaction_Transfer_Points
+I want to transfer points
+American Airlines
+3692197
+yes
+yes
+Twelve thousand
+yes
