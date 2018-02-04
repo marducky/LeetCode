@@ -183,6 +183,21 @@ public class SendRooboUseCasesPostForRoobo {
         arrayListForChangePostToRoobo.add(token);
         String firstLevel = "";
         String secondLevel = "";
+        ArrayList<String> stubbyYamlForRooboArrayList = readFileContent("StubyYamlForRoobo.txt");
+        StringBuffer stubbyYamlForRooboString = new StringBuffer("");
+        ArrayList<String> stubbyYamlAllToWrite = new ArrayList<String>();
+        ArrayList<String> qaAllToWrite = new ArrayList<String>();
+        //        PostJsonForStuby.txt
+        ArrayList<String> postJsonForStuby = readFileContent("PostJsonForStuby.txt");
+        String postJsonForStubbyString = "";
+        for (String sssssTemp : postJsonForStuby) {
+            if (sssssTemp.indexOf("text_flag") > 0 && sssssTemp.indexOf("pa_flag") == -1) {
+                postJsonForStubbyString = sssssTemp;
+            }
+        }
+        for (String ssssTemp : stubbyYamlForRooboArrayList) {
+            stubbyYamlForRooboString.append(ssssTemp + "\n");
+        }
         for (String sssTemp : RooboDialogUseActionArrayList) {
             if (sssTemp.startsWith("*")) {
                 firstLevel = sssTemp.substring(sssTemp.lastIndexOf("*") + 1, sssTemp.length());
@@ -195,11 +210,17 @@ public class SendRooboUseCasesPostForRoobo {
                     JSONObject jsonObjectForRoobo = sendPostUrl("https://api.ros.ai/bot/third/cheji/v3", realPerJsonToRoobo);
                     String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevel + "_" + secondLevel + "_" + sssTemp.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
                     //TODO:to write json file.
-
+                    writeContent(jsonObjectForRoobo.toString(), ".//json" + perJsonName + ".json");
                     //TODO:to write yaml. and it can write once.
+                    String changeToYamlPostJson = postJsonForStubbyString.replace("text_flag", sssTemp);
+                    stubbyYamlAllToWrite.add(stubbyYamlForRooboString.toString().replace("request_json_flag", changeToYamlPostJson).replace("response_json_flag", perJsonName));
+
                     //TODO:to write QA file, and it can write once.
+                    qaAllToWrite.add(changeToYamlPostJson);
                 }
             }
+            writeContent(qaAllToWrite, "RooboTestCaseDialogForFinalTestToQA.yaml");
+            writeContent(stubbyYamlAllToWrite, "StubbyRooboTest.yaml");
         }
         //change the post to the real post content
 
