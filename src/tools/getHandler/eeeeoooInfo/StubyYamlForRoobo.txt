@@ -1,6 +1,6 @@
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >

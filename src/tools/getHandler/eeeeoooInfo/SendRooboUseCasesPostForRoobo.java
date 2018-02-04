@@ -6,7 +6,11 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
 
 public class SendRooboUseCasesPostForRoobo {
     /**
@@ -142,6 +146,64 @@ public class SendRooboUseCasesPostForRoobo {
             }
         }
         return jsonObject;
+    }
+
+    private static String changePostJsonToTargetTxt(String originPostOrText, ArrayList<String> paramList) {
+        //token_flag_db4ab3d8c78f182adfbe0e4c9f4ba5119689
+//        StringBuffer stringBuffer=new StringBuffer("");
+        for (String ssTemp : paramList) {
+            String targetParamName = ssTemp.substring(0, ssTemp.lastIndexOf("_"));
+            originPostOrText = originPostOrText.replace(targetParamName, ssTemp.substring(ssTemp.lastIndexOf("_") + 1, ssTemp.length()));
+        }
+        return originPostOrText;
+    }
+
+
+    public void mainFunction() {
+        DateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_");
+        Random random = new Random();
+        //get the PostJsonForRoobo json content;
+        String postJsonForRooboPath = getDirPath("PostJsonForRoobo.txt");
+        ArrayList<String> postJsonForRooboArrayList = readFileContent(postJsonForRooboPath);
+        StringBuffer postJsonForRooboStringBuffer = new StringBuffer("");
+        for (String ssTemp : postJsonForRooboArrayList) {
+            if (!ssTemp.startsWith("##")) {
+                postJsonForRooboStringBuffer.append(ssTemp + "\n");
+            }
+        }
+        //get the Action text
+        String rooboDialogUseActionPath = getDirPath("RooboDialogUseAction.txt");
+        ArrayList<String> RooboDialogUseActionArrayList = readFileContent(rooboDialogUseActionPath);
+        String sessionId = "sessionId_flag_NuanceWenbinTest2132";//NuanceWenbinTest21; it can random.
+        String agentId = "agentId_flag_MmM3YmVkMjkxZmE5";//must provide correctly
+        String token = "token_flag_db4ab3d8c78f182adfbe0e4c9f4ba5119689";//must provide correctly
+        ArrayList<String> arrayListForChangePostToRoobo = new ArrayList<String>();
+        arrayListForChangePostToRoobo.add(sessionId);
+        arrayListForChangePostToRoobo.add(agentId);
+        arrayListForChangePostToRoobo.add(token);
+        String firstLevel = "";
+        String secondLevel = "";
+        for (String sssTemp : RooboDialogUseActionArrayList) {
+            if (sssTemp.startsWith("*")) {
+                firstLevel = sssTemp.substring(sssTemp.lastIndexOf("*") + 1, sssTemp.length());
+            } else {
+                if (sssTemp.startsWith("#")) {
+                    secondLevel = sssTemp.substring(sssTemp.lastIndexOf("#") + 1, sssTemp.length());
+                } else {
+                    arrayListForChangePostToRoobo.add("query_flag_" + sssTemp);
+                    String realPerJsonToRoobo = changePostJsonToTargetTxt(postJsonForRooboStringBuffer.toString(), arrayListForChangePostToRoobo);
+                    JSONObject jsonObjectForRoobo = sendPostUrl("https://api.ros.ai/bot/third/cheji/v3", realPerJsonToRoobo);
+                    String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevel + "_" + secondLevel + "_" + sssTemp.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
+                    //TODO:to write json file.
+
+                    //TODO:to write yaml. and it can write once.
+                    //TODO:to write QA file, and it can write once.
+                }
+            }
+        }
+        //change the post to the real post content
+
+
     }
 
     public static void main(String[] args) {
