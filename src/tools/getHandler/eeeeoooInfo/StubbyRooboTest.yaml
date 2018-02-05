@@ -1,2145 +1,285 @@
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_0_Funds_transfer_I’d like to transfer money"}
+          {"QueryText":"我想听财经新闻"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_39_27_10_1-Finance_1_1_0_Funds_transfer_I’d_like_to_transfer_money.json
+      file: ./json/2018_02_05_10_41_02_40_2-信息查询_2_1_新闻_我想听财经新闻.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_0_Funds_transfer_Checking *2341"}
+          {"QueryText":"下一批"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_39_39_10_1-Finance_1_1_0_Funds_transfer_Checking__2341.json
+      file: ./json/2018_02_05_10_41_03_70_2-信息查询_2_1_新闻_下一批.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_0_Funds_transfer_Savings *8760"}
+          {"QueryText":"下一个"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_39_51_90_1-Finance_1_1_0_Funds_transfer_Savings__8760.json
+      file: ./json/2018_02_05_10_41_04_00_2-信息查询_2_1_新闻_下一个.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_0_Funds_transfer_$5000.00"}
+          {"QueryText":"上一个"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_40_03_70_1-Finance_1_1_0_Funds_transfer_$5000.00.json
+      file: ./json/2018_02_05_10_41_04_20_2-信息查询_2_1_新闻_上一个.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_0_Funds_transfer_Yes"}
+          {"QueryText":"暂停"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_40_14_10_1-Finance_1_1_0_Funds_transfer_Yes.json
+      file: ./json/2018_02_05_10_41_05_50_2-信息查询_2_1_新闻_暂停.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_1_Funds_transfer_I want to transfer some money."}
+          {"QueryText":"继续播放"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_40_26_90_1-Finance_1_1_1_Funds_transfer_I_want_to_transfer_some_money..json
+      file: ./json/2018_02_05_10_41_05_30_2-信息查询_2_1_新闻_继续播放.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_1_Funds_transfer_Checking *2341"}
+          {"QueryText":"重播当前新闻"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_40_37_30_1-Finance_1_1_1_Funds_transfer_Checking__2341.json
+      file: ./json/2018_02_05_10_41_05_40_2-信息查询_2_1_新闻_重播当前新闻.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_1_Funds_transfer_Savings *8760"}
+          {"QueryText":"退出新闻场景"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_40_49_60_1-Finance_1_1_1_Funds_transfer_Savings__8760.json
+      file: ./json/2018_02_05_10_41_06_30_2-信息查询_2_1_新闻_退出新闻场景.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_1_Funds_transfer_$13,000.00"}
+          {"QueryText":"给我订一张北京到上海明天10点半之后的机票"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_00_40_1-Finance_1_1_1_Funds_transfer_$13,000.00.json
+      file: ./json/2018_02_05_10_41_06_70_2-信息查询_2_2_航班查询_给我订一张北京到上海明天10点半之后的机票.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_1_1_Funds_transfer_Yes"}
+          {"QueryText":"给我订一张北京到上海明天的机票"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_12_50_1-Finance_1_1_1_Funds_transfer_Yes.json
+      file: ./json/2018_02_05_10_41_06_80_2-信息查询_2_2_航班查询_给我订一张北京到上海明天的机票.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_0_POP_Money_I want to send money to Jon"}
+          {"QueryText":"导航到很赞的餐馆"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_24_90_1-Finance_1_2_0_POP_Money_I_want_to_send_money_to_Jon.json
+      file: ./json/2018_02_05_10_41_07_20_3-出行路况_3_1_导航_导航到很赞的餐馆.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_0_POP_Money_Checking *2341"}
+          {"QueryText":"导航到便宜的街边的餐馆"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_36_70_1-Finance_1_2_0_POP_Money_Checking__2341.json
+      file: ./json/2018_02_05_10_41_07_00_3-出行路况_3_1_导航_导航到便宜的街边的餐馆.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_0_POP_Money_First one"}
+          {"QueryText":"来首鹅妈妈俱乐部"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_47_60_1-Finance_1_2_0_POP_Money_First_one.json
+      file: ./json/2018_02_05_10_41_08_10_4-影音娱乐_4_1_儿歌_来首鹅妈妈俱乐部.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_0_POP_Money_$50.00"}
+          {"QueryText":"下一首"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_41_59_10_1-Finance_1_2_0_POP_Money_$50.00.json
+      file: ./json/2018_02_05_10_41_08_80_4-影音娱乐_4_1_儿歌_下一首.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_0_POP_Money_Yes"}
+          {"QueryText":"来首东风破"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_42_11_60_1-Finance_1_2_0_POP_Money_Yes.json
+      file: ./json/2018_02_05_10_41_08_20_4-影音娱乐_4_2_音乐_来首东风破.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_1_POP_Money_I want to send money to Jon"}
+          {"QueryText":"我要听周杰伦的东风破"}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_42_22_00_1-Finance_1_2_1_POP_Money_I_want_to_send_money_to_Jon.json
+      file: ./json/2018_02_05_10_41_09_00_4-影音娱乐_4_2_音乐_我要听周杰伦的东风破.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_1_POP_Money_Checking *2341"}
+          {"QueryText":""}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_42_34_40_1-Finance_1_2_1_POP_Money_Checking__2341.json
+      file: ./json/2018_02_05_10_41_09_70_4-影音娱乐_4_2_音乐_.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_1_POP_Money_Jon Stevens - Checking *6710"}
+          {"QueryText":""}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_42_46_70_1-Finance_1_2_1_POP_Money_Jon_Stevens_-_Checking__6710.json
+      file: ./json/2018_02_05_10_41_09_90_4-影音娱乐_4_2_音乐_.json
 
 -  request:
       method: POST
-      url: /Nina
+      url: /Roobos
       headers:
          content-type: application/json
       post: >
-          {"UserText":"1_2_1_POP_Money_$10,000.00"}
+          {"QueryText":""}
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_02_14_42_59_60_1-Finance_1_2_1_POP_Money_$10,000.00.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_2_1_POP_Money_Yes."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_43_10_20_1-Finance_1_2_1_POP_Money_Yes..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_2_1_POP_Money_Yes."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_43_22_70_1-Finance_1_2_1_POP_Money_Yes..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_0_Pay_a_bill_I want to pay my credit card bill."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_43_33_40_1-Finance_1_3_0_Pay_a_bill_I_want_to_pay_my_credit_card_bill..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_0_Pay_a_bill_Checking *2341"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_43_48_80_1-Finance_1_3_0_Pay_a_bill_Checking__2341.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_0_Pay_a_bill_Visa *3424"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_43_59_60_1-Finance_1_3_0_Pay_a_bill_Visa__3424.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_0_Pay_a_bill_Full balance - $5,416.78"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_44_12_10_1-Finance_1_3_0_Pay_a_bill_Full_balance_-_$5,416.78.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_0_Pay_a_bill_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_44_24_10_1-Finance_1_3_0_Pay_a_bill_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_I want to pay my credit card bill."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_44_36_10_1-Finance_1_3_1_Pay_a_bill_I_want_to_pay_my_credit_card_bill..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_Checking *2341"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_44_47_70_1-Finance_1_3_1_Pay_a_bill_Checking__2341.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_Mastercard *5401"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_45_00_60_1-Finance_1_3_1_Pay_a_bill_Mastercard__5401.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_Full balance- $9,000.00"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_45_12_90_1-Finance_1_3_1_Pay_a_bill_Full_balance-_$9,000.00.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_Yes."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_45_25_40_1-Finance_1_3_1_Pay_a_bill_Yes..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_Yes."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_45_37_70_1-Finance_1_3_1_Pay_a_bill_Yes..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_3_1_Pay_a_bill_No."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_45_49_00_1-Finance_1_3_1_Pay_a_bill_No..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_What kind of credit cards do you offer?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_46_02_60_1-Finance_1_4_0_New_Credit_Card_What_kind_of_credit_cards_do_you_offer_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_Travel rewards"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_46_14_90_1-Finance_1_4_0_New_Credit_Card_Travel_rewards.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_How many interest free days?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_46_28_60_1-Finance_1_4_0_New_Credit_Card_How_many_interest_free_days_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_What’s the interest rate?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_46_40_50_1-Finance_1_4_0_New_Credit_Card_What’s_the_interest_rate_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_What insurances are included?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_46_52_50_1-Finance_1_4_0_New_Credit_Card_What_insurances_are_included_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_4_0_New_Credit_Card_What are the fees?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_47_04_10_1-Finance_1_4_0_New_Credit_Card_What_are_the_fees_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_7_0_Channel_to_live_agent_I want to speak to an agent"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_47_16_50_1-Finance_1_7_0_Channel_to_live_agent_I_want_to_speak_to_an_agent.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"1_7_0_Channel_to_live_agent_I’m in Rome and a pickpocket stole my wallet outside the collseum. I need to cancel my credit card and get a new one right away."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_47_28_20_1-Finance_1_7_0_Channel_to_live_agent_I’m_in_Rome_and_a_pickpocket_stole_my_wallet_outside_the_collseum._I_need_to_cancel_my_credit_card_and_get_a_new_one_right_away..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_I want to upgrade my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_47_40_90_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_I_want_to_upgrade_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_Samsung"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_47_52_70_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_Samsung.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_Galaxy S6 Edge Details"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_48_05_20_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_Galaxy_S6_Edge_Details.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_48_17_10_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_Black Sapphire"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_48_29_80_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_Black_Sapphire.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_32GB"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_48_41_60_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_32GB.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_0_FAQ_NAV_with_eCommerce_upsell_Add all to cart"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_48_53_40_2-Telco_2_1_0_FAQ_NAV_with_eCommerce_upsell_Add_all_to_cart.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_I want to upgrade my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_49_05_30_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_I_want_to_upgrade_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Apple"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_49_17_70_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Apple.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Yes, pre-order"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_49_29_10_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Yes,_pre-order.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Rose Gold"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_49_41_90_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Rose_Gold.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_16GB"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_49_53_20_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_16GB.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Add all to cart"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_50_05_50_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_Add_all_to_cart.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_No thanks"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_50_19_00_2-Telco_2_1_1_FAQ_NAV_with_eCommerce_upsell_Apple_Pre_order_No_thanks.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_I want to upgrade my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_50_31_80_2-Telco_2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_I_want_to_upgrade_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_HTC"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_50_43_00_2-Telco_2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_HTC.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_50_55_90_2-Telco_2_1_2_FAQ_NAV_with_eCommerce_upsell_HTC_Pre_order_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_0_FAQ_NAV_Account_Management_I want to activate my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_51_07_70_2-Telco_2_2_0_FAQ_NAV_Account_Management_I_want_to_activate_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_0_FAQ_NAV_Account_Management_Yes, activate this phone"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_51_19_30_2-Telco_2_2_0_FAQ_NAV_Account_Management_Yes,_activate_this_phone.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_1_Account_Management_I want to activate my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_51_30_80_2-Telco_2_2_1_Account_Management_I_want_to_activate_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_1_Account_Management_No, activate a different phone"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_51_42_00_2-Telco_2_2_1_Account_Management_No,_activate_a_different_phone.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_1_Account_Management_smartphone"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_51_54_60_2-Telco_2_2_1_Account_Management_smartphone.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_1_Account_Management_324232342"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_52_05_00_2-Telco_2_2_1_Account_Management_324232342.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_2_Account_Management_different_phone_I want to activate my phone."}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_52_17_40_2-Telco_2_2_2_Account_Management_different_phone_I_want_to_activate_my_phone..json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_2_Account_Management_different_phone_No, activate a different phone"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_52_29_90_2-Telco_2_2_2_Account_Management_different_phone_No,_activate_a_different_phone.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_2_Account_Management_different_phone_Basic phone"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_52_41_50_2-Telco_2_2_2_Account_Management_different_phone_Basic_phone.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_2_2_Account_Management_different_phone_3232323"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_52_52_80_2-Telco_2_2_2_Account_Management_different_phone_3232323.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_3_0_Troubleshooting_I want to replace my phone battery"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_53_04_70_2-Telco_2_3_0_Troubleshooting_I_want_to_replace_my_phone_battery.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_3_0_Troubleshooting_Samsung"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_53_16_40_2-Telco_2_3_0_Troubleshooting_Samsung.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"2_3_0_Troubleshooting_Galaxy S6"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_53_29_60_2-Telco_2_3_0_Troubleshooting_Galaxy_S6.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_2_0_Search_What is the status of my order?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_53_40_70_3-Retail_3_2_0_Search_What_is_the_status_of_my_order_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_2_0_Search_Cherry wood pen set"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_53_52_70_3-Retail_3_2_0_Search_Cherry_wood_pen_set.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_2_1_Navigation_What is the status of my order?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_54_04_50_3-Retail_3_2_1_Navigation_What_is_the_status_of_my_order_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_2_1_Navigation_Novelty coffee mug"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_54_16_20_3-Retail_3_2_1_Navigation_Novelty_coffee_mug.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_3_0_Process_automation_I want to return an order"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_54_28_30_3-Retail_3_3_0_Process_automation_I_want_to_return_an_order.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"3_3_0_Process_automation_Cherry wood pen set"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_54_39_10_3-Retail_3_3_0_Process_automation_Cherry_wood_pen_set.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_1_0_Locator_Map_Where’s the nearest Nosh Time cafe?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_54_51_90_4-Food_4_1_0_Locator_Map_Where’s_the_nearest_Nosh_Time_cafe_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_I would like to order a drink"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_55_02_30_4-Food_4_3_0_Order_transaction_I_would_like_to_order_a_drink.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Latte"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_55_14_20_4-Food_4_3_0_Order_transaction_Latte.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Extra hot"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_55_26_90_4-Food_4_3_0_Order_transaction_Extra_hot.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Large"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_55_38_80_4-Food_4_3_0_Order_transaction_Large.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Vanilla"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_55_51_50_4-Food_4_3_0_Order_transaction_Vanilla.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Regular"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_56_04_90_4-Food_4_3_0_Order_transaction_Regular.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Non-fat Milk"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_56_16_40_4-Food_4_3_0_Order_transaction_Non-fat_Milk.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_0_Order_transaction_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_56_28_50_4-Food_4_3_0_Order_transaction_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_I would like to order a drink"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_56_40_90_4-Food_4_3_1_Order_trans_actiondrink_unavailable_I_would_like_to_order_a_drink.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_Drip coffee"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_56_52_10_4-Food_4_3_1_Order_trans_actiondrink_unavailable_Drip_coffee.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_hot"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_57_05_90_4-Food_4_3_1_Order_trans_actiondrink_unavailable_hot.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_small"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_57_18_20_4-Food_4_3_1_Order_trans_actiondrink_unavailable_small.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_none"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_57_34_60_4-Food_4_3_1_Order_trans_actiondrink_unavailable_none.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_57_46_30_4-Food_4_3_1_Order_trans_actiondrink_unavailable_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_3_1_Order_trans_actiondrink_unavailable_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_58_00_90_4-Food_4_3_1_Order_trans_actiondrink_unavailable_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_4_0_Add_money_to_payment_account_Add $25 to my payment account?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_58_12_60_4-Food_4_4_0_Add_money_to_payment_account_Add_$25_to_my_payment_account_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_4_0_Add_money_to_payment_account_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_58_24_00_4-Food_4_4_0_Add_money_to_payment_account_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_0_Personalized_Order_transaction_Order my usual drink and add a breakfast sandwich"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_58_36_90_4-Food_4_5_0_Personalized_Order_transaction_Order_my_usual_drink_and_add_a_breakfast_sandwich.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_0_Personalized_Order_transaction_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_58_49_40_4-Food_4_5_0_Personalized_Order_transaction_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_0_Personalized_Order_transaction_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_59_00_20_4-Food_4_5_0_Personalized_Order_transaction_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_0_Personalized_Order_transaction_No"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_59_12_90_4-Food_4_5_0_Personalized_Order_transaction_No.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_Order my usual drink and add a breakfast sandwich"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_59_25_00_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_Order_my_usual_drink_and_add_a_breakfast_sandwich.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_No"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_59_38_50_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_No.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_Small iced coffee"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_14_59_49_00_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_Small_iced_coffee.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_Regular"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_00_02_30_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_Regular.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_none"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_00_14_50_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_none.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_00_26_10_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_00_39_70_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"4_5_1_Personalized_Order_transaction_update_favorite_drink_No"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_00_53_20_4-Food_4_5_1_Personalized_Order_transaction_update_favorite_drink_No.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"5_1_0_Claim_Status_What is my claim status?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_01_05_20_5-Healthcare_5_1_0_Claim_Status_What_is_my_claim_status_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"5_4_0_Coverage_What’s my deductible?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_01_26_30_5-Healthcare_5_4_0_Coverage_What’s_my_deductible_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"5_4_0_Coverage_orthodontics"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_01_41_60_5-Healthcare_5_4_0_Coverage_orthodontics.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"5_4_0_Coverage_no"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_01_53_00_5-Healthcare_5_4_0_Coverage_no.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_What terminal is my flight departing from?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_02_07_50_6-Travel_6_1_0_Flight_information_What_terminal_is_my_flight_departing_from_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_The first one"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_02_20_60_6-Travel_6_1_0_Flight_information_The_first_one.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_When does my flight arrive?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_02_33_20_6-Travel_6_1_0_Flight_information_When_does_my_flight_arrive_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Where is the premier lounge located during my first layover?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_02_49_10_6-Travel_6_1_0_Flight_information_Where_is_the_premier_lounge_located_during_my_first_layover_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Where is the premier lounge located during my second layover?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_03_01_00_6-Travel_6_1_0_Flight_information_Where_is_the_premier_lounge_located_during_my_second_layover_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_What is the baggage limit for this flight?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_03_15_50_6-Travel_6_1_0_Flight_information_What_is_the_baggage_limit_for_this_flight_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Is there an extra fee for checking my golf clubs?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_03_29_60_6-Travel_6_1_0_Flight_information_Is_there_an_extra_fee_for_checking_my_golf_clubs_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_What food is available during this flight?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_03_40_50_6-Travel_6_1_0_Flight_information_What_food_is_available_during_this_flight_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Is there wi-fi on the flight?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_03_55_40_6-Travel_6_1_0_Flight_information_Is_there_wi-fi_on_the_flight_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Resend my itinerary"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_04_08_00_6-Travel_6_1_0_Flight_information_Resend_my_itinerary.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Can I board early if I upgrade to a priority seat?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_04_19_20_6-Travel_6_1_0_Flight_information_Can_I_board_early_if_I_upgrade_to_a_priority_seat_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_Yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_04_34_70_6-Travel_6_1_0_Flight_information_Yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_1_0_Flight_information_no"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_04_46_60_6-Travel_6_1_0_Flight_information_no.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_How do I change my booking?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_05_00_20_6-Travel_6_2_0_Booking_How_do_I_change_my_booking_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_May 22"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_05_11_70_6-Travel_6_2_0_Booking_May_22.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_Departure time"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_05_25_70_6-Travel_6_2_0_Booking_Departure_time.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_8:05 am"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_05_40_20_6-Travel_6_2_0_Booking_8_05_am.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_05_57_70_6-Travel_6_2_0_Booking_yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_0_Booking_Window seat"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_06_10_90_6-Travel_6_2_0_Booking_Window_seat.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_How do I change my booking?"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_06_25_00_6-Travel_6_2_1_Booking_How_do_I_change_my_booking_.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_May 25"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_06_37_70_6-Travel_6_2_1_Booking_May_25.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_Departure time"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_06_48_10_6-Travel_6_2_1_Booking_Departure_time.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_6:40 pm"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_07_01_90_6-Travel_6_2_1_Booking_6_40_pm.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_07_16_20_6-Travel_6_2_1_Booking_yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_2_1_Booking_Window seat"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_07_37_10_6-Travel_6_2_1_Booking_Window_seat.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_I want to transfer points"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_07_52_90_6-Travel_6_4_0_Transaction_Transfer_Points_I_want_to_transfer_points.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_American Airlines"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_08_06_10_6-Travel_6_4_0_Transaction_Transfer_Points_American_Airlines.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_3692197"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_08_18_80_6-Travel_6_4_0_Transaction_Transfer_Points_3692197.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_08_30_60_6-Travel_6_4_0_Transaction_Transfer_Points_yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_08_43_90_6-Travel_6_4_0_Transaction_Transfer_Points_yes.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_Twelve thousand"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_08_55_40_6-Travel_6_4_0_Transaction_Transfer_Points_Twelve_thousand.json
-
--  request:
-      method: POST
-      url: /Nina
-      headers:
-         content-type: application/json
-      post: >
-          {"UserText":"6_4_0_Transaction_Transfer_Points_yes"}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_02_15_09_07_30_6-Travel_6_4_0_Transaction_Transfer_Points_yes.json
+      file: ./json/2018_02_05_10_41_10_40_4-影音娱乐_4_2_音乐_.json
 

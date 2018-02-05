@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "上一个",
+  "semantic": {
+    "service": "News",
+    "action": "Prev",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 听闻早餐 听闻早餐 赶快检查你的iPhone7 这些型号有问题  2018年2月5日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a779975e5c04.mp3",
+        "timestamp": 1517787528,
+        "tagTopic": "政治",
+        "name": "听闻早餐 赶快检查你的iPhone7 这些型号有问题  2018年2月5日"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

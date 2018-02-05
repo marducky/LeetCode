@@ -19,11 +19,7 @@ public class SendRooboUseCasesPostForRoobo {
      */
     private static String getDirPath(String filaName) {
         String pathProject = System.getProperty("user.dir");
-        String pathFileInFolderInOut = SendRooboUseCasesPostForRoobo.class.getResource(filaName).toString();
-        String projectName = pathProject.substring(pathProject.lastIndexOf('\\') + 1, pathProject.length());
-        String fileInFolder = pathFileInFolderInOut.substring(pathFileInFolderInOut.lastIndexOf(projectName), pathFileInFolderInOut.length());
-        String realFilePath = pathProject.substring(0, pathProject.lastIndexOf('\\') + 1) + fileInFolder;
-        return realFilePath;
+        return pathProject + "\\src\\tools\\getHandler\\eeeeoooInfo\\" + filaName;
     }
 
     /**
@@ -31,13 +27,14 @@ public class SendRooboUseCasesPostForRoobo {
      * @return
      */
     private static ArrayList<String> readFileContent(String filePath) {
+        String realFilePath = getDirPath(filePath);
         ArrayList<String> result = new ArrayList<String>();
-        File file = new File(filePath);
+        File file = new File(realFilePath);
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            String line = null;
+            String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 result.add(line);
             }
@@ -54,7 +51,8 @@ public class SendRooboUseCasesPostForRoobo {
      * @param fileName
      */
     private static void writeContent(String giveString, String fileName) {
-        File file = new File(fileName);
+        String realFilePath = getDirPath(fileName);
+        File file = new File(realFilePath);
         try {
             FileWriter fileWriterClear = new FileWriter(file, false);
             if (!file.exists()) {
@@ -77,16 +75,17 @@ public class SendRooboUseCasesPostForRoobo {
      * @param fileName
      */
     private static void writeContent(ArrayList<String> giveArrayListString, String fileName) {
+        String realFilePath = getDirPath(fileName);
         if (giveArrayListString.size() == 0) {
             return;
         }
-        File file = new File(fileName);
+        File file = new File(realFilePath);
         try {
-            FileWriter fileWriter = new FileWriter(fileName, true);
+            FileWriter fileWriter = new FileWriter(realFilePath, true);
             if (!file.exists()) {
                 file.createNewFile();
             } else {
-                FileWriter fileWriterClearTwo = new FileWriter(fileName, false);
+                FileWriter fileWriterClearTwo = new FileWriter(realFilePath, false);
                 fileWriterClearTwo.write("");
                 String s = "";
                 fileWriterClearTwo.flush();
@@ -164,7 +163,7 @@ public class SendRooboUseCasesPostForRoobo {
         Random random = new Random();
         //get the PostJsonForRoobo json content;
         String postJsonForRooboPath = getDirPath("PostJsonForRoobo.txt");
-        ArrayList<String> postJsonForRooboArrayList = readFileContent(postJsonForRooboPath);
+        ArrayList<String> postJsonForRooboArrayList = readFileContent("PostJsonForRoobo.txt");
         StringBuffer postJsonForRooboStringBuffer = new StringBuffer("");
         for (String ssTemp : postJsonForRooboArrayList) {
             if (!ssTemp.startsWith("##")) {
@@ -173,7 +172,7 @@ public class SendRooboUseCasesPostForRoobo {
         }
         //get the Action text
         String rooboDialogUseActionPath = getDirPath("RooboDialogUseAction.txt");
-        ArrayList<String> RooboDialogUseActionArrayList = readFileContent(rooboDialogUseActionPath);
+        ArrayList<String> RooboDialogUseActionArrayList = readFileContent("RooboDialogUseAction.txt");
         String sessionId = "sessionId_flag_NuanceWenbinTest2132";//NuanceWenbinTest21; it can random.
         String agentId = "agentId_flag_MmM3YmVkMjkxZmE5";//must provide correctly
         String token = "token_flag_db4ab3d8c78f182adfbe0e4c9f4ba5119689";//must provide correctly
@@ -205,12 +204,20 @@ public class SendRooboUseCasesPostForRoobo {
                 if (sssTemp.startsWith("#")) {
                     secondLevel = sssTemp.substring(sssTemp.lastIndexOf("#") + 1, sssTemp.length());
                 } else {
-                    arrayListForChangePostToRoobo.add("query_flag_" + sssTemp);
+                    if (arrayListForChangePostToRoobo.size() == 3) {
+                        arrayListForChangePostToRoobo.add("query_flag_" + sssTemp);
+                    } else if (arrayListForChangePostToRoobo.size() == 4) {
+                        arrayListForChangePostToRoobo.remove(3);
+                        arrayListForChangePostToRoobo.add("query_flag_" + sssTemp);
+                    }
+                    System.out.println(arrayListForChangePostToRoobo);
                     String realPerJsonToRoobo = changePostJsonToTargetTxt(postJsonForRooboStringBuffer.toString(), arrayListForChangePostToRoobo);
+//                    System.out.println(realPerJsonToRoobo);
                     JSONObject jsonObjectForRoobo = sendPostUrl("https://api.ros.ai/bot/third/cheji/v3", realPerJsonToRoobo);
+                    System.out.println(jsonObjectForRoobo.toString());
                     String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevel + "_" + secondLevel + "_" + sssTemp.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
                     //TODO:to write json file.
-                    writeContent(jsonObjectForRoobo.toString(), ".//json" + perJsonName + ".json");
+                    writeContent(jsonObjectForRoobo.toString(), ".//json//" + perJsonName + ".json");
                     //TODO:to write yaml. and it can write once.
                     String changeToYamlPostJson = postJsonForStubbyString.replace("text_flag", sssTemp);
                     stubbyYamlAllToWrite.add(stubbyYamlForRooboString.toString().replace("request_json_flag", changeToYamlPostJson).replace("response_json_flag", perJsonName));
@@ -229,7 +236,8 @@ public class SendRooboUseCasesPostForRoobo {
 
     public static void main(String[] args) {
         SendRooboUseCasesPostForRoobo sendRooboUseCasesPostForRoobo = new SendRooboUseCasesPostForRoobo();
-        sendRooboUseCasesPostForRoobo.getDirPath("rooboAPI.txt");
+        System.out.println(sendRooboUseCasesPostForRoobo.getDirPath("rooboAPI.txt"));
+        sendRooboUseCasesPostForRoobo.mainFunction();
 
     }
 }

@@ -1,0 +1,137 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 艾问人物 艾问人物 冯仑 玩跨界已经out了 看冯仑如何跨时空",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a702ec592d0c.mp3",
+        "timestamp": 1517301449,
+        "tagTopic": "财经",
+        "name": "艾问人物 冯仑 玩跨界已经out了 看冯仑如何跨时空"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 14城进入GDP万亿俱乐部 东北尚未有万亿元级城市",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fefeadac6c.mp3",
+        "timestamp": 1517285358,
+        "tagTopic": "财经",
+        "name": "14城进入GDP万亿俱乐部 东北尚未有万亿元级城市"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 摩根大通 戴蒙还将任职CEO五年 新任命两位联席主席",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fef4402d23.mp3",
+        "timestamp": 1517285191,
+        "tagTopic": "财经",
+        "name": "摩根大通 戴蒙还将任职CEO五年 新任命两位联席主席"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 乐视网连续第五天跌停 封单逾560万手",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fef15b6de2.mp3",
+        "timestamp": 1517285145,
+        "tagTopic": "财经",
+        "name": "乐视网连续第五天跌停 封单逾560万手"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 至少190亿美元 苹果四季度盈利料创历史纪录",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fee0da06a0.mp3",
+        "timestamp": 1517284880,
+        "tagTopic": "财经",
+        "name": "至少190亿美元 苹果四季度盈利料创历史纪录"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 多地将争创自由贸易港列为新目标",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fedd35cadb.mp3",
+        "timestamp": 1517284827,
+        "tagTopic": "财经",
+        "name": "多地将争创自由贸易港列为新目标"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 和讯内参 和讯内参 金融业再响惊雷 国家出重拳 全都跑不了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fcdc580def.mp3",
+        "timestamp": 1517276615,
+        "tagTopic": "财经",
+        "name": "和讯内参 金融业再响惊雷 国家出重拳 全都跑不了"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 野马财经 野马财经  明天系 已集齐三大接盘侠 还有谁",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fcbdf146b4.mp3",
+        "timestamp": 1517276186,
+        "tagTopic": "财经",
+        "name": "野马财经  明天系 已集齐三大接盘侠 还有谁"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 Wind财经早餐 Wind财经早餐 2018 1 30",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fc3461b194.mp3",
+        "timestamp": 1517274209,
+        "tagTopic": "财经",
+        "name": "Wind财经早餐 2018 1 30"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 听闻播报 年报预告将至 乐视网全年亏损已无悬念",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6fb202ec7d8.mp3",
+        "timestamp": 1517269508,
+        "tagTopic": "财经",
+        "name": "听闻播报 年报预告将至 乐视网全年亏损已无悬念"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

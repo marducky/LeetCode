@@ -1,0 +1,137 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 和讯内参 和讯内参 四巨头入股万达 王健林被割韭菜",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77b85e4f095.mp3",
+        "timestamp": 1517795470,
+        "tagTopic": "财经",
+        "name": "和讯内参 四巨头入股万达 王健林被割韭菜"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 野马财经 野马财经 宁波中百雷爆 谁 蒙 了徐翔眼睛",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77b717d53e2.mp3",
+        "timestamp": 1517795098,
+        "tagTopic": "财经",
+        "name": "野马财经 宁波中百雷爆 谁 蒙 了徐翔眼睛"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 Wind财经早餐 Wind财经早餐 2018 2 5",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77b165d802e.mp3",
+        "timestamp": 1517793815,
+        "tagTopic": "财经",
+        "name": "Wind财经早餐 2018 2 5"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 A股头条 A股头条 2月5日 中央一号文件公布 监管明确股权质押10个问题 微信号 jrjstock",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77980bbbaf4.mp3",
+        "timestamp": 1517787153,
+        "tagTopic": "财经",
+        "name": "A股头条 2月5日 中央一号文件公布 监管明确股权质押10个问题 微信号 jrjstock"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 听闻播报 A股震荡 北上资金却在加速进场",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7793a12664f.mp3",
+        "timestamp": 1517786022,
+        "tagTopic": "财经",
+        "name": "听闻播报 A股震荡 北上资金却在加速进场"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 武玥 百余家新三板公司预告业绩 超八成预喜",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77934610311.mp3",
+        "timestamp": 1517785936,
+        "tagTopic": "财经",
+        "name": "百余家新三板公司预告业绩 超八成预喜"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 优栗 听闻播报 动力电池回收市场 2018年将爆发",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77166b8b088.mp3",
+        "timestamp": 1517753975,
+        "tagTopic": "财经",
+        "name": "听闻播报 动力电池回收市场 2018年将爆发"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 优栗 机械工业行业2017年发展好于预期",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7715d715812.mp3",
+        "timestamp": 1517753892,
+        "tagTopic": "财经",
+        "name": "机械工业行业2017年发展好于预期"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 武玥 听闻播报 郑州今年首批227个重点项目集中开工建设",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a764fb5ea9fc.mp3",
+        "timestamp": 1517703096,
+        "tagTopic": "财经",
+        "name": "听闻播报 郑州今年首批227个重点项目集中开工建设"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 武玥 中国光谷 去年平均每个工作日诞生约59家企业",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a764f5d6fb8f.mp3",
+        "timestamp": 1517703010,
+        "tagTopic": "财经",
+        "name": "中国光谷 去年平均每个工作日诞生约59家企业"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 艾问人物 艾问人物 盛希泰 如何从证券少帅到创投泰哥",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ec58348db0.mp3",
+        "timestamp": 1517208965,
+        "tagTopic": "财经",
+        "name": "艾问人物 盛希泰 如何从证券少帅到创投泰哥"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 笔记侠快播 笔记侠快播 如何做好内容营销 抓住这10个精髓",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ec51ca5706.mp3",
+        "timestamp": 1517208865,
+        "tagTopic": "财经",
+        "name": "笔记侠快播 如何做好内容营销 抓住这10个精髓"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 \"港独\"分子周庭出席活动被当场\"KO\":何来资格竞选",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ea3db2d816.mp3",
+        "timestamp": 1517200351,
+        "tagTopic": "财经",
+        "name": "\"港独\"分子周庭出席活动被当场\"KO\":何来资格竞选"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 一个月2730亿美元 全球 股疯 下的并购狂潮开启",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ea358abf38.mp3",
+        "timestamp": 1517200220,
+        "tagTopic": "财经",
+        "name": "一个月2730亿美元 全球 股疯 下的并购狂潮开启"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 临时准备金动用安排 有序开展 央行今日暂停逆回购",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ea32f89a1c.mp3",
+        "timestamp": 1517200179,
+        "tagTopic": "财经",
+        "name": "临时准备金动用安排 有序开展 央行今日暂停逆回购"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 海航系 公司集体预喜",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ea2f18d4a4.mp3",
+        "timestamp": 1517200118,
+        "tagTopic": "财经",
+        "name": "海航系 公司集体预喜"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 山西国企混改提速推进",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6ea2cc00324.mp3",
+        "timestamp": 1517200079,
+        "tagTopic": "财经",
+        "name": "山西国企混改提速推进"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 力哥说理财 力哥说理财 对不起 房子真的太贵了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6e9bc081ee7.mp3",
+        "timestamp": 1517198277,
+        "tagTopic": "财经",
+        "name": "力哥说理财 对不起 房子真的太贵了"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 听闻财经通 听闻财经通  养蛙不添娃 折射的人口困境",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a6e880c65188.mp3",
+        "timestamp": 1517193238,
+        "tagTopic": "财经",
+        "name": "听闻财经通  养蛙不添娃 折射的人口困境"
+      },
+      "formatType": "audio"
+    }
+  ]
+}
