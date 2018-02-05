@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "上一个",
+  "semantic": {
+    "service": "News",
+    "action": "Prev",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 开益 我国首次实现脉冲数最小 安全距离最长新型量子密钥",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77a0cb895f0.mp3",
+        "timestamp": 1517789402,
+        "tagTopic": "科技",
+        "name": "我国首次实现脉冲数最小 安全距离最长新型量子密钥"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

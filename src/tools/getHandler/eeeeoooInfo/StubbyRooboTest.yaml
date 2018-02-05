@@ -11,7 +11,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_02_40_2-信息查询_2_1_新闻_我想听财经新闻.json
+      file: ./json/2018_02_05_11_17_28_10_2-信息查询_2_1_新闻_我想听财经新闻.json
 
 -  request:
       method: POST
@@ -26,7 +26,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_03_70_2-信息查询_2_1_新闻_下一批.json
+      file: ./json/2018_02_05_11_17_34_80_2-信息查询_2_1_新闻_下一批.json
 
 -  request:
       method: POST
@@ -41,7 +41,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_04_00_2-信息查询_2_1_新闻_下一个.json
+      file: ./json/2018_02_05_11_17_39_10_2-信息查询_2_1_新闻_下一个.json
 
 -  request:
       method: POST
@@ -56,7 +56,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_04_20_2-信息查询_2_1_新闻_上一个.json
+      file: ./json/2018_02_05_11_17_45_70_2-信息查询_2_1_新闻_上一个.json
 
 -  request:
       method: POST
@@ -71,7 +71,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_05_50_2-信息查询_2_1_新闻_暂停.json
+      file: ./json/2018_02_05_11_17_50_80_2-信息查询_2_1_新闻_暂停.json
 
 -  request:
       method: POST
@@ -86,7 +86,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_05_30_2-信息查询_2_1_新闻_继续播放.json
+      file: ./json/2018_02_05_11_17_56_10_2-信息查询_2_1_新闻_继续播放.json
 
 -  request:
       method: POST
@@ -101,7 +101,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_05_40_2-信息查询_2_1_新闻_重播当前新闻.json
+      file: ./json/2018_02_05_11_18_01_40_2-信息查询_2_1_新闻_重播当前新闻.json
 
 -  request:
       method: POST
@@ -116,7 +116,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_06_30_2-信息查询_2_1_新闻_退出新闻场景.json
+      file: ./json/2018_02_05_11_18_07_20_2-信息查询_2_1_新闻_退出新闻场景.json
 
 -  request:
       method: POST
@@ -131,7 +131,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_06_70_2-信息查询_2_2_航班查询_给我订一张北京到上海明天10点半之后的机票.json
+      file: ./json/2018_02_05_11_18_12_40_2-信息查询_2_2_航班查询_给我订一张北京到上海明天10点半之后的机票.json
 
 -  request:
       method: POST
@@ -146,7 +146,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_06_80_2-信息查询_2_2_航班查询_给我订一张北京到上海明天的机票.json
+      file: ./json/2018_02_05_11_18_18_60_2-信息查询_2_2_航班查询_给我订一张北京到上海明天的机票.json
 
 -  request:
       method: POST
@@ -161,7 +161,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_07_20_3-出行路况_3_1_导航_导航到很赞的餐馆.json
+      file: ./json/2018_02_05_11_18_23_80_3-出行路况_3_1_导航_导航到很赞的餐馆.json
 
 -  request:
       method: POST
@@ -176,7 +176,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_07_00_3-出行路况_3_1_导航_导航到便宜的街边的餐馆.json
+      file: ./json/2018_02_05_11_18_29_50_3-出行路况_3_1_导航_导航到便宜的街边的餐馆.json
 
 -  request:
       method: POST
@@ -191,7 +191,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_08_10_4-影音娱乐_4_1_儿歌_来首鹅妈妈俱乐部.json
+      file: ./json/2018_02_05_11_18_35_00_4-影音娱乐_4_1_儿歌_来首鹅妈妈俱乐部.json
 
 -  request:
       method: POST
@@ -206,7 +206,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_08_80_4-影音娱乐_4_1_儿歌_下一首.json
+      file: ./json/2018_02_05_11_18_40_70_4-影音娱乐_4_1_儿歌_下一首.json
 
 -  request:
       method: POST
@@ -221,7 +221,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_08_20_4-影音娱乐_4_2_音乐_来首东风破.json
+      file: ./json/2018_02_05_11_18_46_20_4-影音娱乐_4_2_音乐_来首东风破.json
 
 -  request:
       method: POST
@@ -236,50 +236,5 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/2018_02_05_10_41_09_00_4-影音娱乐_4_2_音乐_我要听周杰伦的东风破.json
-
--  request:
-      method: POST
-      url: /Roobos
-      headers:
-         content-type: application/json
-      post: >
-          {"QueryText":""}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_05_10_41_09_70_4-影音娱乐_4_2_音乐_.json
-
--  request:
-      method: POST
-      url: /Roobos
-      headers:
-         content-type: application/json
-      post: >
-          {"QueryText":""}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_05_10_41_09_90_4-影音娱乐_4_2_音乐_.json
-
--  request:
-      method: POST
-      url: /Roobos
-      headers:
-         content-type: application/json
-      post: >
-          {"QueryText":""}
-
-   response:
-      headers:
-         content-type: application/json
-      latency: 2000
-      status: 200
-      file: ./json/2018_02_05_10_41_10_40_4-影音娱乐_4_2_音乐_.json
+      file: ./json/2018_02_05_11_18_52_60_4-影音娱乐_4_2_音乐_我要听周杰伦的东风破.json
 

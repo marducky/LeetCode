@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 开益 听闻播报 85人被判刑特 大电信诈骗案在内蒙古宣判",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77a094b4ecd.mp3",
+        "timestamp": 1517789344,
+        "tagTopic": "政治",
+        "name": "听闻播报 85人被判刑特 大电信诈骗案在内蒙古宣判"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "暂停",
+  "semantic": {
+    "service": "News",
+    "action": "Pause",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  }
+}

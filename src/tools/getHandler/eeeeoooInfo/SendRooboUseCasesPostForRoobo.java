@@ -214,6 +214,11 @@ public class SendRooboUseCasesPostForRoobo {
                     String realPerJsonToRoobo = changePostJsonToTargetTxt(postJsonForRooboStringBuffer.toString(), arrayListForChangePostToRoobo);
 //                    System.out.println(realPerJsonToRoobo);
                     JSONObject jsonObjectForRoobo = sendPostUrl("https://api.ros.ai/bot/third/cheji/v3", realPerJsonToRoobo);
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     System.out.println(jsonObjectForRoobo.toString());
                     String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevel + "_" + secondLevel + "_" + sssTemp.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
                     //TODO:to write json file.

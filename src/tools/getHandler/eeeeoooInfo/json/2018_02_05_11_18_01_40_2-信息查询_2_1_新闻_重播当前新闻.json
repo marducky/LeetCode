@@ -1,0 +1,40 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "重播当前新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "keywords": {
+        "orgin": "重播当前",
+        "norm": "重播当前",
+        "logic": "",
+        "paramType": "@sys.any",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "对不起，没有找到该类新闻，试试点播其他新闻吧"
+    }
+  ]
+}

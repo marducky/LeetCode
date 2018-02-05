@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "继续播放",
+  "semantic": {
+    "service": "News",
+    "action": "Resume",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 开益 发改委 铁总回应电煤库存下降 已采取措施确保发电厂用煤需求",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77a050ed9c1.mp3",
+        "timestamp": 1517789276,
+        "tagTopic": "政治",
+        "name": "发改委 铁总回应电煤库存下降 已采取措施确保发电厂用煤需求"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

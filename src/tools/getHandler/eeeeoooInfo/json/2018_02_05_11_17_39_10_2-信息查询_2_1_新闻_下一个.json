@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 武玥 听闻播报 美国流感疫情严峻 已致53名儿童死亡",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77937c11516.mp3",
+        "timestamp": 1517785982,
+        "tagTopic": "国际",
+        "name": "听闻播报 美国流感疫情严峻 已致53名儿童死亡"
+      },
+      "formatType": "audio"
+    }
+  ]
+}
