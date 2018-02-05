@@ -1,0 +1,14 @@
+-  request:
+      method: POST
+      url: /Roobos
+      headers:
+         content-type: application/json
+      post: >
+          request_json_flag
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/response_json_flag.json
