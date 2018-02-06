@@ -1,4 +1,4 @@
-package knowledge.javaCoreTwo.chapter1;
+package knowledge.javaCore.javaCoreBookTwo.chapter1;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
