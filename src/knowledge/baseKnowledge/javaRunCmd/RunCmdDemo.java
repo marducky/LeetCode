@@ -7,7 +7,7 @@ public class RunCmdDemo {
         Runtime runtime = Runtime.getRuntime();
 
         try {
-            runtime.exec("java -version");
+            runtime.exec("javaInherit -version");
         } catch (IOException e) {
             e.printStackTrace();
         }

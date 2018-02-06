@@ -1,7 +1,7 @@
 package knowledge.multiProcess.chapter3;
 
-//import java.util.ArrayList;
-//import java.util.List;
+//import javaInherit.util.ArrayList;
+//import javaInherit.util.List;
 
 public class TwoThreadTransDataOne extends Thread{
     private TwoThreadTransData twoThreadTransData;

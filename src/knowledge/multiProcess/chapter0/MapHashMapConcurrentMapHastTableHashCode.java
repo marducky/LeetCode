@@ -21,8 +21,8 @@ package knowledge.multiProcess.chapter0;
 //
 //import org.omg.PortableServer.THREAD_POLICY_ID;
 //
-//import java.util.HashMap;
-//import java.util.Map;
+//import javaInherit.util.HashMap;
+//import javaInherit.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MapHashMapConcurrentMapHastTableHashCode {

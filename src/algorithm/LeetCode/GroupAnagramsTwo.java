@@ -30,7 +30,7 @@ public class GroupAnagramsTwo {
 //                    temPerlist.add(strs[i]);
                 }
                 //https://www.cnblogs.com/andy-zhou/p/5339683.html
-                //to solve the :java.util.ConcurrentModificationException
+                //to solve the :javaInherit.util.ConcurrentModificationException
                 //在前面一篇文章中提到，对Vector、ArrayList在迭代的时候如果同时对其进行修改就会抛出java.util.ConcurrentModificationException异常。
 //                if (isSmapeSortStrs(perList.get(0),strs[i]))
 ////                    List<String> tempPerList=perList;

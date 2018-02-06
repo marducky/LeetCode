@@ -1,6 +1,6 @@
 /**
  * Java 实现的双向链表。
- * 注：java自带的集合包中有实现双向链表，路径是:java.util.LinkedList
+ * 注：java自带的集合包中有实现双向链表，路径是:javaInherit.util.LinkedList
  */
 package knowledge.baseKnowledge.struchData;
 

@@ -55,7 +55,7 @@ public class FindAndChange {
 
         // CASE_INSENSITIVE：忽略子串大小写
         Pattern pattern2 = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
-        Matcher matcher2 = pattern2.matcher("java Java JAVA jaVA jAVA ILoveYouJaVA youhateJaVa");
+        Matcher matcher2 = pattern2.matcher("javaInherit Java JAVA jaVA jAVA ILoveYouJaVA youhateJaVa");
         // 将查找到的所有子串进行替换 （查找并替换）
         System.out.println(matcher2.replaceAll("JAVA"));
     }

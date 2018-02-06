@@ -180,7 +180,7 @@
         <!-- second pass -->
         <!--
         <nlu-group type="serial"
-                   condition-class="com.nuance.nvc.nlps.handlers.conditions.NLUWCondition_XMLTagExists(java.lang.String:result;url-query,java.lang.Boolean:TRUE)">
+                   condition-class="com.nuance.nvc.nlps.handlers.conditions.NLUWCondition_XMLTagExists(javaInherit.lang.String:result;url-query,javaInherit.lang.Boolean:TRUE)">
 
             <nlu name="uima_overridessm"
                  class="com.nuance.nvc.nlps.handlers.uima.NLUHandler_uima"

@@ -40,7 +40,7 @@ public class Xml2JsonUtil {
     /**
      * 转换一个xml格式的字符串到json格式
      *
-     * @param file java.io.File实例是一个有效的xml文件
+     * @param file javaInherit.io.File实例是一个有效的xml文件
      * @return 成功反回json 格式的字符串;失败反回null
      */
     @SuppressWarnings("unchecked")
@@ -62,7 +62,7 @@ public class Xml2JsonUtil {
      * 一个迭代方法
      *
      * @param element : org.jdom.Element
-     * @return java.util.Map 实例
+     * @return javaInherit.util.Map 实例
      */
     @SuppressWarnings("unchecked")
     private static Map iterateElement(Element element) {

@@ -1,4 +1,4 @@
-package algorithm.LeetCode;//import java.util.LinkedList;
+package algorithm.LeetCode;//import javaInherit.util.LinkedList;
 //
 //public class AddTwoNumber {
 //    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

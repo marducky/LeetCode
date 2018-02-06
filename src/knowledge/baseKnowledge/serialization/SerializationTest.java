@@ -1,7 +1,7 @@
 /**
- * java.io.Serializable
+ * javaInherit.io.Serializable
  * <p>
- * java.io.ExternalizableDemo
+ * javaInherit.io.ExternalizableDemo
  * <p>
  * ObjectOutput
  * <p>

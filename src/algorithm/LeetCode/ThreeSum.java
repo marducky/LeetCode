@@ -1,4 +1,4 @@
-package algorithm.LeetCode;//import java.util.HashMap;
+package algorithm.LeetCode;//import javaInherit.util.HashMap;
 //
 //public class ThreeSum {
 //    public static int[] threeSun(int[] numbers,int target){

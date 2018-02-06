@@ -7,7 +7,7 @@ public class AbPathTest {
         String abPath = RunStubbyProcessJar.class.getResource("").toString().substring(RunStubbyProcessJar.class.getResource("").toString().indexOf("/") + 1, RunStubbyProcessJar.class.getResource("").toString().length());
         String abPathForJar = RunStubbyProcessJar.class.getResource("stubby4j-5.1.1.jar").toString().substring(RunStubbyProcessJar.class.getResource("stubby4j-5.1.1.jar").toString().indexOf("/") + 1, RunStubbyProcessJar.class.getResource("stubby4j-5.1.1.jar").toString().length());
         String abPathForYml = RunStubbyProcessJar.class.getResource("NinaTest.yaml").toString().substring(RunStubbyProcessJar.class.getResource("NinaTest.yaml").toString().indexOf("/") + 1, RunStubbyProcessJar.class.getResource("NinaTest.yaml").toString().length());
-        String cmdPath = "java -jar " + abPathForJar + " -d " + abPathForYml;
+        String cmdPath = "javaInherit -jar " + abPathForJar + " -d " + abPathForYml;
         System.out.println(abPath);
         System.out.println(abPathForJar);
         System.out.println(abPathForYml);

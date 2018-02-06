@@ -39,9 +39,9 @@ public class StreamCaptureThread implements Runnable {
 
     public static void main(String[] args) {
         try {
-            String command = "java -version";
+            String command = "javaInherit -version";
             String command1 = "java";
-            String command2 = "java -jar G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\stubby4j-5.1.1.jar -d G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\NinaTest.yaml";
+            String command2 = "javaInherit -jar G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\stubby4j-5.1.1.jar -d G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\baseKnowledge\\javaRunCmd\\NinaTest.yaml";
             Process p = Runtime.getRuntime().exec(command2);
             StreamCaptureThread errorStream = new StreamCaptureThread(p.getErrorStream());
             StreamCaptureThread outputStream = new StreamCaptureThread(p.getInputStream());
