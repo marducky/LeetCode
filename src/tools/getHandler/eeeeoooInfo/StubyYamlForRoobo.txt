@@ -1,6 +1,6 @@
 -  request:
       method: POST
-      url: /Roobos
+      url: /Roobo
       headers:
          content-type: application/json
       post: >

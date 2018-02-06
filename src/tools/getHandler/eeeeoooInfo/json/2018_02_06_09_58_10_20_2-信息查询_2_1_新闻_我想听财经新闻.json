@@ -1,0 +1,133 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 A股头条 A股头条 2月6日 美股再遭疯狂血洗 沪市对铁公鸡采取硬措施 微信号 jrjstock",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78ee4e899a9.mp3",
+        "timestamp": 1517874770,
+        "tagTopic": "财经",
+        "name": "A股头条 2月6日 美股再遭疯狂血洗 沪市对铁公鸡采取硬措施 微信号 jrjstock"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 听闻播报 逾四成人身险公司背负现金流压力",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78eaaeec02c.mp3",
+        "timestamp": 1517873841,
+        "tagTopic": "财经",
+        "name": "听闻播报 逾四成人身险公司背负现金流压力"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 五大行债转股加码 交银投资正式开业",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78ea65d489e.mp3",
+        "timestamp": 1517873768,
+        "tagTopic": "财经",
+        "name": "五大行债转股加码 交银投资正式开业"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 优栗 听闻播报 统计局局长 中国不同群体之间居民收入差距依然较大",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78781635125.mp3",
+        "timestamp": 1517844569,
+        "tagTopic": "财经",
+        "name": "听闻播报 统计局局长 中国不同群体之间居民收入差距依然较大"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 优栗 鞍钢联手比亚迪研发云轨用钢 打造轨道交通行业新名片",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78765418f4a.mp3",
+        "timestamp": 1517844055,
+        "tagTopic": "财经",
+        "name": "鞍钢联手比亚迪研发云轨用钢 打造轨道交通行业新名片"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 中国将对虚拟货币境外交易平台网站采取监管措施",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77d6bd4a8ab.mp3",
+        "timestamp": 1517803201,
+        "tagTopic": "财经",
+        "name": "中国将对虚拟货币境外交易平台网站采取监管措施"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 乐视网本周迎开板关键日 资金涌入重仓基金谋套利",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77d692bc95f.mp3",
+        "timestamp": 1517803158,
+        "tagTopic": "财经",
+        "name": "乐视网本周迎开板关键日 资金涌入重仓基金谋套利"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 人民币对美元累计升值3 76% 专家 节前易升难贬",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77d668328d8.mp3",
+        "timestamp": 1517803116,
+        "tagTopic": "财经",
+        "name": "人民币对美元累计升值3 76% 专家 节前易升难贬"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 沪指跳空低开跌1 46% 除农业股外全线下挫",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77d62dce3fe.mp3",
+        "timestamp": 1517803061,
+        "tagTopic": "财经",
+        "name": "沪指跳空低开跌1 46% 除农业股外全线下挫"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 力哥说理财 力哥说理财 想买房的 尽快了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a77c9d4acd81.mp3",
+        "timestamp": 1517799896,
+        "tagTopic": "财经",
+        "name": "力哥说理财 想买房的 尽快了"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

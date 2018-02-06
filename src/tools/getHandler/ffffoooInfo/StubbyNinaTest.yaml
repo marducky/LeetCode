@@ -1,0 +1,400 @@
+-  request:
+      method: GET
+      url: /hello-world
+
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      body: Hello World!
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_0_Funds_transfer_I’d like to transfer money"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_39_27_10_1-Finance_1_1_0_Funds_transfer_I’d_like_to_transfer_money.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_0_Funds_transfer_Checking *2341"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_39_39_10_1-Finance_1_1_0_Funds_transfer_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_0_Funds_transfer_Savings *8760"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_39_51_90_1-Finance_1_1_0_Funds_transfer_Savings__8760.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_0_Funds_transfer_$5000.00"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_40_03_70_1-Finance_1_1_0_Funds_transfer_$5000.00.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_0_Funds_transfer_Yes"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_40_14_10_1-Finance_1_1_0_Funds_transfer_Yes.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_1_Funds_transfer_I want to transfer some money."}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_40_26_90_1-Finance_1_1_1_Funds_transfer_I_want_to_transfer_some_money..json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_1_Funds_transfer_Checking *2341"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_40_37_30_1-Finance_1_1_1_Funds_transfer_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_1_Funds_transfer_Savings *8760"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_40_49_60_1-Finance_1_1_1_Funds_transfer_Savings__8760.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_1_Funds_transfer_$13,000.00"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_00_40_1-Finance_1_1_1_Funds_transfer_$13,000.00.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_1_1_Funds_transfer_Yes"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_12_50_1-Finance_1_1_1_Funds_transfer_Yes.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_0_POP_Money_I want to send money to Jon"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_24_90_1-Finance_1_2_0_POP_Money_I_want_to_send_money_to_Jon.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_0_POP_Money_Checking *2341"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_36_70_1-Finance_1_2_0_POP_Money_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_0_POP_Money_First one"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_47_60_1-Finance_1_2_0_POP_Money_First_one.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_0_POP_Money_$50.00"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_41_59_10_1-Finance_1_2_0_POP_Money_$50.00.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_0_POP_Money_Yes"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_42_11_60_1-Finance_1_2_0_POP_Money_Yes.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_I want to send money to Jon"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_42_22_00_1-Finance_1_2_1_POP_Money_I_want_to_send_money_to_Jon.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_Checking *2341"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_42_34_40_1-Finance_1_2_1_POP_Money_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_Jon Stevens - Checking *6710"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_42_46_70_1-Finance_1_2_1_POP_Money_Jon_Stevens_-_Checking__6710.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_$10,000.00"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_42_59_60_1-Finance_1_2_1_POP_Money_$10,000.00.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_Yes."}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_43_10_20_1-Finance_1_2_1_POP_Money_Yes..json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_2_1_POP_Money_Yes."}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_43_22_70_1-Finance_1_2_1_POP_Money_Yes..json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_3_0_Pay_a_bill_I want to pay my credit card bill."}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_43_33_40_1-Finance_1_3_0_Pay_a_bill_I_want_to_pay_my_credit_card_bill..json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_3_0_Pay_a_bill_Checking *2341"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_43_48_80_1-Finance_1_3_0_Pay_a_bill_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_3_0_Pay_a_bill_Visa *3424"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_43_59_60_1-Finance_1_3_0_Pay_a_bill_Visa__3424.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_3_0_Pay_a_bill_Full balance - $5,416.78"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_44_12_10_1-Finance_1_3_0_Pay_a_bill_Full_balance_-_$5,416.78.json
+
+-  request:
+      method: POST
+      url: /Nina
+      headers:
+         content-type: application/json
+      post: >
+          {"UserText":"1_3_0_Pay_a_bill_Yes"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_02_14_44_24_10_1-Finance_1_3_0_Pay_a_bill_Yes.json
+

@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 开益 听闻播报 滴滴终于打开香港市场 DiDi App即日启动试营运",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a78f0a5e7860.mp3",
+        "timestamp": 1517875382,
+        "tagTopic": "科技",
+        "name": "听闻播报 滴滴终于打开香港市场 DiDi App即日启动试营运"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

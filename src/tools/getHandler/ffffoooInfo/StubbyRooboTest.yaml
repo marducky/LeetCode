@@ -1,0 +1,240 @@
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"我想听财经新闻"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_23_80_2-信息查询_2_1_新闻_我想听财经新闻.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"下一批"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_29_90_2-信息查询_2_1_新闻_下一批.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"下一个"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_34_20_2-信息查询_2_1_新闻_下一个.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"上一个"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_40_90_2-信息查询_2_1_新闻_上一个.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"暂停"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_45_30_2-信息查询_2_1_新闻_暂停.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"继续播放"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_51_30_2-信息查询_2_1_新闻_继续播放.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"重播当前新闻"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_01_56_80_2-信息查询_2_1_新闻_重播当前新闻.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"退出新闻场景"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_02_20_2-信息查询_2_1_新闻_退出新闻场景.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"给我订一张北京到上海明天10点半之后的机票"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_07_20_2-信息查询_2_2_航班查询_给我订一张北京到上海明天10点半之后的机票.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"给我订一张北京到上海明天的机票"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_13_30_2-信息查询_2_2_航班查询_给我订一张北京到上海明天的机票.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"导航到很赞的餐馆"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_19_10_3-出行路况_3_1_导航_导航到很赞的餐馆.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"导航到便宜的街边的餐馆"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_24_50_3-出行路况_3_1_导航_导航到便宜的街边的餐馆.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"来首鹅妈妈俱乐部"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_30_80_4-影音娱乐_4_1_儿歌_来首鹅妈妈俱乐部.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"下一首"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_35_50_4-影音娱乐_4_1_儿歌_下一首.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"来首东风破"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_41_70_4-影音娱乐_4_2_音乐_来首东风破.json
+
+-  request:
+      method: POST
+      url: /Roobo
+      headers:
+         content-type: application/json
+      post: >
+          {"QueryText":"我要听周杰伦的东风破"}
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/2018_02_06_10_02_47_80_4-影音娱乐_4_2_音乐_我要听周杰伦的东风破.json
+
