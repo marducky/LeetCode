@@ -1,4 +1,4 @@
-package majors.python;
+package knowledge.python;
 
 import org.omg.SendingContext.RunTime;
 

@@ -1,4 +1,4 @@
-package majors.jvm.chapter2;
+package knowledge.baseKnowledge.jvm.chapter2;
 
 public class StackFrameStaticParam {
     public static void main(String[] args){

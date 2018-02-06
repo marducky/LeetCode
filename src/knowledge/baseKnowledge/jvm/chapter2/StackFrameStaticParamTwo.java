@@ -1,5 +1,5 @@
 //http://blog.csdn.net/zq602316498/article/details/38926607
-package majors.jvm.chapter2;
+package knowledge.baseKnowledge.jvm.chapter2;
 
 public class StackFrameStaticParamTwo {
     public static void main(String[] args){

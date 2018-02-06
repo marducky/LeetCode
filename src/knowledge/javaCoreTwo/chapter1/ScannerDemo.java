@@ -1,4 +1,4 @@
-package majors.javaCoreTwo.chapter1;
+package knowledge.javaCoreTwo.chapter1;
 
 import java.util.ArrayList;
 import java.util.Arrays;

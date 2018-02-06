@@ -1,4 +1,4 @@
-package majors.javaCoreTwo.chapter1;
+package knowledge.javaCoreTwo.chapter1;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package majors.mysql;
+package knowledge.mysql;
 
 import java.sql.*;
 import java.util.Random;

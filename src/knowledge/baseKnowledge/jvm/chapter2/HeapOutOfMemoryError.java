@@ -1,7 +1,7 @@
 /**
  * VM args: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  */
-package majors.jvm.chapter2;
+package knowledge.baseKnowledge.jvm.chapter2;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package majors.jvm.chapter13;
+package knowledge.baseKnowledge.jvm.chapter13;
 
 import java.util.Vector;
 

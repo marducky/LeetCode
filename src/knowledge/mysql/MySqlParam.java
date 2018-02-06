@@ -1,4 +1,4 @@
-package majors.mysql;
+package knowledge.mysql;
 
 class MySqlParam {
     private String url;

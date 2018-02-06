@@ -1,4 +1,4 @@
-package majors.jvm.chapter3;
+package knowledge.baseKnowledge.jvm.chapter3;
 
 public class ReferenceCountingGC {
     public Object instance = null;

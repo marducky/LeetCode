@@ -1,4 +1,4 @@
-package tools;
+package tools.smillTools;
 
 import knowledge.baseKnowledge.regrexKn.FindAndChange;
 
