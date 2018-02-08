@@ -77,6 +77,7 @@ then I add:
 ```
 {
   "registry-mirrors": ["https://vddoqdne.mirror.aliyuncs.com"]
+ "registry-mirrors": ["https://registry.docker-cn.com"]
 }
 ```
 >[aliyun](https://cr.console.aliyun.com)<br>
