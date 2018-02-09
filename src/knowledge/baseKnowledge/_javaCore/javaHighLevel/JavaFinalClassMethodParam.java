@@ -1,9 +1,9 @@
-package knowledge.javaCore.javaHighLevel;
+package knowledge.baseKnowledge._javaCore.javaHighLevel;
 
 import java.util.Random;
 
 /**
- * @project: knowledge.javaCore.javaHighLevel
+ * @project: knowledge.baseKnowledge._javaCore.javaHighLevel
  * @author: Neng Qi
  * @email: qihuaneng@163.com
  * @date: 2018/02/07 16:26

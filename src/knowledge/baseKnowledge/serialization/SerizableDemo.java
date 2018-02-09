@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaCoreBookTwo.chapter1;
+package knowledge.baseKnowledge.serialization;
 
 import java.io.*;
 

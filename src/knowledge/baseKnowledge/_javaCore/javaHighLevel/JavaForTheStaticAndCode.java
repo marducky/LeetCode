@@ -1,7 +1,7 @@
-package knowledge.javaCore.javaHighLevel;
+package knowledge.baseKnowledge._javaCore.javaHighLevel;
 
 /**
- * @project: knowledge.javaCore.javaHighLevel
+ * @project: knowledge.baseKnowledge._javaCore.javaHighLevel
  * @author: Neng Qi
  * @email: qihuaneng@163.com
  * @date: 2018/02/07 16:24

@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaHighLevel.javaInherit;
+package knowledge.baseKnowledge.javaInherit;
 
 public class JavaUpTypeParent {
     public void display() {

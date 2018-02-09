@@ -1,6 +1,4 @@
-package knowledge.javaCore.javaHighLevel.javaInherit;
-
-import knowledge.sortSort.ShellSort;
+package knowledge.baseKnowledge.javaInherit;
 
 public class ProtectInhiritSon extends ProtectInhiritParent {
     private JavaWife javaWife;

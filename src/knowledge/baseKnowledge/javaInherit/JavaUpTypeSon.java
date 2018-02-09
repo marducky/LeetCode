@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaHighLevel.javaInherit;
+package knowledge.baseKnowledge.javaInherit;
 
 public class JavaUpTypeSon extends JavaUpTypeParent {
     public static void main(String[] args) {

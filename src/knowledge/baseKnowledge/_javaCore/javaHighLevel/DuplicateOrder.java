@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaHighLevel;
+package knowledge.baseKnowledge._javaCore.javaHighLevel;
 
 import java.util.*;
 

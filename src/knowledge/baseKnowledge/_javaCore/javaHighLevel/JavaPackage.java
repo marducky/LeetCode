@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaHighLevel;
+package knowledge.baseKnowledge._javaCore.javaHighLevel;
 
 //封装就是将属性私有化，提供公有的方法访问私有属性。
 //做法就是：修改属性的可见性来限制对属性的访问，并为每个属性创建一对取值（getter）方法和赋值（setter）方法，用于对这些属性的访问。

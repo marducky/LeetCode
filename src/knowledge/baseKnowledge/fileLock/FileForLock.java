@@ -1,4 +1,4 @@
-package knowledge.javaCore.javaCoreBookTwo.chapter1;
+package knowledge.baseKnowledge.fileLock;
 // “Locks are associated with files, not channels. Use locks to coordinate with external processes, not between threads in the same JVM.”
 /**
  * channels1. 概念
@@ -30,7 +30,7 @@ import java.nio.channels.FileLock;
 import java.sql.Date;
 
 /**
- * @project: knowledge.javaCore.javaCoreBookTwo.chapter1
+ * @project: knowledge.baseKnowledge._javaCore.javaCoreBookTwo.chapter1
  * @author: Neng Qi
  * @email: qihuaneng@163.com
  * @date: 2018/02/09 11:40
@@ -44,8 +44,8 @@ public class FileForLock {
             //1. 对于一个只读文件通过任意方式加锁时会报NonWritableChannelException异常
             //2. 无参lock()默认为独占锁，不会报NonReadableChannelException异常，因为独占就是为了写
             //3. 有参lock()为共享锁，所谓的共享也只能读共享，写是独占的，共享锁控制的代码只能是读操作，当有写冲突时会报NonWritableChannelException异常
-            fileChannel = new FileOutputStream("G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\javaCore\\javaCoreBookTwo\\chapter1\\testFile/logfile.txt", true).getChannel();
-            RandomAccessFile randomAccessFile = new RandomAccessFile("G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\javaCore\\javaCoreBookTwo\\chapter1\\testFile/logfile.txt", "rw");
+            fileChannel = new FileOutputStream("G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\_javaCore\\javaCoreBookTwo\\chapter1\\testFile/logfile.txt", true).getChannel();
+            RandomAccessFile randomAccessFile = new RandomAccessFile("G:\\info\\NLPS_Code_Repos\\git\\LeetCode\\src\\knowledge\\_javaCore\\javaCoreBookTwo\\chapter1\\testFile/logfile.txt", "rw");
             randomAccessFile.seek(randomAccessFile.length());
             fileChannel = randomAccessFile.getChannel();
             fileLock = fileChannel.lock(); //获得锁方法一：lock()，阻塞的方法，当文件锁不可用时，当前进程会被挂起
