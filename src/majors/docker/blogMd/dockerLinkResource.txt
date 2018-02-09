@@ -15,3 +15,4 @@ Docker 国内镜像
 官方中国加速器：https://registry.docker-cn.com
 ustc的镜像：https://docker.mirrors.ustc.edu.cn
 daocloud：https://www.daocloud.io/mirror#accelerator-doc（注册后使用）
+docker之Dockerfile实践 - wadeson - 博客园 https://www.cnblogs.com/jsonhc/p/7767669.html
