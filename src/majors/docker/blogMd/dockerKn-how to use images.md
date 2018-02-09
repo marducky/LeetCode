@@ -181,3 +181,6 @@ janus/centos                                          dev                 4cc6c3
 janus/ubuntu                                          v2                  2c6eeb4d8c7c        30 minutes ago      137.2 MB
 
 ```
+
+
+[docker之Dockerfile实践 - wadeson - 博客园 ](https://www.cnblogs.com/jsonhc/p/7767669.html)
