@@ -1,0 +1,188 @@
+[
+  {
+    "Id": "6f382cb32d896005fec89ec94137a45ec05849d1fa15230dca307d3ad0268a23",
+    "Created": "2018-02-09T13:50:49.949555638Z",
+    "Path": "python",
+    "Args": [
+      "app.py"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 98854,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2018-02-09T13:50:52.837258717Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    },
+    "Image": "sha256:6fae60ef344644649a39240b94d73b8ba9c67f898ede85cf8e947a887b3e6557",
+    "ResolvConfPath": "/var/lib/docker/containers/6f382cb32d896005fec89ec94137a45ec05849d1fa15230dca307d3ad0268a23/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/6f382cb32d896005fec89ec94137a45ec05849d1fa15230dca307d3ad0268a23/hostname",
+    "HostsPath": "/var/lib/docker/containers/6f382cb32d896005fec89ec94137a45ec05849d1fa15230dca307d3ad0268a23/hosts",
+    "LogPath": "",
+    "Name": "/serene_blackwell",
+    "RestartCount": 0,
+    "Driver": "devicemapper",
+    "MountLabel": "system_u:object_r:svirt_sandbox_file_t:s0:c408,c652",
+    "ProcessLabel": "system_u:system_r:svirt_lxc_net_t:s0:c408,c652",
+    "AppArmorProfile": "",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": null,
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "journald",
+        "Config": {}
+      },
+      "NetworkMode": "default",
+      "PortBindings": {
+        "5000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "5000"
+          }
+        ]
+      },
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "CapAdd": null,
+      "CapDrop": null,
+      "Dns": [],
+      "DnsOptions": [],
+      "DnsSearch": [],
+      "ExtraHosts": null,
+      "GroupAdd": null,
+      "IpcMode": "",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "docker-runc",
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": [],
+      "DiskQuota": 0,
+      "KernelMemory": 0,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": -1,
+      "OomKillDisable": false,
+      "PidsLimit": 0,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0
+    },
+    "GraphDriver": {
+      "Name": "devicemapper",
+      "Data": {
+        "DeviceId": "152",
+        "DeviceName": "docker-253:0-8420898-6080addcd5496393132f28f83a6d0a4fac3f90c347854d5611fef6fde8f325e9",
+        "DeviceSize": "10737418240"
+      }
+    },
+    "Mounts": [],
+    "Config": {
+      "Hostname": "6f382cb32d89",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": false,
+      "AttachStderr": false,
+      "ExposedPorts": {
+        "5000/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      "Cmd": [
+        "python",
+        "app.py"
+      ],
+      "Image": "training/webapp",
+      "Volumes": null,
+      "WorkingDir": "/opt/webapp",
+      "Entrypoint": null,
+      "OnBuild": null,
+      "Labels": {}
+    },
+    "NetworkSettings": {
+      "Bridge": "",
+      "SandboxID": "3596093477f62d9816bc49c516463cab279b2704fd72ff9cc73db0d92e2cf422",
+      "HairpinMode": false,
+      "LinkLocalIPv6Address": "",
+      "LinkLocalIPv6PrefixLen": 0,
+      "Ports": {
+        "5000/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "5000"
+          }
+        ]
+      },
+      "SandboxKey": "/var/run/docker/netns/3596093477f6",
+      "SecondaryIPAddresses": null,
+      "SecondaryIPv6Addresses": null,
+      "EndpointID": "c8f86fddc18db393df493afc1ee16dd0c5e650ffe2b9d3ea7e645a21a1a99621",
+      "Gateway": "172.17.0.1",
+      "GlobalIPv6Address": "",
+      "GlobalIPv6PrefixLen": 0,
+      "IPAddress": "172.17.0.6",
+      "IPPrefixLen": 16,
+      "IPv6Gateway": "",
+      "MacAddress": "02:42:ac:11:00:06",
+      "Networks": {
+        "bridge": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": null,
+          "NetworkID": "00b51123405ed74defe0e2b6b1bdf23de7f2c9f007210c1a7aaccbf3c209ccb9",
+          "EndpointID": "c8f86fddc18db393df493afc1ee16dd0c5e650ffe2b9d3ea7e645a21a1a99621",
+          "Gateway": "172.17.0.1",
+          "IPAddress": "172.17.0.6",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "MacAddress": "02:42:ac:11:00:06"
+        }
+      }
+    }
+  }
+]
