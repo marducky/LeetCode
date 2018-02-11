@@ -1,0 +1,3 @@
+Java发送邮件的几种方式 - CSDN博客 http://blog.csdn.net/qq_32371887/article/details/72821291
+Java 发送邮件 | 菜鸟教程 http://www.runoob.com/java/java-sending-email.html
+JAVA实现发送电子邮件 - 小破孩123 - 博客园 https://www.cnblogs.com/AndroidJotting/p/5024124.html
