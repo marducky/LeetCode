@@ -1,0 +1,133 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 优栗 听闻播报 2018年铁总车辆投资降至800亿 累及中国中车",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f171dd7563.mp3",
+        "timestamp": 1518278499,
+        "tagTopic": "财经",
+        "name": "听闻播报 2018年铁总车辆投资降至800亿 累及中国中车"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 优栗 中石油国内天然气年产量首次突破千亿立方米",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f15a9109de.mp3",
+        "timestamp": 1518278063,
+        "tagTopic": "财经",
+        "name": "中石油国内天然气年产量首次突破千亿立方米"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 艾问人物 艾问人物 许德丰 小蜂链有潜力成为区块链应用的独角兽吗",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e9b0318732.mp3",
+        "timestamp": 1518246661,
+        "tagTopic": "财经",
+        "name": "艾问人物 许德丰 小蜂链有潜力成为区块链应用的独角兽吗"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 无冕财经 无冕财经  老板娘 马东敏回归这一年 百度战投变了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e9a4dc2d22.mp3",
+        "timestamp": 1518246488,
+        "tagTopic": "财经",
+        "name": "无冕财经  老板娘 马东敏回归这一年 百度战投变了"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 涉嫌信披违规 獐子岛被立案调查",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e66611a8f7.mp3",
+        "timestamp": 1518233196,
+        "tagTopic": "财经",
+        "name": "涉嫌信披违规 獐子岛被立案调查"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 2018年房贷或减万亿 房企融资受阻面临资金严冬",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e6637b391d.mp3",
+        "timestamp": 1518233147,
+        "tagTopic": "财经",
+        "name": "2018年房贷或减万亿 房企融资受阻面临资金严冬"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 今日起加满一箱油可省6块5 加油站利润依旧可观",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e661091b91.mp3",
+        "timestamp": 1518233107,
+        "tagTopic": "财经",
+        "name": "今日起加满一箱油可省6块5 加油站利润依旧可观"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 和讯内参 和讯内参 余额宝大调整 以后买余额宝要靠抢",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e5273f0048.mp3",
+        "timestamp": 1518228087,
+        "tagTopic": "财经",
+        "name": "和讯内参 余额宝大调整 以后买余额宝要靠抢"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 野马财经 野马财经 保千里跌停超乐视 为何小股东埋单",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e51ac3ae5b.mp3",
+        "timestamp": 1518227897,
+        "tagTopic": "财经",
+        "name": "野马财经 保千里跌停超乐视 为何小股东埋单"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 Wind财经早餐 Wind财经早餐 2018 2 10",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e4b1a43019.mp3",
+        "timestamp": 1518226228,
+        "tagTopic": "财经",
+        "name": "Wind财经早餐 2018 2 10"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

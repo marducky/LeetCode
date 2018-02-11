@@ -1,5 +1,12 @@
 package tools.getHandler.eeeeoooInfo;
 
+import net.sourceforge.pinyin4j.PinyinHelper;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import tools.CnWordToPinYin.*;
 import net.sf.json.JSONObject;
 
 import java.io.*;
@@ -13,6 +20,58 @@ import java.util.Date;
 import java.util.Random;
 
 public class SendRooboUseCasesPostForRoobo {
+    private static String converterToFirstSpell(String chines) {
+        String pinyinName = "";
+        char[] nameChar = chines.toCharArray();
+        HanyuPinyinOutputFormat defaultFormat = new HanyuPinyinOutputFormat();
+        defaultFormat.setCaseType(HanyuPinyinCaseType.UPPERCASE);
+        defaultFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
+        for (int i = 0; i < nameChar.length; i++) {
+            if (nameChar[i] > 128) {
+                try {
+                    pinyinName += PinyinHelper.toHanyuPinyinStringArray(
+                            nameChar[i], defaultFormat)[0].charAt(0);
+                } catch (BadHanyuPinyinOutputFormatCombination e) {
+                    e.printStackTrace();
+                }
+            } else {
+                pinyinName += nameChar[i];
+            }
+        }
+        return pinyinName;
+    }
+
+    /**
+     * @param inputString
+     * @return
+     */
+    private static String getPingYin(String inputString) {
+        HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
+        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
+        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
+        format.setVCharType(HanyuPinyinVCharType.WITH_V);
+        String output = "";
+        if (inputString != null && inputString.length() > 0
+                && !"null".equals(inputString)) {
+            char[] input = inputString.trim().toCharArray();
+            try {
+                for (int i = 0; i < input.length; i++) {
+                    if (java.lang.Character.toString(input[i]).matches(
+                            "[\\u4E00-\\u9FA5]+")) {
+                        String[] temp = PinyinHelper.toHanyuPinyinStringArray(
+                                input[i], format);
+                        output += temp[0];
+                    } else
+                        output += java.lang.Character.toString(input[i]);
+                }
+            } catch (BadHanyuPinyinOutputFormatCombination e) {
+                e.printStackTrace();
+            }
+        } else {
+            return "*";
+        }
+        return output;
+    }
     /**
      * @param filaName
      * @return
@@ -158,8 +217,10 @@ public class SendRooboUseCasesPostForRoobo {
     }
 
 
-    public void mainFunction() {
+    public static void mainFunction() {
+
         DateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_");
+        DateFormat dfLess = new SimpleDateFormat("MMddHHmmss_");
         Random random = new Random();
         //get the PostJsonForRoobo json content;
         String postJsonForRooboPath = getDirPath("PostJsonForRoobo.txt");
@@ -181,7 +242,10 @@ public class SendRooboUseCasesPostForRoobo {
         arrayListForChangePostToRoobo.add(agentId);
         arrayListForChangePostToRoobo.add(token);
         String firstLevel = "";
+        String firstLevelToHanYuPinYin = "";
         String secondLevel = "";
+        String secondLevelToHanYuPinYin = "";
+
         ArrayList<String> stubbyYamlForRooboArrayList = readFileContent("StubyYamlForRoobo.txt");
         StringBuffer stubbyYamlForRooboString = new StringBuffer("");
         ArrayList<String> stubbyYamlAllToWrite = new ArrayList<String>();
@@ -200,9 +264,12 @@ public class SendRooboUseCasesPostForRoobo {
         for (String sssTemp : RooboDialogUseActionArrayList) {
             if (sssTemp.startsWith("*")) {
                 firstLevel = sssTemp.substring(sssTemp.lastIndexOf("*") + 1, sssTemp.length());
+                firstLevelToHanYuPinYin = converterToFirstSpell(sssTemp.substring(sssTemp.lastIndexOf("*") + 1, sssTemp.length()));
+
             } else {
                 if (sssTemp.startsWith("#")) {
                     secondLevel = sssTemp.substring(sssTemp.lastIndexOf("#") + 1, sssTemp.length());
+                    secondLevelToHanYuPinYin = converterToFirstSpell(sssTemp.substring(sssTemp.lastIndexOf("#") + 1, sssTemp.length()));
                 } else {
                     if (arrayListForChangePostToRoobo.size() == 3) {
                         arrayListForChangePostToRoobo.add("query_flag_" + sssTemp);
@@ -221,11 +288,14 @@ public class SendRooboUseCasesPostForRoobo {
                     }
                     System.out.println(jsonObjectForRoobo.toString());
                     String perJsonName = df.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevel + "_" + secondLevel + "_" + sssTemp.replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
+                    String perJsonNameToPinYin = dfLess.format(new Date(System.currentTimeMillis())) + Math.abs(random.nextInt()) % 10 + 0 + "_" + firstLevelToHanYuPinYin + "_" + secondLevelToHanYuPinYin + "_" + converterToFirstSpell(sssTemp).replace(" ", "_").replace("*", "_").replace(":", "_").replace("?", "_");
                     //TODO:to write json file.
-                    writeContent(jsonObjectForRoobo.toString(), ".//json//" + perJsonName + ".json");
+//                    writeContent(jsonObjectForRoobo.toString(), ".//json//" + perJsonName + ".json");
+                    writeContent(jsonObjectForRoobo.toString(), ".//json//" + perJsonNameToPinYin + ".json");
+
                     //TODO:to write yaml. and it can write once.
                     String changeToYamlPostJson = postJsonForStubbyString.replace("text_flag", sssTemp);
-                    stubbyYamlAllToWrite.add(stubbyYamlForRooboString.toString().replace("request_json_flag", changeToYamlPostJson).replace("response_json_flag", perJsonName));
+                    stubbyYamlAllToWrite.add(stubbyYamlForRooboString.toString().replace("request_json_flag", changeToYamlPostJson).replace("response_json_flag", perJsonNameToPinYin));
 
                     //TODO:to write QA file, and it can write once.
                     qaAllToWrite.add(changeToYamlPostJson);

@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 高明 春运前10天铁路旅客近9000万人次 节前高峰来临",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc49bd4ea1.mp3",
+        "timestamp": 1518322847,
+        "tagTopic": "政治",
+        "name": "春运前10天铁路旅客近9000万人次 节前高峰来临"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

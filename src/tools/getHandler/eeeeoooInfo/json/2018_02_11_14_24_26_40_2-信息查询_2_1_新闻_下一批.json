@@ -1,0 +1,121 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一批",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 听闻下午茶 听闻下午茶 金正恩邀请文在寅访问平壤 2018年2月11日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fdcfeabb1d.mp3",
+        "timestamp": 1518329100,
+        "tagTopic": "政治",
+        "name": "听闻下午茶 金正恩邀请文在寅访问平壤 2018年2月11日"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 广州刘永添等54人涉黑案一审宣判 \"村霸\"获刑20年",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc475ad47e.mp3",
+        "timestamp": 1518322809,
+        "tagTopic": "政治",
+        "name": "广州刘永添等54人涉黑案一审宣判 \"村霸\"获刑20年"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 香港翻车事故已致19人遇难 重案组正跟进调查案件",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc44de4335.mp3",
+        "timestamp": 1518322772,
+        "tagTopic": "政治",
+        "name": "香港翻车事故已致19人遇难 重案组正跟进调查案件"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 中联办否认要香港升旗礼用中式步操:有团体主动提",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc42754fe8.mp3",
+        "timestamp": 1518322732,
+        "tagTopic": "政治",
+        "name": "中联办否认要香港升旗礼用中式步操:有团体主动提"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 郑州海关:2017年新郑机场货邮吞吐量跻身全球50强",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc3ac91b62.mp3",
+        "timestamp": 1518322608,
+        "tagTopic": "财经",
+        "name": "郑州海关:2017年新郑机场货邮吞吐量跻身全球50强"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 资金搏杀乐视网 基金人士 会持续抛售直至清仓",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc3811dd43.mp3",
+        "timestamp": 1518322564,
+        "tagTopic": "财经",
+        "name": "资金搏杀乐视网 基金人士 会持续抛售直至清仓"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 巴西前总统卢拉\"人身保护权\"遭拒 恐随时被捕入狱",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc34b67f8c.mp3",
+        "timestamp": 1518322511,
+        "tagTopic": "国际",
+        "name": "巴西前总统卢拉\"人身保护权\"遭拒 恐随时被捕入狱"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 日本防相视察自卫队直升机事故现场 向民众致歉",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc317ade77.mp3",
+        "timestamp": 1518322461,
+        "tagTopic": "国际",
+        "name": "日本防相视察自卫队直升机事故现场 向民众致歉"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 美媒主播竟在冬奥拥护日本殖民统治 韩国人不干了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc2eeb8037.mp3",
+        "timestamp": 1518322420,
+        "tagTopic": "国际",
+        "name": "美媒主播竟在冬奥拥护日本殖民统治 韩国人不干了"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 加拿大总理访美期间车队遇车祸 造成3人受伤",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc2c44782e.mp3",
+        "timestamp": 1518322377,
+        "tagTopic": "国际",
+        "name": "加拿大总理访美期间车队遇车祸 造成3人受伤"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

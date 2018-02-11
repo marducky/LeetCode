@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 听闻午餐 听闻午餐 央视狗年春晚门票上万元 央视 从未授权出售 2018年2月11日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fb32a26830.mp3",
+        "timestamp": 1518318414,
+        "tagTopic": "政治",
+        "name": "听闻午餐 央视狗年春晚门票上万元 央视 从未授权出售 2018年2月11日"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

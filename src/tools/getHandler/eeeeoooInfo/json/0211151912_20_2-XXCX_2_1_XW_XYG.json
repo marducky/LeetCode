@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "为您播放 欣然 听闻播报 阿里云推出ET奥运大脑马云 把奥运会推向数字时代",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fae93e6ad2.mp3",
+        "timestamp": 1518317301,
+        "tagTopic": "科技",
+        "name": "听闻播报 阿里云推出ET奥运大脑马云 把奥运会推向数字时代"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

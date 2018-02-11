@@ -1,0 +1,137 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 听闻财经通 听闻财经通 评论 要廓清海淘商品涉假罗生门 当然需要下回分解",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fb2e156981.mp3",
+        "timestamp": 1518318314,
+        "tagTopic": "财经",
+        "name": "听闻财经通 评论 要廓清海淘商品涉假罗生门 当然需要下回分解"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 Wind财经早餐 Wind财经早餐 2018 2 11",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f992e84a2c.mp3",
+        "timestamp": 1518311747,
+        "tagTopic": "财经",
+        "name": "Wind财经早餐 2018 2 11"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 武玥 听闻播报 1月CPI涨幅回落至半年新低",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f819f24635.mp3",
+        "timestamp": 1518305701,
+        "tagTopic": "财经",
+        "name": "听闻播报 1月CPI涨幅回落至半年新低"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 河南去年食品农产品出口创历史新高",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f817077a79.mp3",
+        "timestamp": 1518305652,
+        "tagTopic": "财经",
+        "name": "河南去年食品农产品出口创历史新高"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 优栗 听闻播报 2018年铁总车辆投资降至800亿 累及中国中车",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f171dd7563.mp3",
+        "timestamp": 1518278499,
+        "tagTopic": "财经",
+        "name": "听闻播报 2018年铁总车辆投资降至800亿 累及中国中车"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 优栗 中石油国内天然气年产量首次突破千亿立方米",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7f15a9109de.mp3",
+        "timestamp": 1518278063,
+        "tagTopic": "财经",
+        "name": "中石油国内天然气年产量首次突破千亿立方米"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 艾问人物 艾问人物 许德丰 小蜂链有潜力成为区块链应用的独角兽吗",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e9b0318732.mp3",
+        "timestamp": 1518246661,
+        "tagTopic": "财经",
+        "name": "艾问人物 许德丰 小蜂链有潜力成为区块链应用的独角兽吗"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 无冕财经 无冕财经  老板娘 马东敏回归这一年 百度战投变了",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e9a4dc2d22.mp3",
+        "timestamp": 1518246488,
+        "tagTopic": "财经",
+        "name": "无冕财经  老板娘 马东敏回归这一年 百度战投变了"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 涉嫌信披违规 獐子岛被立案调查",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e66611a8f7.mp3",
+        "timestamp": 1518233196,
+        "tagTopic": "财经",
+        "name": "涉嫌信披违规 獐子岛被立案调查"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 2018年房贷或减万亿 房企融资受阻面临资金严冬",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7e6637b391d.mp3",
+        "timestamp": 1518233147,
+        "tagTopic": "财经",
+        "name": "2018年房贷或减万亿 房企融资受阻面临资金严冬"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

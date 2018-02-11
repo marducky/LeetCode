@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 高明 广州刘永添等54人涉黑案一审宣判 \"村霸\"获刑20年",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a7fc475ad47e.mp3",
+        "timestamp": 1518322809,
+        "tagTopic": "政治",
+        "name": "广州刘永添等54人涉黑案一审宣判 \"村霸\"获刑20年"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

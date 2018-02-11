@@ -25,7 +25,7 @@ public class WriteHandler implements CompletionHandler<Integer, ByteBuffer> {
         } else {
             //读取数据
             ByteBuffer readBuffer = ByteBuffer.allocate(1024);
-            clientChannel.read(readBuffer, readBuffer, new Server.ReadHandler(clientChannel, latch));
+            clientChannel.read(readBuffer, readBuffer, new ReadHandler(clientChannel, latch));
         }
     }
 
