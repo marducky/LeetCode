@@ -16,21 +16,20 @@
 
 package majors.docker.kubectl.examples.storage.cassandra.java.src.test.java.io.k8s.cassandra;
 
-import com.google.common.collect.ImmutableMap;
+import majors.docker.kubectl.examples.storage.cassandra.java.src.main.java.io.k8s.cassandra.KubernetesSeedProvider;
 import org.apache.cassandra.locator.SeedProvider;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.hamcrest.Matchers.*;
-
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
 
 public class KubernetesSeedProviderTest {
 
