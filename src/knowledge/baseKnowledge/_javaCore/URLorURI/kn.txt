@@ -1,0 +1,2 @@
+URI与URL详解 - CSDN博客 http://blog.csdn.net/readiay/article/details/52862379
+Java网络编程之URL和URI - CSDN博客 http://blog.csdn.net/guanhang89/article/details/53897461
