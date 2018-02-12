@@ -1,2 +1,9 @@
 URI与URL详解 - CSDN博客 http://blog.csdn.net/readiay/article/details/52862379
 Java网络编程之URL和URI - CSDN博客 http://blog.csdn.net/guanhang89/article/details/53897461
+1、URI与URL的定义
+
+      URI：统一资源标志符（Uniform Resource Identifier）
+      URL：统一资源定位符（uniform resource location）
+      说白了，URI与URL都是定位资源位置的，就是表示这个资源的位置信息，就像经纬度一样可以表示你在世界的哪个角落。URI是一种宽泛的含义更广的定义，而URL则是URI的一个子集，就是说URL是URI的一部分。
+      换句话说，每个URL都是URI，但是不是每个URI都是URL的。他们之间最明显的不同就是在java.net.URI你只能看到他的一些属性，他只是表示一个位置，但是你没有办法通过URI获取到这个对象的流，但是URL就不同了。java.net.URL该类提供方法（openConnection（）），通过该方法我们可以通过IO流操作他。但是URI中我貌似没看到相关的方法。
+      也就是说：URL是可以直接操作的，但是URI并不行。（如果你发现这句话不对，麻烦告诉我下）
