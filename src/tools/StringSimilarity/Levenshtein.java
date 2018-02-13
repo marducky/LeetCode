@@ -60,10 +60,11 @@ public class Levenshtein {
         return 1 - (float) compare(str, target) / Math.max(str.length(), target.length());
     }
 
-    public static void main(String[] args) {
-        Levenshtein lt = new Levenshtein();
-        String str = "myasqql";
-        String target = "mysqqal";
-        System.out.println("similarityRatio=" + lt.getSimilarityRatio(str, target));
-    }
+
+//    public static void main(String[] args) {
+//        Levenshtein lt = new Levenshtein();
+//        String str = "myasqql";
+//        String target = "mysqqal";
+//        System.out.println("similarityRatio=" + lt.getSimilarityRatio(str, target));
+//    }
 }
