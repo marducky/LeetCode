@@ -107,7 +107,7 @@ public class ReformatHandlersManagerConfTwo {
                     isNlusGroupBeginFlag = false;
                     nulsName = matcherBegin.group(0);
                     //print the pattern info
-                    //System.out.println(nulsName);
+                    System.out.println(nulsName);
                 }
 
                 //pattern the </nlus>
@@ -119,17 +119,17 @@ public class ReformatHandlersManagerConfTwo {
                         resultNlus.put(nulsName, targetBegin + "-" + targetEnd + "-true");
                         isNlusGroupHavaOtherNlus = false;
                         //print the pattern info
-                        //System.out.println(targetBegin + "-" + targetEnd + "-true");
+                        System.out.println(targetBegin + "-" + targetEnd + "-true");
                     } else {
                         resultNlus.put(nulsName, targetBegin + "-" + targetEnd + "-false");
                         //print the pattern info
-                        //System.out.println(targetBegin + "-" + targetEnd + "-false");
+                        System.out.println(targetBegin + "-" + targetEnd + "-false");
                     }
 
                     //System.out.println(targetBegin + "-" + targetEnd);
                     isNlusGroupBeginFlag = true;
                     //print the pattern info
-                    //System.out.println(matcherEnd.group());
+                    System.out.println(matcherEnd.group());
                 }
                 //pattern the <nlus name="dragon-go-from-cas" /> or  <nlus name="dragon-go-from-cas"/>
                 Pattern patternSingleNlus = Pattern.compile(isSingleNlus);
@@ -141,7 +141,7 @@ public class ReformatHandlersManagerConfTwo {
                     //can be delete.
                     nuleSingleMapLine.put(targetLine + "", matcherSingleNlus.group(0));
                     //print the pattern info
-                    //System.out.println(targetLine + "       " + matcherSingleNlus.group(0));
+                    System.out.println(targetLine + "       " + matcherSingleNlus.group(0));
                     isNlusGroupHavaOtherNlus = true;
                 }
             }
