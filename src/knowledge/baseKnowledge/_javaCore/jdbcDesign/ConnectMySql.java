@@ -1,6 +1,7 @@
-package knowledge.mysql;
+package knowledge.baseKnowledge._javaCore.jdbcDesign;
 
-import java.io.IOException;
+import knowledge.mysql.MySqlParam;
+
 import java.sql.*;
 
 public class ConnectMySql {
@@ -47,7 +48,7 @@ public class ConnectMySql {
     public static void main(String[] args) {
         MySqlParam mySqlParam = new MySqlParam("jdbc:mysql://localhost:3306/refined_blood_hall?characterEncoding=utf8&useSSL=false", "root", "1314");
         ConnectMySql connectMySql = new ConnectMySql();
-        String sql = "Select * from nowcoder2018;";
+        String sql = "Select * from nowcoder2018 limit 10;";
         connectMySql.conectMySql(mySqlParam.getUrl(), mySqlParam.getUser(), mySqlParam.getPassword(), sql);
     }
 }

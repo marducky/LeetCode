@@ -1,6 +1,6 @@
 package knowledge.mysql;
 
-class MySqlParam {
+public class MySqlParam {
     private String url;
     private String user;
     private String password;

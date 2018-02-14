@@ -96,8 +96,9 @@ public class GiveK8sYamlAlarm {
     public static void main(String[] args) {
         //main function.
 //        getFile();
-        GiveK8sYamlAlarm giveK8sYamlAlarm = new GiveK8sYamlAlarm("mysqla");
-        System.out.println(giveK8sYamlAlarm.getSimilarityYamlFile());
+        String target = "mysqla";
+        GiveK8sYamlAlarm giveK8sYamlAlarm = new GiveK8sYamlAlarm(target);
+        System.out.println("You can find the " + target + " " + giveK8sYamlAlarm.getSimilarityYamlFile());
 
     }
 }
