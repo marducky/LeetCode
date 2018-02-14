@@ -1,10 +1,7 @@
 //http://blog.csdn.net/my_precious/article/details/53010232
 package knowledge.baseKnowledge._javaCore.list2Set2String;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @project: knowledge.baseKnowledge._javaCore.list2Set2String
@@ -15,6 +12,7 @@ import java.util.Set;
 public class list2Set2String {
     public static void main(String[] args) {
         //数组转List
+        System.out.println("========String Demo========");
         String[] demoString = new String[]{"Janus", "Tomas", "Jack"};
         for (String s : demoString) {
             System.out.print(s + "-");
@@ -40,6 +38,28 @@ public class list2Set2String {
             System.out.print(s + "-");
         }
         System.out.println();
-
+        System.out.println("========List转数组========");
+        Object[] resultString = demoString2List.toArray();
+        for (Object o : resultString) {
+            System.out.print(o.toString() + "-");
+        }
+        System.out.println();
+        System.out.println("========List转Set========");
+        Set<String> list2Set = new HashSet<>(demoString2List);
+        for (String ss : list2Set) {
+            System.out.print(ss + "-");
+        }
+        System.out.println();
+        System.out.println("========Set转List========");
+        List<String> list2Se2t = new ArrayList<>(list2Set);
+        for (String s : list2Se2t) {
+            System.out.print(s + "-");
+        }
+        System.out.println();
+        System.out.println("========Set转数组========");
+        Object[] res = list2Set.toArray();
+        for (Object s : res) {
+            System.out.print(s.toString() + "-");
+        }
     }
 }
