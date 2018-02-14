@@ -25,3 +25,10 @@
     1.make the valid tools for k8s yaml;
     2.the visual QR code tools.[ing][down]
     3.the high level Java(e.g. socket.)
+2.14
+    1. try to develop one or more project on the guidance of David Luo and Wenbin Zhang, then try to develop some project independently;
+    2. understand the NLPS project deeply, then solve the nlps problems which I or other members in team encounter;
+    3. acquaint with the all flow to run make a project online, such as k8s, docker, spring boot;
+    4. share technical knowledge or NLPS knowledge that can help my team (nlps, ncs core) members to develop and work efficiently, such my major information security, nlps work flow in subsystem;
+    5. integrate into Nuance ChengDu team deeply;
+    6. communicate more with members in other sites of Nuance.
