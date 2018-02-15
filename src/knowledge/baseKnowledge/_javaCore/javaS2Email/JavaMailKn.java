@@ -1,7 +1,5 @@
 package knowledge.baseKnowledge._javaCore.javaS2Email;
 
-import org.junit.Test;
-
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -20,9 +18,9 @@ import java.util.Properties;
 public class JavaMailKn {
     private String host = "smtp.163.com";
     private String port = "25";
-    private String userName = "";
-    private String password = "";
-    private String to = "";
+    private String userName;
+    private String password;
+    private String to;
 
     public JavaMailKn(String userName, String password, String to) {
         this.userName = userName;
@@ -322,7 +320,7 @@ public class JavaMailKn {
 
     public static void main(String[] args) throws Exception {
         //main function.
-        JavaMailKn javaMailKn = new JavaMailKn("neng_qi_2018@163.com", "*******", "neng_qi_2018@163.com");
+        JavaMailKn javaMailKn = new JavaMailKn("neng_qi_2018@163.com", "neng_qi", "neng_qi_2018@163.com");
         javaMailKn.sendTextMail();
     }
 
