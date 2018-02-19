@@ -3,7 +3,7 @@ Java 性能调优的 11 个实用技巧 - ImportNew http://www.importnew.com/273
 Java 小技巧 ( 一 ) ： 远程 debug - ImportNew http://www.importnew.com/27295.html
 浅析项目中的并发 ( 一 ) - ImportNew http://www.importnew.com/27273.html
 浅析项目中的并发 ( 二 ) - ImportNew http://www.importnew.com/27278.html
-
+并发一枝花之 ConcurrentLinkedQueue - ImportNew http://www.importnew.com/27052.html
 
 
 
