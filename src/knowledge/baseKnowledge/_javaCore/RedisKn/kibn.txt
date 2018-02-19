@@ -6,3 +6,40 @@ Java开发必会的Linux命令 - 推酷 https://www.tuicool.com/articles/vE3aaey
 Spring 中无处不在的 Properties - 推酷 https://www.tuicool.com/articles/FNvEvmA
 优化 MySQL： 3个简单的小调整 - 推酷 https://www.tuicool.com/articles/JJBZzq6
 JAVA 高频算法面试题汇总 - 推酷 https://www.tuicool.com/articles/fMrqYr3
+lifetragedy的专栏 - CSDN博客 http://blog.csdn.net/lifetragedy/article/category/1175320/4
+通向架构师的道路（第一天）之Apache整合Tomcat - CSDN博客 http://blog.csdn.net/lifetragedy/article/details/7698555
+Java 非阻塞 IO 和异步 IO - ImportNew http://www.importnew.com/28021.html
+解读 Java 并发队列 BlockingQueue - ImportNew http://www.importnew.com/28053.html
+100个高质量Java开发者博客 - ImportNew http://www.importnew.com/7469.html
+图解 CMS 垃圾回收机制，你值得拥有 - ImportNew http://www.importnew.com/27822.html
+Java NIO：Buffer、Channel 和 Selector - ImportNew http://www.importnew.com/28007.html
+再谈 websocket 论架构设计 - ImportNew http://www.importnew.com/28036.html
+正确的打日志姿势 - ImportNew http://www.importnew.com/28024.html
+Linux 性能检查命令总结 - ImportNew http://www.importnew.com/27974.html
+几个关于 Class 文件的问题分析 - ImportNew http://www.importnew.com/27886.html
+面试必问的 CAS ，要多了解 - ImportNew http://www.importnew.com/27811.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
