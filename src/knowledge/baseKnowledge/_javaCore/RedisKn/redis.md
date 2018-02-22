@@ -105,3 +105,66 @@ redis.conf 配置项说明如下：
 30. 指定包含其它的配置文件，可以在同一主机上多个Redis实例之间使用同一份配置文件，而同时各个实例又拥有自己的特定配置文件
     include /path/to/local.conf
 ```
+>[Redis 的 5 个常见应用场景](https://www.tuicool.com/articles/UVnyaqU)
+``` 
+前言
+
+Redis 是一个强大的内存型存储，具有丰富的数据结构，使其可以应用于很多方面，包括作为数据库、缓存、消息队列等等。
+
+如果你的印象中Redis只是一个 key-value 存储，那就错过了Redis很多强大的功能，下面就是实际应用场景中5个最普遍的案例。
+
+1. 全页面缓存
+
+如果你使用的是服务器端内容渲染，你又不想为每个请求重新渲染每个页面，就可以使用 Redis 把常被请求的内容缓存起来，能够大大的降低页面请求的延迟，已经有很多框架用Redis来缓存页面，这就是页面静态化的一种方式。
+// Set the page that will last 1 minute
+SET key "<html>...</html>" EX 60
+
+// Get the page
+GET key
+2. 排行榜
+
+Redis 基于内存，可以非常快速高效的处理增加和减少的操作，相比于使用 SQL 请求的处理方式，性能的提升是非常巨大的。
+
+Redis 的有序集合可以轻松实现“从一个大型列表中取得排名最高的N个元素”，毫秒级，而且非常简单。
+// Add an item to the sorted set
+ZADD sortedSet 1 "one"
+
+// Get all items from the sorted set
+ZRANGE sortedSet 0 -1
+
+// Get all items from the sorted set with their score
+ZRANGE sortedSet 0 -1 WITHSCORES
+3. Session 存储
+
+这可能是应用最广的点了，相比较于类似 memcache 的 session 存储，Redis 具有缓存数据持久化的能力，当缓存因出现问题而重启后，之前的缓存数据还在那儿，这个就比较实用，避免了因为session突然消失带来的用户体验问题。
+
+// Set session that will last 1 minute
+SET randomHash "{userId}" EX 60
+
+// Get userId
+GET randomHash
+4. 队列
+
+例如 email 的发送队列、等待被其他应用消费的数据队列，Redis 可以轻松而自然的创建出一个高效的队列。
+
+// Add a Message
+HSET messages <id> <message>
+ZADD due <due_timestamp> <id>
+
+// Recieving Message
+ZRANGEBYSCORE due -inf <current_timestamp> LIMIT 0 1
+HGET messages <message_id>
+
+// Delete  Message
+ZREM due <message_id>
+HDEL messages <message_id>
+5. 发布/订阅
+
+pub/sub   是 Redis 内置的一个非常强大的特性，例如可以创建一个实时的聊天系统、社交网络中的通知触发器等等。
+
+// Add a message to a channel
+PUBLISH channel message
+
+// Recieve messages from a channel
+SUBSCRIBE channel
+```
