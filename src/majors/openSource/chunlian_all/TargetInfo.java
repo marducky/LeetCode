@@ -25,4 +25,9 @@ public class TargetInfo {
     public void setSubUrl(String subUrl) {
         this.subUrl = subUrl;
     }
+
+    @Override
+    public String toString() {
+        return this.name + "" + this.subUrl;
+    }
 }
