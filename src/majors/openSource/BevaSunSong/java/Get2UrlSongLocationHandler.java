@@ -65,7 +65,7 @@ public class Get2UrlSongLocationHandler {
         return null;
     }
 
-    private JSONObject getSongVedioLocation() {
+    public JSONObject getSongVedioLocation() {
         JSONObject jsonObject = getJsonList(this.url);
         return jsonObject;
     }

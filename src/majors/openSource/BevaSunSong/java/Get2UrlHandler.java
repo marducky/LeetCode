@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -94,6 +95,24 @@ public class Get2UrlHandler {
 //            System.out.println(hashMap.get(string));
 //        }
         return hashMap;
+    }
+
+    public ArrayList<ErgeData> getSongClassArrayList() {
+        ArrayList<ErgeData> arrayList = new ArrayList<ErgeData>();
+        JSONArray jsonArray = getJsonArray();
+        for (Object o : jsonArray) {
+            ErgeData ergeData = new ErgeData();
+            JSONObject jsonObject = JSONObject.fromObject(o);
+            ergeData.setId(jsonObject.getString("id"));
+            ergeData.setHref(jsonObject.getString("href"));
+            ergeData.setName(jsonObject.getString("name"));
+            ergeData.setPlay_count(jsonObject.getString("play_count"));
+            arrayList.add(ergeData);
+        }
+//        for (String string:hashMap.keySet()){
+//            System.out.println(hashMap.get(string));
+//        }
+        return arrayList;
     }
 
     public static void main(String[] args) {

@@ -10,6 +10,26 @@ public class ErgeData {
     private String name;
     private String href;
     private String play_count;
+    private String detail;
+    private String id;
+    private String authcode;
+    private String videoLocation;
+
+    public String getAuthcode() {
+        return authcode;
+    }
+
+    public String getVideoLocation() {
+        return videoLocation;
+    }
+
+    public void setVideoLocation(String videoLocation) {
+        this.videoLocation = videoLocation;
+    }
+
+    public void setAuthcode(String authcode) {
+        this.authcode = authcode;
+    }
 
     public String getName() {
         return name;
@@ -33,5 +53,21 @@ public class ErgeData {
 
     public void setPlay_count(String play_count) {
         this.play_count = play_count;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

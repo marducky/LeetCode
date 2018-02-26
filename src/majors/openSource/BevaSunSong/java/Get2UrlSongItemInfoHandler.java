@@ -64,10 +64,9 @@ public class Get2UrlSongItemInfoHandler {
         return null;
     }
 
-    private JSONObject getJsonArray() {
+    public JSONObject getJsonArray() {
         JSONObject jsonObject = getJsonList(this.url);
         JSONObject jsonObject1 = JSONObject.fromObject(jsonObject.getString("data"));
-
         return jsonObject1;
     }
 
