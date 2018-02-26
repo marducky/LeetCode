@@ -3,7 +3,6 @@ package majors.openSource.BevaSunSong.java;
 import net.sf.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -25,7 +24,7 @@ public class ApplicationBeva {
         HashMap<String, HashMap<String, String>> stringHashMapHashMap = new HashMap<String, HashMap<String, String>>();
         HashMap<String, String> stringHashMapAll = new HashMap<String, String>();
         ArrayList<ErgeData> ergeDataArrayListAll = new ArrayList<ErgeData>();
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < allPageCount; i++) {
             Get2UrlHandler get2UrlHandler = new Get2UrlHandler(demoUrl.replace("_PageFlag_", i + ""));
 //            HashMap<String,String> hashMap=get2UrlHandler.getSongHashmap();
             stringHashMapAll.putAll(get2UrlHandler.getSongHashmap());
@@ -40,6 +39,7 @@ public class ApplicationBeva {
             ergeData.setAuthcode(get2UrlSongItemInfoHandler.getJsonArray().getString("authcode"));
             Get2UrlSongLocationHandler get2UrlSongLocationHandler = new Get2UrlSongLocationHandler(demo3.replace("_authCode_", ergeData.getAuthcode()));
             ergeData.setVideoLocation(JSONObject.fromObject(get2UrlSongLocationHandler.getSongVedioLocation().getString("data")).getString("url"));
+            DownVedioHandler downVedioHandler = new DownVedioHandler(ergeData.getName() + ".mp4", ergeData.getVideoLocation());
         }
         System.out.println(ergeDataArrayListAll.size());
         for (ErgeData ergeData : ergeDataArrayListAll) {
