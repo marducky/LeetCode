@@ -1,5 +1,9 @@
 package majors.openSource.BevaSunSong.java;
 
+import majors.openSource.BevaSunSong.test.testlog;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,6 +22,7 @@ public class DownVedioHandler {
     private String fileName;
     private String url;
 
+    private static Logger logger = LogManager.getLogger(DownVedioHandler.class);
     public DownVedioHandler(String filePath, String fileName, String url) {
         this.filePath = filePath;
         this.fileName = fileName;
@@ -72,9 +77,13 @@ public class DownVedioHandler {
 //                System.out.println(bytesum);
                 fs.write(buffer, 0, byteread);
             }
+            inStream.close();
+            fs.close();
         } catch (FileNotFoundException e) {
+            logger.error(e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
+            logger.error(e.getMessage());
             e.printStackTrace();
         }
     }

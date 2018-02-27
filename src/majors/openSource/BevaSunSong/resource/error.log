@@ -1,1 +1,1 @@
-[ERROR]-Time：2018-02-27 05:40:50,563 -Thread Id:[main] -LogLevel：ERROR -location：majors.openSource.BevaSunSong.test.testlog.main(testlog.java:12) -mesDetail：ERRORroperty -Exception： -ERROR mes：错误消息
+[ERROR]-Time：2018-02-27 13:09:16,309 -Thread Id:[main] -LogLevel：ERROR -location：majors.openSource.BevaSunSong.java.DownVedioHandler.downloadNet(DownVedioHandler.java:86) -mesDetail：ERRORroperty -Exception： -ERROR mes：Connection timed out: connect

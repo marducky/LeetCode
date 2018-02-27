@@ -27,4 +27,9 @@ public class PhrasePageHandler {
         }
         return res;
     }
+
+//    public static void main(String[] args) {
+//
+////        PhrasePageHandler phrasePageHandler=new PhrasePageHandler("","http://g.beva.com/gushi/list--c10097.html");
+//    }
 }
