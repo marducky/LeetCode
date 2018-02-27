@@ -72,7 +72,8 @@ public class Get2UrlSongLocationHandler {
 
     public static void main(String[] args) {
         Get2UrlSongLocationHandler get2UrlSongLocation = new Get2UrlSongLocationHandler("http://g.beva.com/kan/data/itemVideo?code=Yzk5M0djR3UrYkcwQ0h0WFhoSEkzUC9ldXVtbGZvb0kxNjJqN1k0SmZ3");
-        System.out.println(get2UrlSongLocation.getSongVedioLocation().toString());
+        Get2UrlSongLocationHandler get2UrlSongLocation1 = new Get2UrlSongLocationHandler("http://g.beva.com/kan/data/itemVideo?code=ZTA0YXR0MUl2cHNwSk45VjVPWXBXMUJUQmxRNWNzb2xTM0pBR3pQdVF6MA");
+        System.out.println(get2UrlSongLocation1.getSongVedioLocation().toString());
 
     }
 }

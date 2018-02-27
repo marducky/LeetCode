@@ -1,0 +1,36 @@
+{
+  "errorCode": 0,
+  "message": "succ",
+  "data": {
+    "itemId": 651,
+    "isVip": false,
+    "itemName": "小蝌蚪找妈妈",
+    "detail": "跟孩子一起看完故事后，可以让孩子复述故事，一起扮演故事中的角色。妈妈可以问孩子，是不是大眼睛、宽嘴巴的动物就是青蛙妈妈呢？是不是四只脚的动物就是青蛙妈妈呢？青蛙为什么老是找错妈妈呢？故事告诉我们看事物不能只看到一个方面，要认识一个事物的全部。最后可以让宝宝讲讲小蝌蚪怎么变成青蛙的，有哪些变化？还可以问问青蛙是益虫还是害虫？同时还可以问宝宝还有哪些动物是益虫、有哪些是害虫？让宝宝加深对青蛙的认识。",
+    "simple": "跟孩子一起看完故事后，可以让孩子复述故事，一起扮演故事中的角色。妈妈可以问孩子，是不是大...",
+    "itemHref": "http:\/\/g.beva.com\/kan-erge\/xiao-zhao-ma-ma.html",
+    "cover": "https:\/\/fs.beva.cn\/topic\/t94\/i651\/c637\/kedou560-erge.jpg",
+    "720P": "http:\/\/1251003234.cdn.myqcloud.com\/1251003234\/erge\/651\/651_5b1869748216de7b59660cf8c2f1e410.mp4",
+    "360P": "",
+    "authcode": "Njk2ZmZZS3V5ZnNhcHFiT3dheWFZTlpQSnlERTBxbjRRU1p4SzlhdUdxdw",
+    "play_count": "5,613,829",
+    "lrc": "",
+    "crinfo": "",
+    "playData": {
+      "swfUrl": "https:\/\/fs.beva.cn\/topic\/t94\/i651\/c637\/kedou-chengxu-erge.swf",
+      "mp4Url": "http:\/\/fs.beva.cn\/vod\/erge\/651\/651_5b1869748216de7b59660cf8c2f1e410.f4m",
+      "letvData": {
+        "vu": "4a085ad591",
+        "uu": "3a9d21720d",
+        "pu": "443dc11a7e"
+      }
+    },
+    "likeData": {
+      "id": "24",
+      "item_id": "651",
+      "like_count": "170",
+      "unlike_count": "77",
+      "ctime": "1368109755"
+    },
+    "diy": "http:\/\/g.beva.com\/diy\/diydemo\/diy"
+  }
+}

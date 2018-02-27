@@ -1,0 +1,18 @@
+[
+  {
+    "kindName": "BevaErGe",
+    "kindUrl": "http://g.beva.com/kan-erge--c10106.html",
+    "kindPageDemo": "http://g.beva.com/kan-erge/data-moreErge-c10106-t4-p_PageFlag_.html",
+    "kindAuthCodeURLDemo": "http://g.beva.com/kan-erge/data-itemInfo-i_itemId_.html",
+    "kindVideoLocationDemo": "http://g.beva.com/kan/data/itemVideo?code=_authCode_",
+    "kindPageCountRegexRole": "<div class=\"tips\">共有(.*)个</div>"
+  },
+  {
+    "kindName": "BevaGuShi",
+    "kindUrl": "http://g.beva.com/gushi/list--c10097.html",
+    "kindPageDemo": "http://g.beva.com/gushi/data-listLoadMore-c10097-t4-p_PageFlag_.html",
+    "kindAuthCodeURLDemo": "http://g.beva.com/kan-erge/data-itemInfo-i_itemId_.html",
+    "kindVideoLocationDemo": "http://g.beva.com/kan/data/itemVideo?code=_authCode_",
+    "kindPageCountRegexRole": "<div class=\"total rounded\"> 共有(.*)个 </div>"
+  }
+]
