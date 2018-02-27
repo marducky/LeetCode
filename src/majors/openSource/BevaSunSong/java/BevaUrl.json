@@ -14,5 +14,13 @@
     "kindAuthCodeURLDemo": "http://g.beva.com/kan-erge/data-itemInfo-i_itemId_.html",
     "kindVideoLocationDemo": "http://g.beva.com/kan/data/itemVideo?code=_authCode_",
     "kindPageCountRegexRole": "<div class=\"total rounded\"> 共有(.*)个 </div>"
+  },
+  {
+    "kindName": "BevaXueTang",
+    "kindUrl": "http://g.beva.com/kan-xuetang.html",
+    "kindPageDemo": "http://g.beva.com/kan-erge/data-moreErge-c10096-t4-p_PageFlag_.html ",
+    "kindAuthCodeURLDemo": "http://g.beva.com/kan-erge/data-itemInfo-i_itemId_.html",
+    "kindVideoLocationDemo": "http://g.beva.com/kan/data/itemVideo?code=_authCode_",
+    "kindPageCountRegexRole": "<div class=\"tips\">共有(.*)个</div>"
   }
 ]
