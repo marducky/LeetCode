@@ -1,0 +1,222 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  annotations:
+    deploy_timeout_secs: "2700"
+    deployment_order: "2"
+    deployment_strategy: rolling-update
+    hack_key_to_force_deletecreate_deployment_strategy: not used
+    hack_key_to_force_redeployment: not used
+  creationTimestamp: 2018-02-26T22:49:52Z
+  generation: 2
+  labels:
+    app: profiles-manager
+    hash: e4e519947c39fdd7e60bdbac35264032
+    name: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+  name: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+  namespace: nlps-ad-nlps
+  resourceVersion: "18542768"
+  selfLink: /api/v1/namespaces/nlps-ad-nlps/replicationcontrollers/profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+  uid: 5b3d2b06-1b47-11e8-8725-0050568e1a8a
+spec:
+  replicas: 1
+  selector:
+    app: profiles-manager
+    name: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+    parent_hash: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+    parent_manifest_name_with_hash: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+  template:
+    metadata:
+      annotations:
+        sspni-info-scheduling-explanation: 'App_Group-Spreadout: try (strong preference
+          weight=100) NOT to pick nodes where a pod of the same app_group_id (profilesmanagerrc)
+          already exists and is running ..... AND try (weak preference weight=10 x
+          3 to not interfere with the strong preference for spreadout above) NOT to
+          pick a node in either [AzureCloudUpdateDomain OR K8sFailureZone OR K8sFailureRegion]
+          where the same app_group_id (profilesmanagerrc) is already running if possible
+          ..... AND try (even weaker preference weight=5) to pick nodes where nothing
+          is running.'
+      creationTimestamp: null
+      labels:
+        app: profiles-manager
+        app_group_id: profilesmanagerrc
+        name: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+        parent_hash: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+        parent_manifest_name_with_hash: profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+    spec:
+      affinity:
+        podAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app_group_id
+                  operator: DoesNotExist
+              namespaces:
+              - nlps-ad-nlps
+topologyKey: kubernetes.io/hostname
+            weight: 5
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app_group_id
+                  operator: In
+                  values:
+                  - profilesmanagerrc
+              namespaces:
+              - nlps-ad-nlps
+              topologyKey: kubernetes.io/hostname
+            weight: 100
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app_group_id
+                  operator: In
+                  values:
+                  - profilesmanagerrc
+              namespaces:
+              - nlps-ad-nlps
+              topologyKey: cloud.azure.beta.kubernetes.io/ud
+            weight: 10
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app_group_id
+                  operator: In
+                  values:
+                  - profilesmanagerrc
+              namespaces:
+              - nlps-ad-nlps
+              topologyKey: failure-domain.beta.kubernetes.io/zone
+            weight: 10
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app_group_id
+                  operator: In
+                  values:
+                  - profilesmanagerrc
+              namespaces:
+              - nlps-ad-nlps
+              topologyKey: failure-domain.beta.kubernetes.io/region
+            weight: 10
+      containers:
+      - env:
+        - name: DEPLOYMENT_DATETIME
+          value: Tue Feb 27 00:20:51 UTC 2018
+        - name: TENANTS_FILE
+          value: /conf/tenants.json
+        - name: LDAP_ADMIN_DN
+        - name: LDAP_ADMIN_EMAIL
+        - name: LDAP_ADMIN_PWD
+- name: LDAP_ADMIN_CONNECTION_TIMEOUT
+          value: "10000"
+        - name: POD_ID
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: GRAPHITE_ENABLED
+          value: "true"
+        - name: GRAPHITE_HOST
+          value: mt-dmz-gw002.nuance.com
+        - name: GRAPHITE_PORT
+          value: "2003"
+        - name: GRAPHITE_PREFIX
+          value: ncs.k8s_cluster.mtdmz2-nlps.nlps-ad-nlps.nlps.profiles-manager.${HOSTNAME}
+        - name: GRAPHITE_INTERVAL
+          value: "10000"
+        - name: HTTP_ALARMS_ENABLED
+          value: "true"
+        - name: HTTP_ALARMS_HOST
+          value: 10.56.10.141
+        - name: HTTP_ALARMS_PORT
+          value: "5003"
+        - name: HTTP_ALARMS_PATH
+          value: /
+        - name: STDOUT_ALARMS_ENABLED
+          value: "true"
+        - name: LEGACY_WATCHER_ALARMS_ENABLED
+          value: "false"
+        - name: ALARMS_METADATA_KV
+          value: '{\"k8s_namespace\":\"nlps-ad-nlps\", \"k8s_api_server\":\"10.56.10.104\",
+            \"hostname\":\"${POD_ID}\", \"service\":\"${APP_NAME}\"}'
+        - name: ZOOKEEPER_ADDRESSES
+          value: zookeeper.ntg6-stable-core:2181
+        - name: MZK_CLUSTER
+          value: nlps-ad-nlps
+        - name: MZK_DATACENTER
+          value: mtdmz2-nlps
+        - name: MZK_POD
+          value: nlps-ad-nlps
+        - name: JVM_GC_OPTS
+          value: -verbose:gc -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dcom.nuance.nvc.dialog_runtime.cfg.preload_artifactory_url=file:///conf/tenants.json
+        - name: JVM_APP_OPT_5
+          value: -agentlib:jdwp=transport=dt_socket,address=9009,server=y,suspend=n
+        - name: LOG4J_LOGGING_LEVEL
+          value: DEBUG
+        image: mobi-registry.nuance.com:5000/nlps-daily-build/profiles-manager:201802232039
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /cfg/rest/ops/info/isAlive
+            port: 9080
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 20
+resources:
+          limits:
+            cpu: "2"
+            memory: 4000Mi
+          requests:
+            cpu: "1"
+            memory: 2000Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/log/nuance/ncs/logs
+          name: log-directory
+        - mountPath: /etc/localtime
+          name: ntp-directory
+          readOnly: true
+        - mountPath: /conf/
+          name: config-volume
+          readOnly: true
+        - mountPath: /mem
+          name: mem
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        nlps-ad-nlps.node_pool: generic
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 60
+      volumes:
+      - emptyDir:
+          medium: Memory
+        name: mem
+      - hostPath:
+          path: /etc/localtime
+        name: ntp-directory
+      - hostPath:
+          path: /var/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
+        name: log-directory
+      - configMap:
+          defaultMode: 420
+          name: profile-manager-config
+        name: config-volume
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1

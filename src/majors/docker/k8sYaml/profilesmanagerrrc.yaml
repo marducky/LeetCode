@@ -1,0 +1,81 @@
+Name:         profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+Namespace:    nlps-ad-nlps
+Selector:     app=profiles-manager,name=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032,parent_hash=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032,parent_manifest_name_with_hash=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+Labels:       app=profiles-manager
+              hash=e4e519947c39fdd7e60bdbac35264032
+              name=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+Annotations:  deploy_timeout_secs=2700
+              deployment_order=2
+              deployment_strategy=rolling-update
+              hack_key_to_force_deletecreate_deployment_strategy=not used
+              hack_key_to_force_redeployment=not used
+Replicas:     1 current / 1 desired
+Pods Status:  1 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:       app=profiles-manager
+                app_group_id=profilesmanagerrc
+                name=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+                parent_hash=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+                parent_manifest_name_with_hash=profilesmanagerrc-hsh-e4e519947c39fdd7e60bdbac35264032
+  Annotations:  sspni-info-scheduling-explanation=App_Group-Spreadout: try (strong preference weight=100) NOT to pick nodes where a pod of the same app_group_id (profilesmanagerrc) already exists and is running ........
+  Containers:
+   profiles-manager:
+    Image:  mobi-registry.nuance.com:5000/nlps-daily-build/profiles-manager:201802232039
+    Ports:  9080/TCP, 9090/TCP, 9009/TCP
+    Limits:
+      cpu:     2
+      memory:  4000Mi
+    Requests:
+      cpu:      1
+      memory:   2000Mi
+    Liveness:   http-get http://:9080/cfg/rest/ops/info/isAlive delay=30s timeout=20s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:9080/cfg/rest/ops/info/isReady delay=30s timeout=20s period=10s #success=1 #failure=3
+    Environment:
+      DEPLOYMENT_DATETIME:            Tue Feb 27 00:20:51 UTC 2018
+      TENANTS_FILE:                   /conf/tenants.json
+      LDAP_ADMIN_DN:                  
+      LDAP_ADMIN_EMAIL:               
+      LDAP_ADMIN_PWD:                 
+      LDAP_ADMIN_CONNECTION_TIMEOUT:  10000
+      POD_ID:                          (v1:metadata.name)
+      GRAPHITE_ENABLED:               true
+      GRAPHITE_HOST:                  mt-dmz-gw002.nuance.com
+      GRAPHITE_PORT:                  2003
+      GRAPHITE_PREFIX:                ncs.k8s_cluster.mtdmz2-nlps.nlps-ad-nlps.nlps.profiles-manager.${HOSTNAME}
+      GRAPHITE_INTERVAL:              10000
+      HTTP_ALARMS_ENABLED:            true
+      HTTP_ALARMS_HOST:               10.56.10.141
+      HTTP_ALARMS_PORT:               5003
+      HTTP_ALARMS_PATH:               /
+      STDOUT_ALARMS_ENABLED:          true
+      LEGACY_WATCHER_ALARMS_ENABLED:  false
+      ALARMS_METADATA_KV:             {\"k8s_namespace\":\"nlps-ad-nlps\", \"k8s_api_server\":\"10.56.10.104\", \"hostname\":\"${POD_ID}\", \"service\":\"${APP_NAME}\"}
+      ZOOKEEPER_ADDRESSES:            zookeeper.ntg6-stable-core:2181
+      MZK_CLUSTER:                    nlps-ad-nlps
+      MZK_DATACENTER:                 mtdmz2-nlps
+      MZK_POD:                        nlps-ad-nlps
+      JVM_GC_OPTS:                    -verbose:gc -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dcom.nuance.nvc.dialog_runtime.cfg.preload_artifactory_url=file:///conf/tenants.json
+      JVM_APP_OPT_5:                  -agentlib:jdwp=transport=dt_socket,address=9009,server=y,suspend=n
+      LOG4J_LOGGING_LEVEL:            DEBUG
+    Mounts:
+      /conf/ from config-volume (ro)
+      /etc/localtime from ntp-directory (ro)
+      /mem from mem (rw)
+      /var/log/nuance/ncs/logs from log-directory (rw)
+  Volumes:
+   mem:
+    Type:    EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:  Memory
+   ntp-directory:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/localtime
+    HostPathType:  
+   log-directory:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
+    HostPathType:  
+   config-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      profile-manager-config
+    Optional:  false
+Events:        <none>

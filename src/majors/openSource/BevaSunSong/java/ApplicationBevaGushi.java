@@ -39,7 +39,7 @@ public class ApplicationBevaGushi {
             ergeData.setAuthcode(get2UrlSongItemInfoHandler.getJsonArray().getString("authcode"));
             Get2UrlSongLocationHandler get2UrlSongLocationHandler = new Get2UrlSongLocationHandler(demo3.replace("_authCode_", ergeData.getAuthcode()));
             ergeData.setVideoLocation(JSONObject.fromObject(get2UrlSongLocationHandler.getSongVedioLocation().getString("data")).getString("url"));
-            DownVedioHandler downVedioHandler = new DownVedioHandler(ergeData.getName() + ".mp4", ergeData.getVideoLocation());
+//            DownVedioHandler downVedioHandler = new DownVedioHandler(ergeData.getName() + ".mp4", ergeData.getVideoLocation());
         }
         System.out.println(ergeDataArrayListAll.size());
         for (ErgeData ergeData : ergeDataArrayListAll) {
