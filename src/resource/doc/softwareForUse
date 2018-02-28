@@ -11,6 +11,8 @@ Insomnia: A tool to open the get and post method.
 
 SwitchHosts: 一个管理、切换多个 hosts 方案的工具。由于 Hosts 文件的特殊性，所以用户使用 SwitchHosts! 工具时需要以管理员身份运行才能更好实现软件的功能。
 
+jd-gui: 反编译jar, 获得java源码
+
 
 
 
