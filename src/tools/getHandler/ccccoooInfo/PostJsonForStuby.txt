@@ -1,4 +1,4 @@
 #####1: Only have PA_Service_Name,UserText.
-{"PA_Service_Name":"pa_flag","UserText":"text_flag"}
+{"PA_Service_Name":"pa_flag","UserText":"text_flag"}{"UserText":"text_flag"}
 #####2: Only have UserText.
-{"UserText":"text_flag"}
+{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"text_flag","nleResults":true}}

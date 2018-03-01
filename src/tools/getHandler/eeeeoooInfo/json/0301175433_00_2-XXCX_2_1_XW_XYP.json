@@ -1,0 +1,121 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一批",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 欣然 听闻播报 人人车宣布 联合滴滴 进军新车交易",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97a578eb6b0.mp3",
+        "timestamp": 1519887841,
+        "tagTopic": "科技",
+        "name": "听闻播报 人人车宣布 联合滴滴 进军新车交易"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 欣然 武侠剧 倚天屠龙记 再度翻拍 新老演员重饰经典",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97a5392c02c.mp3",
+        "timestamp": 1519887679,
+        "tagTopic": "娱乐",
+        "name": "武侠剧 倚天屠龙记 再度翻拍 新老演员重饰经典"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 欣然 听闻播报 经典传承人82岁谷建芬用13年为孩子写歌",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97a457a5238.mp3",
+        "timestamp": 1519887554,
+        "tagTopic": "娱乐",
+        "name": "听闻播报 经典传承人82岁谷建芬用13年为孩子写歌"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 听闻下午茶 听闻下午茶 2020年东京奥运会和残奥会吉祥物正式公布 2018年3月1日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a979ff62e31b.mp3",
+        "timestamp": 1519886329,
+        "tagTopic": "政治",
+        "name": "听闻下午茶 2020年东京奥运会和残奥会吉祥物正式公布 2018年3月1日"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 广东东莞取消积分入户 放宽8类重点群体落户限制",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97771005fed.mp3",
+        "timestamp": 1519875859,
+        "tagTopic": "政治",
+        "name": "广东东莞取消积分入户 放宽8类重点群体落户限制"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 香港男子持玩具气枪抢银行被捕 7万港币现金被检获",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9776e748161.mp3",
+        "timestamp": 1519875818,
+        "tagTopic": "政治",
+        "name": "香港男子持玩具气枪抢银行被捕 7万港币现金被检获"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 大陆送出惠台\"大礼包\" 台当局却提醒称参与有风险",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9776b4bd0a0.mp3",
+        "timestamp": 1519875769,
+        "tagTopic": "政治",
+        "name": "大陆送出惠台\"大礼包\" 台当局却提醒称参与有风险"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 \"两会\"期间北京快递需实名收寄和100%过机安检",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a977671c6ed6.mp3",
+        "timestamp": 1519875701,
+        "tagTopic": "政治",
+        "name": "\"两会\"期间北京快递需实名收寄和100%过机安检"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 高明 中国2月电影票房破百亿 创中国影史新纪录",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9775e9570ef.mp3",
+        "timestamp": 1519875565,
+        "tagTopic": "财经",
+        "name": "中国2月电影票房破百亿 创中国影史新纪录"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 白马股持续回调 机构称后市仍是\"业绩为王\"",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9775b88a085.mp3",
+        "timestamp": 1519875516,
+        "tagTopic": "财经",
+        "name": "白马股持续回调 机构称后市仍是\"业绩为王\""
+      },
+      "formatType": "audio"
+    }
+  ]
+}

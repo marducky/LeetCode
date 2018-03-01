@@ -1,0 +1,51 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@838875f6-4c31-482f-b5bf-76bbd6149816",
+    "@IID": "5ac7380f-e225-4ed7-b85b-a19ce8fe67d6",
+    "@TimeStamp": "2018-03-01T09:45:13.1522935Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "What amount you would like to transfer?"
+      },
+      "AlternateOutText": {
+        "#text": "What amount you would like to transfer?"
+      },
+      "AlternateOutText2": {
+        "#text": "What amount you would like to transfer?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "1d0a5825-a19b-44e6-8364-f2a311d099d1"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "savings",
+              "literal": ""
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "conceptsInFocus": [
+      "PAY_BILL_AMOUNT"
+    ],
+    "coBrowsingUrl": "http://ui-dev.nina-nuance.com/ps/ninaMC/external/html/banking/index.html"
+  }
+}

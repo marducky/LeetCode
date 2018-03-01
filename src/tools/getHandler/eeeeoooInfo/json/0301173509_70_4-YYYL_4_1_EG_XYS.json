@@ -1,0 +1,35 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一首",
+  "semantic": {
+    "service": "Chat",
+    "action": "default",
+    "outputContext": {
+      "service": "Chat",
+      "context": "chat"
+    }
+  },
+  "results": [
+    {
+      "hint": "好的主人，知道啦",
+      "data": {
+        "emotion": [
+          {
+            "type": "text_question",
+            "value": "normal",
+            "score": ""
+          },
+          {
+            "type": "text_answer",
+            "value": "normal",
+            "score": ""
+          }
+        ],
+        "source": "chat_roobo_default"
+      }
+    }
+  ]
+}

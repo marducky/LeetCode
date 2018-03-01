@@ -1,0 +1,133 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 高明 华尔街开始慌了 摩根大通首次承认数字货币会对其未来构成威胁",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a977642624cd.mp3",
+        "timestamp": 1519875656,
+        "tagTopic": "财经",
+        "name": "华尔街开始慌了 摩根大通首次承认数字货币会对其未来构成威胁"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 成为戴姆勒最大股东后李书福告诉德媒 不寻求获得监事会席位",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a977615bc1a6.mp3",
+        "timestamp": 1519875609,
+        "tagTopic": "财经",
+        "name": "成为戴姆勒最大股东后李书福告诉德媒 不寻求获得监事会席位"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 中国2月电影票房破百亿 创中国影史新纪录",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9775e9570ef.mp3",
+        "timestamp": 1519875565,
+        "tagTopic": "财经",
+        "name": "中国2月电影票房破百亿 创中国影史新纪录"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 高明 白马股持续回调 机构称后市仍是\"业绩为王\"",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9775b88a085.mp3",
+        "timestamp": 1519875516,
+        "tagTopic": "财经",
+        "name": "白马股持续回调 机构称后市仍是\"业绩为王\""
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 力哥说理财 力哥说理财 月入3500的屌丝 真的赚了一个亿",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a976ddd03dd0.MP3",
+        "timestamp": 1519873506,
+        "tagTopic": "财经",
+        "name": "力哥说理财 月入3500的屌丝 真的赚了一个亿"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 和讯内参 和讯内参 豪掷570亿 吉利成奔驰第一大股东",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a975a36806ba.mp3",
+        "timestamp": 1519868474,
+        "tagTopic": "财经",
+        "name": "和讯内参 豪掷570亿 吉利成奔驰第一大股东"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 野马财经 野马财经  以房养老 之殇",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9759314458c.mp3",
+        "timestamp": 1519868212,
+        "tagTopic": "财经",
+        "name": "野马财经  以房养老 之殇"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 Wind财经早餐 Wind财经早餐 2018 3 1",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97545575fd3.mp3",
+        "timestamp": 1519867015,
+        "tagTopic": "财经",
+        "name": "Wind财经早餐 2018 3 1"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 A股头条 A股头条 3月1日 调查组突袭獐子岛 美股道指再跌超300点 微信号 jrjstock",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a97400a08769.mp3",
+        "timestamp": 1519861775,
+        "tagTopic": "财经",
+        "name": "A股头条 3月1日 调查组突袭獐子岛 美股道指再跌超300点 微信号 jrjstock"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 武玥 听闻播报 证监会确实要对四大新兴行业独角兽IPO 即报即审",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a973aa983fcf.mp3",
+        "timestamp": 1519860407,
+        "tagTopic": "财经",
+        "name": "听闻播报 证监会确实要对四大新兴行业独角兽IPO 即报即审"
+      },
+      "formatType": "audio"
+    }
+  ]
+}
