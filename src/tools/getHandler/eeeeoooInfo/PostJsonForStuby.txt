@@ -1,4 +1,4 @@
 #####1: Only have PA_Service_Name,UserText.
 {"PA_Service_Name":"pa_flag","UserText":"text_flag"}{"QueryText":"text_flag"}
 #####2: Only have UserText.
-{"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"text_flag","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+.*"query.*text_flag".*

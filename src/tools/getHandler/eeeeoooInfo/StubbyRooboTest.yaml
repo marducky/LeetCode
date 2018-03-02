@@ -1,90 +1,320 @@
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"我想听财经新闻","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*我想听财经新闻".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175427_00_2-XXCX_2_1_XW_WXTCJXW.json
+      file: ./json/0302123523_50_2-XXCX_2_1_XW_WXTCJXW.json
 
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"下一批","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*下一批".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175433_00_2-XXCX_2_1_XW_XYP.json
+      file: ./json/0302123528_20_2-XXCX_2_1_XW_XYP.json
 
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"下一个","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*下一个".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175438_70_2-XXCX_2_1_XW_XYG.json
+      file: ./json/0302123534_30_2-XXCX_2_1_XW_XYG.json
 
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"上一个","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*上一个".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175444_50_2-XXCX_2_1_XW_SYG.json
+      file: ./json/0302123539_70_2-XXCX_2_1_XW_SYG.json
 
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"暂停","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*暂停".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175449_70_2-XXCX_2_1_XW_ZT.json
+      file: ./json/0302123545_60_2-XXCX_2_1_XW_ZT.json
 
 -  request:
       method: POST
-      url: /Roobo
+      url: /
       headers:
          content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
       post: >
-          {"sessionId":"c6bf1760-53f9-41a4-a253-6c8f3f2eb053","query":"继续播放","agentId":"MmM3YmVkMjkxZmE5","token":"db4ab3d8c78f182adfbe0e4c9f4ba5119689","lang":"zh"}
+          .*"query.*继续播放".*
 
    response:
       headers:
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0301175455_50_2-XXCX_2_1_XW_JXBF.json
+      file: ./json/0302123550_20_2-XXCX_2_1_XW_JXBF.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*重播当前新闻".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123556_90_2-XXCX_2_1_XW_ZBDQXW.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*退出新闻场景".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123601_30_2-XXCX_2_1_XW_TCXWCJ.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*给我订一张北京到上海明天10点半之后的机票".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123607_80_2-XXCX_2_2_HBCX_JWDYZBJDSHMT10DBZHDJP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*给我订一张北京到上海明天的机票".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123612_70_2-XXCX_2_2_HBCX_JWDYZBJDSHMTDJP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*导航到很赞的餐馆".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123618_10_3-CXLK_3_1_DH_DHDHZDCG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*导航到便宜的街边的餐馆".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123623_90_3-CXLK_3_1_DH_DHDBYDJBDCG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*来首鹅妈妈俱乐部".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123629_80_4-YYYL_4_1_EG_LSEMMJLB.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*下一首".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123634_60_4-YYYL_4_1_EG_XYS.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*来首东风破".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123640_90_4-YYYL_4_2_YL_LSDFP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+         user-agent: .*
+         connection: keep-alive
+         host: .*
+         accept: application/json
+         content-length: .*
+      post: >
+          .*"query.*我要听周杰伦的东风破".*
+
+   response:
+      headers:
+         content-type: application/json
+      latency: 2000
+      status: 200
+      file: ./json/0302123646_30_4-YYYL_4_2_YL_WYTZJLDDFP.json
 

@@ -1,16 +1,16 @@
 UserTestList
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_0_Funds_transfer_I’d like to transfer money","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_0_Funds_transfer_Checking *2341","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_0_Funds_transfer_Savings *8760","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_0_Funds_transfer_$5000.00","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_0_Funds_transfer_Yes","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_1_Funds_transfer_I want to transfer some money.","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_1_Funds_transfer_Checking *2341","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_1_Funds_transfer_Savings *8760","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_1_Funds_transfer_$13,000.00","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_1_1_Funds_transfer_Yes","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_2_0_POP_Money_I want to send money to Jon","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_2_0_POP_Money_Checking *2341","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_2_0_POP_Money_First one","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_2_0_POP_Money_$50.00","nleResults":true}}
-{"TalkAgentRequest":{"@SCI":"","@IID":"","@TimeStamp":"2018-03-01T09:39:04.445Z","UserText":"1_2_0_POP_Money_Yes","nleResults":true}}
+.*UserText.*I’d like to transfer money.*
+.*UserText.*Checking *2341.*
+.*UserText.*Savings *8760.*
+.*UserText.*$5000.00.*
+.*UserText.*Yes.*
+.*UserText.*I want to transfer some money..*
+.*UserText.*Checking *2341.*
+.*UserText.*Savings *8760.*
+.*UserText.*$13,000.00.*
+.*UserText.*Yes.*
+.*UserText.*I want to send money to Jon.*
+.*UserText.*Checking *2341.*
+.*UserText.*First one.*
+.*UserText.*$50.00.*
+.*UserText.*Yes.*
