@@ -4,9 +4,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           request_json_flag

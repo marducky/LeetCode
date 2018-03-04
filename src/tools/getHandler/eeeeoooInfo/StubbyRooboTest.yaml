@@ -4,9 +4,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*我想听财经新闻".*
@@ -16,7 +14,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123523_50_2-XXCX_2_1_XW_WXTCJXW.json
+      file: ./json/0305012454_00_2-XXCX_2_1_XW_WXTCJXW.json
 
 -  request:
       method: POST
@@ -24,9 +22,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*下一批".*
@@ -36,7 +32,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123528_20_2-XXCX_2_1_XW_XYP.json
+      file: ./json/0305012500_60_2-XXCX_2_1_XW_XYP.json
 
 -  request:
       method: POST
@@ -44,9 +40,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*下一个".*
@@ -56,7 +50,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123534_30_2-XXCX_2_1_XW_XYG.json
+      file: ./json/0305012505_40_2-XXCX_2_1_XW_XYG.json
 
 -  request:
       method: POST
@@ -64,9 +58,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*上一个".*
@@ -76,7 +68,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123539_70_2-XXCX_2_1_XW_SYG.json
+      file: ./json/0305012511_10_2-XXCX_2_1_XW_SYG.json
 
 -  request:
       method: POST
@@ -84,9 +76,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*暂停".*
@@ -96,7 +86,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123545_60_2-XXCX_2_1_XW_ZT.json
+      file: ./json/0305012516_10_2-XXCX_2_1_XW_ZT.json
 
 -  request:
       method: POST
@@ -104,9 +94,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*继续播放".*
@@ -116,7 +104,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123550_20_2-XXCX_2_1_XW_JXBF.json
+      file: ./json/0305012522_90_2-XXCX_2_1_XW_JXBF.json
 
 -  request:
       method: POST
@@ -124,9 +112,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*重播当前新闻".*
@@ -136,7 +122,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123556_90_2-XXCX_2_1_XW_ZBDQXW.json
+      file: ./json/0305012527_40_2-XXCX_2_1_XW_ZBDQXW.json
 
 -  request:
       method: POST
@@ -144,9 +130,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*退出新闻场景".*
@@ -156,7 +140,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123601_30_2-XXCX_2_1_XW_TCXWCJ.json
+      file: ./json/0305012533_60_2-XXCX_2_1_XW_TCXWCJ.json
 
 -  request:
       method: POST
@@ -164,9 +148,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*给我订一张北京到上海明天10点半之后的机票".*
@@ -176,7 +158,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123607_80_2-XXCX_2_2_HBCX_JWDYZBJDSHMT10DBZHDJP.json
+      file: ./json/0305012538_60_2-XXCX_2_2_HBCX_JWDYZBJDSHMT10DBZHDJP.json
 
 -  request:
       method: POST
@@ -184,9 +166,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*给我订一张北京到上海明天的机票".*
@@ -196,7 +176,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123612_70_2-XXCX_2_2_HBCX_JWDYZBJDSHMTDJP.json
+      file: ./json/0305012544_30_2-XXCX_2_2_HBCX_JWDYZBJDSHMTDJP.json
 
 -  request:
       method: POST
@@ -204,9 +184,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*导航到很赞的餐馆".*
@@ -216,7 +194,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123618_10_3-CXLK_3_1_DH_DHDHZDCG.json
+      file: ./json/0305012549_60_3-CXLK_3_1_DH_DHDHZDCG.json
 
 -  request:
       method: POST
@@ -224,9 +202,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*导航到便宜的街边的餐馆".*
@@ -236,7 +212,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123623_90_3-CXLK_3_1_DH_DHDBYDJBDCG.json
+      file: ./json/0305012555_70_3-CXLK_3_1_DH_DHDBYDJBDCG.json
 
 -  request:
       method: POST
@@ -244,9 +220,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*来首鹅妈妈俱乐部".*
@@ -256,7 +230,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123629_80_4-YYYL_4_1_EG_LSEMMJLB.json
+      file: ./json/0305012601_50_4-YYYL_4_1_EG_LSEMMJLB.json
 
 -  request:
       method: POST
@@ -264,9 +238,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*下一首".*
@@ -276,7 +248,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123634_60_4-YYYL_4_1_EG_XYS.json
+      file: ./json/0305012606_00_4-YYYL_4_1_EG_XYS.json
 
 -  request:
       method: POST
@@ -284,9 +256,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*来首东风破".*
@@ -296,7 +266,7 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123640_90_4-YYYL_4_2_YL_LSDFP.json
+      file: ./json/0305012612_50_4-YYYL_4_2_YL_LSDFP.json
 
 -  request:
       method: POST
@@ -304,9 +274,7 @@
       headers:
          content-type: application/json
          user-agent: .*
-         connection: keep-alive
          host: .*
-         accept: application/json
          content-length: .*
       post: >
           .*"query.*我要听周杰伦的东风破".*
@@ -316,5 +284,5 @@
          content-type: application/json
       latency: 2000
       status: 200
-      file: ./json/0302123646_30_4-YYYL_4_2_YL_WYTZJLDDFP.json
+      file: ./json/0305012617_00_4-YYYL_4_2_YL_WYTZJLDDFP.json
 

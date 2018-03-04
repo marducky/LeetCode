@@ -1,0 +1,121 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一批",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "请欣赏 优栗 每分钟120击 获评第43届法国凯撒奖最佳影片",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9c042822d47.mp3",
+        "timestamp": 1520174244,
+        "tagTopic": "娱乐",
+        "name": "每分钟120击 获评第43届法国凯撒奖最佳影片"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 听闻晚高峰 听闻晚高峰 多项数学杯赛叫停 家长培训群删除 数学 等关键词 2018年3月4日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bc59b2dd0a.mp3",
+        "timestamp": 1520158119,
+        "tagTopic": "政治",
+        "name": "听闻晚高峰 多项数学杯赛叫停 家长培训群删除 数学 等关键词 2018年3月4日"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 欣然 格力小米10亿赌局今年到期 董明珠如此回应",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bbd99eb8cd.mp3",
+        "timestamp": 1520156113,
+        "tagTopic": "科技",
+        "name": "格力小米10亿赌局今年到期 董明珠如此回应"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 欣然 听闻播报 曝三大运营商今年将取消流量漫游费",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bbd12a38e0.mp3",
+        "timestamp": 1520156013,
+        "tagTopic": "科技",
+        "name": "听闻播报 曝三大运营商今年将取消流量漫游费"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 欣然 梁咏琪5月红馆演唱会预售爆满 主打广东歌",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bbcb86581b.mp3",
+        "timestamp": 1520155884,
+        "tagTopic": "娱乐",
+        "name": "梁咏琪5月红馆演唱会预售爆满 主打广东歌"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 欣然 听闻播报 奥斯卡热门即将上映 影迷手绘童话般 水形物语",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bbc319e202.mp3",
+        "timestamp": 1520155800,
+        "tagTopic": "娱乐",
+        "name": "听闻播报 奥斯卡热门即将上映 影迷手绘童话般 水形物语"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 白鲸出海头条 白鲸出海头条 中国互联网出海一周头条04期",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bac76a6646.mp3",
+        "timestamp": 1520151780,
+        "tagTopic": "科技",
+        "name": "白鲸出海头条 中国互联网出海一周头条04期"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 听闻下午茶 听闻下午茶  表情奇幻冒险 横扫金酸梅 阿汤哥首夺最烂男主 2018年3月4日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9b8aba28a5d.mp3",
+        "timestamp": 1520143214,
+        "tagTopic": "政治",
+        "name": "听闻下午茶  表情奇幻冒险 横扫金酸梅 阿汤哥首夺最烂男主 2018年3月4日"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 听闻午餐 听闻午餐 2020年将正式商用5G网络 2018年3月4日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9b644a3b54c.mp3",
+        "timestamp": 1520133344,
+        "tagTopic": "政治",
+        "name": "听闻午餐 2020年将正式商用5G网络 2018年3月4日"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 武玥 听闻播报 法国国务秘书认为特朗普贸易战言论 令人担忧",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9b5c6ed66c3.mp3",
+        "timestamp": 1520131185,
+        "tagTopic": "国际",
+        "name": "听闻播报 法国国务秘书认为特朗普贸易战言论 令人担忧"
+      },
+      "formatType": "audio"
+    }
+  ]
+}
