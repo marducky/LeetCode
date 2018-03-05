@@ -1,0 +1,137 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "我想听财经新闻",
+  "semantic": {
+    "service": "News",
+    "action": "Play",
+    "params": {
+      "tag_topic": {
+        "orgin": "财经",
+        "norm": "财经",
+        "logic": "",
+        "paramType": "@sys.entity.news_tag_topic",
+        "code": 0
+      },
+      "type": {
+        "orgin": "新闻",
+        "norm": "新闻",
+        "logic": "",
+        "paramType": "@sys.entity.news_type",
+        "code": 0
+      }
+    },
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 武玥 听闻播报 监管将迎新模式 预计未来PPP规模将进一步扩大",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9b5c92186bd.mp3",
+        "timestamp": 1520131222,
+        "tagTopic": "财经",
+        "name": "听闻播报 监管将迎新模式 预计未来PPP规模将进一步扩大"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 武玥 史无前例 摩根大通预测今年美股回购规模将达到8420亿美元",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9b5c42f4042.mp3",
+        "timestamp": 1520131144,
+        "tagTopic": "财经",
+        "name": "史无前例 摩根大通预测今年美股回购规模将达到8420亿美元"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 优栗 听闻播报 2018年新 甘 宁或将停止新增光伏规模",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9a0c6212e22.mp3",
+        "timestamp": 1520045271,
+        "tagTopic": "财经",
+        "name": "听闻播报 2018年新 甘 宁或将停止新增光伏规模"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 优栗 中国社科院 预计一线城市房价短期仍将延续当前跌势",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9a0c0d552cb.mp3",
+        "timestamp": 1520045146,
+        "tagTopic": "财经",
+        "name": "中国社科院 预计一线城市房价短期仍将延续当前跌势"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 优栗 证照分离 改革今年将全面推进",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a99285eb2c86.mp3",
+        "timestamp": 1519986788,
+        "tagTopic": "财经",
+        "name": "证照分离 改革今年将全面推进"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 无冕财经 无冕财经 名创优品IPO前传 起底叶国富的业务版图",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a98f1077e43e.mp3",
+        "timestamp": 1519972618,
+        "tagTopic": "财经",
+        "name": "无冕财经 名创优品IPO前传 起底叶国富的业务版图"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "我们一起听 笔记侠快播 笔记侠快播 傅盛 这本决策圣经我在公司内部已经分享过10遍",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a98f0c0e4dfd.mp3",
+        "timestamp": 1519972547,
+        "tagTopic": "财经",
+        "name": "笔记侠快播 傅盛 这本决策圣经我在公司内部已经分享过10遍"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "为您播放 艾问人物 艾问人物 区块链大佬 怎样避免被割 韭菜",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a98f07d9dbcd.mp3",
+        "timestamp": 1519972480,
+        "tagTopic": "财经",
+        "name": "艾问人物 区块链大佬 怎样避免被割 韭菜"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 力哥说理财 力哥说理财 你的财宝在哪里 你的心就在哪里",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a98eb9ecdb40.mp3",
+        "timestamp": 1519971235,
+        "tagTopic": "财经",
+        "name": "力哥说理财 你的财宝在哪里 你的心就在哪里"
+      },
+      "formatType": "audio"
+    },
+    {
+      "hint": "请欣赏 高明 设数百家壳公司 共享大佬杨志伟等25人涉传销被捕",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a98c4723b098.mp3",
+        "timestamp": 1519961205,
+        "tagTopic": "财经",
+        "name": "设数百家壳公司 共享大佬杨志伟等25人涉传销被捕"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

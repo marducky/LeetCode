@@ -1,0 +1,31 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "下一个",
+  "semantic": {
+    "service": "News",
+    "action": "Next",
+    "inputContext": {
+      "service": "News",
+      "context": "news"
+    },
+    "outputContext": {
+      "service": "News",
+      "context": "news"
+    }
+  },
+  "results": [
+    {
+      "hint": "我们一起听 听闻晚高峰 听闻晚高峰 多项数学杯赛叫停 家长培训群删除 数学 等关键词 2018年3月4日",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a9bc59b2dd0a.mp3",
+        "timestamp": 1520158119,
+        "tagTopic": "政治",
+        "name": "听闻晚高峰 多项数学杯赛叫停 家长培训群删除 数学 等关键词 2018年3月4日"
+      },
+      "formatType": "audio"
+    }
+  ]
+}

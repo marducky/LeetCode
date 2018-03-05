@@ -1,0 +1,54 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@0a45a64f-1c57-49c9-ab86-2cd989bc506a",
+    "@IID": "026375d6-52f1-4fc3-b7c5-7c65fb5aaddc",
+    "@TimeStamp": "2018-03-02T04:37:48.0661374Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Great.  Your transaction has been submitted. Can I help you with anything else?"
+      },
+      "AlternateOutText": {
+        "#text": "Great. Your transaction has been submitted. Can I help you with anything else?"
+      },
+      "AlternateOutText2": {
+        "#text": "Great. Your transaction has been submitted. Can I help you with anything else?"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "b2214b36-24c9-4185-bc6a-c3fbee7a111d"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "savings",
+              "literal": ""
+            }
+          },
+          "2186e2f0-365d-4bf3-a21f-8f21b29c8245": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "kbNodeHit": true
+  }
+}

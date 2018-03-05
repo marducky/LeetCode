@@ -1,4 +1,4 @@
 #####1: Only have PA_Service_Name,UserText.
 {"PA_Service_Name":"pa_flag","UserText":"text_flag"}{"QueryText":"text_flag"}
 #####2: Only have UserText.
-.*"query.*text_flag".*
+.*"query.*text_flag.*

@@ -1,0 +1,56 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@696daa0b-1136-468f-ab00-e2f266b790c7",
+    "@IID": "270e8937-a220-4ab0-8f5d-27bb1cab35ba",
+    "@TimeStamp": "2018-03-02T04:38:47.3741374Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Ok, you’d like to transfer $13,000.00 from your brokerage account to your savings account. Is that correct?"
+      },
+      "AlternateOutText": {
+        "#text": "Ok, you’d like to transfer $13,000.00 from your brokerage account to your savings account. Is that correct?\t"
+      },
+      "AlternateOutText2": {
+        "#text": "Ok, you’d like to transfer $13,000.00 from your brokerage account to your savings account. Is that correct?\t"
+      }
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "49cd01a3-2159-431a-9a6a-1ba70f3cef88"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "savings",
+              "literal": ""
+            }
+          },
+          "3984c6bd-c03d-42cf-badb-8b9b3a5914be": {
+            "YES_NO": {
+              "value": "yes",
+              "literal": "Yes"
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}

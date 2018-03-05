@@ -1,0 +1,56 @@
+{
+  "TalkAgentResponse": {
+    "@SCI": "@05e093aa-f141-da79-6982-6a668d0269ac@696daa0b-1136-468f-ab00-e2f266b790c7",
+    "@IID": "270e8937-a220-4ab0-8f5d-27bb1cab35ba",
+    "@TimeStamp": "2018-03-02T04:38:35.4741374Z",
+    "@ResponseCode": "Found",
+    "@Version": "6",
+    "Display": {
+      "OutText": {
+        "#text": "Hmm, there’s not enough money in your checking account to make this transfer. Do you want to transfer this amount from your brokerage account instead? <ul><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"5286c239-64cf-4aa6-8009-89a2eb765a99\">Yes, transfer from brokerage account<\/a><\/li><li><a href=\"#\" data-vtz-link-type=\"Dialog\" data-vtz-jump=\"78a74275-6ba6-47ca-b326-611241e62ae2\">No, don't make a transfer<\/a><\/li><\/ul>"
+      },
+      "AlternateOutText": {
+        "#text": "Hmm, there’s not enough money in your checking account to make this transfer. Do you want to transfer this amount from your brokerage account instead?\n "
+      },
+      "AlternateOutText2": {
+        "#text": "Hmm, there’s not enough money in your checking account to make this transfer. Do you want to transfer this amount from your brokerage account instead?\n "
+      }
+    },
+    "OutOptions": {
+      "options": [
+        "Yes, transfer from brokerage account",
+        "No, don't make a transfer"
+      ]
+    },
+    "TimeOut": 300,
+    "sessionBootstrap": {
+      "moduleState": {
+        "Brain": "3984c6bd-c03d-42cf-badb-8b9b3a5914be"
+      },
+      "conceptCaptures": {
+        "agent": {},
+        "intent": {
+          "4862182002837835642": {
+            "FROM_ACCOUNT": {
+              "value": "checking",
+              "literal": "Checking"
+            }
+          }
+        },
+        "node": {
+          "50bafd39-628c-4048-9726-2db6386569df": {
+            "TO_ACCOUNT": {
+              "value": "savings",
+              "literal": ""
+            }
+          }
+        },
+        "correction": null
+      }
+    },
+    "activeIntent": "4862182002837835642",
+    "conceptsInFocus": [
+      "YES_NO"
+    ]
+  }
+}
