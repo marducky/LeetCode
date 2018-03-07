@@ -953,7 +953,7 @@ enable_user_defined_functions: false
 # This option has no effect, if enable_user_defined_functions is false.
 enable_scripted_user_defined_functions: false
 
-# The default Windows kernel timer and scheduling resolution is 15.6ms for power conservation.
+# The default Windows kernel TestTimer and scheduling resolution is 15.6ms for power conservation.
 # Lowering this value on Windows can provide much tighter latency and better throughput, however
 # some virtualized environments may see a negative performance impact from changing this setting
 # below their system default. The sysinternals 'clockres' tool can confirm your system's default
