@@ -1,0 +1,74 @@
+Name:           mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7-74qqz
+Namespace:      ntg6-stable-core
+Node:           mtl-pe58.nuance.com/10.56.11.157
+Start Time:     Wed, 28 Feb 2018 06:21:47 +0800
+Labels:         app=mzk
+                app_group_id=mzkrc
+                name=mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7
+                parent_hash=mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7
+                parent_manifest_name_with_hash=mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7
+Annotations:    kubernetes.io/created-by={"kind":"SerializedReference","apiVersion":"v1","reference":{"kind":"ReplicationController","namespace":"ntg6-stable-core","name":"mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7",...
+                kubernetes.io/psp=privileged
+                sspni-info-scheduling-explanation=App_Group-Spreadout: try (strong preference weight=100) NOT to pick nodes where a pod of the same app_group_id (mzkrc) already exists and is running ..... AND try (we...
+Status:         Running
+IP:             172.17.72.31
+Controlled By:  ReplicationController/mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7
+Containers:
+  mzk:
+    Container ID:   docker://4ccd4e2e38433d1e4e8d3bec7840ce0cba1c7c08040bac03b973454120e5f61b
+    Image:          mobi-registry.nuance.com:5000/build-ncs/mobile-zookeeper:7.0.200.0.507
+    Image ID:       docker-pullable://mobi-registry.nuance.com:5000/build-ncs/mobile-zookeeper@sha256:ba3f4dc7234e32b8b6e36f08a3fc0cb0d2b7182cae42d61dece631b73de22fd6
+    Ports:          8777/TCP, 7777/TCP
+    State:          Running
+      Started:      Wed, 28 Feb 2018 06:23:07 +0800
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  4Gi
+    Requests:
+      cpu:      500m
+      memory:   2Gi
+    Liveness:   http-get http://:7777/mzk/status/isAlive delay=90s timeout=5s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:7777/mzk/status/isReady delay=90s timeout=5s period=10s #success=1 #failure=3
+    Environment:
+      POD_ID:                         mzkrc-hsh-1b47394574e9e5c5939a28c6f793e1b7-74qqz (v1:metadata.name)
+      ZOOKEEPER_ADDRESSES:            zookeeper.ntg6-stable-core:2181
+      MZK_CLUSTER:                    ntg6-stable-core
+      MZK_DATACENTER:                 mtdmz2-ntg6
+      MZK_POD:                        ntg6-stable-core
+      GRAPHITE_ENABLED:               true
+      GRAPHITE_HOST:                  10.3.65.233
+      GRAPHITE_PORT:                  2003
+      GRAPHITE_PREFIX:                ncs.k8s_cluster.mtdmz2-ntg6.ntg6-stable-core.core.mzk.${HOSTNAME}
+      GRAPHITE_INTERVAL:              10000
+      HTTP_ALARMS_ENABLED:            true
+      HTTP_ALARMS_HOST:               10.56.10.141
+      HTTP_ALARMS_PORT:               5003
+      HTTP_ALARMS_PATH:               /
+      STDOUT_ALARMS_ENABLED:          true
+      LEGACY_WATCHER_ALARMS_ENABLED:  false
+      ALARMS_METADATA_KV:             {\"k8s_namespace\":\"ntg6-stable-core\", \"k8s_api_server\":\"10.56.10.104\", \"hostname\":\"${POD_ID}\", \"service\":\"${APP_NAME}\"}
+      LOG4J_LOGGING_LEVEL:            INFO
+      APP_PARAMS:                     watcher.integration.enabled=false watcher.enabled=false
+    Mounts:
+      /var/log/nuance/ncs/logs from log-directory (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-gzkn4 (ro)
+Conditions:
+  Type           Status
+  Initialized    True
+  Ready          True
+  PodScheduled   True
+Volumes:
+  log-directory:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/opt/nuance/kubernetes/volumes/ntg6-stable-core/core/logs
+    HostPathType:
+  default-token-gzkn4:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-gzkn4
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  ntg6-stable-core.node_pool=generic
+Tolerations:     <none>
+Events:          <none>

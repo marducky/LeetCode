@@ -1,10 +1,112 @@
-a.x:
-  a1.x: a1v
-  a2.x: a2v
-  a3.x: a3v
-b.y:
-  b1.y:
-    b11.y: b11v
-    b12.y: b12v
-  b2.y:
-    b21.y: b21v.y.y
+From: Xu, Yuan
+Command: kubectl -s http://10.56.11.194:8080 -n mix-nlgschengdu-core describe pod llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3-bmkp6
+Name:           llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3-bmkp6
+Namespace:      mix-nlgschengdu-core
+Node:           mtl-pe57.nuance.com/10.56.11.128
+Start Time:     Mon, 05 Mar 2018 03:15:31 +0000
+Labels:         app=llms-pool-1
+                app_group_id=llms-pool-1
+                name=llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3
+                parent_hash=llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3
+                parent_manifest_name_with_hash=llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3
+Annotations:    kubernetes.io/created-by={"kind":"SerializedReference","apiVersion":"v1","reference":{"kind":"ReplicationController","namespace":"mix-nlgschengdu-core","name":"llms-pool-1-hsh-e722a91d865165997b6d0c40...
+                kubernetes.io/psp=privileged
+                sspni-info-scheduling-explanation=App_Group-Spreadout: try (strong preference weight=100) NOT to pick nodes where a pod of the same app_group_id (llms-pool-1) already exists and is running ..... AND t...
+Status:         Running
+IP:             172.17.109.26
+Created By:     ReplicationController/llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3
+Controlled By:  ReplicationController/llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3
+Init Containers:
+  pack-dl-init:
+    Container ID:       docker://ddd5de74897a795b91beadf7e2b13b528b9acfb3b9aea43510f2ae3bd521425e
+    Image:              mobi-registry.nuance.com:5000/build-ncs/packdownload:7.1.000.0.43
+    Image ID:           docker-pullable://mobi-registry.nuance.com:5000/build-ncs/packdownload@sha256:c242abfb599146546d81352c4ef9d269b4971b56642b944c601d8945cba5bdea
+    Port:               <none>
+    Command:
+      /bin/sh
+      -c
+      python3 /root/run.py
+    State:              Terminated
+      Reason:           Completed
+      Exit Code:        0
+      Started:          Mon, 05 Mar 2018 03:15:35 +0000
+      Finished:         Mon, 05 Mar 2018 03:15:37 +0000
+    Ready:              True
+    Restart Count:      0
+    Environment:
+      POD_ID:                                   llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3-bmkp6 (v1:metadata.name)
+      DESTINATION_PACK_PATH:                    /tmp/deleteme
+      PACKS_LIST:                               llmsdatapack:ru-RU_location.llm.1.0.0.0;llmsdatapack:de-DE_location.llm.1.0.0.0;llmsdatapack:en-GB_location.llm.1.0.0.0;llmsdatapack:tr-TR_location.llm.1.0.1.0;llmsdatapack:zh-TW_location.llm.1.0.0.0;llmsdatapack:sv-SE_location.llm.1.0.0.0;llmsdatapack:pt-PT_location.llm.1.0.0.0;llmsdatapack:pl-PL_location.llm.1.0.1.0;llmsdatapack:nl-NL_location.llm.1.0.0.0;llmsdatapack:fr-FR_location.llm.1.0.0.0;llmsdatapack:es-ES_location.llm.1.0.1.0;llmsdatapack:cs-CZ_location.llm.1.0.0.0;llmsdatapack:it-IT_location.llm.1.0.1.0;llmsdatapack:es-MX_location.llm.1.0.1.0;llmsdatapack:fr-CA_location.llm.1.0.1.0;llmsdatapack:en-US_location.llm.1.0.0.0
+      ARTIFACTORY_BASE_URL:                     http://mtl-artifactory03:8081/artifactory/ncs-packs
+      CLEAN_UNUSED_PACKS:                       True
+      WAIT_INFINITELY_ONCE_DONE:                False
+      PACK_DOWNLOAD_LOCK_ATTEMPT_TIMEOUT_SEC:   20000
+      PACK_DOWNLOAD_SOCKET_TIMEOUT_SEC:         60
+      ARTIFACTORY_API_SEARCH_URL:               http://mtl-artifactory03:8081/artifactory/api/search/artifact?name=
+      ARTIFACTORY_USER:                         <set to the key 'user' in secret 'artifactory-secret'>          Optional: false
+      ARTIFACTORY_PASS:                         <set to the key 'password' in secret 'artifactory-secret'>      Optional: false
+    Mounts:
+      /tmp/deleteme from packs-working-stages (rw)
+      /var/log/nuance/ncs/logs from log-directory (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
+Containers:
+  llms-pool-1:
+    Container ID:       docker://bcec4125d88717f391971b1a0e7d1a5bc4c20dc1ec8517e8417b37216c1b211b
+    Image:              mobi-registry.nuance.com:5000/build-ncs/location-language-metadata-service:7.0.200.1.58296
+    Image ID:           docker-pullable://mobi-registry.nuance.com:5000/build-ncs/location-language-metadata-service@sha256:64edabd28dfc78c0e636661a70c9ea5dc3cd922d46a5cd9af8aebefad13f6f2c
+    Ports:              8080/TCP, 9090/TCP
+    State:              Running
+      Started:          Mon, 05 Mar 2018 03:15:43 +0000
+    Ready:              True
+    Restart Count:      0
+    Limits:
+      cpu:      2
+      memory:   4Gi
+    Requests:
+      cpu:      1
+      memory:   2Gi
+    Liveness:   http-get http://:9090/health delay=60s timeout=5s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:9090/isReady delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      POD_ID:                           llms-pool-1-hsh-e722a91d865165997b6d0c4036c9e6c3-bmkp6 (v1:metadata.name)
+      WORKING_STAGE_ID:                 STAGE-B
+      WORKING_STAGE_CRITERIA:           llmsdatapack:ru-RU_location.llm.1.0.0.0;llmsdatapack:de-DE_location.llm.1.0.0.0;llmsdatapack:en-GB_location.llm.1.0.0.0;llmsdatapack:tr-TR_location.llm.1.0.1.0;llmsdatapack:zh-TW_location.llm.1.0.0.0;llmsdatapack:sv-SE_location.llm.1.0.0.0;llmsdatapack:pt-PT_location.llm.1.0.0.0;llmsdatapack:pl-PL_location.llm.1.0.1.0;llmsdatapack:nl-NL_location.llm.1.0.0.0;llmsdatapack:fr-FR_location.llm.1.0.0.0;llmsdatapack:es-ES_location.llm.1.0.1.0;llmsdatapack:cs-CZ_location.llm.1.0.0.0;llmsdatapack:it-IT_location.llm.1.0.1.0;llmsdatapack:es-MX_location.llm.1.0.1.0;llmsdatapack:fr-CA_location.llm.1.0.1.0;llmsdatapack:en-US_location.llm.1.0.0.0
+      PACKS_LIST:                       llmsdatapack:ru-RU_location.llm.1.0.0.0;llmsdatapack:de-DE_location.llm.1.0.0.0;llmsdatapack:en-GB_location.llm.1.0.0.0;llmsdatapack:tr-TR_location.llm.1.0.1.0;llmsdatapack:zh-TW_location.llm.1.0.0.0;llmsdatapack:sv-SE_location.llm.1.0.0.0;llmsdatapack:pt-PT_location.llm.1.0.0.0;llmsdatapack:pl-PL_location.llm.1.0.1.0;llmsdatapack:nl-NL_location.llm.1.0.0.0;llmsdatapack:fr-FR_location.llm.1.0.0.0;llmsdatapack:es-ES_location.llm.1.0.1.0;llmsdatapack:cs-CZ_location.llm.1.0.0.0;llmsdatapack:it-IT_location.llm.1.0.1.0;llmsdatapack:es-MX_location.llm.1.0.1.0;llmsdatapack:fr-CA_location.llm.1.0.1.0;llmsdatapack:en-US_location.llm.1.0.0.0
+      GRAPHITE_ENABLED:                 true
+      GRAPHITE_HOST:                    mt-dmz-gw002.nuance.com
+      GRAPHITE_PORT:                    2003
+      GRAPHITE_PREFIX:                  ncs.k8s_cluster.mtdmz2-mix.mix-nlgschengdu-core.core.llms.${HOSTNAME}
+      GRAPHITE_INTERVAL:                10000
+      HTTP_ALARMS_ENABLED:              true
+      HTTP_ALARMS_HOST:                 10.56.10.141
+      HTTP_ALARMS_PORT:                 5003
+      HTTP_ALARMS_PATH:                 /
+      STDOUT_ALARMS_ENABLED:            true
+      LEGACY_WATCHER_ALARMS_ENABLED:    false
+      ALARMS_METADATA_KV:               {\"k8s_namespace\":\"mix-nlgschengdu-core\", \"k8s_api_server\":\"10.56.11.194\", \"hostname\":\"${POD_ID}\", \"service\":\"${APP_NAME}\"}
+      APP_PARAMS:                       --spring.profiles.active=staging --http.alarm.listOfServers=${HTTP_ALARMS_HOST}:${HTTP_ALARMS_PORT}
+      LOG4J_LOGGING_LEVEL:
+    Mounts:
+      /opt/nuance/ncs/llms/data from packs-working-stages (ro)
+      /var/log/nuance/ncs/logs from log-directory (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
+Conditions:
+  Type          Status
+  Initialized   True
+  Ready         True
+  PodScheduled  True
+Volumes:
+  log-directory:
+    Type:       HostPath (bare host directory volume)
+    Path:       /var/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/core/logs
+  packs-working-stages:
+    Type:       HostPath (bare host directory volume)
+    Path:       /var/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/pools-working-stages/llms-pool-1/STAGE-B/llms
+  default-token-5dqb7:
+    Type:       Secret (a volume populated by a Secret)
+    SecretName: default-token-5dqb7
+    Optional:   false
+QoS Class:      Burstable
+Node-Selectors: mix-nlgschengdu-core.node_pool=generic
+Tolerations:    <none>
+Events:         <none>

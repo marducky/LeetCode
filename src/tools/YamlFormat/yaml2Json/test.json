@@ -1,0 +1,14 @@
+{
+  "cause": "The given Nina Url is wrong or connected in the true Internet./ The Internet is forbidden in env...",
+  "name": "Internal Server Error",
+  "hostname": "localhost",
+  "impact": "Main_functions",
+  "service": null,
+  "severity": "CRITICAL",
+  "details": "Roobo Internal Server Error Failed to get response from Roobo. {\"reason\":\"(404) Nothing found for POST request at URI /\",\"headers\":{\"content-length\":\"157\",\"host\":\"localhost:8882\",\"connection\":\"keep-alive\",\"content-type\":\"application/json\",\"user-agent\":\"Java/1.8.0_151\",\"accept\":\"application/json\"},\"code\":404,\"method\":\"POST\",\"post\":\"{\\\"sessionId\\\":\\\"d43338dd-cb69-429b-a530-2d8c2dceaef4\\\",\\\"query\\\":\\\"Yssses\\\",\\\"agentId\\\":\\\"MmM3YmVkMjkxZmE5\\\",\\\"token\\\":\\\"db4ab3d8c78f182adfbe0e4c9f4ba5119689\\\",\\\"lang\\\":\\\"zh\\\"}\",\"url\":\"/\"}.",
+  "sourceLocation": "com.nuance.mobility.ncs.pa.services.rooboProxyService.controllers.RooboController.handleEngineException:158",
+  "eventId": null,
+  "action": "Verify the Nina Url or Verify the Internet...",
+  "subsystem": null,
+  "summary": "Roobo Internal Server Error"
+}
