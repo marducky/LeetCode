@@ -1,5 +1,7 @@
 package schoolPaper.论文实验;
 
+import java.util.Random;
+
 /**
  * @project: schoolPaper.论文实验
  * @author: Neng Qi
@@ -36,10 +38,25 @@ public class consolePrint {
 
     }
 
+    public static void printHash() {
+
+        Random random = new Random();
+        for (int i = 1; i < 33; i++) {
+            int num = random.nextInt(15);
+            System.out.print((Integer.toHexString(num) + "").toUpperCase());
+            if ((i % 2 == 0)) {
+                System.out.print(" ");
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
 //        System.out.println("");
 //        printUserForNormal(1);
 //        printUserForNormal("ls",4);
 //
+        printHash();
     }
+
 }
