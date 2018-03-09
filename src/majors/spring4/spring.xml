@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--//我们将得到一样的结果，只是实现的方式不一样而已。对于设值注入和构造注入两种方式如何选择呢，-->
+
+    <!--一般的，如果对依赖关系无需变化地注入，尽量采用构造注入。其他依赖关系的注入则考虑采用设值方式注入。-->
+    <bean id="chinese" class="majors.spring4.AxeDemo.Chinese">
+        <!--<property name="axe" ref="steelAxe" />/\-->
+        <constructor-arg ref="stoneAxe"/>
+    </bean>
+    <bean id="stoneAxe" class="majors.spring4.AxeDemo.StoneAxe"/>
+    <bean id="steelAxe" class="majors.spring4.AxeDemo.SteelAxe"/>
+    <bean id="win" class="javax.swing.JFrame"/>
+    <bean id="date" class="java.util.Date"/>
+</beans>
