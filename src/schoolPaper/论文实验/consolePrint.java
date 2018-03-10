@@ -61,9 +61,9 @@ public class consolePrint {
                 System.out.println();
             }
         } else if (args.length == 2) {
-            for (int o = args[0]; o < args[1]; o++) {
+            for (int o = args[0]; o <= args[1]; o++) {
 //                System.out.println(String.format("%02d",o));
-                System.out.print("PCR-" + String.format("%02d ", o - 1));
+                System.out.print("PCR-" + String.format("%02d: ", o - 1));
                 for (int j = 1; j < 41; j++) {
                     int num = random.nextInt(15);
                     System.out.print((Integer.toHexString(num) + "").toLowerCase().toUpperCase());
@@ -72,6 +72,10 @@ public class consolePrint {
                     }
                 }
                 System.out.println();
+            }
+            for (int i = args[1] + 1; i <= 24; i++) {
+                System.out.print("PCR-" + String.format("%02d: ", i - 1));
+                printFFF();
             }
         } else {
             System.out.print("PCR[" + (0) + "]: ");
@@ -86,9 +90,13 @@ public class consolePrint {
             System.out.println();
         }
 
+    }
 
-
-
+    public static void printFFF() {
+        for (int i = 1; i < 21; i++) {
+            System.out.print("FF ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -98,7 +106,7 @@ public class consolePrint {
 //
 //        printHash();
 //        printHash(3);
-        printHash(3, 8);
+        printHash(9, 11);
         printUserForNormal();
     }
 
