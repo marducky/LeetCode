@@ -1,0 +1,19 @@
+*1-Finance
+#1_1_0_Funds_transfer
+I’d like to transfer money
+Checking *2341
+Savings *8760
+$5000.00
+Yes
+#1_1_1_Funds_transfer
+I want to transfer some money.
+Checking *2341
+Savings *8760
+$13,000.00
+Yes
+#1_2_0_POP_Money
+I want to send money to Jon
+Checking *2341
+First one
+$50.00
+Yes
