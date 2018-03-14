@@ -26,7 +26,7 @@ spec:
             privileged: true
           env:
             - name: NRSYSMOND_logfile
-              value: "/var/log/nrsysmond.log"
+              value: "/VarExample/log/nrsysmond.log"
           image: newrelic/nrsysmond
           name: newrelic
           command: [ "bash", "-c", "source /etc/kube-newrelic/config && /usr/sbin/nrsysmond -E -F" ]
@@ -37,11 +37,11 @@ spec:
             - name: dev
               mountPath: /dev
             - name: run
-              mountPath: /var/run/docker.sock
+              mountPath: /VarExample/run/docker.sock
             - name: sys
               mountPath: /sys
             - name: log
-              mountPath: /var/log
+              mountPath: /VarExample/log
       volumes:
         - name: newrelic-config
           secret:
@@ -51,11 +51,11 @@ spec:
               path: /dev
         - name: run
           hostPath:
-              path: /var/run/docker.sock
+              path: /VarExample/run/docker.sock
               type: Socket
         - name: sys
           hostPath:
               path: /sys
         - name: log
           hostPath:
-              path: /var/log
+              path: /VarExample/log

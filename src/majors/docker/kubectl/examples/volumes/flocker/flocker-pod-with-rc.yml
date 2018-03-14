@@ -40,7 +40,7 @@ spec:
         volumeMounts:
           # name must match the volume name below
           - name: ghost-data
-            mountPath: "/var/lib/ghost"
+            mountPath: "/VarExample/lib/ghost"
       volumes:
         - name: ghost-data
           flocker:

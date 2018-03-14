@@ -15,7 +15,7 @@ spec:
       volumes:
       - name: docker-sock
         hostPath:
-         path: /var/run/docker.sock
+         path: /VarExample/run/docker.sock
          type: Socket
       - name: dev-vol
         hostPath:
@@ -53,7 +53,7 @@ spec:
 #        - name: ADDITIONAL_CONF                            #OPTIONAL pass additional parameters to the agent such as authentication example provided here
 #          value: "k8s_uri: https://myacct:mypass@localhost:4430\nk8s_ca_certificate: k8s-ca.crt\nk8s_ssl_verify_certificate: true"
         volumeMounts:
-        - mountPath: /host/var/run/docker.sock
+        - mountPath: /host/VarExample/run/docker.sock
           name: docker-sock
           readOnly: false
         - mountPath: /host/dev

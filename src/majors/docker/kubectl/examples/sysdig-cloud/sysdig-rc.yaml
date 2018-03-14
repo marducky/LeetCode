@@ -13,7 +13,7 @@ spec:
       volumes:
       - name: docker-sock
         hostPath:
-         path: /var/run/docker.sock
+         path: /VarExample/run/docker.sock
          type: Socket
       - name: dev-vol
         hostPath:
@@ -58,7 +58,7 @@ spec:
 #        - name: ADDITIONAL_CONF                            #OPTIONAL
 #          value: "app_checks:\n  - name: nginx\n    check_module: nginx\n    pattern:\n      comm: nginx\n    conf:\n      nginx_status_url: "http://localhost:{port}/nginx_status\""
         volumeMounts:
-        - mountPath: /host/var/run/docker.sock
+        - mountPath: /host/VarExample/run/docker.sock
           name: docker-sock
           readOnly: false
         - mountPath: /host/dev

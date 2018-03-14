@@ -52,8 +52,8 @@ Containers:
       LOG4J_LOGGING_LEVEL:            INFO
       APP_PARAMS:                     watcher.integration.enabled=false watcher.enabled=false
     Mounts:
-      /var/log/nuance/ncs/logs from log-directory (rw)
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-gzkn4 (ro)
+      /VarExample/log/nuance/ncs/logs from log-directory (rw)
+      /VarExample/run/secrets/kubernetes.io/serviceaccount from default-token-gzkn4 (ro)
 Conditions:
   Type           Status
   Initialized    True
@@ -62,7 +62,7 @@ Conditions:
 Volumes:
   log-directory:
     Type:          HostPath (bare host directory volume)
-    Path:          /var/opt/nuance/kubernetes/volumes/ntg6-stable-core/core/logs
+    Path:          /VarExample/opt/nuance/kubernetes/volumes/ntg6-stable-core/core/logs
     HostPathType:
   default-token-gzkn4:
     Type:        Secret (a volume populated by a Secret)

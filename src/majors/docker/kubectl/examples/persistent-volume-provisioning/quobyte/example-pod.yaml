@@ -15,7 +15,7 @@ spec:
       - name: server
         image: nginx 
         volumeMounts:
-          - mountPath: /var/lib/www/html
+          - mountPath: /VarExample/lib/www/html
             name: quobytepvc
       volumes:
         - name: quobytepvc

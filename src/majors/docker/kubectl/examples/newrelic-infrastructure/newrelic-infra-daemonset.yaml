@@ -34,9 +34,9 @@ spec:
             - name: dev
               mountPath: /dev
             - name: run
-              mountPath: /var/run/docker.sock
+              mountPath: /VarExample/run/docker.sock
             - name: log
-              mountPath: /var/log
+              mountPath: /VarExample/log
             - name: host-root
               mountPath: /host
               readOnly: true
@@ -49,10 +49,10 @@ spec:
               path: /dev
         - name: run
           hostPath:
-              path: /var/run/docker.sock
+              path: /VarExample/run/docker.sock
         - name: log
           hostPath:
-              path: /var/log
+              path: /VarExample/log
         - name: host-root
           hostPath:
               path: /

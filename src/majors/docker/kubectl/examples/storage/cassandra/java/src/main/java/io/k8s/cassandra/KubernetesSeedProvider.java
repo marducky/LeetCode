@@ -114,7 +114,7 @@ public class KubernetesSeedProvider implements SeedProvider {
         String path = String.format("/api/v1/namespaces/%s/endpoints/", podNamespace);
         String seedSizeVar = getEnvOrDefault("CASSANDRA_SERVICE_NUM_SEEDS", "8");
         Integer seedSize = Integer.valueOf(seedSizeVar);
-        String accountToken = getEnvOrDefault("K8S_ACCOUNT_TOKEN", "/var/run/secrets/kubernetes.io/serviceaccount/token");
+        String accountToken = getEnvOrDefault("K8S_ACCOUNT_TOKEN", "/VarExample/run/secrets/kubernetes.io/serviceaccount/token");
 
         List<InetAddress> seeds = new ArrayList<InetAddress>();
         try {

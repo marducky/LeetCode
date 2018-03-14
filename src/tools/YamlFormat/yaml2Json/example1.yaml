@@ -47,8 +47,8 @@ Init Containers:
       ARTIFACTORY_PASS:                         <set to the key 'password' in secret 'artifactory-secret'>      Optional: false
     Mounts:
       /tmp/deleteme from packs-working-stages (rw)
-      /var/log/nuance/ncs/logs from log-directory (rw)
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
+      /VarExample/log/nuance/ncs/logs from log-directory (rw)
+      /VarExample/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
 Containers:
   llms-pool-1:
     Container ID:       docker://bcec4125d88717f391971b1a0e7d1a5bc4c20dc1ec8517e8417b37216c1b211b
@@ -88,8 +88,8 @@ Containers:
       LOG4J_LOGGING_LEVEL:
     Mounts:
       /opt/nuance/ncs/llms/data from packs-working-stages (ro)
-      /var/log/nuance/ncs/logs from log-directory (rw)
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
+      /VarExample/log/nuance/ncs/logs from log-directory (rw)
+      /VarExample/run/secrets/kubernetes.io/serviceaccount from default-token-5dqb7 (ro)
 Conditions:
   Type          Status
   Initialized   True
@@ -98,10 +98,10 @@ Conditions:
 Volumes:
   log-directory:
     Type:       HostPath (bare host directory volume)
-    Path:       /var/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/core/logs
+    Path:       /VarExample/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/core/logs
   packs-working-stages:
     Type:       HostPath (bare host directory volume)
-    Path:       /var/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/pools-working-stages/llms-pool-1/STAGE-B/llms
+    Path:       /VarExample/opt/nuance/kubernetes/volumes/mix-nlgschengdu-core/pools-working-stages/llms-pool-1/STAGE-B/llms
   default-token-5dqb7:
     Type:       Secret (a volume populated by a Secret)
     SecretName: default-token-5dqb7

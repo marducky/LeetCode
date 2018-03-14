@@ -183,7 +183,7 @@ resources:
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
-        - mountPath: /var/log/nuance/ncs/logs
+        - mountPath: /VarExample/log/nuance/ncs/logs
           name: log-directory
         - mountPath: /etc/localtime
           name: ntp-directory
@@ -208,7 +208,7 @@ resources:
           path: /etc/localtime
         name: ntp-directory
       - hostPath:
-          path: /var/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
+          path: /VarExample/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
         name: log-directory
       - configMap:
           defaultMode: 420

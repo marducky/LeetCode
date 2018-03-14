@@ -21,7 +21,7 @@ spec:
         image: quay.io/pires/docker-elasticsearch-kubernetes:1.7.1-4
         env:
         - name: KUBERNETES_CA_CERTIFICATE_FILE
-          value: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+          value: /VarExample/run/secrets/kubernetes.io/serviceaccount/ca.crt
         - name: NAMESPACE
           valueFrom:
             fieldRef:

@@ -61,7 +61,7 @@ Pod Template:
       /conf/ from config-volume (ro)
       /etc/localtime from ntp-directory (ro)
       /mem from mem (rw)
-      /var/log/nuance/ncs/logs from log-directory (rw)
+      /VarExample/log/nuance/ncs/logs from log-directory (rw)
   Volumes:
    mem:
     Type:    EmptyDir (a temporary directory that shares a pod's lifetime)
@@ -72,7 +72,7 @@ Pod Template:
     HostPathType:  
    log-directory:
     Type:          HostPath (bare host directory volume)
-    Path:          /var/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
+    Path:          /VarExample/opt/nuance/kubernetes/volumes/nlps-ad-nlps/nlps/logs
     HostPathType:  
    config-volume:
     Type:      ConfigMap (a volume populated by a ConfigMap)
