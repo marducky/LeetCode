@@ -14,4 +14,9 @@
     <bean id="steelAxe" class="majors.spring4.AxeDemo.SteelAxe"/>
     <bean id="win" class="javax.swing.JFrame"/>
     <bean id="date" class="java.util.Date"/>
+    <bean id="springHelloWorld" class="majors.spring4.helloSpring.helloworld.impl.SpringHelloWorld"></bean>
+    <bean id="structHelloWorld" class="majors.spring4.helloSpring.helloworld.impl.StrutsHelloWorld"></bean>
+    <bean id="helloWorldService" class="majors.spring4.helloSpring.helloworld.HelloWorldService">
+        <property name="helloWorld" ref="springHelloWorld"/>
+    </bean>
 </beans>
