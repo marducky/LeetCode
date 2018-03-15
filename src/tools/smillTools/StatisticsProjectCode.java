@@ -95,6 +95,7 @@ public class StatisticsProjectCode {
         System.out.println("commentLines = " + commentLines);
         System.out.println("totalLines = " + getTotalLines());
         System.out.println("javaCodeFileCounter = " + javaCodeFlieCounter);
+
 //        Map<String,String> map=new HashMap<String, String>();
 //        System.out.println(map.get(1));
 //        int[] ints=new int[3];
