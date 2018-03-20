@@ -1,6 +1,7 @@
-package majors.spring4.chapter2;
+package majors.spring4.chapter2.autoconfig;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 
 /**
@@ -8,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
  * @email: neng.qi@nuance.com
  * @date: 2018/03/19 17:22
  **/
-@ContextConfiguration
-@ComponentScan
+//@Configuration
+//@ComponentScan
 public class CDPlayerConfig {
 }

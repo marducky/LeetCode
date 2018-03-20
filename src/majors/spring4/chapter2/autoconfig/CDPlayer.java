@@ -1,4 +1,4 @@
-package majors.spring4.chapter2;
+package majors.spring4.chapter2.autoconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

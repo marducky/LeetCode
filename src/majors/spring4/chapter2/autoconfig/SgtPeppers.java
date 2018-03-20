@@ -1,6 +1,5 @@
-package majors.spring4.chapter2;
+package majors.spring4.chapter2.autoconfig;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +7,7 @@ import org.springframework.stereotype.Component;
  * @email: neng.qi@nuance.com
  * @date: 2018/03/19 17:17
  **/
-@Component
+//@Component
 public class SgtPeppers implements CompactDisc {
     private String title = "Stg, Pepper's Lonely Hearts Club Band";
     private String artist = "The beatles";
