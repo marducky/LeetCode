@@ -22,6 +22,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="a-denfender-QMZ" target="1.5" />
+      <module name="restfulservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
