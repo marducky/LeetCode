@@ -4,18 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class H20_DicesSum {
+    //    DecimalFormat df = new DecimalFormat("#.000000");
+    double perValue = (double) 1 / 6;
     public Map<Integer, Double> dicesSum(int n) {
-        // Write your code here
-        // Ps. new AbstractMap.SimpleEntry<Integer, Double>(sum, pro)
-        // to create the pair
         Map<Integer, Double> perMap = new HashMap<>();
-
         if (n == 1) {
-
             for (int i = 0; i < 6; i++) {
-                perMap.put(i + 1, 1.7);
+                perMap.put(i + 1, perValue);
             }
-//            entryList.addAll(perMap.entrySet());
         } else {
             Map<Integer, Double> perMapPer = dicesSum(n - 1);
             dicesSum(1).forEach((k1, v1) -> {

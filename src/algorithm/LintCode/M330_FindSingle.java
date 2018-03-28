@@ -6,7 +6,7 @@ package algorithm.LintCode;
  * @email: qihuaneng@163.com
  * @date: 2018/02/22 14:44
  **/
-public class _330FindSingle {
+public class M330_FindSingle {
     public int findSingle(int[] nums) {
         if (nums.length < 2)
             return nums[0];

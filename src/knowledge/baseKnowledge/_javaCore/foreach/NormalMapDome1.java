@@ -17,7 +17,7 @@ public class NormalMapDome1 {
         items.put("D", 40);
         items.put("E", 50);
         items.put("F", 60);
-
+        System.out.println(items.entrySet());
         for (Map.Entry<String, Integer> entry : items.entrySet()) {
             System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
         }

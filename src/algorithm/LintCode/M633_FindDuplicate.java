@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @email: qihuaneng@163.com
  * @date: 2018/02/22 14:37
  **/
-public class _633FindDuplicate {
+public class M633_FindDuplicate {
     public int findDuplicate(int[] nums) {
         // write your code here
         int result = 0;
@@ -23,7 +23,7 @@ public class _633FindDuplicate {
     }
 
     public static void main(String[] args) {
-        _633FindDuplicate findDuplicate = new _633FindDuplicate();
+        M633_FindDuplicate findDuplicate = new M633_FindDuplicate();
         int n[] = {3, 2, 1, 4, 7, 7};
         System.out.println(findDuplicate.findDuplicate(n));
 

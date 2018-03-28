@@ -1,8 +1,6 @@
 package algorithm.LintCode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @project: algorithm.LintCode
@@ -10,7 +8,7 @@ import java.util.List;
  * @email: qihuaneng@163.com
  * @date: 2018/02/22 14:25
  **/
-public class _196FindMissing {
+public class M196_FindMissing {
     /**
      * @param nums: An array of integers
      * @return: An integer
@@ -31,7 +29,7 @@ public class _196FindMissing {
     }
 
     public static void main(String[] args) {
-        _196FindMissing findMissing = new _196FindMissing();
+        M196_FindMissing findMissing = new M196_FindMissing();
         int n[] = {1, 3, 4, 5, 6, 7};
         System.out.println(findMissing.findMissing(n));
 

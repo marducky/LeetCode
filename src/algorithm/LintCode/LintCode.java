@@ -1,6 +1,5 @@
 package algorithm.LintCode;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -13,6 +12,12 @@ public class LintCode {
     @Test
     public void m3() {
         M3_DigitCounts m3_digitCounts = new M3_DigitCounts();
-        System.out.println(m3_digitCounts.digitCounts(12, 1));
+        System.out.println(m3_digitCounts.digitCounts(50, 1));
+    }
+
+    @Test
+    public void h20() {
+        H20_DicesSum h20_dicesSum = new H20_DicesSum();
+        System.out.println(h20_dicesSum.dicesSum(11).toString());
     }
 }
