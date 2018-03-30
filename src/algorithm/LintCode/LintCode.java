@@ -18,6 +18,6 @@ public class LintCode {
     @Test
     public void h20() {
         H20_DicesSum h20_dicesSum = new H20_DicesSum();
-        System.out.println(h20_dicesSum.dicesSum(11).toString());
+        System.out.println(h20_dicesSum.dicesSum(1));
     }
 }
