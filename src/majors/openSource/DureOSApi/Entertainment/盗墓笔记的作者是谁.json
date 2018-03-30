@@ -1,0 +1,26 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "盗墓笔记的作者是谁",
+  "result": [
+    {
+      "card_type": "kg",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "盗墓笔记的作者是南派三叔"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t12.baidu.com\/it\/u=3059944376,251721505&fm=58"
+        ],
+        "title": "盗墓笔记的作者",
+        "source_category": "knowledge_graph_general"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "0688639698",
+  "spend_time": "442ms",
+  "uuid": "bn_95e65d5e-1c1a-4882-9149-dc26a89ef827",
+  "time": 1522393889
+}

@@ -1,0 +1,25 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "介绍一下北京地铁",
+  "result": [
+    {
+      "card_type": "baike",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "北京地铁是服务于中国北京市的城市轨道交通。其第一条线路于1971年1月15日正式开通运营，使北京成为中国第一个开通地铁的城市。截至2017年12月，北京地铁运营线路共有22条地铁线路，均采用地铁系统，覆盖北京市11个市辖区，运营里程608公里，共设车站370座"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t10.baidu.com\/it\/u=1906628712,2216332721&fm=58&w=255&h=255&img.PNG&bpow=750&bpoh=494"
+        ],
+        "title": "北京地铁"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "2266129663",
+  "spend_time": "487ms",
+  "uuid": "bn_ab75f31b-1e52-4dfa-bd7c-d13f811daf45",
+  "time": 1522395466
+}

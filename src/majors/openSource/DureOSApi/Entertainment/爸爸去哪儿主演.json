@@ -1,0 +1,83 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "爸爸去哪儿主演",
+  "result": [
+    {
+      "card_type": "movie_satisfy",
+      "intent": "movie_satisfy",
+      "tts_status": {
+        "tts": " 田亮饰演田亮，林志颖饰演林志颖，王岳伦饰演王岳伦，郭涛饰演郭涛。"
+      },
+      "data": {
+        "list": [
+          {
+            "name": "田亮",
+            "post": "http:\/\/t11.baidu.com\/it\/u=4179650887,890210570&fm=58&s=C880C712D6A272BD9BA058C70300E021",
+            "link": ""
+          },
+          {
+            "name": "林志颖",
+            "post": "http:\/\/t12.baidu.com\/it\/u=4117070903,1509082340&fm=58&s=8F22E107E8A0B69C2DF8E916010080E2",
+            "link": ""
+          },
+          {
+            "name": "王岳伦",
+            "post": "http:\/\/t10.baidu.com\/it\/u=619288125,1968525697&fm=58&s=5A0CA944365B2DD4320CC1920300F0C3",
+            "link": ""
+          },
+          {
+            "name": "郭涛",
+            "post": "http:\/\/t11.baidu.com\/it\/u=4117655818,4038229166&fm=58&s=21518B6E86D015D4E9A10DB303008092",
+            "link": ""
+          },
+          {
+            "name": "张亮",
+            "post": "http:\/\/t10.baidu.com\/it\/u=121735257,1794746219&fm=58&s=D784BC41C45347D4D00CA4DE03004093",
+            "link": ""
+          },
+          {
+            "name": "田雨橙",
+            "post": "http:\/\/t10.baidu.com\/it\/u=2106984024,3913838717&fm=58&s=A5F671360B1352D00A4021CF0300F0A2",
+            "link": ""
+          },
+          {
+            "name": "小小志",
+            "post": "http:\/\/t12.baidu.com\/it\/u=3567968933,2255014923&fm=58&s=3B931DC5D2233D17102408BB0300D040",
+            "link": ""
+          },
+          {
+            "name": "王诗龄",
+            "post": "http:\/\/t12.baidu.com\/it\/u=3167491856,3572502502&fm=58&s=A01A7F9447615D132855E14F03001070",
+            "link": ""
+          },
+          {
+            "name": "郭子睿",
+            "post": "http:\/\/t11.baidu.com\/it\/u=2977959379,3879096829&fm=58&s=26B87F87DE635A847C8A64E80300F00A",
+            "link": ""
+          },
+          {
+            "name": "张悦轩",
+            "post": "http:\/\/t11.baidu.com\/it\/u=666377911,2012418450&fm=58&s=12B97884CE33148477A86CF903004015",
+            "link": ""
+          },
+          {
+            "name": "李锐",
+            "post": "http:\/\/t12.baidu.com\/it\/u=3348410876,742844873&fm=58&s=4EEE9A45BE32061102A87C3D0300C040",
+            "link": ""
+          },
+          {
+            "name": "何炅",
+            "post": "http:\/\/t10.baidu.com\/it\/u=4270008486,1296527543&fm=58&s=BD37CB146F5367D0060E31C70300A0AB",
+            "link": ""
+          }
+        ]
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "0744025563",
+  "spend_time": "518ms",
+  "uuid": "bn_fec9b498-829b-4513-809b-0c84b6a008d4",
+  "time": 1522393944
+}

@@ -1,0 +1,25 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "介绍一下宋朝",
+  "result": [
+    {
+      "card_type": "baike",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "宋朝是中国历史上承五代十国下启元朝的朝代，分北宋和南宋两个阶段，共历十八帝，享国三百一十九年。960年，后周诸将发动陈桥兵变，拥立宋州归德军节度使赵匡胤为帝，建立宋朝。赵匡胤为避免晚唐藩镇割据和宦官专权乱象，采取重文抑武方针，加强中央集权，并剥夺武将兵权"
+      },
+      "data": {
+        "images": [
+          "http:\/\/h.hiphotos.baidu.com\/baike\/pic\/item\/d50735fae6cd7b8951bb01c6082442a7d8330e9b.jpg"
+        ],
+        "title": "宋朝"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1913932740",
+  "spend_time": "543ms",
+  "uuid": "bn_92fa3ab8-eca1-4261-ab2c-5d410da35c7d",
+  "time": 1522395114
+}

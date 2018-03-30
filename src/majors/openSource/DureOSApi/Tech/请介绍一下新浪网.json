@@ -1,0 +1,25 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "请介绍一下新浪网",
+  "result": [
+    {
+      "card_type": "baike",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "新浪网是新浪公司主办的新闻门户网站。主要提供网络媒体及娱乐服务。新浪网以成为世界各地中国人的全功能网上生活社区为发展方向"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t12.baidu.com\/it\/u=3067254497,1542819144&fm=58&u_exp_0=2526341930,1057177954&fm_exp_0=86&bpow=564&bpoh=372"
+        ],
+        "title": "新浪网"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1091801941",
+  "spend_time": "454ms",
+  "uuid": "bn_08e63775-009b-4c23-be73-7a970d7f28b4",
+  "time": 1522394292
+}

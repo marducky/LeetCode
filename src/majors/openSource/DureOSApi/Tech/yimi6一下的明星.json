@@ -1,0 +1,26 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "160以下的明星有哪些",
+  "result": [
+    {
+      "card_type": "kg",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "苍井空,郭敬明,石原里美,张韶涵,Lady Gaga,鞠婧祎,等"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t10.baidu.com\/it\/u=3764126379,2060704259&fm=58&s=F1B51F7403426F51064259CF0300B0B9"
+        ],
+        "title": "160以下的明星有哪些",
+        "source_category": "knowledge_graph_personage"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "2426595086",
+  "spend_time": "440ms",
+  "uuid": "bn_8136fef7-a388-4bd6-b998-feeb9d0af9b2",
+  "time": 1522395627
+}

@@ -1,0 +1,19 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "一美元等于多少人民币",
+  "result": [
+    {
+      "card_type": "exchange_rate",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "1美元等于6.272人民币"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1369683698",
+  "spend_time": "524ms",
+  "uuid": "bn_cd2d00b4-7316-48fb-a31a-113b6c03bd29",
+  "time": 1522394570
+}

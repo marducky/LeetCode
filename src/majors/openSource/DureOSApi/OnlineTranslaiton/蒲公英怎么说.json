@@ -1,0 +1,19 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "蒲公英怎么说",
+  "result": [
+    {
+      "card_type": "translator",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "dandelion"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1226221690",
+  "spend_time": "427ms",
+  "uuid": "bn_0e28e685-bcc1-4261-bc70-e79b95419598",
+  "time": 1522394426
+}

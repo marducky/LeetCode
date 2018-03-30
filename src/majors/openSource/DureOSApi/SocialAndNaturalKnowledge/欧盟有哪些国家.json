@@ -1,0 +1,26 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "欧盟有哪些国家",
+  "result": [
+    {
+      "card_type": "kg",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "欧洲联盟成员国有 奥地利、比利时、保加利亚、塞浦路斯、克罗地亚、捷克、丹麦、爱沙尼亚等"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t11.baidu.com\/it\/u=4147104760,1507219794&fm=58"
+        ],
+        "title": "欧洲联盟成员国",
+        "source_category": "knowledge_graph_geography"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1000412748",
+  "spend_time": "499ms",
+  "uuid": "bn_f6e8b7a0-caa7-4a8c-9d33-5f629c3bd8d5",
+  "time": 1522394200
+}

@@ -1,0 +1,26 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "洋务运动是什么时候",
+  "result": [
+    {
+      "card_type": "kg",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "洋务运动的时间是1861年-1895年"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t12.baidu.com\/it\/u=1653088997,1983874189&fm=58"
+        ],
+        "title": "洋务运动的时间",
+        "source_category": "knowledge_graph_general"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "1636310271",
+  "spend_time": "453ms",
+  "uuid": "bn_277936fb-02c9-4ff6-9a95-789d06eba073",
+  "time": 1522394836
+}

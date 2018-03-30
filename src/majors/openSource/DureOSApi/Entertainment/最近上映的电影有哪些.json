@@ -1,0 +1,17 @@
+{
+  "errno": 0,
+  "raw_text": "最新上映的电影有哪些",
+  "result": [
+    {
+      "card_type": "unknow",
+      "intent": "unknow",
+      "tts_status": {
+        "tts": "我暂时还没有学习这个知识"
+      }
+    }
+  ],
+  "logid": "0615713266",
+  "spend_time": "997ms",
+  "uuid": "bn_2d0a58cd-eb08-4151-83f9-cef8e0bcb6c3",
+  "time": 1522393816
+}

@@ -1,0 +1,26 @@
+{
+  "errno": 0,
+  "message": "success",
+  "raw_text": "熊出没有多少集",
+  "result": [
+    {
+      "card_type": "kg",
+      "intent": "universal_search",
+      "tts_status": {
+        "tts": "熊出没的集数是104集"
+      },
+      "data": {
+        "images": [
+          "http:\/\/t11.baidu.com\/it\/u=4190529883,894359377&fm=58"
+        ],
+        "title": "熊出没的集数",
+        "source_category": "knowledge_graph_general"
+      }
+    }
+  ],
+  "data_resource": 2,
+  "logid": "0476377781",
+  "spend_time": "455ms",
+  "uuid": "bn_add48e01-644c-41e9-82c7-585476ee28cc",
+  "time": 1522393676
+}
