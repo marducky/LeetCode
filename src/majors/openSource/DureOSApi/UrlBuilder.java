@@ -35,14 +35,13 @@ public class UrlBuilder {
     private String getUrl() {
         StringBuffer sb = new StringBuffer("");
         sb.append(duerosRequest.getNApiUrl() + "?");
-        int i = 1;
+        System.out.println(mUrl.toString());
         mUrl.forEach((k, v) -> {
-//            if (i==1){
-            sb.append("&" + k + "=" + v);
-
-//            }
+            if (!"sign".equals(k)) {
+                sb.append("&" + k + "=" + v);
+            }
         });
-//        sb.deleteCharAt(sb.charAt('?')+1);
+        sb.append("&sign=" + mUrl.get("sign"));
         return sb.toString().replaceFirst("&", "");
 
     }
