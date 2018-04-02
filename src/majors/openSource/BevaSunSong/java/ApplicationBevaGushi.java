@@ -13,6 +13,7 @@ import java.util.HashMap;
  **/
 public class ApplicationBevaGushi {
     public static void main(String[] args) throws Exception {
+
         GetGBevaPageInfoHandler getGBevaPageInfoHandler = new GetGBevaPageInfoHandler("http://g.beva.com/gushi/list--c10097.html");
         String regexRole = "<div class=\"total rounded\">共有(.*)个</div>";
         PhrasePageHandler phrasePageHandler = new PhrasePageHandler(regexRole, getGBevaPageInfoHandler.getPageInfo().toString());
