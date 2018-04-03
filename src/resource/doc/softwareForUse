@@ -21,5 +21,7 @@ jvisualvm : java internal memory debug tool
 
 insight io.  a good tool to view github code.
 
+gliffy Diagrams 一个轻量级Chrome 插件，简单易用，可以用它进行各种图形的绘制，比如：流程化，类图等，而且可以直接导入visio的文件进行二次编辑，绘制完成后，可以直接与google 云盘连接，便于保存和同步，当然其也有很多的主题与模板可供选择，绘制这些图，是开发理清思路的第一步。
+界面如下：
 
-
+Momentum 可以给Chrome浏览器每天更换新标签页，让你每天可以看到漂亮的美图，除了美图风景，还有很多附加小功能，比如，天气，todolist，时间，今日任务，搜索等，可以给你的浏览器焕然一新。
