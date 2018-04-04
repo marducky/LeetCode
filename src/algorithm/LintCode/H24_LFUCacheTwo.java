@@ -46,50 +46,35 @@ public class H24_LFUCacheTwo {
     public void set(int key, int value) {
         if (storeMap.containsKey(key)) {
             storeMap.remove(key, storeMap.get(key));
-            ArrayList<Integer> arrayList = new ArrayList<>();
-            storeMap.forEach((k, v) -> {
-                arrayList.add(v);
-            });
-            Collections.sort(arrayList);
-            if (value >= arrayList.get(capacity - 1)) {
-                storeMap.put(key, -1);
-            } else {
-                ArrayList<Integer> arrayListTwo = new ArrayList<>();
-                storeMap.forEach((k, v) -> {
-                    if (value <= v) {
-                        arrayListTwo.add(k);
-                    }
-                });
-                arrayListTwo.forEach(integer -> {
-                    storeMap.replace(integer, -1);
-                });
-                storeMap.put(key, value);
-            }
+            convertMap(key, value);
         } else if (storeMap.size() < this.capacity) {
             storeMap.put(key, value);
         } else {
-            ArrayList<Integer> arrayList = new ArrayList<>();
-            storeMap.forEach((k, v) -> {
-                arrayList.add(v);
-            });
-            Collections.sort(arrayList);
-            if (value >= arrayList.get(capacity - 1)) {
-                storeMap.put(key, -1);
-            } else {
-                ArrayList<Integer> arrayListTwo = new ArrayList<>();
-                storeMap.forEach((k, v) -> {
-                    if (value <= v) {
-                        arrayListTwo.add(k);
-                    }
-                });
-                arrayListTwo.forEach(integer -> {
-                    storeMap.replace(integer, -1);
-                });
-                storeMap.put(key, value);
-            }
+            convertMap(key, value);
         }
     }
 
+    private void convertMap(int key, int value) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        storeMap.forEach((k, v) -> {
+            arrayList.add(v);
+        });
+        Collections.sort(arrayList);
+        if (value >= arrayList.get(capacity - 1)) {
+            storeMap.put(key, -1);
+        } else {
+            ArrayList<Integer> arrayListTwo = new ArrayList<>();
+            storeMap.forEach((k, v) -> {
+                if (value < v) {
+                    arrayListTwo.add(k);
+                }
+            });
+            arrayListTwo.forEach(integer -> {
+                storeMap.replace(integer, -1);
+            });
+            storeMap.replace(key, value);
+        }
+    }
     public int get(int key) {
         return storeMap.get(key);
     }
