@@ -39,3 +39,6 @@ public class demo {
         System.out.println(duerOSCaller.httpGet(urlBuilder.buildNlpUrl(), "GBK"));
     }
 }
+
+
+
