@@ -47,16 +47,12 @@ public class LintCode {
         H24_LFUCacheTwo h24_lfuCache = new H24_LFUCacheTwo(3);
         h24_lfuCache.set(2, 2);
         h24_lfuCache.set(1, 1);
-        System.out.println(h24_lfuCache.toString());
         h24_lfuCache.set(3, 3);
         h24_lfuCache.set(4, 2);
-        System.out.println(h24_lfuCache.toString());
         h24_lfuCache.set(5, 3);
-        System.out.println(h24_lfuCache.toString());
         h24_lfuCache.set(6, 2);
         h24_lfuCache.set(7, 2);
         h24_lfuCache.set(8, 4);
-        System.out.println(h24_lfuCache.toString());
         h24_lfuCache.set(8, 1);
         System.out.println(h24_lfuCache.toString());
     }
