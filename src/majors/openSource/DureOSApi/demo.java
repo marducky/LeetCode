@@ -38,6 +38,8 @@ public class demo {
         DuerOSCaller duerOSCaller = new DuerOSCaller();
         System.out.println(duerOSCaller.httpGet(urlBuilder.buildNlpUrl(), "GBK"));
     }
+
+
 }
 
 
