@@ -30,6 +30,7 @@ public class demo {
 //        System.out.println(urlBuilder.buildNlpUrl());
 //     String str="我的前半生的主演是谁";
 //     try {
+
 //      System.out.println(URLEncoder.encode(str,"UTF-8"));
 //      System.out.println(URLDecoder.decode(str,"UTF-8"));
 //     }catch (UnsupportedEncodingException e){
