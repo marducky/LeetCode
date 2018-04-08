@@ -16,7 +16,7 @@ public class demo {
         DuerosRequest duerosRequest = new DuerosRequest();
         duerosRequest.setNApiUrl("http://sandbox.codriverapi.baidu.com/codriverapi/robokit");
         duerosRequest.setAk("bn");
-        duerosRequest.setAv(3);
+        duerosRequest.setAv(5);
         duerosRequest.setC("l");
         duerosRequest.setCn("20011104");
         duerosRequest.setCoordtype(2);
