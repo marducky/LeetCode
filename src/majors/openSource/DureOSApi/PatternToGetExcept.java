@@ -14,6 +14,9 @@ public class PatternToGetExcept {
         while (matcher.find()) {
             System.out.println(matcher.group(1));
             System.out.println(matcher.group(2));
+            if (matcher.group(2) != null) {
+                String s = matcher.group(2).replaceAll("<li>", "** ").replaceAll("</li>", "\n");
+            }
             System.out.println(matcher.groupCount());
 //            System.out.println(matcher.group(3));
         }
