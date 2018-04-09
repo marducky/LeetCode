@@ -66,6 +66,7 @@ public class UrlBuilder {
         } catch (Exception e) {
 
         }
+        System.out.println(url);
         return url;
     }
 }
