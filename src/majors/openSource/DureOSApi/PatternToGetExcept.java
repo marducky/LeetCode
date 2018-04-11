@@ -42,6 +42,7 @@ public class PatternToGetExcept {
 //        getXieKuohaoNull(XText);
         getXieKuohaoNull(XText1);
     }
+
 }
 
 
