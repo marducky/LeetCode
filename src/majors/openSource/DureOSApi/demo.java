@@ -19,6 +19,7 @@ public class demo {
         duerosRequest.setAv(5);
         duerosRequest.setC("l");
         duerosRequest.setCn("20011104");
+
         duerosRequest.setCoordtype(2);
 //     duerosRequest.setUuid("add48e01-644c-41e9-82c7-585476ee28cc");
         duerosRequest.setUuid(randomUUID().toString());
