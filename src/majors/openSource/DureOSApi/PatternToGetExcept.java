@@ -10,6 +10,7 @@ public class PatternToGetExcept {
         Pattern pattern = Pattern.compile(url);
         Matcher matcher = pattern.matcher(xText);
         int i = 0;
+
 //        System.out.println(matcher.find());
         while (matcher.find()) {
             System.out.println(matcher.group(1));
