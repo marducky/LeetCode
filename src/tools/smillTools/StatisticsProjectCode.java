@@ -25,6 +25,7 @@ public class StatisticsProjectCode {
      */
     private static void parse(File srcDir) {
         BufferedReader bufferedReader = null;
+
         boolean comment = false;
         try {
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(srcDir)));
