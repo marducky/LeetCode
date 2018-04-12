@@ -37,6 +37,8 @@ public class demo {
 //     }catch (UnsupportedEncodingException e){
 //      e.printStackTrace();
 //     }//
+
+
         DuerOSCaller duerOSCaller = new DuerOSCaller();
         System.out.println(duerOSCaller.httpGet(urlBuilder.buildNlpUrl(), "GBK"));
     }
