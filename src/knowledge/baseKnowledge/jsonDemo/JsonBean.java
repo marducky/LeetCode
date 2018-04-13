@@ -126,5 +126,6 @@ public class JsonBean {
 
     public static void main(String[] args) {
         createJsonByBean();
+
     }
 }
