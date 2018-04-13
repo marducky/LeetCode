@@ -1,0 +1,654 @@
+
+#the GET /hello-world cannot be delete, which used for the k8s healthy.
+-  request:
+      method: GET
+      url: /hello-world
+
+   response:
+      status: 200
+      body: "hello"
+#the GET /hello-world cannot be delete, which used for the k8s healthy.
+
+
+
+#add baidu stub
+#===============================================
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros1k
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      file: ./json/1baidu1k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros2k
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      file: ./json/1baidu2k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros4k
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      file: ./json/1baidu4k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros6k
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      file: ./json/1baidu6k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros8k
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      file: ./json/1baidu8k.json
+#===============================================
+
+#add baidu stub with latency
+#===============================================
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros1klatency
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      latency: 2000
+      file: ./json/1baidu1k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros2klatency
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      latency: 2000
+      file: ./json/1baidu2k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros4klatency
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      latency: 2000
+      file: ./json/1baidu4k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros6klatency
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      latency: 2000
+      file: ./json/1baidu6k.json
+
+-  request:
+      method: GET
+      url: /codriverapi/robokit$
+      query:
+        word: dueros8klatency
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      latency: 2000
+      file: ./json/1baidu8k.json
+#===============================================
+
+
+
+
+#add Nina long response.
+#==================================
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Nina long 17k*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/1Ninalong17k.json
+
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Nina long 5k*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/1Ninalong5k.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Nina long 5k*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/1Ninalong8k.json
+
+
+#==================================
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*I.*d.*like.*to.*transfer.*money.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_32_25_80_1-Finance_1_1_0_Funds_transfer_I_d_like_to_transfer_money.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Checking.*2341.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_32_36_40_1-Finance_1_1_0_Funds_transfer_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Savings.*8760.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_32_48_70_1-Finance_1_1_0_Funds_transfer_Savings__8760.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*5000.*00.**
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_33_00_70_1-Finance_1_1_0_Funds_transfer_5000.00.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Yes.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_33_12_70_1-Finance_1_1_0_Funds_transfer_Yes.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*I.*want.*to.*transfer.*some.*money..*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_33_24_50_1-Finance_1_1_1_Funds_transfer_I_want_to_transfer_some_money..json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Checking.*2341.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_33_37_80_1-Finance_1_1_1_Funds_transfer_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*Savings.*8760.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_33_49_90_1-Finance_1_1_1_Funds_transfer_Savings__8760.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*13.*000.*00.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_34_00_70_1-Finance_1_1_1_Funds_transfer_13,000.00.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+
+      post: >
+          .*UserText.*Yes.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_34_14_80_1-Finance_1_1_1_Funds_transfer_Yes.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+
+      post: >
+          .*UserText.*I want.*to.*send.*money.*to.*Jon.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_34_26_50_1-Finance_1_2_0_POP_Money_I_want_to_send_money_to_Jon.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+
+      post: >
+          .*UserText.*Checking.*2341.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_34_38_20_1-Finance_1_2_0_POP_Money_Checking__2341.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+      post: >
+          .*UserText.*First.*one.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_34_51_00_1-Finance_1_2_0_POP_Money_First_one.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+
+      post: >
+          .*UserText.*50.*00.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_35_03_00_1-Finance_1_2_0_POP_Money_50.00.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/x-www-form-urlencoded
+
+      post: >
+          .*UserText.*Yes.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/2018_03_02_14_35_15_90_1-Finance_1_2_0_POP_Money_Yes.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+      post: >
+          .*"query.*我想听财经新闻.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012454_00_2-XXCX_2_1_XW_WXTCJXW.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+      post: >
+          .*"query.*下一批.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012500_60_2-XXCX_2_1_XW_XYP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+      post: >
+          .*"query.*下一个.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012505_40_2-XXCX_2_1_XW_XYG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*上一个.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012511_10_2-XXCX_2_1_XW_SYG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*暂停.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012516_10_2-XXCX_2_1_XW_ZT.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*继续播放.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012522_90_2-XXCX_2_1_XW_JXBF.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*重播当前新闻.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012527_40_2-XXCX_2_1_XW_ZBDQXW.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*退出新闻场景.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012533_60_2-XXCX_2_1_XW_TCXWCJ.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*给我订一张北京到上海明天10点半之后的机票.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012538_60_2-XXCX_2_2_HBCX_JWDYZBJDSHMT10DBZHDJP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*给我订一张北京到上海明天的机票.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012544_30_2-XXCX_2_2_HBCX_JWDYZBJDSHMTDJP.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*导航到很赞的餐馆.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012549_60_3-CXLK_3_1_DH_DHDHZDCG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*导航到便宜的街边的餐馆.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012555_70_3-CXLK_3_1_DH_DHDBYDJBDCG.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*来首鹅妈妈俱乐部.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012601_50_4-YYYL_4_1_EG_LSEMMJLB.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*下一首.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012606_00_4-YYYL_4_1_EG_XYS.json
+
+-  request:
+      method: POST
+      url: /
+      headers:
+         content-type: application/json
+
+      post: >
+          .*"query.*来首东风破.*
+
+   response:
+      headers:
+         content-type: application/json
+
+      status: 200
+      file: ./json/0305012612_50_4-YYYL_4_2_YL_LSDFP.json
