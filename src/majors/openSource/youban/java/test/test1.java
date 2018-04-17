@@ -1,7 +1,8 @@
-package majors.openSource.youban.java;
+package majors.openSource.youban.java.test;
 
-import majors.openSource.youban.java.Tangshi.Tangshi;
-import majors.openSource.youban.java.Tangshi.TangshiTwo;
+import majors.openSource.youban.java.category.tangshi.Tangshi;
+import majors.openSource.youban.java.category.tangshi.TangshiTwo;
+import majors.openSource.youban.java.handler.GetYouBanPageInfoHandler;
 import org.junit.Test;
 
 import java.net.URLEncoder;

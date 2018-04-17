@@ -1,6 +1,6 @@
-package majors.openSource.youban.java.Tangshi;
+package majors.openSource.youban.java.category.tangshi;
 
-import majors.openSource.youban.java.GetYouBanPageInfoHandler;
+import majors.openSource.youban.java.handler.GetYouBanPageInfoHandler;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;
