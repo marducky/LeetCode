@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TangshiTwo {
-    private String tangshiListGetPattern = "<li id=\"li_(.*)\" title=\"(.*)\" [\\s\\S]*?>[\\s\\S]*?<a href=\"(.*)\">[\\s\\S]*?</li>";
+    private String tangshiListGetPattern = "<li id=\\\"li_(.*)\\\" title=\\\"(.*)\\\"[\\s\\S]*?<a href=\"(.*)\"[\\s\\S]*?<\\/li>";
 
     private String perTangUrlPattern = "<div class=[\\s\\S]*?<a class=[\\s\\S]*?href=\"(.*)\" target=\"_blank\">[\\s\\S]*?href=\"(.*)\" title=\"[\\s\\S]*?</a></div>";
 
