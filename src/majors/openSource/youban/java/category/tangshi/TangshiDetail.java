@@ -1,4 +1,4 @@
-package majors.openSource.youban.java.Tangshi;
+package majors.openSource.youban.java.category.tangshi;
 
 import lombok.Data;
 

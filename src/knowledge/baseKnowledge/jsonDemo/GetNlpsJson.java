@@ -8,8 +8,12 @@ import java.util.Map;
 
 //class manager{
 //    private String nlus;
+
+
 //}
 public class GetNlpsJson {
+
+    //ssss
     private static int conut = 0;
     public void getNlpsJson() {
         XmlToJson jsonToXml = new XmlToJson();

@@ -1,4 +1,4 @@
-package majors.openSource.youban.java;
+package majors.openSource.youban.java.handler;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

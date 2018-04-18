@@ -1,0 +1,57 @@
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "明天的天气",
+  "semantic": {
+    "service": "Weather",
+    "action": "WeatherForADay",
+    "params": {
+      "date": {
+        "orgin": "明天",
+        "norm": "{\"year\":\"2018\",\"month\":\"04\",\"day\":\"14\",\"especial\":\"\",\"kind\":0,\"status\":0,\"leap\":false,\"delta\":0,\"yeardelta\":0,\"monthdelta\":0}",
+        "logic": "",
+        "paramType": "@sys.sdate",
+        "code": 0
+      },
+      "focus": {
+        "orgin": "[{\"category\":\"天气\"}]",
+        "norm": "[{\"category\":\"weather\"}]",
+        "logic": "0",
+        "paramType": "{\"category\":\"@sys.entity.weather_condition.weather\"}",
+        "code": 0
+      }
+    },
+    "outputContext": {
+      "service": "Weather",
+      "context": "weather_aday_city"
+    }
+  },
+  "results": [
+    {
+      "hint": "主人，你具体想知道哪个城市的呢",
+      "data": [
+        {
+          "alter": "",
+          "city": "",
+          "date": "2018-04-14",
+          "focus": "",
+          "humidity": "",
+          "index": 0,
+          "maxTemp": "",
+          "minTemp": "",
+          "pm25": "",
+          "temperature": "",
+          "weather": "",
+          "windDay": "",
+          "windDayLevel": "",
+          "windDir": "",
+          "windLevel": "",
+          "windNight": "",
+          "windNightLevel": ""
+        }
+      ]
+    }
+  ]
+}
