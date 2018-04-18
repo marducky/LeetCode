@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  **/
 public class GetAudioImpl {
     private static final String MP3_URL = "http://www.youban.com/mp3/";
-    private static String subAudioPattern = "<li><a href=\"(.*)\" target=\"_blank\">(.*)</a></li>";
+    private static String subAudioPattern = "<li><a href=\"(.*)\" target=\"_blank\"[\\s\\S]*?>(.*)</a></li>";
 
     public static List<AudioDetails> getAudioList() throws Exception {
         List<AudioDetails> audioDetailsList = new ArrayList<>();
@@ -23,10 +23,13 @@ public class GetAudioImpl {
         Pattern pattern = Pattern.compile(subAudioPattern);
         Matcher matcher = pattern.matcher(getYouBanPageInfoHandler.getPageInfo().toString());
         while (matcher.find()) {
-            AudioDetails audioDetails = new AudioDetails();
-            audioDetails.setAudioFirstName(matcher.group(2));
-            audioDetails.setAudioFirstUrl(matcher.group(1));
-            audioDetailsList.add(audioDetails);
+            if (matcher.group(1).indexOf("mp3-c") == -1) {
+                AudioDetails audioDetails = new AudioDetails();
+                audioDetails.setAudioFirstName(matcher.group(2));
+                audioDetails.setAudioFirstUrl(matcher.group(1));
+                audioDetailsList.add(audioDetails);
+            }
+
         }
         return audioDetailsList;
     }

@@ -14,12 +14,12 @@ import java.util.regex.Pattern;
  * @date: 2018/04/18 17:33
  **/
 public class GetSubAudioImpl {
-    private static final String ERGE_URL = "http://www.youban.com/erge/";
-    private static String ergeURLPattern = "<li><a href=\"(.*)\" target=\"_blank\" class=\"red\">(.*)</a></li>";
 
-    public static List<SubAudioDetails> getSubAudioDetails() throws Exception {
+    private static String ergeURLPattern = "<li><a href=\"(.*)\" target=\"_blank\"[\\s\\S]*?>(.*)</a></li>";
+
+    public static List<SubAudioDetails> getSubAudioDetails(String url) throws Exception {
         List<SubAudioDetails> subAudioDetailsList = new ArrayList<>();
-        GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(ERGE_URL);
+        GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(url);
         Pattern pattern = Pattern.compile(ergeURLPattern);
         Matcher matcher = pattern.matcher(getYouBanPageInfoHandler.getPageInfo().toString());
         while (matcher.find()) {

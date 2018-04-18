@@ -14,8 +14,10 @@ import java.util.List;
  **/
 public class ChildSongControllers {
     // no the Audio Details.
-    public static void main_function() throws Exception {
-        List<SubAudioDetails> subAudioDetailsList = GetSubAudioImpl.getSubAudioDetails();
+    private static final String ERGE_URL = "http://www.youban.com/erge/";
+
+    public static void main_function(String url) throws Exception {
+        List<SubAudioDetails> subAudioDetailsList = GetSubAudioImpl.getSubAudioDetails(url);
         subAudioDetailsList.forEach(subAudioDetails -> {
             try {
                 List<PerAudioDetail> perAudioDetailList = GetPerAudioImpl.getPerAudioChildSong(subAudioDetails.getSubAudioUrl());
@@ -24,5 +26,9 @@ public class ChildSongControllers {
                 e.printStackTrace();
             }
         });
+    }
+
+    public static void doMain() throws Exception {
+        main_function(ERGE_URL);
     }
 }
