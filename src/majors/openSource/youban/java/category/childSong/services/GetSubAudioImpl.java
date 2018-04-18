@@ -22,7 +22,13 @@ public class GetSubAudioImpl {
         GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(ERGE_URL);
         Pattern pattern = Pattern.compile(ergeURLPattern);
         Matcher matcher = pattern.matcher(getYouBanPageInfoHandler.getPageInfo().toString());
-
+        while (matcher.find()) {
+            SubAudioDetails subAudioDetails = new SubAudioDetails();
+            subAudioDetails.setSubAudioUrl(matcher.group(1));
+            String ss = "";
+            subAudioDetails.setSubAudioName(matcher.group(2));
+            subAudioDetailsList.add(subAudioDetails);
+        }
         return subAudioDetailsList;
     }
 }
