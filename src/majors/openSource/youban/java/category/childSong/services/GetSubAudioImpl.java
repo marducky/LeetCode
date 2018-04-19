@@ -17,7 +17,9 @@ public class GetSubAudioImpl {
     private static final String ERGE_URL = "http://www.youban.com/erge/";
     private static String ergeURLPattern = "<li><a href=\"(.*)\" target=\"_blank\" class=\"red\">(.*)</a></li>";
 
+
     public static List<SubAudioDetails> getSubAudioDetails() throws Exception {
+
         List<SubAudioDetails> subAudioDetailsList = new ArrayList<>();
         GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(ERGE_URL);
         Pattern pattern = Pattern.compile(ergeURLPattern);
