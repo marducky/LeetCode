@@ -1,0 +1,47 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "eatcpu",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "replicas": 2,
+    "selector": {
+      "name": "huang"
+    },
+    "template": {
+      "metadata": {
+        "name": "cpu",
+        "labels": {
+          "name": "huang"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "eatcpucontainer",
+            "image": "registry.hub.abc.com.cn/eatcpu:v1.1",
+            "resources": {
+              "request": {
+                "cpu": "1.0",
+                "memory": "1.0Gi"
+              },
+              "limits": {
+                "cpu": "1.2",
+                "memory": "1.1Gi"
+              }
+            },
+            "command": [
+              "/deadloop",
+              "-max_procs=4"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "replicas": 0
+  }
+}
