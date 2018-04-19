@@ -41,7 +41,7 @@ public class GetPerAudioImpl {
             PerAudioDetail perAudioDetail = new PerAudioDetail();
             perAudioDetail.setMp3Url(matcher.group(1));
             perAudioDetail.setName(matcher.group(2));
-            GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(perAudioDetail.getMainUrl());
+            GetYouBanPageInfoHandler getYouBanPageInfoHandler = new GetYouBanPageInfoHandler(perAudioDetail.getMp3Url());
             Pattern patternV = Pattern.compile(letvVedioUrlPattern);
             Matcher matcherV = patternV.matcher(getYouBanPageInfoHandler.getPageInfo().toString());
             while (matcherV.find()) {
