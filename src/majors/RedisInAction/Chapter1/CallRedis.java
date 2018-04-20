@@ -22,8 +22,17 @@ public class CallRedis {
         System.out.println(jedis.lindex("janus", 1));
     }
 
+    public static void step3() {
+        Jedis jedis = new Jedis("localhost");
+        System.out.println();
+        jedis.sadd("janus-set", "sda", "dasdasd");
+        System.out.println(jedis.smembers("janus-set"));
+//        System.out.println(jedis.sismember("janus-set","sss"));
+
+    }
     public static void main(String[] args) {
-        step2();
+//        step2();
+        step3();
 
     }
 }
