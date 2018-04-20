@@ -14,4 +14,6 @@ public class PerAudioDetail {
     String letvActualUrl;
     String ssUrl;
     String ssDownURL;
+    String paintUrl;
+    String paintDownUrl;
 }
