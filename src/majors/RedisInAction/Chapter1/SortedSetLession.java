@@ -115,6 +115,8 @@ public class SortedSetLession {
      * @param price
      * @return
      */
+
+
     public boolean updatePrice(long id, float price) {
         String key = "goods:" + id;
         return jedis.hset(key, "price", String.valueOf(price)) == 0;
