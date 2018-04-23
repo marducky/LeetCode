@@ -1,9 +1,8 @@
 package majors.RedisInAction.Chapter1;
 
-import java.util.Set;
-
 import com.alibaba.fastjson.JSON;
 
+import java.util.Set;
 public class Goods {
 
     public Goods() {

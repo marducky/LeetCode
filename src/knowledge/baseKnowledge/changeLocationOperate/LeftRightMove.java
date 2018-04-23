@@ -10,6 +10,7 @@ public class LeftRightMove {
         System.out.println(sssMoveLeft);
         prinfInfo(sssMoveLeft);
 
+
         int sssMoveRight=sss>>1;
         System.out.println(sssMoveRight);
         prinfInfo(sssMoveRight);
