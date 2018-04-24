@@ -6,9 +6,7 @@ import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;
 
 import java.io.*;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author: Neng Qi
@@ -337,33 +335,33 @@ public class WorderToNewWordUtils {
         return value;
     }
 
-//    public static void main(String[] args) throws Exception{
-//        String zuankong = "钻孔编号：";
-//        String zhaopian = "照片编号：";
-//        //模板文件地址
-//        String inputUrl = "G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\docTemplate\\templateDocDoc.docx";
-//        //新生产的模板文件
-//        String outputUrl = "G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\docTemplate\\GetemplateDocDoc.docx";
-//        String outputUrl2 = "G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\docTemplate\\GetemplateDocDoc22.docx";
-//
-//
-//        Map<String, String> testMap = new HashMap<String, String>();
-//        testMap.put("title", "demoTitle");
-//        testMap.put("projectName", "demoProject");
-//        testMap.put("pageTotal", "1");
-//        testMap.put("pageRd", "1");
-//
-//        List<String[]> testList = new ArrayList<String[]>();
-//        testList.add(new String[]{"1", "1AA", "1BB", "1CC"});
-//        testList.add(new String[]{"2", "2AA", "2BB", "2CC"});
-//        testList.add(new String[]{"3", "3AA", "3BB", "3CC"});
-//        testList.add(new String[]{"4", "4AA", "4BB", "4CC"});
-//        List<String> list=new ArrayList<>();
-//        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\20170318012228929.jpg");
-//        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\Ascii.jpg");
-//        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\QQ图片20180404163325.jpg");
-//
-//        WorderToNewWordUtils.changWord(inputUrl, outputUrl, testMap, testList);
+    public static void main(String[] args) throws Exception {
+        String zuankong = "钻孔编号：";
+        String zhaopian = "照片编号：";
+        //模板文件地址
+        String inputUrl = "C:\\Users\\Janus\\IdeaProjects\\Generate2Word\\resource\\docTemplate\\templateDocDoc.docx";
+        //新生产的模板文件
+        String outputUrl = "C:\\Users\\Janus\\IdeaProjects\\Generate2Word\\resource\\docTemplate\\GetemplateDocDoc.docx";
+        String outputUrl2 = "G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\docTemplate\\GetemplateDocDoc22.docx";
+
+
+        Map<String, String> testMap = new HashMap<String, String>();
+        testMap.put("title", "demoTitle");
+        testMap.put("projectName", "demoProject");
+        testMap.put("pageTotal", "1");
+        testMap.put("pageRd", "1");
+
+        List<String[]> testList = new ArrayList<String[]>();
+        testList.add(new String[]{"1", "1AA", "1BB", "1CC"});
+        testList.add(new String[]{"2", "2AA", "2BB", "2CC"});
+        testList.add(new String[]{"3", "3AA", "3BB", "3CC"});
+        testList.add(new String[]{"4", "4AA", "4BB", "4CC"});
+        List<String> list = new ArrayList<>();
+        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\20170318012228929.jpg");
+        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\Ascii.jpg");
+        list.add("G:\\info\\NLPS_Code_Repos\\git\\Generate2Word\\resource\\image\\QQ图片20180404163325.jpg");
+
+        WorderToNewWordUtils.changWord(inputUrl, outputUrl, testMap, testList);
 //        WorderToNewWordUtils.changWordWithPic(inputUrl, outputUrl2, testMap, list);
-//    }
+    }
 }
