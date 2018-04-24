@@ -73,7 +73,7 @@ public class StatisticsProjectCode {
 //            System.out.println("------------\n"+file);
             if (file.getName().matches(".*\\.java$")) {
 //                System.out.println(file.getName().toString());
-                System.out.println(file);
+                System.out.println(file.toString());
                 javaCodeFlieCounter++;
                 parse(file);
             }
