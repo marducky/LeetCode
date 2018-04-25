@@ -21,7 +21,9 @@
 
 *这里是斜体*
 
-|table  |are   |cool|cccc|
+
+
+|table  |are   |cool| cccc|
 |-------|:----:|----:|-----:|
 |col    |col1  |col2|sss|
 
