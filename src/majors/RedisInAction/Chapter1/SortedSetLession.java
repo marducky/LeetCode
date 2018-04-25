@@ -1,15 +1,9 @@
 package majors.RedisInAction.Chapter1;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-
 import org.apache.commons.lang.math.NumberUtils;
-
 import redis.clients.jedis.Jedis;
+
+import java.util.*;
 
 public class SortedSetLession {
 
@@ -23,6 +17,8 @@ public class SortedSetLession {
             sl.addGoods(goods);
         }
         //读取商品总数
+
+
         System.out.println("商品总数: " + sl.getTotalCount());
         //删除第29件商品
         sl.delGoods(29);
