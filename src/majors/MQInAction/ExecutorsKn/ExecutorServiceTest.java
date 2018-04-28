@@ -1,4 +1,4 @@
-package majors.MQInAction.ProducterAndConsumer;
+package majors.MQInAction.ExecutorsKn;
 
 import java.util.ArrayList;
 import java.util.List;

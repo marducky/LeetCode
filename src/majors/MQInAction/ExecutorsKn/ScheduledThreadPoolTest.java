@@ -1,4 +1,4 @@
-package majors.MQInAction.ProducterAndConsumer;
+package majors.MQInAction.ExecutorsKn;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
