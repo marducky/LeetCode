@@ -1,10 +1,8 @@
 package majors.RedisInAction.Chapter2;
 
-import majors.RedisInAction.Chapter1.JedisProvider;
 import redis.clients.jedis.Jedis;
 
-import java.util.Arrays;
-import java.util.List;
+
 import java.util.Set;
 
 /**
