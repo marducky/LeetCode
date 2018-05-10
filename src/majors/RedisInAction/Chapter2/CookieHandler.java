@@ -34,6 +34,8 @@ public class CookieHandler {
 
     public void updateToken(String token, String user) {
         Long timeNow = System.currentTimeMillis();
+
+
         this.jedis.hset("login:", token, user);
         this.jedis.zadd("recent:", timeNow, token);
     }
