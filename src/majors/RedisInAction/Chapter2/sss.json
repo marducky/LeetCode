@@ -1,0 +1,49 @@
+{
+  "map_parouter": [
+    {
+      "pa": "Roobo",
+      "languages": [
+        "cmn-CHN"
+      ],
+      "matches": [
+        {
+          "domain": "News",
+          "intention": "Search",
+          "category": "finance"
+        },
+        {
+          "domain": "Shopping",
+          "intention": "Search",
+          "category": "book_store"
+        }
+      ]
+    },
+    {
+      "pa": "DuerOS",
+      "languages": [
+        "cmn-CHN"
+      ],
+      "matches": [
+        {
+          "domain": "Unsupported",
+          "intention": "Unsupported"
+        }
+      ]
+    },
+    {
+      "pa": "Nina",
+      "languages": [
+        "eng-USA"
+      ],
+      "keywords": [
+        {
+          "list": [
+            "Nina"
+          ],
+          "type": "startWord"
+        }
+      ]
+    }
+  ]
+}
+
