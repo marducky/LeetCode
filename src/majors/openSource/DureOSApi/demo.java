@@ -24,7 +24,7 @@ public class demo {
 //     duerosRequest.setUuid("add48e01-644c-41e9-82c7-585476ee28cc");
         duerosRequest.setUuid(randomUUID().toString());
         duerosRequest.setCrd("116.407396_39.9042");
-        duerosRequest.setWord("大汉天子主演是谁");
+        duerosRequest.setWord("北京大学");
 //     duerosRequest.setWord("%E6%88%91%E7%9A%84%E5%89%8D%E5%8D%8A%E7%94%9F%E7%9A%84%E4%B8%BB%E6%BC%94%E6%98%AF%E8%B0%81");
 //     duerosRequest.setWord("%CE%D2%B5%C4%C7%B0%B0%EB%C9%FA%B5%C4%D6%F7%D1%DD%CA%C7%CB%AD");
         urlBuilder.setDuerosRequest(duerosRequest);
