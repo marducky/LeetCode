@@ -87,7 +87,7 @@ public class StatisticsProjectCode {
 //        String projectPath=StatisticsProjectCode.class.getClassLoader().getResource("").toString();
         String projectPath = System.getProperty("user.dir");
         System.out.println(projectPath);
-        File srcDir = new File("C:\\Users\\Janus\\IdeaProjects\\GetUniScore");
+        File srcDir = new File("C:\\Users\\Janus\\IdeaProjects\\Generate2Word");
 //        File srcDir = new File(projectPath);
 //        File srcDir=new File("G:\\info\\NLPS_Code_Repos\\git\\_nlps");
         myList(srcDir);// 遍历所java源文件
