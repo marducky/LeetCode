@@ -69,8 +69,8 @@ public class LogMybatisTest {
 
     @Test
     public void gcc() {
-//        System.gc();
-        String nlpsConfigHome = System.getenv("NLPS_CONFIG_HOME");
-        System.out.println(nlpsConfigHome);
+        System.gc();
+//        String nlpsConfigHome = System.getenv("NLPS_CONFIG_HOME");
+//        System.out.println(nlpsConfigHome);
     }
 }
