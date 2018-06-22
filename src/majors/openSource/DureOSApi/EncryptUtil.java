@@ -1,9 +1,13 @@
 package majors.openSource.DureOSApi;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.security.MessageDigest;
 
 public class EncryptUtil {
     private static final char[] HEX_REFER_CHARS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    File eee=new File("");
+
 
     public static String toMd5(String str) {
         String md5Str = "";
