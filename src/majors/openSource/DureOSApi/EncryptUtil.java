@@ -1,7 +1,6 @@
 package majors.openSource.DureOSApi;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.security.MessageDigest;
 
 public class EncryptUtil {
