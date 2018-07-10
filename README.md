@@ -10,3 +10,6 @@ And you can email me: qihuaneng@163.com, if you think it useful to me. Thanks. <
 About me:<br><br>
 Janus, A DEFENDER.<br><br>
 Good lucky.<br><br>
+
+## Begin Java Study
+sss
