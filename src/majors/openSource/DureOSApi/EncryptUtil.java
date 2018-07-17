@@ -11,6 +11,7 @@ public class EncryptUtil {
     public static String toMd5(String str) {
         String md5Str = "";
         try {
+//            ;;;
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(str.getBytes("UTF-8"));
             // 完成计算，返回结果数组
